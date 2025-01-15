@@ -9,6 +9,8 @@ Then you can build the book using:
 ```
 make
 ```
+This will build the book in html format. You can view the book by opening the file `./_build/html/index.html` in a web browser.
+
 You can also build the book in pdf format using:
 ```shell
 make book
