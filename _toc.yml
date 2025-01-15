@@ -1,0 +1,24 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Orientation
+  chapters:
+  - file: orientation/slides
+  - file: orientation/syllabus
+  - file: orientation/calendar
+  - file: orientation/instructor
+  - file: orientation/introduction
+  - file: orientation/orientation
+  - file: orientation/github
+  - file: orientation/setup
+  - file: orientation/programming
+  
+# - caption: Computer and Computation
+#   numbered: True
+#   chapters:
+#   - file: computer/hardware
+#   - file: computer/software
+#   - file: computer/hpc
