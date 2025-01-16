@@ -1,13 +1,3 @@
-
-
-
-
-<!-- ```{image} figures/materials_informatics_logo.png
-:alt: logo
-:width: 60%
-:align: center
-``` -->
-
 :::::{grid} 2
 :reverse:
 
@@ -37,7 +27,7 @@ Materials Informatics: The Role of Big Data
 MLE4217/5219  
 Instructed by *Zeyu Deng*
 
-```{button-ref} orientation/slides
+```{button-ref} orientation/intro
 :ref-type: doc
 :color: primary
 :class: sd-rounded-pill float-left
