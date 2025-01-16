@@ -11,13 +11,12 @@ chapters:
   - file: orientation/orientation
   - file: orientation/syllabus
   - file: orientation/calendar
-  - file: orientation/software
   - file: orientation/introduction
   - file: orientation/github
   - file: orientation/setup
   - file: orientation/programming
-# - file: computer/intro
-#   sections:
-#   - file: computer/hardware
-#   - file: computer/software
-#   - file: computer/hpc
+- file: computer/intro
+  sections:
+  - file: computer/hardware
+  - file: computer/software
+  - file: computer/hpc
