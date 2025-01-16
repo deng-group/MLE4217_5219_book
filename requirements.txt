@@ -1,5 +1,2 @@
 jupyter-book
 pydata-sphinx-theme==0.15.3
-pymatgen
-ase
-dscribe
