@@ -179,7 +179,7 @@ Please read and understand the University Policy on AI before using AI tools. Yo
 ```
 GitHub Copilot is an AI-powered code completion tool that helps you write code faster and with fewer errors. Here's how you can set it up in Visual Studio Code:
 
-### Step-by-Step Guide to Set Up GitHub Copilot
+### Set Up GitHub Copilot
 
 1. **Install the GitHub Copilot Extension**:
     - Open Visual Studio Code.

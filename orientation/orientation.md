@@ -33,8 +33,8 @@ Please refer to the [syllabus](syllabus.md) and [calendar](calendar.md) for the 
 ```
 Please scan the QR code above or use [this link](https://forms.office.com/r/mUfEwsjP3E?origin=lprLink) to complete this form so we can consider content changes based on your background and previous experience. Your responses are anonymous and will not impact your course GPA or any other academic standing. Please provide accurate information throughout the form.
 
-## Set up your computer
-Install softwares as suggested by [software guide](software.md). Then please see the guide to [setup your environment](setup.md).
+## Set up your programming environment
+Please see the guide to [setup your environment](setup.md).
 
 ```{admonition} NUS IT
 :class: tip, dropdown
@@ -55,11 +55,6 @@ In general, for password you should use mixture of capital/small letters, number
 - For each app/website, use password manager to generate different user names and passwords.
 - Setup the two(multi)-factor-authentication (2FA) for all of your account as possible.
 - Use passwordless login (passkeys, biometrics, and etc.) as possible. See passkeys below.
-
-```{admonition} Recovery Code
-:class: info, dropdown
-You should put the recovery code of the password manager to somewhere you can easily find.
-```
 
 ```{admonition} Examples of password manager
 :class: info, dropdown
