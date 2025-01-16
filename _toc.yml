@@ -3,8 +3,8 @@
 
 format: jb-book
 root: intro
-options:
-  numbered: true
+# options:
+#   numbered: true
 chapters:
 - file: orientation/intro
   sections:
@@ -17,8 +17,8 @@ chapters:
   - file: orientation/github
   - file: orientation/setup
   - file: orientation/programming
-- file: computer/intro
-  sections:
-  - file: computer/hardware
-  - file: computer/software
-  - file: computer/hpc
+# - file: computer/intro
+#   sections:
+#   - file: computer/hardware
+#   - file: computer/software
+#   - file: computer/hpc
