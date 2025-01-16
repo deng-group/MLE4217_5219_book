@@ -3,9 +3,11 @@
 
 format: jb-book
 root: intro
-parts:
-- caption: Orientation
-  chapters:
+# options:
+#   numbered: true
+chapters:
+- file: orientation/intro
+  sections:
   - file: orientation/slides
   - file: orientation/syllabus
   - file: orientation/calendar
@@ -15,10 +17,8 @@ parts:
   - file: orientation/github
   - file: orientation/setup
   - file: orientation/programming
-  
-# - caption: Computer and Computation
-#   numbered: True
-#   chapters:
+# - file: computer/intro
+#   sections:
 #   - file: computer/hardware
 #   - file: computer/software
 #   - file: computer/hpc
