@@ -1,23 +1,24 @@
-# Orientation
-````{admonition} You should first read the rules to understand policies!
-:class: tip, dropdown
-**Content**
-
-You must not do following except with permission from the instructor:
-- Share this content with others. 
-- Reveal anything of your project to other people. 
-- Collaborate with other people without permission for your assignment.
-
-**Academic Integrity**
+# Getting Started
+````{admonition} **Academic Integrity**
+:class: danger
+- Read and understand [NUS Academic Integrity guide](
+https://libguides.nus.edu.sg/new2nus/acadintegrity), particularly the section about AI tools.
 - You must obey the law of Singapore and the [Code of Conduct for student](https://studentconduct.nus.edu.sg/wp-content/uploads/NUS-Code-of-Student-Conduct.pdf). 
 - You must not use the university HPC services for other personal interest such as Bitcoin mining and obey all the rules set by the NUS IT.  
-- NUS Library summarized Academic Integrity guide
-https://libguides.nus.edu.sg/new2nus/acadintegrity
 
 
-**University policy about the usage of generative AI**  
-https://ctlt.nus.edu.sg/wp-content/uploads/2024/08/Policy-for-Use-of-AI-in-Teaching-and-Learning.pdf
+````
 
+## Instructor
+````{card}
+**Zeyu Deng**
+```{image} ../figures/profile.JPG
+:alt: profile
+:class: bg-primary mb-1
+:width: 30%
+:align: center
+```
+Hi, my name is Zeyu Deng, and I am an Assistant Professor of Materials Science and Engineering at the National University of Singapore (NUS). My research interests include computational materials science, multiscale modeling, and high-performance computing. Currently, my work focuses on using advanced computational techniques to uncover the design principles of materials for renewable energy applications. Outside of my scientific work, I enjoy traveling and photography. I will guide you through this course, and I hope you will learn some useful skills that will benefit you!
 ````
 
 ## Course arrangement
@@ -36,7 +37,7 @@ Please scan the QR code above or use [this link](https://forms.office.com/r/mUfE
 Install softwares as suggested by [software guide](software.md). Then please see the guide to [setup your environment](setup.md).
 
 ```{admonition} NUS IT
-:class: tip
+:class: tip, dropdown
 NUS IT provides support for IT related issues. They also provide services such as HPC and server hosting. You can submit a ticket on nTouch if you have any issues related to IT.
 - [NUS VPN](https://nusit.nus.edu.sg/services/wifi_internet/nvpn/) has to be installed to access intranet and NUS HPC when you are not on campus. 
 - [NUS IT webpage](https://nusit.nus.edu.sg/)
@@ -56,7 +57,7 @@ In general, for password you should use mixture of capital/small letters, number
 - Use passwordless login (passkeys, biometrics, and etc.) as possible. See passkeys below.
 
 ```{admonition} Recovery Code
-:class: info
+:class: info, dropdown
 You should put the recovery code of the password manager to somewhere you can easily find.
 ```
 
@@ -80,20 +81,4 @@ You should use [Find Full Text: Proxy Bookmarklet](https://libguides.nus.edu.sg/
 
 ## Code repository
 
-We use [GitHub](https://www.github.com) for data version control and storage. **Please register a GitHub account if you don't have one.**
-
-## Learning
-
-In this course, we will do programming using Python. You can use [ChatGPT](https://chatgpt.com/) or [Claude](https://claude.ai/) to learn and assist your programming (**not for writing your report!**). As a student, you can get [free student developer pack](https://education.github.com/pack) which includes Copilot if you're using VS Code. 
-
-- Linux: If you don't know much about Linux environment, please complete [Introduction to the Unix Command Line](https://cambiotraining.github.io/unix-shell/) from Cambridge University.
-
-- Python: You can find lots of tutorials online, for example: [MIT 6.189](https://ocw.mit.edu/courses/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2008/pages/lecture-notes/).
-
-```{admonition} Don't go too crazy!
-:class: tip
-You shouldn't go too deep in this part. You can always go back check and search. The best way to learn is through project.
-```
-
-## Finish
-🎊🥳 Congratulations! You have finished this guide! You can continue now!
+We use [GitHub](https://www.github.com) for data version control and storage. **Please register a GitHub account if you don't have one.** You can use the [GitHub Student Developer Pack](https://education.github.com/pack) to get free access to many useful tools such as Copilot.

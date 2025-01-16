@@ -8,12 +8,11 @@ root: intro
 chapters:
 - file: orientation/intro
   sections:
-  - file: orientation/slides
+  - file: orientation/orientation
   - file: orientation/syllabus
   - file: orientation/calendar
-  - file: orientation/instructor
+  - file: orientation/software
   - file: orientation/introduction
-  - file: orientation/orientation
   - file: orientation/github
   - file: orientation/setup
   - file: orientation/programming
