@@ -56,4 +56,4 @@ For more details about the course (like the syllabus, calendar, and rules), chec
 You can quickly navigate through the sections using the navigation bar on the left side. There is also a search box to help you find any content in this course swiftly. To get started, you can use the navigation bar and begin with the [Orientation](orientation/orientation.md).
 
 # Acknowledgements
-This interactive textbook is built by Jupyter Book.
+This interactive textbook is built by Jupyter Book. Some contents of this course was inspired by the Materials Informatics courses offered by [Prof. Chris J. Pickard](https://www.msm.cam.ac.uk/people/pickard) and [Prof. Taylor D. Sparks](https://faculty.utah.edu/u0203991-Taylor_D._Sparks/hm/index.hml).
