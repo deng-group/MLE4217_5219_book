@@ -17,6 +17,9 @@ chapters:
   - file: orientation/programming
 - file: computer/intro
   sections:
+  - file: computer/history
   - file: computer/hardware
-  - file: computer/software
+  - file: computer/performance
   - file: computer/hpc
+  - file: computer/software
+  - file: computer/git_examples
