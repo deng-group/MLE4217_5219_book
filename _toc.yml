@@ -15,8 +15,11 @@ chapters:
   - file: orientation/github
   - file: orientation/setup
   - file: orientation/programming
-# - file: computer/intro
-#   sections:
-#   - file: computer/hardware
-#   - file: computer/software
-#   - file: computer/hpc
+- file: computer/intro
+  sections:
+  - file: computer/history
+  - file: computer/hardware
+  - file: computer/performance
+  - file: computer/hpc
+  - file: computer/software
+  - file: computer/git_examples
