@@ -1,6 +1,6 @@
 # Week 2: Computer and Computation
-```{image} ../figures/computer_title.jpeg
-:width: 50%
+```{image} ../figures/computer_title.jpg
+:width: 100%
 :align: center
 ```
 ## Slides
