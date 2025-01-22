@@ -262,8 +262,9 @@ After working on different branches, you may need to merge the changes from one 
     ```
 ```
 ````
-### Comparison Between `git pull`, `git rebase`, and `git merge` when Working with Branches
 
+```{admonition} Comparison Between git pull, rebase, and merge
+:class: tip, dropdown
 When working with branches in Git, you have several options to integrate changes from one branch into another. The three most common commands are `git pull`, `git rebase`, and `git merge`. Each command has its own use case and behavior.
 
 | Command      | Usage                          | Pros                                      | Cons                                      | When to Use                              |
@@ -276,7 +277,7 @@ When working with branches in Git, you have several options to integrate changes
 |              |                                | Easier to understand context of changes   | May require resolving merge conflicts     |                                          |
 
 Choosing the right command depends on your workflow and the project's requirements. Understanding the differences and use cases will help you manage your branches more effectively.
-
+```
 
 ## Resolve Merge Conflicts
 When you merge branches with conflicting changes, you may encounter merge conflicts. Merge conflicts occur when Git cannot automatically merge the changes and requires manual intervention to resolve the conflicts. You can resolve merge conflicts in VS Code or using the command line.
