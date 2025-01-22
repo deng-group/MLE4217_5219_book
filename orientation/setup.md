@@ -20,7 +20,30 @@ Here's how you can get started:
 xcode-select --install
 ```
 
-4. (**For Windows only**) Install [Visual Studio C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/). **This will download a few GB data. You can do this after you go home!** If you encountered error during the installation of some Python packages (likely `spglib`), you should install this. Also make sure you are in the administrator previledge during installation process of this python package.
+```{admonition} (For macOS only) Terminal app
+:class: info
+To open Terminal on macOS, press `Cmd+Space` to open Spotlight Search, type `Terminal`, and press `Enter`.
+```
+
+4. (**For Windows only**) Install [Visual Studio C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/). **This will download a few GB data. You can do this after you go home!**
+
+```{admonition} (For Windows only) Install Visual Studio C++ build tools 
+:class: tip
+1. Visit the [Visual Studio C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) website.
+2. Click on the "Download Visual Studio" button.
+3. Run the downloaded installer and follow the on-screen instructions.
+4. Select the "Desktop development with C++" workload during installation.
+5. Make sure to install the "MSVC v142 - VS 2019 C++ x64/x86 build tools" or other higher version component.
+6. After installation, restart your computer to apply the changes.
+```
+
+```{admonition} (For Windows only) If **spglib** installation failed
+:class: warning
+If you encountered an error during the installation of the `pymatgen` package, complaining some error about the `spglib`, you may need to install the Visual Studio C++ build tools. This package is a dependency of `pymatgen`. Follow the instructions above to install the Visual Studio C++ build tools, and then try installing the `spglib` package again.
+
+You might also need to open the Anaconda Prompt in administrator mode to try to install the `spglib` package successfully. To do this, right-click on the Anaconda Prompt shortcut and select "Run as administrator." Then, try installing the `spglib` package using `pip install spglib`.
+```
+
 
 Visual Studio Code offers a convenient file explorer panel for easy script navigation and access. You can also launch an integrated terminal using "Terminal > New Terminal" for seamless coding workflows.
 
