@@ -1,6 +1,4 @@
 # Practical: Version Control System
-In this practical, you will learn how to use Git with Visual Studio Code (VS Code) to manage your project files and collaborate with others. 
-## Summary and Goal
 
 In this practical, you will gain hands-on experience with Git, a powerful version control system, and learn how to integrate it with Visual Studio Code (VS Code). Both VS Code and equivalent command-line instructions are provided for each step. By the end of this practical, you will be able to:
 
@@ -10,8 +8,8 @@ In this practical, you will gain hands-on experience with Git, a powerful versio
 - Pull changes from a remote repository
 - Clone a remote repository
 - Create and switch branches
-- View Git history
 - Resolve merge conflicts
+- View Git history
 
 These skills will help you manage your project files efficiently and collaborate effectively with others.
 
@@ -83,7 +81,7 @@ After making changes to your project files, you need to commit and push the chan
 - Save the file.
 
 ### Stage Your Changes
-After you have made changes to your files, you need to stage the changes before committing them. Staged changes mean that you have marked the files to be included in the next commit.
+After you have made changes to your files, you need to stage the changes before committing them. Staged changes mean that you have marked the files to be included in the next commit. You can also just commit all changes at once, see the next step.
 
 ````{tab-set}
 ```{tab-item} VS Code
@@ -148,7 +146,7 @@ After connecting to a remote repository, you can push your changes to the remote
 
 ````{tab-set}
 ```{tab-item} VS Code
-You can just click the synchronize icon in the bottom left corner of the window to push your changes after you commit all changes.
+You can just click the `Sync changes` in the Source Control panel to push your changes if you've commited all changes.
 
 Or you can follow these steps:
 - Click on the `...` icon in the Source Control view.
@@ -186,10 +184,8 @@ If you are working with others on the same project, you may need to pull changes
 If you want to work on an existing project, you can clone a remote repository to your local machine. You can do this in VS Code or using the command line.
 ````{tab-set}
 ```{tab-item} VS Code
-- Open VS Code.
-- Click on `View` in the top menu.
-- Select `Command Palette`.
-- Type `Git: Clone` and select it.
+- Open the Source Control view.
+- Click Clone Repository.
 - Enter the remote repository URL.
 - Choose a folder to clone the repository into.
 ```
@@ -211,7 +207,7 @@ After cloning the repository, you can open it in VS Code and start working on it
 Branches are used to work on different features or versions of a project. You can create and switch branches in VS Code or using the command line.
 
 ### Create a New Branch
-First we will create a new branch named `development`.
+Your current branch is usually `main` or `master`. First we will create a new branch named `development`. On VS Code, you can see the current branch name in the bottom left corner of the window. 
 
 ````{tab-set}
 ```{tab-item} VS Code
@@ -230,6 +226,7 @@ First we will create a new branch named `development`.
 ````
 
 ### Switch Branches
+You can switch between branches to work on different features or versions of a project. In VS Code, you can change the branch by clicking on the branch name in the bottom left corner of the window.
 
 ````{tab-set}
 ```{tab-item} VS Code
@@ -245,12 +242,106 @@ First we will create a new branch named `development`.
     ```
 ```
 ````
-
-## View Git History
+### Merge Branches
+After working on different branches, you may need to merge the changes from one branch to another. You can merge branches in VS Code or using the command line. Make sure you are currently on the branch you want to merge into.
 
 ````{tab-set}
 ```{tab-item} VS Code
-- Install the Git History extension:
+- Click on the branch name in the bottom left corner of the window.
+- Select the branch you want to merge into.
+- Click on the `...` icon next to the branch name.
+- Select `Pull from...`.
+- Choose the branch you want to pull changes from.
+```
+
+```{tab-item} Command Line
+- Open your terminal.
+- Run the following command to pull changes from another branch:
+    ```sh
+    git pull origin branch-name
+    ```
+```
+````
+### Comparison Between `git pull`, `git rebase`, and `git merge` when Working with Branches
+
+When working with branches in Git, you have several options to integrate changes from one branch into another. The three most common commands are `git pull`, `git rebase`, and `git merge`. Each command has its own use case and behavior.
+
+| Command      | Usage                          | Pros                                      | Cons                                      | When to Use                              |
+|--------------|--------------------------------|-------------------------------------------|-------------------------------------------|------------------------------------------|
+| `git pull`   | `git pull origin branch-name`  | Simple and straightforward                | Can create unnecessary merge commits      | Quickly update your branch with changes from a remote repository |
+|              |                                | Automatically fetches and merges changes  | May lead to a cluttered commit history    |                                          |
+| `git rebase` | `git rebase branch-name`       | Creates a cleaner, linear commit history  | More complex and risky, especially with conflicts | When you want a clean, linear commit history and are comfortable resolving conflicts |
+|              |                                | Easier to follow project history          | Rewriting commit history can cause issues |                                          |
+| `git merge`  | `git merge branch-name`        | Preserves complete history of changes     | Can create a cluttered commit history     | When you want to preserve the history of both branches and understand the context of changes |
+|              |                                | Easier to understand context of changes   | May require resolving merge conflicts     |                                          |
+
+Choosing the right command depends on your workflow and the project's requirements. Understanding the differences and use cases will help you manage your branches more effectively.
+
+
+## Resolve Merge Conflicts
+When you merge branches with conflicting changes, you may encounter merge conflicts. Merge conflicts occur when Git cannot automatically merge the changes and requires manual intervention to resolve the conflicts. You can resolve merge conflicts in VS Code or using the command line.
+
+### Example of Resolving a Conflict
+Here we will create a conflict by making changes to the same line in two different branches. Then we will merge the branches and resolve the conflict. Previously we have created the `development` branch. Now we will create a new branch named `feature` and make changes to the `README.md` file.
+
+Add the following content to the `README.md` file in the `feature` branch:
+```markdown
+# MLE5219 Project
+This is the README file for the MLE5219 project.
+This is a new feature added to the README file.
+```
+
+Then commit and push the changes to the `feature` branch. Now switch to the `development` branch and make changes to the `README.md` file:
+```markdown
+# MLE5219 Project
+This is the README file for the MLE5219 project.
+This is a new feature added to the README file in the development branch.
+```
+
+Commit and push the changes to the `development` branch. Now merge the `feature` branch into the `development` branch. You will see a conflict in the `README.md` file. Resolve the conflict by choosing the appropriate changes and commit the resolved file.
+
+````{tab-set}
+```{tab-item} VS Code
+- Merge the branches:
+    - Click on the branch name in the bottom left corner of the window.
+    - Select the branch you want to merge into. Here we use `development`.
+    - Click on the `...` icon next to the branch name.
+    - Select `Pull from...`.
+    - Choose the branch you want to pull changes from. Here we use `feature`.
+- VS Code will show the conflicts in the editor.
+- Choose the appropriate option to resolve the conflict:
+    - Accept Current Change
+    - Accept Incoming Change
+    - Accept Both Changes
+    - Compare Changes
+- After resolving the conflicts, stage the resolved files.
+- Commit the changes.
+```
+
+```{tab-item} Command Line
+- Merge the branches:
+    ```sh
+    git pull origin feature
+    ```
+- Open the conflicting files in your editor.
+- Manually resolve the conflicts.
+- Stage the resolved files:
+    ```sh
+    git add .
+    ```
+- Commit the changes:
+    ```sh
+    git commit -m "Resolved merge conflicts"
+    ```
+```
+````
+
+## View Git History
+You can view the history of commits and changes in your Git repository. You can do this in VS Code or using the command line.
+
+````{tab-set}
+```{tab-item} VS Code
+- Install the Git Graph extension:
     - Go to the Extensions view.
     - Search for `Git History`.
     - Install the extension.
@@ -265,79 +356,17 @@ First we will create a new branch named `development`.
     ```sh
     git log
     ```
+- If you want to see a more detailed log, you can use:
+    ```sh
+    git log --oneline --graph --all
+    ```
 ```
 ````
 
 ```{admonition} Git Graph Extension
 :class: tip
-It is recommended to install the Git Graph extension to see commit and logs.
+It is also recommended to install the Git Graph extension to see commit and logs.
 ```
 
-## Resolve Merge Conflicts
-
-````{tab-set}
-```{tab-item} VS Code
-- If you encounter merge conflicts, VS Code will highlight the conflicts in the editor.
-- Use the provided options to resolve the conflicts.
-- Stage the resolved files.
-- Commit the changes.
-```
-
-```{tab-item} Command Line
-- Open your terminal.
-- Run the following command to merge branches:
-    ```sh
-    git merge branch-name
-    ```
-- If there are conflicts, open the conflicting files in your editor.
-- Manually resolve the conflicts.
-- Stage the resolved files:
-    ```sh
-    git add .
-    ```
-- Commit the changes:
-    ```sh
-    git commit -m "Resolved merge conflicts"
-    ```
-```
-````
-
-### Example of Resolving a Conflict
-
-````{tab-set}
-```{tab-item} VS Code
-- Make conflicting changes in two branches.
-- Merge the branches:
-    ```sh
-    git merge branch-name
-    ```
-- VS Code will show the conflicts in the editor.
-- Choose the appropriate option to resolve the conflict:
-    - Accept Current Change
-    - Accept Incoming Change
-    - Accept Both Changes
-    - Compare Changes
-- After resolving the conflicts, stage the resolved files.
-- Commit the changes.
-```
-
-```{tab-item} Command Line
-- Make conflicting changes in two branches.
-- Merge the branches:
-    ```sh
-    git merge branch-name
-    ```
-- Open the conflicting files in your editor.
-- Manually resolve the conflicts.
-- Stage the resolved files:
-    ```sh
-    git add .
-    ```
-- Commit the changes:
-    ```sh
-    git commit -m "Resolved merge conflicts"
-    ```
-```
-````
 
 That's it! You are now ready to use Git with VS Code.
