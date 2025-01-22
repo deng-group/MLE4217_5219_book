@@ -55,5 +55,8 @@ For more details about the course (like the syllabus, calendar, and rules), chec
 # Navigation
 You can quickly navigate through the sections using the navigation bar on the left side. There is also a search box to help you find any content in this course swiftly. To get started, you can use the navigation bar and begin with the [Orientation](orientation/orientation.md).
 
+# Running the Jupyter Notebook Using Colab
+You can run the Jupyter notebooks in this course using Google Colab. Click the little rocket button if you see it to open the notebook in Colab. You can then run the code cells and interact with the notebook as if it were on your local machine.
+
 # Acknowledgements
 This interactive textbook is built by Jupyter Book. Some contents of this course was inspired by the Materials Informatics courses offered by [Prof. Chris J. Pickard](https://www.msm.cam.ac.uk/people/pickard) and [Prof. Taylor D. Sparks](https://faculty.utah.edu/u0203991-Taylor_D._Sparks/hm/index.hml).
