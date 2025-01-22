@@ -24,7 +24,7 @@ latex:
 launch_buttons:
   notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
   colab_url: "https://colab.research.google.com"
-  thebe: true
+  # thebe: true
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
