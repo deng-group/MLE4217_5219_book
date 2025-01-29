@@ -1,4 +1,4 @@
-# Week 1: Orientation
+# Orientation
 ```{image} ../figures/orientation_title.jpg
 ---
 width: 100%

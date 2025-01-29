@@ -24,3 +24,6 @@ chapters:
   - file: computer/software
   - file: computer/git_examples
   - file: computer/scaling
+- file: database/index
+  sections:
+  - file: database/database

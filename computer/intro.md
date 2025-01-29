@@ -1,4 +1,4 @@
-# Week 2: Computer and Computation
+# Computer and Computation
 ```{image} ../figures/computer_title.jpg
 :width: 100%
 :align: center
