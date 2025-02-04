@@ -15,7 +15,7 @@ Lecture video will be uploaded after the lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
-This week, we will dive into database for materials informatics. We will discuss the importance of data structures and formats in database design, and explore specialized materials databases to perform tasks like querying properties. We will also identify methods for generating materials data and evaluate their appropriateness.
+This week, we will dive into database for materials informatics. We will discuss the importance of data structures and formats in database design, and explore specialized materials databases to perform tasks like querying properties. We will also use Python to call APIs and access materials data from online databases.
 
 ## Learning Objectives
 By the end of this week, you should be able to:
