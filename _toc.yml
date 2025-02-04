@@ -27,5 +27,8 @@ chapters:
 - file: database/index
   sections:
   - file: database/database
+  - file: database/concepts
+  - file: database/formats
+  - file: database/materials_database
   - file: database/materials_project
   - file: database/bulk_modulus
