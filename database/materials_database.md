@@ -33,3 +33,19 @@ The [Materials Project](https://next-gen.materialsproject.org/) is a comprehensi
 
 ### AFLOWLIB
 The [AFLOWLIB](https://aflowlib.org/) database is a high-throughput computational materials database that contains data on the electronic, structural, and thermodynamic properties of materials. It is developed and maintained by researchers at Duke University and other institutions. AFLOW provides open access to materials data generated from first-principles calculations, allowing researchers to explore and analyze the properties of materials at a large scale. The database is continuously updated with new data and features, making it a valuable resource for materials informatics and materials design.
+
+## Materials Selection
+```{figure} ../figures/materials_database.png
+---
+width: 80%
+name: directive-fig
+---
+Ashby plot showing the Young's modulus vs. density for various materials. Source: https://en.wikipedia.org/wiki/Material_selection#/media/File:Material-comparison--strength-vs-density_plain.svg
+```
+When selecting materials for a specific application, the primary objective is to find the best balance between performance, cost, and other constraints. This involves a thorough evaluation of various material properties to determine which material will provide the optimal solution for the intended use.
+
+One effective tool for this evaluation is the Ashby plot, named after its developer Michael Ashby. An Ashby plot is a graphical method that allows engineers and scientists to visualize and compare different material properties. By plotting these properties on a graph, it becomes easier to identify which materials meet the desired criteria.
+
+For example, if you are designing a component that requires specific mechanical properties, you might use an Ashby plot to compare materials based on their Young's modulus and density. The plot would help you visualize which materials offer the best combination of stiffness and lightness. By examining the Young's modulus vs. density plot, you can quickly identify materials that provide the desired mechanical performance while keeping the component lightweight, making it easier to narrow down your choices.
+
+In addition to performance and cost, other factors such as availability, environmental impact, and manufacturability may also play a crucial role in material selection. By considering all these factors and using tools like the Ashby plot, you can make informed decisions that lead to the best possible material choice for your application.
