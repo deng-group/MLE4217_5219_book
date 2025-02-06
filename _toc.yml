@@ -32,3 +32,4 @@ chapters:
   - file: database/materials_database
   - file: database/materials_project
   - file: database/bulk_modulus
+- file: atomistic_structure_I/index
