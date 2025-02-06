@@ -35,7 +35,7 @@ The [Materials Project](https://next-gen.materialsproject.org/) is a comprehensi
 The [AFLOWLIB](https://aflowlib.org/) database is a high-throughput computational materials database that contains data on the electronic, structural, and thermodynamic properties of materials. It is developed and maintained by researchers at Duke University and other institutions. AFLOW provides open access to materials data generated from first-principles calculations, allowing researchers to explore and analyze the properties of materials at a large scale. The database is continuously updated with new data and features, making it a valuable resource for materials informatics and materials design.
 
 ## Materials Selection
-```{figure} ../figures/materials_database.png
+```{figure} ../figures/ashby_plot.png
 ---
 width: 80%
 name: directive-fig
