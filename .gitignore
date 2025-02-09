@@ -2,3 +2,4 @@ _build
 .DS_Store
 Thumbs.db
 *.json
+atomistic_structure_I/Si.cif

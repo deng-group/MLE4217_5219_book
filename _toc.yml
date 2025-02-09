@@ -33,3 +33,5 @@ chapters:
   - file: database/materials_project
   - file: database/bulk_modulus
 - file: atomistic_structure_I/index
+  sections:
+  - file: atomistic_structure_I/crystal_structure
