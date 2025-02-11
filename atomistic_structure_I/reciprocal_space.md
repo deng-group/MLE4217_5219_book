@@ -11,7 +11,7 @@ $
 \mathbf{a}^* = \frac{2\pi (\mathbf{b} \times \mathbf{c})}{\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})}
 $
 
-The reciprocal lattice is important because it simplifies the analysis of wave diffraction and electronic band structure in crystals. It is particularly useful for understanding X-ray diffraction patterns, which help determine the atomic structure of crystals. Bragg's law, which describes the condition for constructive interference, can be expressed using reciprocal lattice vectors.
+The reciprocal lattice is important because it simplifies the analysis of wave diffraction and electronic band structure in crystals. By considering the periodicity of the crystal lattice, the reciprocal space allows for a more straightforward interpretation of diffraction patterns and electronic properties. It is particularly useful for understanding X-ray diffraction patterns, which help determine the atomic structure of crystals. Bragg's law, which describes the condition for constructive interference, can be expressed using reciprocal lattice vectors.
 
 Applications of the reciprocal lattice include:
 
@@ -20,6 +20,13 @@ Applications of the reciprocal lattice include:
 - Solid-State Physics: Studying electronic band structures and phonon dispersion relations.
 
 ## Brillouin Zone
+```{figure} ../figures/brillouin_zone.png
+---
+width: 100%
+name: directive-fig
+---
+Weigner-Seitz cell in reciprocal space and the first Brillouin zone of an FCC lattice.
+```
 The Brillouin zone is a uniquely defined primitive cell in reciprocal space. It is the Wigner-Seitz cell of the reciprocal lattice and is constructed by drawing perpendicular bisectors to the reciprocal lattice vectors from the origin. The first Brillouin zone contains all the unique wave vectors that can be used to describe the periodicity of the crystal.
 
 In a three-dimensional crystal, the Brillouin zone is a polyhedron, and its shape depends on the symmetry of the crystal lattice. For example, in a simple cubic lattice, the first Brillouin zone is a cube, while in a face-centered cubic lattice, it is a truncated octahedron.

@@ -30,6 +30,14 @@ Crystal directions are defined by their indices [uvw], which represent the direc
 
 A group of directions that are equivalent due to the crystal's symmetry is called a direction family \<uvw\>. For example, the [100], [010], and [001] directions are all part of the <100> direction family.
 
+```{figure} ../figures/miller_indices.png
+---
+width: 80%
+name: directive-fig
+---
+An illustration of crystal directions and planes using the Miller indices notation.
+```
+
 A set of crystallographic planes can be defined by their Miller indices (hkl), which are reciprocals of the intercepts of the plane with the unit cell axes. For a plane with intercepts $x$, $y$, and $z$ along the lattice vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ respectively:
 
 $h = \frac{a}{x}, k = \frac{b}{y}, l = \frac{c}{z}$
@@ -62,10 +70,25 @@ Each **Bravais lattice** represents a distinct 3D periodic arrangement of points
 
 
 ## Primitive vs Conventional Unit Cells
-
+```{figure} ../figures/primitive_cell.png
+---
+width: 60%
+name: directive-fig
+---
+Primitive cell are not unique and can be chosen in different ways. The figure shows three different primitive cells for a lattice.
+```
 - The primitive unit cell contains exactly one lattice point per cell and has the smallest possible volume. While it is mathematically elegant, it often doesn't clearly show the crystal's symmetry. In crystallographic notation, it is denoted by 'P'.
 
 - The conventional unit cell may contain more than one lattice point and is larger than the primitive cell. It better displays the crystal's symmetry and is commonly used in crystallography. Conventional unit cells can be body-centered (denoted as I), face-centered (F), or base-centered (A,B,C).
 
 As an illustration, consider a face-centered cubic (FCC) structure. In this case, the conventional unit cell contains 4 lattice points, while the primitive unit cell contains only 1 lattice point. This demonstrates how conventional cells, though larger, can better represent the structural symmetry of the crystal.
 
+## Crystal Structure
+```{figure} ../figures/motif.png
+---
+width: 80%
+name: directive-fig
+---
+Schematic of a crystal structure with a lattice and motif using a face-centered cubic (FCC) ZnS example. Motif atoms are highlighted in dashed circle.
+```
+The crystal structure of a material is defined by the combination of a lattice and a motif. The lattice is a regular, repeating arrangement of points in space, while the motif, or basis, is a set of atoms associated with each lattice point. By placing the motif at every lattice point, we can generate the entire crystal structure. Atoms tend to pack closely together when forming a crystal, minimizing the space between them and creating a dense, orderly structure.
