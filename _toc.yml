@@ -34,4 +34,5 @@ chapters:
   - file: database/bulk_modulus
 - file: atomistic_structure_I/index
   sections:
+  - file: atomistic_structure_I/unit_cell
   - file: atomistic_structure_I/crystal_structure
