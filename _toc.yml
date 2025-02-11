@@ -35,4 +35,7 @@ chapters:
 - file: atomistic_structure_I/index
   sections:
   - file: atomistic_structure_I/unit_cell
+  - file: atomistic_structure_I/symmetry
+  - file: atomistic_structure_I/reciprocal_space
+  - file: atomistic_structure_I/structure_formats
   - file: atomistic_structure_I/crystal_structure
