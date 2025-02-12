@@ -70,6 +70,13 @@ Each **Bravais lattice** represents a distinct 3D periodic arrangement of points
 
 
 ## Primitive vs Conventional Unit Cells
+
+- The primitive unit cell contains exactly one lattice point per cell and has the smallest possible volume. While it is mathematically elegant, it often doesn't clearly show the crystal's symmetry. In crystallographic notation, it is denoted by 'P'.
+
+- The conventional unit cell may contain more than one lattice point and is larger than the primitive cell. It better displays the crystal's symmetry and is commonly used in crystallography. Conventional unit cells can be body-centered (denoted as I), face-centered (F), or base-centered (A,B,C).
+
+As an illustration, consider a face-centered cubic (FCC) structure. In this case, the conventional unit cell contains 4 lattice points, while the primitive unit cell contains only 1 lattice point. This demonstrates how conventional cells, though larger, can better represent the structural symmetry of the crystal.
+
 ```{figure} ../figures/primitive_cell.png
 ---
 width: 60%
@@ -77,11 +84,8 @@ name: directive-fig
 ---
 Primitive cell are not unique and can be chosen in different ways. The figure shows three different primitive cells for a lattice.
 ```
-- The primitive unit cell contains exactly one lattice point per cell and has the smallest possible volume. While it is mathematically elegant, it often doesn't clearly show the crystal's symmetry. In crystallographic notation, it is denoted by 'P'.
 
-- The conventional unit cell may contain more than one lattice point and is larger than the primitive cell. It better displays the crystal's symmetry and is commonly used in crystallography. Conventional unit cells can be body-centered (denoted as I), face-centered (F), or base-centered (A,B,C).
-
-As an illustration, consider a face-centered cubic (FCC) structure. In this case, the conventional unit cell contains 4 lattice points, while the primitive unit cell contains only 1 lattice point. This demonstrates how conventional cells, though larger, can better represent the structural symmetry of the crystal.
+Choosing a primitive unit cell is not unique, and different choices can be made based on the crystal structure's symmetry. Niggli reduction is a method to convert a conventional unit cell to a unique primitive unit cell by transforming the lattice vectors to their shortest form. This process simplifies the unit cell representation and makes it easier to analyze the crystal structure.
 
 ## Crystal Structure
 ```{figure} ../figures/motif.png
