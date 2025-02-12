@@ -11,6 +11,8 @@ Crystal structure prototypes: FCC, BCC, and HCP.
 ```
 Three common structure prototypes in materials science are the face-centered cubic (FCC), body-centered cubic (BCC), and hexagonal close-packed (HCP) structures. These prototypes represent the fundamental arrangements of atoms in cubic, hexagonal, and close-packed crystal structures, respectively.
 
+FCC and HPC structures are close-packed structures, with the FCC structure having atoms at the corners and face centers of a cube, while the HCP structure has atoms at the corners and centers of the top and bottom faces of a hexagonal prism. Their packing efficiency is 74%. The BCC structure has atoms at the corners and the center of a cube.
+
 ## Rocksalt and CsCl Structures
 ```{figure} ../figures/prototypes_2.png
 ---
