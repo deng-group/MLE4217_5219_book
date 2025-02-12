@@ -40,3 +40,4 @@ chapters:
   - file: atomistic_structure_I/reciprocal_space
   - file: atomistic_structure_I/structure_formats
   - file: atomistic_structure_I/crystal_structure
+  - file: atomistic_structure_I/vesta
