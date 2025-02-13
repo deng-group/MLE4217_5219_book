@@ -41,3 +41,6 @@ chapters:
   - file: atomistic_structure_I/structure_formats
   - file: atomistic_structure_I/crystal_structure
   - file: atomistic_structure_I/vesta
+- file: atomistic_structure_II/index
+  sections:
+  - file: atomistic_structure_II/defects_interface
