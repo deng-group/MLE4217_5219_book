@@ -7,7 +7,7 @@ name: directive-fig
 ```
 
 ## Slides
-<iframe src="ttps://docs.google.com/presentation/d/e/2PACX-1vSucxRVFRQXWqxnWpI-JTbKwqgMkATdYlTnZI0AgfBPahmoNdtHCkoDAcHFIXRU-ihBlj5K36OXWiOw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSucxRVFRQXWqxnWpI-JTbKwqgMkATdYlTnZI0AgfBPahmoNdtHCkoDAcHFIXRU-ihBlj5K36OXWiOw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
 The recording will be available after the lecture.
