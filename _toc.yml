@@ -43,4 +43,6 @@ chapters:
   - file: atomistic_structure_I/vesta
 - file: atomistic_structure_II/index
   sections:
-  - file: atomistic_structure_II/defects_interface
+  - file: atomistic_structure_II/defect
+  - file: atomistic_structure_II/advanced_structure
+
