@@ -40,9 +40,13 @@ chapters:
   - file: atomistic_structure_I/reciprocal_space
   - file: atomistic_structure_I/structure_formats
   - file: atomistic_structure_I/crystal_structure
-  - file: atomistic_structure_I/vesta
+  
 - file: atomistic_structure_II/index
   sections:
+  - file: atomistic_structure_II/site_properties
   - file: atomistic_structure_II/defect
+  - file: atomistic_structure_II/interface
+  - file: atomistic_structure_II/noncrystalline_materials
+  - file: atomistic_structure_II/vesta
   - file: atomistic_structure_II/advanced_structure
 
