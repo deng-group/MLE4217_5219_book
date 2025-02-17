@@ -13,8 +13,8 @@
 - Provide students some overview of the cutting edge development of the computational materials science including machine learning potentials
 - Provide students basic knowledge to analyze manuscripts containing computational simulations
 ## Organization
-- Three hours in person lecture per week
-- Three assignments (25% * 3) + quiz (25%)
+- Three hours in person lecture per week including instructions and practicals.
+- Three assignments (25% * 3) + five quiz (5% * 5)
 
 ## Grading
 Grading is based on the assignments and in class quiz. There are no exams.
