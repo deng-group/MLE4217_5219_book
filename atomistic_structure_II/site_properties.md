@@ -3,65 +3,119 @@ In crystallography, a site property is a fundamental concept that describes the 
 
 The detailed understanding of a site property enables scientists and engineers to interpret how local differences at the atomic level aggregate to form complex material behaviors.
 
+## Positions
+
+Understanding coordinate systems is fundamental in crystallography as they provide a framework for describing atomic positions within a crystal.
+
+### Fractional Coordinates (u, v, w)
+
+Fractional coordinates are used to express the positions of atoms relative to the unit cell dimensions. Each coordinate (u, v, w) is a fraction of the unit cell's edge lengths along the crystallographic axes. This system is particularly useful for describing periodic structures because it inherently accounts for the repeating nature of the crystal lattice. For example, a fractional coordinate of (0.5, 0.5, 0.5) indicates that the atom is located at the center of the unit cell.
+
+### Cartesian Coordinates (x, y, z)
+
+Cartesian coordinates, on the other hand, describe atomic positions in absolute terms, typically measured in units such as Ångströms (Å) or nanometers (nm). These coordinates are more intuitive for visualizing molecular structures and for performing calculations that require precise distances and angles. In this system, the position of an atom is given by its distance along the x, y, and z axes from a defined origin point.
+
+### Conversion Between Coordinate Systems
+
+Converting between fractional and Cartesian coordinates is a crucial skill in crystallography. This conversion is performed using the lattice vectors of the crystal, which define the unit cell dimensions and angles. The relationship between the two coordinate systems can be expressed mathematically, allowing scientists to switch between the abstract periodicity of fractional coordinates and the tangible geometries of Cartesian coordinates.
+
+For example, if the lattice vectors are defined as **a**, **b**, and **c**, the conversion from fractional (u, v, w) to Cartesian (x, y, z) coordinates can be performed using the following equation:
+
+$
+\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} a_{x} & b_{x} & c_{x} \\ a_{y} & b_{y} & c_{y} \\ a_{z} & b_{z} & c_{z} \end{bmatrix} \begin{bmatrix} u \\ v \\ w \end{bmatrix}
+$
+
+
+where: (x, y, z) are the Cartesian coordinates, (u, v, w) are the fractional coordinates, $a_x, a_y, a_z$ are the components of the lattice vector **a**, $b_x, b_y, b_z$ are the components of the lattice vector **b**, $c_x, c_y, c_z$ are the components of the lattice vector **c**.
+
+Conversely, to convert from Cartesian to fractional coordinates, the inverse of the lattice vector matrix is used. This conversion is essential for linking theoretical models with experimental data, enabling a comprehensive understanding of crystal structures.
+
 ## Wyckoff Positions
 
-Building on the idea of individual atomic characteristics, Wyckoff positions offer a systematic way to describe locations of atoms within a crystal's unit cell. Named after crystallographer Georg Hermann Wyckoff, these positions are defined by the crystal's inherent symmetry. Think of the crystal as a dance performance, where symmetry sets each atom’s position on the "dance floor."
 
-Wyckoff positions not only locate atoms but also guide the understanding of how atoms collectively adhere to symmetry rules, setting the stage for further discussions on coordinate systems and multiplicity.
+Wyckoff positions provide a systematic way to describe the locations of atoms within a crystal's unit cell, considering the crystal's inherent symmetry. Named after crystallographer Ralph Wyckoff, these positions are specific points in space that are equivalent due to the symmetry operations of the space group. Each Wyckoff position is denoted by a letter (e.g., *a*, *b*, *c*, ...) and has an associated multiplicity and site symmetry.
 
-### Fractional and Cartesian Coordinates
+- Multiplicity: This indicates the number of equivalent positions within the unit cell for a given Wyckoff position. For example, a Wyckoff position labeled as 4*e* means there are four equivalent locations of that type in the unit cell.
+- Site Symmetry: This describes the point group symmetry of the Wyckoff position itself. It represents the symmetry operations that leave the atomic site invariant. Site symmetry is labeled using Hermann-Mauguin notation (e.g., -1, 2, *m*, 2/*m*, etc.). A site with -1 symmetry has only an inversion center.
 
-Wyckoff positions can be expressed using two types of coordinate systems, each offering unique insights into atomic positioning:
+In essence, Wyckoff positions tell you where atoms can be located in the unit cell while still maintaining the overall symmetry of the crystal structure.
 
-- Fractional Coordinates: These dimensionless values describe an atom's location as a fraction of the unit cell dimensions, much like identifying a location by percentage within a region. For instance, an atom at (0.5, 0.5, 0.5) occupies a central, balanced position.
-  
-- Cartesian Coordinates: Providing the exact location in space with units like angstroms (Å), Cartesian coordinates offer a more tangible perspective, as if measuring the distance with a ruler.
+### Finding Wyckoff Positions
 
-The choice between fractional and Cartesian systems reflects the need for either theoretical periodicity or practical visualization, linking the abstract symmetry concepts with concrete geometries.
+Information about Wyckoff positions for each space group can be found in the International Tables for Crystallography, Volume A, or online resources such as the Bilbao Crystallographic Server ([https://www.cryst.ehu.es/](https://www.cryst.ehu.es/) under WYCKPOS). These resources provide detailed information about the coordinates, multiplicity, and site symmetry of each Wyckoff position.
 
-## Multiplicity
+### Example
 
-With positions defined and localized using coordinates, multiplicity comes into play to quantify repetition. Multiplicity refers to the number of times an equivalent atomic site appears in a unit cell because of symmetry. In many ways, it is similar to recognizing repeating tiles in a mosaic; each repetition reinforces the overall pattern and influences the material's macroscopic properties.
+```{figure} ../figures/wyckoff.png
+---
+width: 50%
+name: directive-fig
+---
+Wyckoff positions of $P2_1/c$ space group.
+```
+Imagine a simple cubic crystal structure with space group $P2_1/c$ as shown in above picture. One possible Wyckoff position is 4e at (0,0,0), and (0,0.5,0.5). This means there are two positions per unit cell at the origin.
 
-This repetition, governed by the spatial arrangement of atoms, naturally leads us to further explore the role of symmetry in a crystal.
-
-## Symmetry
-
-Symmetry is the cornerstone that connects all sections discussed so far. It explains how atomic sites are arranged relative to one another and how these arrangements condition material behaviors. For example, high symmetry might lead to uniform mechanical or electronic responses, while asymmetry introduces variability and anisotropy.
-
-The seamless integration of symmetry with site properties, Wyckoff positions, and multiplicity lays the foundation for understanding how specific atomic configurations govern the overall properties of a material.
 
 ## Occupation
 
-Moving beyond mere position and arrangement, site occupation identifies which atoms or ions actually reside in those designated positions. The occupation of sites may vary, with some being partially filled or hosting a mixture of different species. This concept can be likened to a concert hall where every seat may not be occupied; the pattern of occupancy directly affects the performance.
+```{figure} ../figures/cuau_disorder.png
+---
+width: 50%
+name: directive-fig
+---
+Disordered atomic arrangement in a $\rm{Cu_{0.8}Au_{0.2}}$ alloy.
+```
 
-Linking the idea of occupation with previously explained concepts helps in comprehending how variations in the atomic ensemble contribute to properties such as conductivity and reactivity.
+Beyond the defined positions within a crystal structure, it's crucial to consider which atoms or ions actually occupy those sites. This is described by the site occupation. A site can be fully occupied by a single type of atom, partially occupied, or even co-occupied by multiple components.
 
-## Coordination Number
+The occupation value ranges from 0 to 1. An occupation of 0 indicates a vacancy, meaning the site is empty. Conversely, an occupation of 1 signifies that the site is fully occupied by the designated atom type. Partial occupation, with values between 0 and 1, suggests that the site is occupied by that atom type only a fraction of the time. In cases of co-occupation, multiple atom types may occupy the same site, each with its own occupation probability that contributes to the total occupation of 1.
 
-Expanding on the local environment around an occupied site, the coordination number details how many immediate neighbors surround an atom. This direct count is pivotal in understanding the strength and nature of atomic bonds. 
+Understanding site occupation is particularly important when dealing with structural disorder, such as in alloys. For example, high-entropy alloys (HEAs) exhibit exceptional mechanical, thermal, and magnetic properties due to their disordered structures. In these materials, different elements randomly occupy the available sites, leading to unique properties.
 
-The concept of a coordination number connects naturally with the earlier discussion on occupation and symmetry, indicating how the density of neighboring atoms reinforces bonding and material stability. In many instances, determining local neighbor relationships may involve computational methods like Kd-tree algorithms or Voronoi tessellation.
+Computational approaches often require considering different possible arrangements of atoms on partially or co-occupied sites. This involves generating and evaluating various permutations of atomic ordering to accurately model the material's behavior.
 
-## Thermal Displacement Parameters
+Experimentally, site occupation can be determined through techniques like X-ray diffraction (XRD) crystal structure refinement, which provides information about the atomic arrangement and occupancy within the crystal lattice.
 
-Even within a rigid crystal framework, atoms are not static. Thermal displacement parameters quantify the vibrational movement of atoms around their equilibrium positions, signifying an essential dynamic aspect of site properties. As temperature increases, the vibrational motion amplifies, influencing properties such as thermal expansion.
+## Atomic Displacement Parameters
 
-This dynamic behavior is critical in bridging static structural properties with real-world performance under varying thermal conditions, further linking microscopic properties with macroscopic observable effects.
+Atomic Displacement Parameters, also known as Debye-Waller factors, provide a measure of the deviation of atoms from their ideal positions within a crystal structure. This deviation is primarily due to thermal vibrations. Even in a seemingly rigid crystal, atoms are not static; they are constantly in motion, vibrating around their equilibrium positions. The extent of this vibrational movement is quantified by thermal displacement parameters, reflecting a crucial dynamic aspect of site properties. Larger thermal displacement parameters indicate greater atomic displacement.
+
+Atomic Displacement Parameters can be either isotropic or anisotropic. Isotropic parameters, denoted as B, describe the displacement as equal in all directions. Anisotropic parameters, denoted as U, account for the fact that atomic displacement may vary depending on the direction. These anisotropic parameters are represented by a $3\times3$ tensor, capturing the directional dependence of the atomic vibrations.
+
+As temperature increases, the vibrational motion of atoms amplifies, influencing properties such as thermal expansion. This dynamic behavior is critical in linking static structural properties with real-world performance under varying thermal conditions, further connecting microscopic properties with macroscopic observable effects. Understanding thermal displacement parameters is essential for accurately modeling and predicting material behavior, especially at different temperatures.
 
 ### Thermal Ellipsoid
 
-To visualize thermal displacement, the thermal ellipsoid represents the probable range and direction of an atom's vibrations. It serves as an intuitive model that mirrors how thermal energy affects atomic positions. This conceptual tool deepens the understanding of thermal properties, linking the abstract numerical parameters to a tangible graphical representation.
+```{figure} ../figures/adp.png
+---
+width: 50%
+name: directive-fig
+---
+Thermal ellipsoids in $\rm{BiI3}$. The principal axes of the ellipsoid represent the directions of maximum and minimum displacement.
+```
 
-## Magnetic Moments
+To visualize thermal displacement, the thermal ellipsoid represents the probable range and direction of an atom's vibrations. It serves as an intuitive model that mirrors how thermal energy affects atomic positions. The size and shape of the ellipsoid reflect the uncertainty in the atom's position due to thermal motion. Larger ellipsoids indicate greater uncertainty and, by extension, higher thermal displacement.
 
-Another layer of complexity in site properties emerges from magnetic moments. These are intrinsic attributes arising from electron movements and spins, and they dictate how sites interact magnetically. The alignment of magnetic moments — whether in unison as in ferromagnetism or oppositely as in antiferromagnetism — radically alters material behavior.
+## Coordination Number
 
-The discussion of magnetic moments ties back to the dynamics and local environments discussed earlier, offering a comprehensive picture where both static and dynamic properties meet in determining the material's overall character.
+```{figure} ../figures/cn_voronoi.png
+---
+width: 100%
+name: directive-fig
+---
+Local environment: Coordination number and Voronoi tessellation.
+```
 
-## Charge
+The coordination number quantifies the number of atoms directly bonded to a central atom. It provides valuable insights into the local environment and bonding characteristics of a particular site within a crystal structure. A higher coordination number generally indicates a greater number of bonds and potentially stronger interactions.
 
-Charge plays a crucial role in defining a site’s properties. The charge distribution at atomic sites impacts electron transport and chemical reactivity. An imbalance in the distribution of charge, much like a seesaw tilting, can influence the entire material's behavior.
+To determine the coordination number, one must identify the nearest neighbor (NN) atoms surrounding the central atom. Efficient algorithms, such as KD-tree searches (with a time complexity of O(log N)), can be employed to quickly locate these neighboring sites.
 
-## Interatomic Forces
-Interatomic forces are the glue that holds a crystal together. These forces, which can be of various types like ionic, covalent, or van der Waals, determine the stability and mechanical properties of a material. Understanding the interplay of these forces at different sites is essential for predicting material responses under stress or external stimuli.
+Another powerful technique for characterizing the local environment is Voronoi tessellation. This method constructs a Voronoi diagram by drawing perpendicular bisecting planes (or lines in 2D) between the central atom and all its neighbors. The resulting Voronoi cell represents the space closer to the central atom than to any other atom, effectively defining its local environment.
+
+The coordination number, in conjunction with techniques like KD-tree searches and Voronoi tessellation, provides a comprehensive understanding of the atomic arrangement and bonding environment around a specific site. 
+
+## Other Site Properties
+There are several other site properties that play a significant role in determining the behavior of materials:
+- Magnetic Moments: Intrinsic attributes arising from electron movements and spins, dictating how sites interact magnetically.
+- Charge: Charge distribution at atomic sites impacts electron transport and chemical reactivity.
+- Interatomic Forces: Determine the stability and mechanical properties of a material.

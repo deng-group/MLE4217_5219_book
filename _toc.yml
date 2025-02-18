@@ -43,6 +43,7 @@ chapters:
   
 - file: atomistic_structure_II/index
   sections:
+  - file: atomistic_structure_II/smiles_and_graphs
   - file: atomistic_structure_II/site_properties
   - file: atomistic_structure_II/noncrystalline_materials
   - file: atomistic_structure_II/defect

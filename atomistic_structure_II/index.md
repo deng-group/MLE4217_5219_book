@@ -15,16 +15,19 @@ The recording will be available after the lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
-This week, we delve deeper into the fundamentals of atomistic structure. We begin with an exploration of the supercell concept, which lays the groundwork for modeling periodic arrangements within crystalline materials. The discussion then shifts to the use of Cartesian and fractional coordinates—two essential frameworks for describing atomic positions and lattice dynamics.
+This week, we continue our exploration of atomistic structure, building upon the foundational concepts we've already covered. Our journey begins with an introduction to SMILES and graph representations of molecules, powerful tools for describing and manipulating chemical structures.
 
-Another topic is Wyckoff positions, highlighting their significance in understanding crystallographic symmetry. In addition, we investigate various types of structural imperfections, including defects, interfaces, and grain boundaries, and discuss their profound impact on material properties. Finally, we round off the chapter with an overview of non-crystalline materials, contrasting their disordered atomic arrangements with the ordered structures of crystals.
+Next, we'll investigate site properties within a material's structure. Understanding the characteristics of individual atomic sites is crucial for predicting a material's behavior.
 
-This comprehensive introduction sets the stage for a deeper understanding of the structural aspects that govern material behavior.
+We will then explore structure descriptors tailored for non-crystalline (amorphous) materials, which lack the long-range order of crystals. Describing these structures requires different approaches, and we'll introduce some of the key techniques.
+
+Finally, we'll introduce the fundamental concepts of defects and interfaces in materials. Defects are deviations from perfect crystal structure, while interfaces are boundaries between different materials or regions within a material. Both play a critical role in determining material properties.
+
 
 ## Learning Objectives
 By the end of this week, you should be able to:
-- Understand the supercell concept and its role in modeling periodic structures.
-- Differentiate between Cartesian and fractional coordinate systems.
-- Analyze Wyckoff positions and their importance in crystallographic symmetry.
-- Examine various structural imperfections, including defects, interfaces, and grain boundaries.
-- Contrast crystalline and non-crystalline material structures.
+
+- Understand and utilize SMILES notation and graph representations to describe molecules.
+- Analyze and interpret site properties within a material's structure.
+- Apply appropriate structure descriptors for characterizing non-crystalline (amorphous) materials.
+- Explain the fundamental concepts of defects and interfaces in materials and their influence on material properties.

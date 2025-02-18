@@ -3,35 +3,47 @@
 In the previous chapter, we discussed the ideal atomic arrangements in crystalline materials. However, in reality, perfect crystals are rare. Most materials contain various types of structural imperfections, such as defects, interfaces, and grain boundaries. These imperfections can significantly influence material properties, including mechanical strength, electrical conductivity, and thermal stability.
 
 ## Point Defects
-Point defects are the simplest type of structural imperfections in crystalline materials. They involve the presence of atoms at lattice sites that are different from the ideal atomic arrangement. Point defects can be classified into three main categories: vacancies, interstitials, and substitutional defects.
 
-### Charged Defect vs Neutral Defect
-Charged defects are point defects that introduce an electrical charge into the crystal lattice. These defects can affect the material's electronic properties, such as conductivity and band structure. Neutral defects, on the other hand, do not introduce an electrical charge and have a minimal impact on the material's electronic properties.
+```{figure} ../figures/point_defect.png
+---
+width: 100%
+name: directive-fig
+---
+Various types of point defects in crystalline materials.
+```
 
-### Finite Size Corrections
-Finite size corrections are adjustments made to the calculated properties of defects in materials to account for the finite size of the simulation cell. The standard method is [Freysoldt correction](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.102.016402), which corrects the defect formation energy by considering the interaction between the defect and its periodic images.
+Point defects represent the simplest deviations from the perfect atomic arrangement in a crystalline material. Imagine a perfectly ordered crystal lattice; a point defect is essentially a localized imperfection involving one or a few atoms. These imperfections can significantly influence a material's properties, such as its mechanical strength, electrical conductivity, and optical behavior.
 
-### Vacancies
-A vacancy occurs when an atom is missing from its lattice site. This defect creates a local distortion in the crystal structure, leading to changes in material properties. For example, vacancies can increase the diffusion rate of atoms in a material, affecting its mechanical and thermal properties.
-- Schottky defect: A type of point defect in which oppositely charged ions are missing from their ideal lattice sites.
+We can categorize point defects into several main types: vacancies, interstitials, and substitutional defects.
 
-### Interstitials
-An interstitial defect arises when an atom occupies an interstitial site within the crystal lattice. This defect can introduce strain and alter the electronic properties of the material. Interstitial atoms can also act as impurities, affecting the material's mechanical and electrical behavior.
-- Frendel defect: An interstitial defect in which an atom occupies an interstitial site in the crystal lattice.
+A vacancy is simply a missing atom from its regular lattice site. Think of it as an empty space where an atom should be. The presence of vacancies disrupts the surrounding crystal structure, leading to local distortions and affecting properties like atomic diffusion rates. A classic example is the Schottky defect, where you have a pair of vacancies, one for a cation and one for an anion, maintaining charge neutrality in ionic compounds.
 
-### Antisites
-Antisites are substitutional defects in which an atom occupies a lattice site that is different from its ideal position. This defect can disrupt the crystal structure and lead to changes in material properties. Antisites can affect the material's electronic, optical, and magnetic properties, making them essential for understanding the behavior of complex materials.
+An interstitial defect occurs when an atom occupies a space *between* the regular lattice sites. These interstitial atoms squeeze into the structure, causing strain and potentially altering the material's electronic properties. They can also behave like impurities. A Frenkel defect is a specific type of interstitial defect where an atom has moved from its lattice site to an interstitial site, creating both a vacancy and an interstitial.
 
-## Disordered Structures
-Disordered structures are materials with random atomic arrangements, unlike the ordered structures found in crystals. Disordered materials can exhibit unique properties, such as high flexibility, high surface area, and enhanced reactivity. Understanding the atomic arrangements in disordered materials is crucial for designing new materials with tailored properties.
+Substitutional defects arise when an atom of a *different* element occupies a regular lattice site. These "foreign" atoms can disrupt the crystal structure and change the material's properties. Antisites are a specific type of substitutional defect where an atom occupies the "wrong" lattice site (e.g., in a compound AB, an A atom sits on a B site). Antisites are particularly important in complex materials, influencing electronic, optical, and magnetic characteristics.
 
-### Thermal Disorder
-Thermal disorder refers to the random motion of atoms in a material due to thermal energy. This disorder can lead to changes in material properties, such as thermal expansion, heat capacity, and thermal conductivity. Understanding thermal disorder is essential for predicting the behavior of materials at different temperatures.
+To describe point defects, we often use Kröger–Vink notation. This is a shorthand notation that tells us the type of defect, its location, and its charge relative to the perfect lattice. For example, $V_O^{\cdot\cdot}$ represents an oxygen vacancy with a +2 charge relative to the lattice, $Si_C$ represents a silicon atom sitting on a carbon site (an antisite), $Li_i^{\cdot}$ represents an interstitial lithium atom with a +1 charge, and $V_{Cl}^{'}$ represents a chlorine vacancy with a -1 charge.
 
-### Chemical Disorder
-Chemical disorder arises from the random distribution of different types of atoms in a material. This disorder can affect the material's electronic, magnetic, and optical properties. Chemical disorder is common in complex materials, such as alloys and compounds, and plays a crucial role in determining their behavior.
+It's important to note that point defects can also carry an electrical charge. These charged defects can significantly impact the electronic properties of the material, influencing conductivity and band structure. Defects that don't introduce a net charge are called neutral defects.
 
-An example is the high-entropy alloy (HEA), which contains multiple elements in random atomic arrangements. High-entropy alloys exhibit exceptional mechanical, thermal, and magnetic properties, making them promising materials for various applications.
+Point defects play a crucial role in determining various material properties. For instance, they are essential for creating p-type and n-type semiconductors, and they can enhance the catalytic activity of materials like $CeO_2$ due to the presence of oxygen vacancies ($V_O$).
+
 
 ## Supercell
-Crystal structures have periodicity, which means that the arrangement of atoms repeats itself in space. However, defects can disrupt this periodicity. To model defective structures, we use a supercell—a larger unit cell that contains the defect. By introducing a defect into the supercell, we can study its impact on material properties.
+```{figure} ../figures/supercell.png
+---
+width: 100%
+name: directive-fig
+---
+Construction of a supercell with example of $\rm{TiO_2}$
+```
+
+When we want to use computer simulations to study defects, we often employ a technique that relies on "supercells." Imagine taking the perfect, repeating arrangement of atoms in a crystal and then enlarging it to create a much bigger box – that's essentially a supercell. We then introduce a defect into this supercell, allowing us to investigate how the defect influences the material's properties.
+
+Why do we use supercells? Because they allow us to apply periodic boundary conditions, which are a common feature in many simulation methods. By repeating the supercell in all directions, we can mimic an infinite crystal containing a regular array of defects.
+
+However, there's a catch. The supercell needs to be large enough so that the defect within one supercell doesn't "feel" the presence of its neighboring defects in the surrounding supercells. If the supercell is too small, the artificial interactions between defects can lead to inaccurate results.
+
+Of course, using a larger supercell comes at a cost. The computational effort required for simulations, especially those based on electronic structure methods, increases rapidly with the size of the supercell. These methods often scale as O(N3), where N is the number of atoms, meaning that doubling the supercell size can increase the computational time by a factor of eight!
+
+Another important consideration is that the finite size of the supercell can introduce errors. Because we're simulating a repeating array of defects rather than a single, isolated defect, we need to apply finite size corrections to minimize these errors. One common method for charged defects is the Freysoldt correction, which accounts for the electrostatic interaction between the charged defect and its periodic images in the simulation. Applying such corrections is crucial for accurately calculating defect formation energies and other important properties.
