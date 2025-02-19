@@ -15,19 +15,16 @@ The recording will be available after the lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
-This week, we continue our exploration of atomistic structure, building upon the foundational concepts we've already covered. Our journey begins with an introduction to SMILES and graph representations of molecules, powerful tools for describing and manipulating chemical structures.
+In this chapter, we expand our discussion on atomistic structures by first examining the site properties characterizing crystalline materials. Building on the foundational concepts previously addressed, the focus shifts toward understanding local atomic environments and their influence on overall material behavior.
 
-Next, we'll investigate site properties within a material's structure. Understanding the characteristics of individual atomic sites is crucial for predicting a material's behavior.
+Following this, the chapter delves into the principles of defects and interfaces, emphasizing their critical roles in defining material properties. Defects, which represent deviations from an ideal crystal lattice, and interfaces, which serve as boundaries between distinct material regions, are analyzed in detail to elucidate their effects on mechanical, electrical, and thermal performance.
 
-We will then explore structure descriptors tailored for non-crystalline (amorphous) materials, which lack the long-range order of crystals. Describing these structures requires different approaches, and we'll introduce some of the key techniques.
-
-Finally, we'll introduce the fundamental concepts of defects and interfaces in materials. Defects are deviations from perfect crystal structure, while interfaces are boundaries between different materials or regions within a material. Both play a critical role in determining material properties.
-
+Subsequently, the discussion transitions to the representation of molecular structures and the unique challenges posed by non-crystalline (amorphous) materials. The absence of long-range order in amorphous systems necessitates alternative structure descriptors, and this text introduces several key methodologies for effectively characterizing such disordered materials.
 
 ## Learning Objectives
 By the end of this week, you should be able to:
 
-- Understand and utilize SMILES notation and graph representations to describe molecules.
 - Analyze and interpret site properties within a material's structure.
-- Apply appropriate structure descriptors for characterizing non-crystalline (amorphous) materials.
 - Explain the fundamental concepts of defects and interfaces in materials and their influence on material properties.
+- Understand and utilize SMILES notation and graph representations to describe molecules.
+- Apply appropriate structure descriptors for characterizing non-crystalline (amorphous) materials.

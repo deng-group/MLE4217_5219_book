@@ -1,4 +1,5 @@
-# SMILES and Graphs
+# Molecules
+Molecules can be represented in various ways, each providing different levels of detail and information. In this section, we will explore some common representations of molecules, including molecular formulas, Lewis structures, SMILES notation. We will also introduce the concept of graphs and their relevance to chemistry and materials science.
 
 ## SMILES
 ```{figure} ../figures/smiles.png
