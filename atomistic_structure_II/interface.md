@@ -24,7 +24,7 @@ The interface region represents a transition zone where the properties of the ad
 width: 50%
 name: directive-fig
 ---
-A slab model of  Al (100) with a 10 Å vacuum layer.
+A slab model of  Al (100) with a $10 Å$ vacuum layer.
 ```
 A slab model is a computational technique used to simulate surfaces and interfaces, enabling the study of phenomena like adsorption and catalysis. When constructing a slab model, several key parameters must be carefully considered:
 
