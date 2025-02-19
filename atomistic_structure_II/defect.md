@@ -54,3 +54,15 @@ However, there's a catch. The supercell needs to be large enough so that the def
 Of course, using a larger supercell comes at a cost. The computational effort required for simulations, especially those based on electronic structure methods, increases rapidly with the size of the supercell. These methods often scale as $O(N^3)$, where N is the number of atoms, meaning that doubling the supercell size can increase the computational time by a factor of eight!
 
 Another important consideration is that the finite size of the supercell can introduce errors. Because we're simulating a repeating array of defects rather than a single, isolated defect, we need to apply finite size corrections to minimize these errors. One common method for charged defects is the Freysoldt correction, which accounts for the electrostatic interaction between the charged defect and its periodic images in the simulation. Applying such corrections is crucial for accurately calculating defect formation energies and other important properties.
+
+## Other Defects
+```{figure} ../figures/stacking_fault.png
+---
+width: 100%
+name: directive-fig
+---
+Stacking faults in a crystal structure.
+```
+Beyond point defects, crystalline materials may exhibit a variety of additional imperfections, including dislocations, voids, and stacking faults. Dislocations, which are line defects, play a crucial role in plastic deformation and mechanical behavior. Voids represent small empty spaces within the structure, and stacking faults occur when there is an error in the regular sequence of atomic layers.
+
+Modeling these defects poses significant challenges. Their extended nature and complex interactions require advanced simulation techniques and considerable computational resources. Understanding the behavior of these defects is essential for predicting the performance and failure mechanisms of materials.
