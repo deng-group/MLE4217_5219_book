@@ -1,4 +1,11 @@
 # Defect
+```{figure} ../figures/doping.png
+---
+width: 100%
+name: directive-fig
+---
+Defects contribute to rubies' red hue and emeralds' green coloration, and they are also crucial for enabling superconductivity in YBCO.
+```
 
 In the previous chapter, we discussed the ideal atomic arrangements in crystalline materials. However, in reality, perfect crystals are rare. Most materials contain various types of structural imperfections, such as defects, interfaces, and grain boundaries. These imperfections can significantly influence material properties, including mechanical strength, electrical conductivity, and thermal stability.
 
