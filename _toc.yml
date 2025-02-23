@@ -50,4 +50,6 @@ chapters:
   - file: atomistic_structure_II/interface
   - file: atomistic_structure_II/vesta
   - file: atomistic_structure_II/advanced_structure
+- file: models_and_theories_I/index
+
 
