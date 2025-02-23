@@ -28,9 +28,9 @@ For example, accessing an array element by its index is an operation that takes 
 
 Linear scaling, represented as O(N), occurs when the time required to complete a task grows directly in proportion to the size of the input data. An example of this is iterating through a list or reading a file line by line.
 
-Quadratic scaling, or O($N^2$), happens when the time required grows with the square of the input size. This is common in tasks involving nested loops, such as matrix multiplication or molecular-level simulations.
+Quadratic scaling, or O($N^2$), happens when the time required grows with the square of the input size. This is common in tasks involving nested loops, such as molecular-level simulations.
 
-Polynomial scaling, such as O($N^3$), is seen in more complex operations like matrix diagonalization, matrix inversion, and calculating determinants, which are often encountered in quantum mechanics.
+Polynomial scaling, such as O($N^3$), is seen in more complex operations like matrix multiplication, diagonalization, inversion, and calculating determinants, which are often encountered in quantum mechanics.
 
 Logarithmic scaling, denoted as O(N log N), is typical for algorithms like the Fast Fourier Transform (FFT), which is used in signal processing and other applications.
 
