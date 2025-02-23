@@ -1,4 +1,4 @@
-# Atomistic Structure II
+# Models and Theories I
 ```{image} ../figures/models_and_theories_title.jpeg
 ---
 width: 100%
