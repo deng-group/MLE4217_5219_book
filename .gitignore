@@ -4,3 +4,6 @@ Thumbs.db
 *.json
 atomistic_structure_I/Si.cif
 surface_*.cif
+models_and_theories_I/al.log
+.gitignore
+*.traj
