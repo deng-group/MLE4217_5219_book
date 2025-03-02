@@ -35,7 +35,22 @@ $$
 For solid materials, the stress tensor can be derived from the potential energy function by taking the negative gradient of the potential energy with respect to the atomic positions.
 
 ## Periodic Boundary Conditions
-In solid state materials, the structure has translational symmetry, which means that we can apply a periodic boundary condition to the simulation cell to mimic an infinite system.
+In solid state materials, the structure has translational symmetry, which means that we can apply a periodic boundary condition to the simulation cell to mimic an infinite system. Mathmaticallly, the periodic boundary condition is applied by replicating the simulation cell in all directions, so that atoms that leave the simulation cell re-enter (wrap) from the opposite side. This allows us to simulate the dynamics of the system without the need to model an infinite system.
+
+$$
+\mathbf{r}_{\text{wrapped}}= \mathbf{r} - L \text{round}(\mathbf{r}/{L})
+$$
+
+where $\mathbf{r}_{\text{wrapped}}$ is the wrapped position of the atom, $\mathbf{r}$ is the position of the atom in the simulation cell, $L$ is the length of the simulation cell, and $\text{round}$ is the rounding function.
+
+The wrapped distance between atoms in the simulation cell and the neighboring cells:
+
+$$
+r_{ij} = \mathbf{r}_i - \mathbf{r}_j - L \text{round}\left(\frac{\mathbf{r}_i - \mathbf{r}_j}{L}\right)
+$$
+
+where $r_{ij}$ is the distance between atoms $i$ and $j$, $\mathbf{r}_i$ and $\mathbf{r}_j$ are the positions of atoms $i$ and $j$, and $\mathbf{L}$ is the length of the simulation cell.
+
 
 ## Ewald Summation
 The electrostatic potential energy term $U_{\text{elec}}$ in the potential energy function is long-ranged and can be difficult to calculate accurately in periodic systems. The Ewald summation is a method for calculating the electrostatic potential energy between charged particles in a periodic system. The Ewald summation is based on the idea of splitting the electrostatic potential into short-range and long-range components, and calculating each component separately. 

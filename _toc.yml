@@ -55,6 +55,7 @@ chapters:
   - file: models_and_theories_I/modelling
   - file: models_and_theories_I/force_fields
   - file: models_and_theories_I/molecular_dynamics
+  - file: models_and_theories_I/dft
   - file: models_and_theories_I/ase
 
 
