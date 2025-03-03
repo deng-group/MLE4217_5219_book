@@ -16,16 +16,6 @@ The computational cost of force fields depends on the number of atoms in the sys
 
 In practice, the unit cell is divided into a grid, and the atoms are assigned to grid cells. The interactions between atoms are calculated only for atoms in the same or neighboring grid cells. This reduces the number of interactions that need to be calculated and improves the efficiency of the simulation.
 
-
-## Interatomic Forces
-Interatomic forces can be derived from the potential energy function by taking the negative gradient of the potential energy with respect to the atomic positions.
-
-$$
-\mathbf{F}_i = -\nabla_i U
-$$
-
-For solid materials, the stress tensor can be derived from the potential energy function by taking the negative gradient of the potential energy with respect to the atomic positions.
-
 ## Periodic Boundary Conditions
 In solid state materials, the structure has translational symmetry, which means that we can apply a periodic boundary condition to the simulation cell to mimic an infinite system. Mathmaticallly, the periodic boundary condition is applied by replicating the simulation cell in all directions, so that atoms that leave the simulation cell re-enter (wrap) from the opposite side. This allows us to simulate the dynamics of the system without the need to model an infinite system.
 
@@ -142,3 +132,12 @@ U_{\text{ML}} = f_{\text{ML}}(\mathbf{X})
 $$
 
 where $U_{\text{ML}}$ is the machine learning potential, $f_{\text{ML}}$ is the machine learning model, and $\mathbf{X}$ is the descriptor of the system, such as the atomic positions, charges, and forces. A more detailed discussion of machine learning potentials will be covered in the later lectures.
+
+## Interatomic Forces
+Interatomic forces can be derived from the potential energy function by taking the negative gradient of the potential energy with respect to the atomic positions.
+
+$$
+\mathbf{F}_i = -\nabla_i U
+$$
+
+For solid materials, the stress tensor can be derived from the potential energy function by taking the negative gradient of the potential energy with respect to the atomic positions.
