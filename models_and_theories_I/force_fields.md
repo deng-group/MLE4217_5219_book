@@ -16,14 +16,6 @@ The computational cost of force fields depends on the number of atoms in the sys
 
 In practice, the unit cell is divided into a grid, and the atoms are assigned to grid cells. The interactions between atoms are calculated only for atoms in the same or neighboring grid cells. This reduces the number of interactions that need to be calculated and improves the efficiency of the simulation.
 
-## Potential Energy Function
-The potential energy function is usually expressed as a sum of pairwise interactions between atoms or molecules:
-
-$$
-U = \sum_{i=1}^N U_1(r_i) + \sum_{i=1}^N \sum_{j=i+1}^N U_2(r_{ij})+ \sum_{i=1}^N \sum_{j=i+1}^N \sum_{k=j+1}^N U_3(r_{ijk}, \theta_{ijk}) + \ldots
-$$
-
-where $U_1(r_i)$ is the potential energy of atom $i$, $U_2(r_{ij})$ is the potential energy between atoms $i$ and $j$, $U_3(r_{ijk})$ is the potential energy between atoms $i$, $j$, and $k$, and so on. $\theta_{ijk}$ is the angle between atoms $i$, $j$, and $k$. The one body term ($U_1$) is only meaningful if atoms are in an external field and usually ignored in most force field.
 
 ## Interatomic Forces
 Interatomic forces can be derived from the potential energy function by taking the negative gradient of the potential energy with respect to the atomic positions.
@@ -83,6 +75,16 @@ $$
 U_{\text{elec, self}} = -\frac{\alpha}{\sqrt{\pi}}\sum_{i=1}^N \frac{q_i^2}{\epsilon_0}
 $$
 where $\alpha$ is the Ewald parameter, $q_i$ is the charge of atom $i$, and $\epsilon_0$ is the vacuum permittivity.
+
+## Potential Energy Function
+The potential energy function is usually expressed as a sum of pairwise interactions between atoms or molecules:
+
+$$
+U = \sum_{i=1}^N U_1(r_i) + \sum_{i=1}^N \sum_{j=i+1}^N U_2(r_{ij})+ \sum_{i=1}^N \sum_{j=i+1}^N \sum_{k=j+1}^N U_3(r_{ijk}, \theta_{ijk}) + \ldots
+$$
+
+where $U_1(r_i)$ is the potential energy of atom $i$, $U_2(r_{ij})$ is the potential energy between atoms $i$ and $j$, $U_3(r_{ijk})$ is the potential energy between atoms $i$, $j$, and $k$, and so on. $\theta_{ijk}$ is the angle between atoms $i$, $j$, and $k$. The one body term ($U_1$) is only meaningful if atoms are in an external field and usually ignored in most force field.
+
 
 ## Pair Potentials
 Pair potentials are a type of force field that describes the interactions between pairs of atoms or molecules in a material. Pair potentials are based on the assumption that the interactions between atoms or molecules can be approximated as pairwise interactions, where the potential energy between two atoms or molecules depends only on their separation distance.

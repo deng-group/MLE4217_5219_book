@@ -30,7 +30,7 @@ Solving the Schrödinger equation directly is computationally expensive and ofte
 Functional is a function of a function where the input is a function and the output is a number. For example, integration is a functional that takes a function as input and returns a number as output. In DFT, the electron density is the function, and the functional is a function of the electron density.
 ```
 
-The key idea behind DFT is the Hohenberg-Kohn theorems, which state that the ground-state energy of a system is a unique functional of the electron density and that the electron density that minimizes the ground-state energy is the true ground-state electron density. 
+The key idea behind DFT is the Hohenberg-Kohn theorems, which state that (i) the ground-state energy of a system $E_{gs}$ is a unique functional of the electron density and (ii) the electron density that minimizes the ground-state energy is the true ground-state electron density. 
 
 $$
 E[\rho_{\text{gs}}] = \min_{\rho} E[\rho]
