@@ -9,7 +9,25 @@ $$
 U = U_{\text{bond}} + U_{\text{angle}} + U_{\text{dihedral}} + U_{\text{non-bonded}}
 $$
 
-where $U_{\text{bond}}$ is the energy associated with bond stretching, $U_{\text{angle}}$ is the energy associated with bond bending, $U_{\text{dihedral}}$ is the energy associated with torsion. $U_{\text{bond}}$ and $U_{\text{angle}}$ are usually approximated under the harmonic approximation. $U_{\text{non-bonded}}$ is the energy associated with non-bonded interactions such as van der Waals forces and electrostatic interactions.
+where $U_{\text{bond}}$ is the energy associated with bond stretching, $U_{\text{angle}}$ is the energy associated with bond bending, $U_{\text{dihedral}}$ is the energy associated with torsion. $U_{\text{bond}}$ and $U_{\text{angle}}$ are usually approximated under the harmonic approximation. $U_{\text{non-bonded}}$ is the energy associated with non-bonded interactions such as van der Waals forces and electrostatic interactions. Below are the common terms in the potential energy function:
+
+$$
+U_{\text{bond}} = \sum_{\text{bonds}} k_b (r - r_0)^2
+$$
+
+$$
+U_{\text{angle}} = \sum_{\text{angles}} k_{\theta} (\theta - \theta_0)^2
+$$
+
+$$
+U_{\text{dihedral}} = \sum_{\text{dihedrals}} k_{\phi} (1 + \cos(n \phi - \delta))
+$$
+
+$$
+U_{\text{non-bonded}} = \sum_{i=1}^N \sum_{j=i+1}^N U_{\text{LJ}}(r_{ij}) + U_{\text{elec}}(r_{ij})
+$$
+
+where $k_b$, $k_{\theta}$, and $k_{\phi}$ are the force constants for bond stretching, bond bending, and torsion, $r$ is the bond length, $\theta$ is the bond angle, $\phi$ is the dihedral angle, $r_0$, $\theta_0$, and $\phi_0$ are the equilibrium bond length, bond angle, and dihedral angle, $n$ is the multiplicity of the dihedral angle, $\delta$ is the phase shift of the dihedral angle, $r_{ij}$ is the distance between atoms $i$ and $j$, $U_{\text{LJ}}$ is the Leonard-Jones potential, and $U_{\text{elec}}$ is the electrostatic potential.
 
 ### Computational Cost
 The computational cost of force fields depends on the number of atoms in the system and the number of interactions that need to be calculated. The computational cost of force fields scales linearly with the number of atoms in the system, and can be reduced by using approximations. Most interactions in force fields are short-ranged, which means that the interactions between atoms decay rapidly with distance. This allows us to use cutoff distances to limit the number of interactions that need to be calculated. The short range interactions are only for atoms in the neighbor list, which is usually a small fraction of the total number of atoms. The long-range interactions are more tricky to calculate and is usually the bottleneck of computations. Methods such as [Ewald summation](#ewald-summation) are used to calculate long-range electrostatic interactions.
@@ -66,8 +84,8 @@ U_{\text{elec, self}} = -\frac{\alpha}{\sqrt{\pi}}\sum_{i=1}^N \frac{q_i^2}{\eps
 $$
 where $\alpha$ is the Ewald parameter, $q_i$ is the charge of atom $i$, and $\epsilon_0$ is the vacuum permittivity.
 
-## Potential Energy Function
-The potential energy function is usually expressed as a sum of pairwise interactions between atoms or molecules:
+## Many Body Expansion
+The potential energy function can be expanded into many-body terms that describe the interactions between three or more atoms or molecules in a material. The many-body expansion is based on the idea that the interactions between atoms or molecules can be approximated as pairwise interactions, where the potential energy between two atoms or molecules depends only on their separation distance. The many-body expansion is given by the following equation:
 
 $$
 U = \sum_{i=1}^N U_1(r_i) + \sum_{i=1}^N \sum_{j=i+1}^N U_2(r_{ij})+ \sum_{i=1}^N \sum_{j=i+1}^N \sum_{k=j+1}^N U_3(r_{ijk}, \theta_{ijk}) + \ldots
