@@ -6,6 +6,14 @@ Modelling is the process of using models to represent and understand the behavio
 In materials science, models and modelling are used to study the structure, properties, and behavior of materials at the different length and time scales. For example, crystal structures can be modelled using mathematical representations of the atomic positions and interactions, and the properties of materials can be predicted using computational models based on quantum mechanics or classical mechanics.
 
 ## Time and Length Scales
+
+```{figure} ../figures/multiscale.png
+---
+width: 80%
+name: directive-fig
+---
+Multiscale modelling in materials science.
+```
 Materials exhibit behavior at different length and time scales, and models and modelling are used to study this behavior at each scale. In materials science, the behavior of materials can be studied at the electronic scale, the atomistic scale, the mesoscale, and the macroscale, respectively. This course will focus on the electronic and atomistic scale.
 
 At the electronic scale (fs, and Ångstrom), the behavior of materials is governed by the interactions between electrons and nuclei, usually described by quantum mechanics. Models based on quantum mechanics are used to study the electronic structure of materials, including the distribution of electrons and the formation of chemical bonds. First-principles (or ab-initio) density functional theory (DFT) is usually applied at this scale to study the electronic structure of materials and to predict their properties.

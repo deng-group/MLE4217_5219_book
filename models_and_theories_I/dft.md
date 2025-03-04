@@ -14,6 +14,14 @@ $$
 where $\Psi(\mathbf{r}, \mathbf{R}, t)$ is the wave function of the system, $\hat{H}$ is the Hamiltonian operator, and $\mathbf{r}$ and $\mathbf{R}$ are the positions of the electrons and nuclei in the system.
 
 ## Born-Oppenheimer Approximation
+````{sidebar}
+```{figure} ../figures/bo_approx.png
+---
+name: directive-fig
+---
+Born-Oppenheimer approximation for separating the motion of the electrons and nuclei so that the electron wave function can be solved separately.
+```
+````
 The Born-Oppenheimer approximation states that the motion of the electrons is much faster than the motion of the nuclei, so we can treat the electrons as moving in the fixed potential energy field of the nuclei. Then the nuclei are treated as classical particles and only electrons are quantum particles. This allows us to solve the Schrödinger equation for the electrons separately from the motion of the nuclei, which simplifies the problem and makes it computationally feasible. 
 
 $$
@@ -23,6 +31,7 @@ $$
 where $V_{\text{ext}}(\mathbf{r})$ is the external potential energy due to the nuclei, $V_{\text{ee}}(\mathbf{r})$ is the electron-electron interaction potential energy, and $E_i$ is the energy of the $i$-th electron.
 
 ## Density Functional Theory (DFT)
+
 Solving the Schrödinger equation directly is computationally expensive and often infeasible for large systems. Density functional theory (DFT) is a method that approximates the wave function of a system by considering the electron density of the system. The electron density is a function of the positions of the electrons in the system and contains all the information about the system. By approximating the wave function in terms of the electron density, DFT reduces the computational cost of solving the Schrödinger equation and makes it feasible to study large systems.
 
 ```{admonition} Functional
@@ -48,6 +57,14 @@ where $\psi_i(\mathbf{r})$ is the wave function of the $i$-th electron and $N$ i
 
 Therefore, by finding the electron density that minimizes the total energy of the system, we can determine the ground-state electron density and the ground-state energy of the system.
 
+````{sidebar}
+```{figure} ../figures/scf.png
+---
+name: directive-fig
+---
+Self-consistent field (SCF) method for solving the Kohn-Sham equations.
+```
+````
 ## Kohn-Sham Equations
 The high cost of solving the many-body Schrödinger equation can be reduced by introducing a set of auxiliary non-interacting electrons that have the same electron density as the true system. These auxiliary electrons are called Kohn-Sham electrons, and they are used to construct an effective potential that approximates the electron-electron interaction potential in the system. The Kohn-Sham equations are a set of equations that describe the motion of the Kohn-Sham electrons in the effective potential.
 
@@ -62,6 +79,14 @@ The key idea is to separate the total energy functional into terms that are easi
 There are many different $E_{\text{xc}}$ that have been developed: Local Density Approximation (LDA), Generalized Gradient Approximation (GGA), Hybrid Functionals, etc. Each functional has its own strengths and weaknesses, and the choice of functional depends on the system being studied and the properties of interest.
 
 ## Basis Set
+````{sidebar}
+```{figure} ../figures/planewave.png
+---
+name: directive-fig
+---
+Plane wave basis set for expanding the wave function of the Kohn-Sham electrons.
+```
+````
 The wave function of the Kohn-Sham electrons is expanded in terms of a basis set of functions, which are used to approximate the wave function. The basis set can be chosen to be a set of atomic orbitals, plane waves, or other types of functions. In solid-state physics, planewave basis set is used:
 
 $$
@@ -73,9 +98,21 @@ where $\mathbf{G}$ is a reciprocal lattice vector,  $c_{\mathbf{k,G}}$ are the e
 Noted that the computation is done in the reciprocal space, and a k-points grid is used to sample the Brillouin zone. The number of k-points used in the calculation affects the accuracy of the results, with more k-points leading to more accurate results but higher computational cost.
 
 ## Pseudopotentials
+```{figure} ../figures/pseudopotentials.png
+---
+name: directive-fig
+---
+Comparison of the wavefunction between all-electron (AE) and pseudopotential (PS) calculations. The core electrons are replaced by an effective smooth potential in the pseudopotential calculation.
+```
 Psuedopotentials are used to replace the core electrons in the system with an effective potential that approximates the effect of the core electrons on the valence electrons because the core electrons are tightly bound to the nucleus and do not participate in chemical bonding. This allows us to reduce the number of electrons that need to be treated explicitly in the calculation. It also smooth out the potential near the nucleus, which makes the calculation converge faster with a much smaller basis set.
 
 ## Properties
+```{figure} ../figures/dft_property.png
+---
+name: directive-fig
+---
+Band structure and optical adsorption spectra of Silicon calculated using DFT. It should be noted that the band gap of Silicon is underestimated.
+```
 Instead of compute the derivative of the total energy with respect to the position of the particles, the force can be calculated directly once the ground state electron density is determined using the Hellmann-Feynman theorem, which we need to determine to get the energy anyway.
 
 Compared to classical force fields, DFT can provide more accurate results for a wide range of properties, such as electronic structure, bonding, and reactivity. DFT can be used to study a variety of systems, including molecules, solids, and surfaces. 
