@@ -73,7 +73,7 @@ where $\mathbf{G}$ is a reciprocal lattice vector,  $c_{\mathbf{k,G}}$ are the e
 Noted that the computation is done in the reciprocal space, and a k-points grid is used to sample the Brillouin zone. The number of k-points used in the calculation affects the accuracy of the results, with more k-points leading to more accurate results but higher computational cost.
 
 ## Pseudopotentials
-Psuedopotentials are used to replace the core electrons in the system with an effective potential that approximates the effect of the core electrons on the valence electrons. This allows us to reduce the number of electrons that need to be treated explicitly in the calculation. It also smooth out the potential near the nucleus, which makes the calculation converge faster with a much smaller basis set.
+Psuedopotentials are used to replace the core electrons in the system with an effective potential that approximates the effect of the core electrons on the valence electrons because the core electrons are tightly bound to the nucleus and do not participate in chemical bonding. This allows us to reduce the number of electrons that need to be treated explicitly in the calculation. It also smooth out the potential near the nucleus, which makes the calculation converge faster with a much smaller basis set.
 
 ## Properties
 Instead of compute the derivative of the total energy with respect to the position of the particles, the force can be calculated directly once the ground state electron density is determined using the Hellmann-Feynman theorem, which we need to determine to get the energy anyway.

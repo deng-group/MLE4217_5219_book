@@ -127,7 +127,7 @@ $$
 U = \sum_{i < j} f_C(R_{ij})[f_R(R_{ij}) - b_{ij}f_A(R_{ij})]
 $$
 
-where $U$ is the potential energy of the system, $f_C(R_{ij})$ is the cutoff function that determines the range of the potential, $f_R(R_{ij})$ is the repulsiV=e term that accounts for the Pauli exclusion principle, $f_A(R_{ij})$ is the attractive term that accounts for the van der Waals forces, $b_{ij}$ is the bond order term that describes the bond strength between atoms $i$ and $j$, and $R_{ij}$ is the distance between atoms $i$ and $j$.
+where $U$ is the potential energy of the system, $f_C(R_{ij})$ is the cutoff function that determines the range of the potential, $f_R(R_{ij})$ is the repulsive term that accounts for the Pauli exclusion principle, $f_A(R_{ij})$ is the attractive term that accounts for the van der Waals forces, $b_{ij}$ is the bond order term that describes the bond strength between atoms $i$ and $j$, and $R_{ij}$ is the distance between atoms $i$ and $j$.
 
 ### Embedded Atom Method (EAM)
 Embedded Atom Method (EAM) is another many-body potential that describes the interactions between atoms in metallic materials. The EAM potential is based on the assumption that the energy of an atom in a material is a function of the electron density around the atom. The EAM potential is given by the following equation:
