@@ -19,7 +19,6 @@ execute:
 latex:
   latex_documents:
     targetname: book.tex
-  
 
 launch_buttons:
   notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
