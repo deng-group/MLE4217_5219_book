@@ -116,7 +116,7 @@ name: directive-fig
 ---
 Comparison of the wavefunction between all-electron (AE) and pseudopotential (PS) calculations. The core electrons are replaced by an effective smooth potential in the pseudopotential calculation.
 ```
-Psuedopotentials are used to replace the core electrons in the system with an effective potential that approximates the effect of the core electrons on the valence electrons because the core electrons are tightly bound to the nucleus and do not participate in chemical bonding. This allows us to reduce the number of electrons that need to be treated explicitly in the calculation. It also smooth out the potential near the nucleus, which makes the calculation converge faster with a much smaller basis set.
+Psuedopotentials are used to replace the core electrons in the system with an effective potential that approximates the effect of the core electrons on the valence electrons because the core electrons are tightly bound to the nucleus and do not participate in chemical bonding. This allows us to reduce the number of electrons that need to be treated explicitly in the calculation. It also smooth out the potential near the nucleus, which makes the calculation converge faster with a much smaller basis set. There different ways of constructing pseudopotentials such as norm-conserving pseudopotentials (NCPP) and ultrasoft pseudopotentials (USPP). 
 
 ## Properties
 ```{figure} ../figures/dft_property.png
