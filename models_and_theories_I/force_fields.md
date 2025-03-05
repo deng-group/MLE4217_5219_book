@@ -93,7 +93,7 @@ $$
 U_{\text{non-bonded}} = \sum_{i=1}^N \sum_{j=i+1}^N U_{\text{LJ}}(r_{ij}) + U_{\text{elec}}(r_{ij})
 $$
 
-where $k_b$, $k_{\theta}$, and $k_{\phi}$ are the force constants for bond stretching, bond bending, and torsion, $r$ is the bond length, $\theta$ is the bond angle, $\phi$ is the dihedral angle, $r_0$, $\theta_0$, and $\phi_0$ are the equilibrium bond length, bond angle, and dihedral angle, $n$ is the multiplicity of the dihedral angle, $\delta$ is the phase shift of the dihedral angle, $r_{ij}$ is the distance between atoms $i$ and $j$, $U_{\text{LJ}}$ is the Leonard-Jones potential, and $U_{\text{elec}}$ is the electrostatic potential.
+where $k_b$, $k_{\theta}$, and $k_{\phi}$ are the force constants for bond stretching, bond bending, and torsion, $r$ is the bond length, $\theta$ is the bond angle, $\phi$ is the dihedral angle, $r_0$, $\theta_0$, and $\phi_0$ are the equilibrium bond length, bond angle, and dihedral angle, $n$ is the multiplicity of the dihedral angle, $\delta$ is the phase shift of the dihedral angle, $r_{ij}$ is the distance between atoms $i$ and $j$, $U_{\text{LJ}}$ is the Leonard-Jones potential, and $U_{\text{elec}}$ is the electrostatic potential. Examples of common force fields include CHARMM, AMBER, and GROMOS.
 
 ## Ewald Summation
 The electrostatic potential energy term $U_{\text{elec}}$ in the potential energy function is long-ranged and can be difficult to calculate accurately in periodic systems. The Ewald summation is a method for calculating the electrostatic potential energy between charged particles in a periodic system. The Ewald summation is based on the idea of splitting the electrostatic potential into short-range and long-range components, and calculating each component separately. 
@@ -188,10 +188,10 @@ Many-body potentials are a type of force field that describes the interactions b
 Tersoff potential (bond order potentials) is a many-body potential that describes the interactions between atoms in covalently bonded materials. The Tersoff potential is given by the following equation:
 
 $$
-U = \sum_{i < j} f_C(R_{ij})[f_R(R_{ij}) - b_{ij}f_A(R_{ij})]
+U = \sum_{i < j} f_C(r_{ij})[f_R(r_{ij}) - b_{ij}f_A(r_{ij})]
 $$
 
-where $U$ is the potential energy of the system, $f_C(R_{ij})$ is the cutoff function that determines the range of the potential, $f_R(R_{ij})$ is the repulsive term that accounts for the Pauli exclusion principle, $f_A(R_{ij})$ is the attractive term that accounts for the van der Waals forces, $b_{ij}$ is the bond order term that describes the bond strength between atoms $i$ and $j$, and $R_{ij}$ is the distance between atoms $i$ and $j$.
+where $U$ is the potential energy of the system, $f_C(r_{ij})$ is the cutoff function that determines the range of the potential, $f_R(r_{ij})$ is the repulsive term that accounts for the Pauli exclusion principle, $f_A(r_{ij})$ is the attractive term that accounts for the van der Waals forces, $b_{ij}$ is the bond order term that describes the bond strength between atoms $i$ and $j$, and $r_{ij}$ is the distance between atoms $i$ and $j$. The bond order term $b_{ij}$ is a function of the bond length, bond angle, and coordination number of the atoms, which has the many-body effect.
 
 ### Embedded Atom Method (EAM)
 Embedded Atom Method (EAM) is another many-body potential that describes the interactions between atoms in metallic materials. The EAM potential is based on the assumption that the energy of an atom in a material is a function of the electron density around the atom. The EAM potential is given by the following equation:
@@ -204,7 +204,7 @@ where $U$ is the total energy of the system, $F(\rho_i)$ is the embedding energy
 
 Other similar potentials: effective medium theory (EMT) and modified embedded atom method (MEAM).
 
-## Other Potentials
+## Other Force Fields
 There are many other types of force fields and potentials that are used in atomistic modelling, depending on the specific properties of the material being studied. Some examples include: reactive force fields, polarizable force fields, and coarse-grained force fields.
 
 Recently, machine learning potentials have gained popularity in materials science, where machine learning algorithms are used to develop force fields that can accurately predict the properties of materials without the need for explicit parameterization.

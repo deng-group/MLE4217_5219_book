@@ -12,7 +12,7 @@ In materials science, models and modelling are used to study the structure, prop
 width: 80%
 name: directive-fig
 ---
-Multiscale modelling in materials science.
+Multiscale modelling in materials science as a function of time and length scales. From electronic to macroscopic scales, different models and techniques are used to study the behavior of materials at different scales. In this course, we will focus on the electronic and atomistic scales.
 ```
 Materials exhibit behavior at different length and time scales, and models and modelling are used to study this behavior at each scale. In materials science, the behavior of materials can be studied at the electronic scale, the atomistic scale, the mesoscale, and the macroscale, respectively. This course will focus on the electronic and atomistic scale.
 
