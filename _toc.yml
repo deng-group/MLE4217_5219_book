@@ -57,5 +57,12 @@ chapters:
   - file: models_and_theories_I/molecular_dynamics
   - file: models_and_theories_I/dft
   - file: models_and_theories_I/ase
+- file: models_and_theories_II/index
+  sections:
+  - file: models_and_theories_II/statistical_mech
+  - file: models_and_theories_II/molecular_dynamics
+  - file: models_and_theories_II/monte_carlo
+  - file: models_and_theories_II/kmc
+  - file: models_and_theories_II/md_mc
 
 
