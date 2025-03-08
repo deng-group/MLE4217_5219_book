@@ -36,3 +36,5 @@ where $U$ is the potential energy of the system, which has been discussed in the
 
 The total energy of the system should be conserved during the simulation, which means that the sum of the kinetic and potential energy should remain constant over time. This is also known as the microcanonical ensemble in statistical mechanics, where the total energy of the system is conserved and the system is isolated from its surroundings.
 
+## Thermostats and Barostats
+In molecular dynamics simulations, we often want to control the temperature and pressure of the system to study the behavior of the system under different conditions. This is done using thermostats and barostats.
