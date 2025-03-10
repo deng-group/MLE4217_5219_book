@@ -12,8 +12,6 @@ $$
 
 where $\mathbf{r}(t)$ is the position of the particle at time $t$, $\mathbf{v}(t)$ is the velocity of the particle at time $t$, $\mathbf{a}(t)$ is the acceleration of the particle at time $t$, and $\Delta t$ is the time step.
 
-
-
 ### Initial Conditions
 The initial positions and velocities of the particles determine the trajectory of the system and the properties that are calculated during the simulation. The initial positions of the particles can be generated based on experimental observations (crystal structure) or some physical assumptions, while the initial velocities can be assigned based on a Maxwell-Boltzmann distribution at a given temperature.
 
@@ -45,7 +43,7 @@ $$
 E = K + U
 $$
 
-where $U$ is the potential energy of the system, which has been discussed in the [previous section](../models_and_theories_I/force_fields.md).
+where $U$ is the potential energy of the system, which has been discussed in the [previous section](../models_and_theories_I/force_fields.md). $U$ can also be computed using DFT or quantum mechanical methods. It is called ab initio molecular dynamics (AIMD) when quantum mechanical methods are used to compute the potential energy.
 
 The total energy of the system should be conserved during the simulation, which means that the sum of the kinetic and potential energy should remain constant over time. This is also known as the microcanonical ensemble in statistical mechanics, where the total energy of the system is conserved and the system is isolated from its surroundings.
 
