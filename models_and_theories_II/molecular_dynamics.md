@@ -4,13 +4,21 @@ If we have a system of particles, we can simulate the dynamics of the system by 
 
 
 ## Verlet Integration
-The Verlet integration is a numerical method for solving the equations of motion in molecular dynamics simulations. The Verlet integration is based on the idea of discretizing the equations of motion in time and updating the positions and velocities of the particles at each time step. The Verlet integration is a second-order method, which means that it is more accurate than first-order methods like the Euler method.
+The Verlet integration is a numerical method for solving the equations of motion in molecular dynamics simulations. The Verlet integration is based on the idea of discretizing the equations of motion in time and updating the positions and velocities of the particles at each time step. 
 
 $$
 \mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2
 $$
 
-where $\mathbf{r}(t)$ is the position of the particle at time $t$, $\mathbf{v}(t)$ is the velocity of the particle at time $t$, $\mathbf{a}(t)$ is the acceleration of the particle at time $t$, and $\Delta t$ is the time step.
+where $\mathbf{r}(t)$ is the position of the particle at time $t$, $\mathbf{v}(t)$ is the velocity of the particle at time $t$, $\mathbf{a}(t)$ is the acceleration of the particle at time $t$, and $\Delta t$ is the time step. The acceleration of the particle can be computed from the Newton's second law.
+
+The velocity of the particle at time $t + \Delta t$ can be calculated using the positions at time $t$ and $t + \Delta t$:
+
+$$
+\mathbf{v}(t + \Delta t) = \frac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}
+$$
+
+
 
 ### Initial Conditions
 The initial positions and velocities of the particles determine the trajectory of the system and the properties that are calculated during the simulation. The initial positions of the particles can be generated based on experimental observations (crystal structure) or some physical assumptions, while the initial velocities can be assigned based on a Maxwell-Boltzmann distribution at a given temperature.
@@ -19,7 +27,7 @@ The initial positions and velocities of the particles determine the trajectory o
 It is important to equilibrate the system before starting the production run. Equilibration is the process of allowing the system to reach a stable state where the properties of the system no longer change with time. This is done by running the simulation for a certain number of steps until the system reaches equilibrium. Once the system has equilibrated, the production run can be started, where the properties of the system are calculated and analyzed.
 
 ### Time Step
-The time step should be small enough to accurately capture the dynamics of the system but large enough to be computationally efficient. The time step is usually chosen based on the fastest vibrational frequency in the system, which is determined by the force constants of the bonds in the system.
+The time step should be small enough to accurately capture the dynamics of the system but large enough to be computationally efficient. The time step is usually chosen based on the fastest vibrational frequency in the system, which is determined by the force constants of the bonds in the system. A safe choice for the time step is to use a fraction of the fastest vibrational frequency, e.g. 1 fs for a system with a vibrational frequency of 10 THz.
 
 ## Kinetic and Potential Energy
 The total energy of the system is the sum of the kinetic and potential energy of the particles. The kinetic energy of a system is given by the sum of the kinetic energy of all the particles in the system:

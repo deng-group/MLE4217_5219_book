@@ -1,10 +1,15 @@
 # Monte Carlo
 Monte Carlo methods are a class of computational algorithms that rely on random sampling to obtain numerical results. These methods are widely used in various fields, including physics, chemistry, and computer science, to solve complex problems that are difficult or impossible to solve analytically. In atomistic simulation, unlike molecular dynamics (MD), which relies on solving equations of motion for particles over time, Monte Carlo simulations are based on random sampling and statistical sampling methods to explore the configuration space of a system.
 
+
 ## Metropolis Algorithm
 In principle, you can randomly sample the whole phase space to calculate the properties of a system. However, this is not practical due to the vast number of possible configurations. For example, a system with 100 particles has $10^{150}$ possible configurations, which is an astronomically large number. However, most of the configurations have low probability (low Boltzmann factor) and are not relevant to the properties of the system. Therefore, we need a method to sample the phase space effectively to obtain accurate statistical averages and thermodynamic properties.
 
 The Metropolis algorithm is a Monte Carlo method that allows you to sample the phase space effectively by accepting or rejecting proposed moves based on a probability criterion. The Metropolis algorithm is widely used in Monte Carlo simulations to generate a representative set of configurations that can be used to calculate ensemble averages.
+
+```{admonition} Markov Chain
+A Markov chain is a stochastic process that evolves over time in a series of discrete steps, where the probability of transitioning from one state to another depends only on the current state and not on the previous history of the process. In a Markov chain, the system moves from one state to another according to a transition probability matrix, which specifies the probability of transitioning from one state to another.
+```
 
 The Metropolis algorithm consists of the following steps:
 1. Initialization: Start with an initial configuration of the system.

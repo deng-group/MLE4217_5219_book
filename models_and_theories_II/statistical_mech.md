@@ -81,24 +81,69 @@ F = -k_B T \ln Z
 $$
 
 $$
-S = -k_B \beta^2 \frac{\partial \ln Z}{\partial \beta}
-$$
-
-$$
 U = -\frac{\partial \ln Z}{\partial \beta}=k_B T^2 \frac{\partial \ln Z}{\partial T}
 $$
 
 $$
-C_v = \frac{\partial U}{\partial T} = k_B \beta^2 \frac{\partial^2 \ln Z}{\partial \beta^2}
+S = - \frac{\partial F}{\partial T} = k_B \ln Z+k_B T \frac{\partial \ln Z}{\partial T}
 $$
 
 $$
 P = -\frac{\partial F}{\partial V}=k_B T \frac{\partial \ln Z}{\partial V}  
 $$
 
-where $F$ is the Helmholtz free energy, $S$ is the entropy, $U$ is the internal energy, $C_v$ is the specific heat at constant volume, $P$ is the pressure, and $V$ is the volume of the system.
+$$
+H = U + PV = k_B T^2 \frac{\partial \ln Z}{\partial \beta} + k_B T V \frac{\partial \ln Z}{\partial V}
+$$
+
+$$
+G = F + PV = -k_B T \ln Z + k_B T V \frac{\partial \ln Z}{\partial V}
+$$
+
+$$
+C_v = \frac{\partial U}{\partial T} = k_B \beta^2 \frac{\partial^2 \ln Z}{\partial \beta^2}
+$$
+
+
+where $F$ is the Helmholtz free energy, $S$ is the entropy, $U$ is the internal energy, $C_v$ is the heat capacity at constant volume, $P$ is the pressure,  $V$ is the volume of the system, $H$ is the enthalpy, and $G$ is the Gibbs free energy.
 
 These equations allow us to relate the microscopic properties of the system to its macroscopic behavior and predict how the system will respond to changes in temperature, pressure, and volume.
+
+<!-- ### Example: 1D Harmonic Oscillator
+The energy levels of a 1D harmonic oscillator are quantized, and the partition function can be calculated as:
+
+$$
+E_n = \hbar \omega (n+\frac{1}{2})
+$$
+
+where $n$ is the quantum number, $\hbar$ is the reduced Planck constant, and $\omega$ is the angular frequency of the oscillator.
+
+The partition function for the harmonic oscillator is given by:
+
+$$
+Z = \sum e^{-\beta E_n} = \sum e^{-\beta \hbar \omega (n+\frac{1}{2})}
+$$
+
+By evaluating this sum, we can calculate the thermodynamic properties of the harmonic oscillator, such as the internal energy, entropy, and heat capacity.
+
+$$
+U = -\frac{\partial \ln Z}{\partial \beta} = \frac{\hbar \omega}{2} \coth(\frac{\hbar \omega}{2k_B T})
+$$
+
+$$
+C_v = \frac{\partial U}{\partial T} = k_B (\frac{\hbar \omega}{k_B T})^2 \frac{e^{\frac{\hbar \omega}{k_B T}}}{(e^{\frac{\hbar \omega}{k_B T}}-1)^2}
+$$
+
+$$
+F = -k_B T \ln Z = \frac{\hbar \omega}{2} - k_B T \ln(1-e^{-\beta \hbar \omega})
+$$
+
+$$
+S = -\frac{\partial F}{\partial T} = k_B \ln(1-e^{-\beta \hbar \omega}) + \frac{k_B \beta \hbar \omega e^{-\beta \hbar \omega}}{1-e^{-\beta \hbar \omega}}
+$$
+
+We can plot these thermodynamic properties as a function of temperature to understand the behavior of the harmonic oscillator at different temperatures. -->
+
 
 ## Sampling the Phase Space
 
