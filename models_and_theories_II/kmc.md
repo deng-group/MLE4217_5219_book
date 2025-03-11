@@ -2,6 +2,15 @@
 Kinetic Monte Carlo (kMC) is an extension of the Monte Carlo method that is used to simulate the time evolution of a system by considering the rates of individual events. In kMC, the system is modeled as a set of discrete states, and the transitions between these states are governed by transition rates. By simulating the stochastic evolution of the system based on these rates, kMC can provide insights into the dynamics of complex systems and predict their behavior over time.
 
 ## Rejection Free Kinetic Monte Carlo
+
+````{sidebar}
+```{figure} ../figures/kmc_process.png
+---
+name: directive-fig
+---
+Process of running rejection-free kinetic Monte Carlo (RFkMC).
+```
+````
 Rejection-free kinetic Monte Carlo (RFkMC) is a variant of the kMC method that aims to improve the efficiency of simulations by avoiding the rejection step that is typically used to ensure detailed balance. In RFkMC, the transition rates are modified to ensure that the system evolves in a way that satisfies detailed balance without the need for rejection. This can lead to significant speedups in simulations of complex systems, making RFkMC a powerful tool for studying the dynamics of materials and chemical reactions.
 
 ### Initial State

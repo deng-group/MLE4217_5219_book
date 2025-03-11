@@ -1,6 +1,16 @@
 # Monte Carlo
 Monte Carlo methods are a class of computational algorithms that rely on random sampling to obtain numerical results. These methods are widely used in various fields, including physics, chemistry, and computer science, to solve complex problems that are difficult or impossible to solve analytically. In atomistic simulation, unlike molecular dynamics (MD), which relies on solving equations of motion for particles over time, Monte Carlo simulations are based on random sampling and statistical sampling methods to explore the configuration space of a system.
 
+```{figure} ../figures/monte_carlo_pi_combined.png
+---
+name: directive-fig
+---
+Example of Monte Carlo simulation to estimate the value of $\pi$ using random sampling. Right panel shows the convergence of the estimated value of $\pi$ as a function of the number of samples.
+```
+
+A simple example of a Monte Carlo simulation is the estimation of the value of $\pi$ using random sampling. The idea is to randomly sample points in a square and calculate the fraction of points that fall within a circle inscribed in the square. The ratio of the area of the quarter circle to the area of the square is $\pi$, which can be used as an estimate of the value of $\pi$. By increasing the number of random samples, the estimate of $\pi$ converges to the true value.
+
+
 
 ## Metropolis Algorithm
 In principle, you can randomly sample the whole phase space to calculate the properties of a system. However, this is not practical due to the vast number of possible configurations. For example, a system with 100 particles has $10^{150}$ possible configurations, which is an astronomically large number. However, most of the configurations have low probability (low Boltzmann factor) and are not relevant to the properties of the system. Therefore, we need a method to sample the phase space effectively to obtain accurate statistical averages and thermodynamic properties.

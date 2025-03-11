@@ -22,4 +22,4 @@ By the end of this week, you should be able to:
 - Understand the principles of the statistical mechanics and how it is used to model the structure and properties of materials at the atomic scale.
 - Understand the principles behind the molecular dynamics and Monte Carlo simulations and how they are used to model the structure and properties of materials at the atomic scale.
 - Understand the advantages and limitations of the molecular dynamics and Monte Carlo simulations.
-- Know how to use atomic simulation environments (ASE) to perform calculations using these methods.
+- Know how to use atomic simulation environments (ASE) to perform MD and MC calculations.

@@ -4,6 +4,16 @@ If we have a system of particles, we can simulate the dynamics of the system by 
 
 
 ## Verlet Integration
+
+````{sidebar}
+```{figure} ../figures/md_process.png
+---
+name: directive-fig
+---
+General process of molecular dynamics simulation.
+```
+````
+
 The Verlet integration is a numerical method for solving the equations of motion in molecular dynamics simulations. The Verlet integration is based on the idea of discretizing the equations of motion in time and updating the positions and velocities of the particles at each time step. 
 
 $$

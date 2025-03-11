@@ -4,7 +4,14 @@ Statistical mechanics links the behavior of a system at the microscopic level to
 It is used to explain many phenomena in materials science. For example, the behavior of gases, liquids, and solids can be described using statistical mechanics, as well as phase transitions, chemical reactions, and the properties of materials at the atomic and molecular level.
 
 ## Microstates and Macrostates
-
+````{sidebar}
+```{figure} ../figures/micro_macrostates.png
+---
+name: directive-fig
+---
+Microstates and macrostates in statistical mechanics as applied to a coin toss example. Each possible outcome of the coin tosses represents a microstate, while the number of heads and tails represents a macrostate.
+```
+````
 In statistical mechanics, a system is described by its microstates and macrostates. A microstate is a specific configuration of the particles in the system (atomic positions, molecular configurations), while a macrostate is a collection of microstates that share certain macroscopic properties, such as temperature, pressure, and volume. The behavior of a system is described by the probability distribution of its microstates, which gives the likelihood of finding the system in a particular microstate.
 
 For example, consider the simple case of tossing a coin three times. Each possible outcome of the coin tosses (e.g., HHT, TTH, HTT, etc.) represents a microstate of the system. There are $2^3 = 8$ possible microstates in total.
@@ -15,6 +22,12 @@ A macrostate, on the other hand, is defined by the number of heads and tails, re
 The microstate is characterized by the positions ($\mathbf{r}$) and momenta ($\mathbf{p}$) of all the particles in the system. The collection of all possible microstates of a system is called the phase space ($\Gamma(\mathbf{r},\mathbf{p})$), which represents all the possible configurations of the system.
 
 ## Ensemble
+```{figure} ../figures/ensemble.png
+---
+name: directive-fig
+---
+4 types of ensembles in statistical mechanics: microcanonical, canonical, isothermal-isobaric, and grand canonical.
+```
 Ensemble is the actual microstates and the probability distribution within the phase space. It is a collection of microstates that share certain macroscopic properties, such as temperature (T), pressure (P), volume (V), number of particles (N). There are several types of ensembles in statistical mechanics, each corresponding to different constraints on the system.
 
 ```{admonition} Partition function
