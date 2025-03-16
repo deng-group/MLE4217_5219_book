@@ -64,5 +64,8 @@ chapters:
   - file: models_and_theories_II/monte_carlo
   - file: models_and_theories_II/kmc
   - file: models_and_theories_II/md_mc
+- file: optimization/index
+  sections:
+  - file: optimization/introduction
 
 
