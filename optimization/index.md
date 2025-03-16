@@ -1,4 +1,4 @@
-# Models and Theories II
+# Optimization
 ```{image} ../figures/optimization_title.jpeg
 ---
 width: 100%

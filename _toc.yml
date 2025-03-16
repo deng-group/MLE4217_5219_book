@@ -67,5 +67,6 @@ chapters:
 - file: optimization/index
   sections:
   - file: optimization/introduction
+  - file: optimization/optimization
 
 
