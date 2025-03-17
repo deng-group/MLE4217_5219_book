@@ -1,22 +1,5 @@
 # Local Optimization
 
-<<<<<<< HEAD
-## First-Order Methods
-
-### Gradient Descent
-
-### Stochastic Gradient Descent
-
-
-### Conjugate Gradient
-
-## Second-Order Methods
-
-### Newton's Method
-
-### BFGS and LBFGS
-
-=======
 
 ## Gradient Descent
 Principle: Move iteratively in the direction of the negative gradient.
@@ -64,4 +47,3 @@ Consider the size and dimensionality of the problem.
 Experiment with different methods and parameters.
 
 Always visualize results to check for convergence and reasonableness.
->>>>>>> b641f19 (Add optimization documentation including sections on local and global optimization methods, transition state search, and applications)

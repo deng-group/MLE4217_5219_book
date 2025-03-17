@@ -1,10 +1,4 @@
 # Introduction
-<<<<<<< HEAD
-
-## Basic Concepts
-
-## Overview
-=======
 Optimization is the process finding the input values (parameters, variables) that minimize or maximize a given object function, potentially subject to constraints.
 
 In materials informatics, we can use optimization to find the best material composition, crystal structure, processing parameters, etc., for given application where the objective function is the performance of the material, e.g. highest strength, lowest energy, specific magnetic properties, etc. 
@@ -61,4 +55,3 @@ Constraints: Physical and chemical constraints (e.g., charge neutrality, phase s
 
 Multi-objective optimization: Optimize multiple properties at the same time.
 
->>>>>>> b641f19 (Add optimization documentation including sections on local and global optimization methods, transition state search, and applications)

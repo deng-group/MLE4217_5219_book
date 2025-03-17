@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Transition State Theory
-=======
 # Transition State Search
 Finding transition states (saddle points) is crucial for understanding reaction mechanisms and kinetics in materials.
 
@@ -37,5 +34,4 @@ May not find the true MEP if there are multiple pathways or complex energy lands
 
 ## Applications
 Studying diffusion pathways of atoms in solids, calculating activation energies for chemical reactions on surfaces, understanding phase transformations.
->>>>>>> b641f19 (Add optimization documentation including sections on local and global optimization methods, transition state search, and applications)
 

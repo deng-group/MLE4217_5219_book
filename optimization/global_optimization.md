@@ -1,12 +1,4 @@
 # Global Optimization
-<<<<<<< HEAD
-
-## Simulated Annealing
-
-## Basin Hopping
-
-## Genetic Algorithm
-=======
 Global methods aim to find the global minimum, even in non-convex problems.
 
 Generally more computationally expensive than local methods.
@@ -67,4 +59,3 @@ Differential Evolution (DE): Another evolutionary algorithm.
 Bayesian Optimization: Uses a probabilistic model to guide the search, particularly useful for expensive objective functions.
 
 Random Search: Simple but effective, especially for high-dimensional problems.
->>>>>>> b641f19 (Add optimization documentation including sections on local and global optimization methods, transition state search, and applications)
