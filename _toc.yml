@@ -69,6 +69,7 @@ chapters:
   - file: optimization/introduction
   - file: optimization/local_optimization
   - file: optimization/global_optimization
+  - file: optimization/choose_opt
   - file: optimization/transition_state
   - file: optimization/optimization
 

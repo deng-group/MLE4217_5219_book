@@ -62,12 +62,3 @@ Genetic Algorithms (GA) is inspired by biological evolution and natural selectio
     - Elitism:  The best few individuals from the previous generation are preserved and carried over to the next generation.
 7.  Iteration: Repeat steps 2-6 for a specified number of generations or until a convergence criterion is met.
 
-## How to Choose
-It depends on the properties of the objective function:
-
-- Noisy Objective Functions: Simulated annealing is good choice.
-- Discrete Variables: Genetic algorithm is suitable.
-- Computational Cost: Basin hopping can be used if the cost is high.
-
-### No Free Lunch Theorem
-The "No Free Lunch" theorem in optimization states that no single optimization algorithm is the best for all problems. The performance of an algorithm depends on the specific properties of the problem. Therefore, it's essential to understand the characteristics of the optimization problem and choose an algorithm that is well-suited to those properties.
