@@ -67,7 +67,11 @@ BFGS is a *quasi-Newton* method.  Newton's method uses the *Hessian* (matrix of 
 
 BFGS iteratively updates an approximation to the *inverse* Hessian, denoted as $B_k$.  The update rule for the approximation is complex, but the key idea is that it uses the change in the gradient and the change in the position to improve the approximation:
 
-$B_{k+1} = B_k + ...$ (The full update formula is omitted for brevity, but it can be added if desired. It involves terms with $\Delta x_k = x_{k+1} - x_k$ and $\Delta g_k = \nabla f(x_{k+1}) - \nabla f(x_k)$).
+$$
+B_{k+1} = B_k + \frac{y_k y_k^T}{y_k^T s_k} - \frac{B_k s_k s_k^T B_k}{s_k^T B_k s_k}
+$$
+
+where $s_k = x_{k+1} - x_k$ and $y_k = \nabla f(x_{k+1}) - \nabla f(x_k)$.
 
 The search direction is then calculated as:
 

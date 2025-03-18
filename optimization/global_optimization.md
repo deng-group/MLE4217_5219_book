@@ -1,16 +1,11 @@
 # Global Optimization
-Global methods aim to find the global minimum, even in non-convex problems.
-
-Generally more computationally expensive than local methods.
-
-Often involve a combination of exploration (searching the entire space) and exploitation (refining promising regions).
-
+Local optimization methods can get trapped in local minima. Global optimization algorithms are designed to explore the search space more broadly, increasing the chances of finding the global optimum.
 
 ## Simulated Annealing
-Principle: Inspired by the annealing process in metallurgy. Starts at a high "temperature" (allowing exploration) and gradually cools down (focusing on exploitation). Accepts moves that worsen the objective function with a probability that decreases with temperature.
+Simulated annealing is inspired by the annealing process in metallurgy. Starts at a high "temperature" (allowing exploration) and gradually cools down (focusing on exploitation). Accepts moves that worsen the objective function with a probability that decreases with temperature.
 
 ### Algorithm
-1.  Initialization: Start with an initial solution, $x_0$, and a high"temperature," $T$.
+1.  Initialization: Start with an initial solution, $x_0$, and a high "temperature," $T$.
 2.  Generate Neighbor: Generate a random neighboring solution, $x_{new}$, by perturbing the current solution. The nature of the perturbation depends on the problem (e.g., for a continuous variable, you might add a random number drawnfrom a normal distribution; for a discrete variable, you might randomly changeone of the components).
 3.  Evaluate Energy Change: Calculate the change in the objective function (often referred to as "energy" in the context of simulated annealing), $\Delta E= f(x_{new}) - f(x_{current})$.
 4.  Acceptance Criterion:
@@ -31,43 +26,30 @@ Principle: Inspired by the annealing process in metallurgy. Starts at a high "te
 6.  Iteration: Repeat steps 2-5 until a stopping criterion is met (e.g., the temperature reaches a predefined minimum value, a maximum number of iterations is reached, or the objective function value hasn't improved significantly for a certain number of iterations).
 
 ## Basin Hopping
-Principle: Combines local optimization with random perturbations. Transforms the objective function into a "staircase" of local minima.
+Basin hoopping combines local optimization with random perturbations. Transforms the objective function into a "staircase" of local minima. 
 
-Algorithm: Repeatedly performs local optimization (e.g., using BFGS) followed by a random perturbation of the variables. Accepts or rejects moves based on a Metropolis criterion.
+It repeatedly performs local optimization (e.g., using BFGS) followed by a random perturbation of the variables (simulated to SA). Accepts or rejects moves based on a Metropolis criterion. 
 
-Advantages: More efficient than SA for many problems, can handle rugged energy landscapes.
-
-Disadvantages: Still requires tuning parameters (e.g., the size of the perturbations).
-
-Materials Example: Finding stable configurations of nanoparticles.
-
+It is more efficient than SA for many problems, can handle rugged energy landscapes. However it still requires tuning parameters (e.g., the size of the perturbations).
 
 ## Genetic Algorithm
-Principle: Inspired by biological evolution. Maintains a "population" of candidate solutions that evolve through selection, crossover (recombination), and mutation.
+These algorithms are inspired by biological evolution. They maintain a population of candidate solutions and use principles of selection, crossover, and mutation to evolve the population towards better solutions. GA's explore the search space in a parallel and stochastic manner. The combination of selection, crossover, and mutation allows the algorithm to efficiently search for good solutions, even in complex, high-dimensional problems.
 
-Algorithm:
+### Algorithm
 
-Initialization: Create a random initial population.
+1. Initialization: Create an initial population of random solutions (often represented as "chromosomes" or bit strings).
 
-Selection: Select the "fittest" individuals (those with better objective function values).
+2. Selection: Evaluate the "fitness" (objective function value) of each solution in the population. Select individuals for reproduction based on their fitness (e.g., using roulette wheel selection or tournament selection).
 
-Crossover: Combine the "genes" (variables) of selected individuals to create new offspring.
+3. Crossover: Combine the "genetic material" of selected pairs of individuals to create new "offspring" solutions. This involves swapping parts of their representations.
 
-Mutation: Introduce random changes to the offspring's genes.
+4. Mutation: Introduce random changes to the offspring solutions. This helps to maintain diversity in the population and explore new regions of the search space.
 
-Repeat: Iterate until a stopping criterion is met.
+5. Replacement: Replace some or all of the original population with the new offspring.
 
-Advantages: Well-suited for discrete and combinatorial optimization problems, can handle complex and noisy objective functions.
-
-Disadvantages: Can be computationally expensive, requires careful tuning of parameters (population size, crossover rate, mutation rate).
-
-Materials Example: Optimizing the composition and structure of alloys, designing new materials with specific properties.
+Repeat steps 2-5 for a specified number of generations or until a convergence criterion is met.
 
 ## Other Global Optimization Methods
-Particle Swarm Optimization (PSO): Inspired by the social behavior of birds flocking or fish schooling.
-
-Differential Evolution (DE): Another evolutionary algorithm.
-
-Bayesian Optimization: Uses a probabilistic model to guide the search, particularly useful for expensive objective functions.
-
-Random Search: Simple but effective, especially for high-dimensional problems.
+- Particle Swarm Optimization (PSO): Inspired by the social behavior of birds flocking or fish schooling.
+- Bayesian Optimization: Uses a probabilistic model to guide the search, particularly useful for expensive objective functions.
+- Random Search: Simple but effective, especially for high-dimensional problems.
