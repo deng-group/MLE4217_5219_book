@@ -1,7 +1,24 @@
 # Global Optimization
 Local optimization methods can get trapped in local minima. Global optimization algorithms are designed to explore the search space more broadly, increasing the chances of finding the global optimum.
 
+```{figure} ../figures/global_opt.png
+---
+width: 60%
+name: directive-fig
+---
+Global optimization aims to find the global minimum of a function, which may have multiple local minima.
+```
+
 ## Simulated Annealing
+````{sidebar} 
+```{figure} ../figures/sa.png
+---
+width: 100%
+name: directive-fig
+---
+Simulated annealing and the comparison to local optimization algorithm BFGS. Simulated annealing can escape local minima by allowing moves that worsen the objective function with a certain probability.
+```
+````
 Simulated annealing is inspired by the annealing process in metallurgy. Starts at a high "temperature" (allowing exploration) and gradually cools down (focusing on exploitation). Accepts moves that worsen the objective function with a probability that decreases with temperature.
 
 ### Algorithm
@@ -26,6 +43,15 @@ Simulated annealing is inspired by the annealing process in metallurgy. Starts a
 6.  Iteration: Repeat steps 2-5 until a stopping criterion is met (e.g., the temperature reaches a predefined minimum value, a maximum number of iterations is reached, or the objective function value hasn't improved significantly for a certain number of iterations).
 
 ## Basin Hopping
+
+```{figure} ../figures/basin_hopping.png
+---
+width: 100%
+name: directive-fig
+---
+Basin hopping and comparison to BFGS. Basin hopping combines local optimization with random perturbations to escape local minima.
+```
+
 Basin hoopping combines local optimization with random perturbations. Transforms the objective function into a "staircase" of local minima. 
 
 It repeatedly performs local optimization (e.g., using BFGS) followed by a random perturbation of the variables (simulated to SA). Accepts or rejects moves based on a Metropolis criterion. 

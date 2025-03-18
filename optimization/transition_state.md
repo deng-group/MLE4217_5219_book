@@ -8,6 +8,16 @@ In materials science, we're often interested not just in stable states (minima o
 Knowing the energy of the transition state (the *activation energy*) is crucial for understanding the kinetics of these processes. The *minimum energy path (MEP)* is the path connecting two minima that passes through the transition state with the lowest possible energy barrier. The Nudged Elastic Band (NEB) method is a powerful technique for finding the MEP.
 
 ## Nudged Elastic Band Method
+
+```{figure} ../figures/transition_state.png
+---
+width: 100%
+name: directive-fig
+---
+The potential energy surface showing stable states, transition states, and the minimum energy path (MEP). In NEB, a series of images are used to represent the path between the initial and final states. The forces perpendicular to the band are projected to find the MEP.
+```
+
+
 NEB creates a series of intermediate configurations ("images") between the initial and final states, forming a "band" or "chain" of states. These images are connected by fictitious "springs," and the forces acting on the images are carefully modified to guide the band towards the MEP.
 
 ### Algorithm

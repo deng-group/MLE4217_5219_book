@@ -15,6 +15,12 @@ The lecture video will be available after the lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
+This week, we will study various optimization algorithms and their applications in chemistry and materials science. Optimization is a fundamental tool in computational chemistry and materials science, used to find the minimum or maximum of a function. We will start from some basic concepts and then introduce local and global optimization algorithms. We will also cover how to get the minimum energy path (MEP) using the Nudged Elastic Band (NEB) method. In the practical session, you will learn how to perform optimization using Python and use ASE to perform geometry optimization.
 
 ## Learning Objectives
 By the end of this week, you should be able to:
+- Understand the importance of optimization in computational chemistry and materials science.
+- Describe the difference between local and global optimization algorithms.
+- Understand basics of optimization algorithms such as gradient descent, Newton's method, and simulated annealing.
+- Choose an appropriate optimization algorithm based on the problem characteristics.
+- Explain the Nudged Elastic Band (NEB) method and its application in finding transition states.

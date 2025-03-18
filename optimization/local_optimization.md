@@ -3,7 +3,15 @@
 These methods are good at finding local minima. They are often used when you have a reasonable starting point or when the objective function is relatively smooth (ideally, convex).
 
 ## Gradient Descent
-
+````{sidebar} 
+```{figure} ../figures/gradient_descent_2d.png
+---
+width: 100%
+name: directive-fig
+---
+Gradient descent in 1D and 2D. The algorithm iteratively takes steps in the direction of the negative gradient to find the minimum of the function.
+```
+````
 This is the workhorse of many optimization problems.  It works by iteratively taking steps in the direction of the *negative gradient*.
 
 The algorithm is simple:
@@ -20,7 +28,13 @@ GD is simple to implement but can be slow for high-dimensional problems or funct
 Variants: Stochastic Gradient Descent (SGD, for large datasets, updates with a subset of the data), Momentum (adds a "momentum" term to accelerate convergence and escape shallow local minima), Adam (combines momentum and adaptive learning rates).
 
 ## Conjugate Gradient
-
+```{figure} ../figures/cg.png
+---
+width: 100%
+name: directive-fig
+---
+Comparison of gradient descent and conjugate gradient methods. Conjugate gradient methods can converge more quickly than gradient descent, especially for quadratic functions.
+```
 Gradient descent can sometimes "zig-zag" inefficiently, especially in valleys with steep sides. Conjugate gradient methods improve upon this by choosing search directions that are *conjugate* to each other.  This ensures that each step makes progress in a new, independent direction. CG converges more quickly than GD for many problems, particularly when the objective function is quadratic.
 
 The search direction, $d_k$, is calculated as:
@@ -37,6 +51,15 @@ where $\alpha_k$ is again chosen (often via line search) to minimize the functio
 - Key Idea: Instead of just using the negative gradient, the search direction is a linear combination of the negative gradient and the previous search direction.
 
 ## Newton's Method
+````{sidebar} 
+```{figure} ../figures/newton_method.png
+---
+width: 100%
+name: directive-fig
+---
+Newton's method of optimization and the comparison to gradient descent. Newton's method converges much faster than gradient descent near the minimum.
+```
+````
 Newton's method uses both the gradient and the Hessian matrix (second derivatives) to find the minimum of a function. It's based on approximating the function locally by a quadratic function and then finding the minimum of that quadratic.
 
 We want to find a point where the gradient is zero, $\nabla f(x) = 0$. This is a necessary condition for a minimum (assuming the function is differentiable).  Newton's method uses a Taylor series expansion of the gradient around the current point, $x_k$:

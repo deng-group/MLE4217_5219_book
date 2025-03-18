@@ -19,6 +19,14 @@ Before diving into specific algorithms, let's define some key concepts:
 
 ### Objective Function
 
+```{figure} ../figures/object_function.png
+---
+width: 60%
+name: directive-fig
+---
+Object function $f(x) = x^2+2x+1$. The minimum value of this function is 0 at $x=-1$.
+```
+
 This is the function we want to minimize or maximize.  `x` represents the input variables (often a vector). For example:
 
 *   `f(x)` could be the total energy of a crystal structure, where `x` represents the positions of all the atoms.
@@ -34,7 +42,13 @@ These are the parameters we can adjust to influence the objective function.  The
 *   Categorical: Representing distinct categories, like crystal structure type (FCC, BCC, HCP).
 
 ### Constraints
-
+```{figure} ../figures/constrains.png
+---
+width: 60%
+name: directive-fig
+---
+The constrains of the optimization problem. Here, the feasible region is constrained by the inequality $x\leq 0.5$ and $x\geq -2.5$.
+```
 Often, we can't simply choose *any* value for our variables.  Constraints define the allowed range or relationships between variables. Examples:
 
 *   Composition constraints: The percentages of all elements in an alloy must sum to 100%.
@@ -42,14 +56,26 @@ Often, we can't simply choose *any* value for our variables.  Constraints define
 *   Non-negativity: Concentrations of chemical species cannot be negative.
 
 ### Local vs. Global Optima
-
+```{figure} ../figures/local_global_minima.png
+---
+width: 60%
+name: directive-fig
+---
+Local and global minima of a function. The global minimum is the lowest point in the entire search space, while local minima are lower than nearby points.
+```
 *   Local Minimum: A point where the objective function is lower than all *nearby* points.  Imagine a small dip in a hilly landscape.
 *   Global Minimum: The absolute lowest point of the objective function across the *entire* search space.  This is the deepest valley in our landscape.
 
 Finding the global minimum is generally much harder than finding a local minimum. Many optimization algorithms can get "stuck" in local minima, failing to find the true global optimum.
 
 ### Convexity
-
+```{figure} ../figures/convex_vs_non-convex.png
+---
+width: 100%
+name: directive-fig
+---
+Convex and non-convex functions. Convex functions have only one minimum, which is the global minimum. Non-convex functions have multiple local minima.
+```
 A function is *convex* if, for any two points within its domain, the line segment connecting those points lies entirely above or on the function's curve. Mathematically:
 
 $$f(\lambda x_1 + (1 - \lambda)x_2) \le \lambda f(x_1) + (1 - \lambda)f(x_2)$$
@@ -59,7 +85,13 @@ for any $x_1$, $x_2$ in the domain and any $\lambda$ between 0 and 1.
 Convex functions are "nice" because they have only *one* minimum, which is the global minimum.  If a function is *non-convex* (has multiple bumps and valleys), finding the global minimum is much more challenging.
 
 ### Gradient
-
+```{figure} ../figures/gradient.png
+---
+width: 100%
+name: directive-fig
+---
+Left panel: The gradient of 1D function $f(x) = (x+1)^2$. The gradient is shown as arrows, pointing in the opposite direction of steepest ascent. Right panel: The gradient of 2D function $f(x_1, x_2) = (x_1-1)^2 + (x_2+1)^2$. The gradient is shown as vectors, pointing in the direction of steepest ascent.
+```
 The gradient, denoted by $\nabla f(x)$, is a vector that points in the direction of the *steepest ascent* of the function at a given point.  Its components are the partial derivatives of the function with respect to each variable:
 
 $$\nabla f(x) = \left[ \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, ..., \frac{\partial f}{\partial x_n} \right]$$

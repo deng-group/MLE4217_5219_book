@@ -10,4 +10,13 @@ Visualizing the results is essential to ensure that the algorithm is converging 
 For global optimization, the choice of algorithm depends on the properties of the objective function. For noisy objective functions, simulated annealing is a good choice. When dealing with discrete variables, a genetic algorithm is suitable. If the computational cost is high, basin hopping can be used.
 
 ## No Free Lunch Theorem
+
+```{figure} ../figures/no_free_lunch_theorem.png
+---
+width: 60%
+name: directive-fig
+---
+No Free Lunch Theorem: No single optimization algorithm is the best for all problems.
+```
+
 The "No Free Lunch" theorem in optimization states that no single optimization algorithm is the best for all problems. The performance of an algorithm depends on the specific properties of the problem. Therefore, it is essential to understand the characteristics of the optimization problem and choose an algorithm that is well-suited to those properties.
