@@ -58,5 +58,8 @@ You can quickly navigate through the sections using the navigation bar on the le
 # Running the Jupyter Notebook Using Colab
 You can run the Jupyter notebooks in this course using Google Colab. Click the little rocket button if you see it to open the notebook in Colab. You can then run the code cells and interact with the notebook as if it were on your local machine.
 
+# Contact
+Please feel free to contact me through email at [msedz@nus.edu.sg](mailto:msedz@nus.edu.sg) if you have any questions or suggestions. I'm looking forward to hearing from you!
+
 # Acknowledgements
 This interactive textbook is built by Jupyter Book. Some contents of this course was inspired by the Materials Informatics courses offered by [Prof. Chris J. Pickard](https://www.msm.cam.ac.uk/people/pickard), [Prof. Taylor D. Sparks](https://faculty.utah.edu/u0203991-Taylor_D._Sparks/hm/index.hml), and [Dr. Enze Chen & Prof. Mark Asta](https://enze-chen.github.io/mi-book-2021/intro.html).
