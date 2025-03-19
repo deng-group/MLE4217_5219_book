@@ -2,6 +2,35 @@
 
 These methods are good at finding local minima. They are often used when you have a reasonable starting point or when the objective function is relatively smooth (ideally, convex).
 
+## Line Search
+Line search is a method for finding the minimum of a function along a given direction. It's often used in conjunction with other optimization methods that require a search direction (e.g., gradient descent, Newton's method). An example of a line search algorithm is the golden section search.
+
+Golden section search is a method for finding the minimum (or maximum) of a unimodal function within a specified interval. It is a derivative-free optimization technique that relies on the golden ratio to reduce the search interval at each step.
+
+#### Algorithm
+1. Define the interval $[a, b]$ where the minimum lies.
+2. Compute two interior points:
+
+    $$
+    x_1 = b - \frac{b - a}{\phi}, \quad x_2 = a + \frac{b - a}{\phi}
+    $$
+
+    where $\phi = \frac{1 + \sqrt{5}}{2}$ is the golden ratio.
+3. Evaluate the function at $x_1$ and $x_2$.
+4. Narrow the interval:
+    - If $f(x_1) < f(x_2)$, the new interval is $[a, x_2]$.
+    - Otherwise, the new interval is $[x_1, b]$.
+5. Repeat steps 2-4 until the interval is sufficiently small.
+6. The minimum is approximately at the midpoint of the final interval.
+
+#### Advantages and Disadvantages
+- Does not require derivatives, making it suitable for non-differentiable or noisy functions.
+- Efficient for unimodal functions due to the constant reduction factor provided by the golden ratio.
+- Only works for unimodal functions within the specified interval.
+- Slower convergence compared to methods that use gradient information.
+
+Golden section search is often used in line search procedures within larger optimization algorithms.
+
 ## Gradient Descent
 ````{sidebar} 
 ```{figure} ../figures/gradient_descent_2d.png
