@@ -3,10 +3,10 @@ Local optimization methods can get trapped in local minima. Global optimization 
 
 ```{figure} ../figures/global_opt.png
 ---
-width: 60%
+width: 100%
 name: directive-fig
 ---
-Global optimization aims to find the global minimum of a function, which may have multiple local minima.
+Global optimization aims to find the global minimum of a function, which may have multiple local minima. The example shows an Ackley function with multiple local minima and a single global minimum.
 ```
 
 ## Simulated Annealing
@@ -78,4 +78,4 @@ Repeat steps 2-5 for a specified number of generations or until a convergence cr
 ## Other Global Optimization Methods
 - Particle Swarm Optimization (PSO): Inspired by the social behavior of birds flocking or fish schooling.
 - Bayesian Optimization: Uses a probabilistic model to guide the search, particularly useful for expensive objective functions.
-- Random Search: Simple but effective, especially for high-dimensional problems.
+- Random Search: There is a correlation between basin depth and size and big basins exists in large fraction of the configurational space. Therefore, we can just randomly sample the whole space. It is simple but effective, especially for high-dimensional problems. 

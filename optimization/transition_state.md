@@ -41,13 +41,14 @@ NEB creates a series of intermediate configurations ("images") between the initi
         $\mathbf{F}_i = \mathbf{F}_i^{\perp} + \mathbf{F}_i^s$
 
 5.  Optimization:  The positions of the images (excluding the fixed initial and final states) are updated by moving them in the direction of the total force. This can be done using any standard optimization algorithm, such as:
-        *   Gradient Descent: $\mathbf{R}_i^{new} = \mathbf{R}_i^{old} + \alpha \mathbf{F}_i$
-        *   Velocity Verlet: A common choice in molecular dynamics simulations.
-        *   BFGS or other quasi-Newton methods: Can be more efficient than gradient descent.
+
+    - Gradient Descent: $\mathbf{R}_i^{new} = \mathbf{R}_i^{old} + \alpha \mathbf{F}_i$
+    - Velocity Verlet: A common choice in molecular dynamics simulations.
+    - BFGS or other quasi-Newton methods: Can be more efficient than gradient descent.
 
 6.  Iteration: Repeat steps 3-5 until the forces on the images are sufficiently small (i.e., the system has converged to the MEP).
 
-*   Tangent Estimation:  The choice of the tangent vector, $\boldsymbol{\tau}_i$, can affect the convergence of the NEB method. Several improved tangent estimates exist:
+- Tangent Estimation:  The choice of the tangent vector, $\boldsymbol{\tau}_i$, can affect the convergence of the NEB method. Several improved tangent estimates exist:
     * Energy-weighted tangent:
     $
     \tau_i =
