@@ -10,7 +10,7 @@ Human-readable formats are designed to be easily read and understood by humans. 
 
 CSV files store data in plain text, where each line represents a record and fields within the record are separated by delimiters such as commas, tabs, or spaces. This format is simple and easy to read, but it can be inefficient when the database is large. For example, a CSV file might look like this:
 
-```csv
+```
 ID,Name,Department,Salary
 1,John Doe,Engineering,75000
 2,Jane Smith,Marketing,68000

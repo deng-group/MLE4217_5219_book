@@ -6,6 +6,8 @@ root: intro
 # options:
 #   numbered: true
 chapters:
+- file: syllabus
+- file: calendar
 - file: orientation/intro
   sections:
   - file: orientation/orientation
@@ -72,9 +74,9 @@ chapters:
   - file: optimization/choose_opt
   - file: optimization/transition_state
   - file: optimization/optimization
-- file: high_througput/index
+- file: high_throughput/index
   sections:
-  - file: high_througput/introduction
-  - file: high_througput/workflow
+  - file: high_throughput/introduction
+  - file: high_throughput/workflow
 
 

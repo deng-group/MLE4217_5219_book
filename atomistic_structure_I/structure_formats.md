@@ -7,7 +7,7 @@ Crystallographic Information Framework (CIF) is a standard text file format for 
 A CIF file consists of data items that are organized into categories. Each data item is associated with a tag that describes the information it contains. The data items are typically arranged in a tabular format, with each row representing a different data item. CIF files can be opened and viewed using a text editor or specialized crystallographic software like Jmol, Mercury, or VESTA. It contains `loop_` for repeating data items.
 
 An example of CIF file of Zinc (Zn) is shown below:
-```cif
+```
 # generated using pymatgen
 data_Zn
 _symmetry_space_group_name_H-M   P6_3/mmc
@@ -71,7 +71,7 @@ Protein Data Bank (PDB) file format is a standard file format for representing t
 XYZ file format is a simple text file format for representing molecular and atomic coordinates. The XYZ file format is widely used in computational chemistry and molecular modeling to store the 3D coordinates of atoms in a molecule or crystal structure. The XYZ file format is human-readable and consists of a header line followed by lines containing the atomic symbols and their corresponding x, y, and z coordinates.
 
 An example of XYZ file format for water molecule ($H_2O$) is shown below:
-```xyz
+```
 3
 Water molecule
 O 0.000000 0.000000 0.000000
@@ -87,7 +87,7 @@ XYZ file format only contains atomic coordinates and does not include informatio
 [Extended XYZ](https://github.com/libAtoms/extxyz) file (`.extxyz`) format is an extension of the standard XYZ file format that includes additional information about the atoms or molecules in the system. In addition to the atomic coordinates, the extxyz file format can include information such as atomic charges, velocities, forces, and other properties. The extxyz file format is commonly used in machine learning and molecular dynamics simulations to store atomic data along with additional information.
 
 An example of extxyz file format for Zn is shown below:
-```extxyz
+```
 2
 Lattice="2.6143598557 0 0 -1.3071799278 2.2641020496 0 0  0 4.8731608391" Properties=species:S:1:pos:R:3 pbc="T T T"
 Zn 0.00000   1.50940   1.21829
@@ -100,7 +100,7 @@ In this example, the first line of the extxyz file contains the total number of 
 POSCAR file format is used by the Vienna Ab initio Simulation Package (VASP) to represent crystal structures. The POSCAR file contains information about the unit cell parameters, atomic coordinates, and lattice vectors of a crystal structure. The POSCAR file format is a plain text file that can be opened and edited using a text editor. The POSCAR file format is widely used in computational materials science and solid-state physics for performing electronic structure calculations and molecular dynamics simulations.
 
 An example of POSCAR file format for Zn is shown below:
-```poscar
+```
 Zn2
 1.0
         2.6143598557         0.0000000000         0.0000000000

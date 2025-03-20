@@ -50,7 +50,7 @@ Our goal is to make this course practical and helpful for you. We'll cover the b
 
 The field is evolving quickly, so we can't promise that everything we teach will be the latest and greatest. But if you have any suggestions, we'd love to hear them!
 
-For more details about the course (like the syllabus, calendar, and rules), check out [Course Information](orientation/syllabus.md).
+For more details about the course (like the syllabus, calendar, and rules), check out [Syllabus](syllabus.md), [Calendar](calendar.md), and [Orientation](orientation/orientation.md).
 
 # Navigation
 You can quickly navigate through the sections using the navigation bar on the left side. There is also a search box to help you find any content in this course swiftly. To get started, you can use the navigation bar and begin with the [Orientation](orientation/orientation.md).
