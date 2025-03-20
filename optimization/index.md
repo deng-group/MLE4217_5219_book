@@ -10,7 +10,7 @@ name: directive-fig
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRd6TAxBAjozQVIJYbtWbgshPJn9qrtC1IzW_J1G1qWDvXg00a00QXZsTJAY04TR50T0RVPV9SfpuVo/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-The lecture video will be available after the lecture.
+The lecture has been recorded using Zoom. Please access the video through the link [here](https://nus-sg.zoom.us/rec/share/eRw8oGn72YeTetWTNbrCM6yyBjUuiB1Cu0ch2n-JJjNIBjtuYUTbErxYIC4blhVs.uaQ1xlR1PnlFOSzg).
 
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
