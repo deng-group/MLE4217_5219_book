@@ -72,5 +72,9 @@ chapters:
   - file: optimization/choose_opt
   - file: optimization/transition_state
   - file: optimization/optimization
+- file: high_througput/index
+  sections:
+  - file: high_througput/introduction
+  - file: high_througput/workflow
 
 
