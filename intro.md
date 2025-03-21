@@ -5,10 +5,9 @@ site:
   hide_toc: true
   hide_title_block: true
 ---
-+++ {"class": "col-page-inset"}
 
 
-:::::{grid} 2 3 3 3
+:::::{grid} 2 2 2 2
 
 ::::{grid-item}
 
@@ -18,8 +17,8 @@ site:
 
 ### Instructed by *Zeyu Deng*
 
-Department of Materials Science and Engineering
-National University of Singapore
+Department of Materials Science and Engineering  
+National University of Singapore  
 msedz@nus.edu.sg
 
 {button}`Get Started <orientation/intro.md>`
@@ -33,6 +32,7 @@ msedz@nus.edu.sg
 ::::
 
 :::::
++++ {"class": "col-page-inset"}
 
 # Welcome
 🙌 **Welcome to Materials Informatics (MLE4217/5219)**! 🎉 This interactive textbook will make you success!
