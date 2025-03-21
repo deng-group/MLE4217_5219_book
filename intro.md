@@ -5,9 +5,10 @@ site:
   hide_toc: true
   hide_title_block: true
 ---
-+++ {"class": "col-body-inset"}
++++ {"class": "col-page-inset"}
 
-:::::{grid} 2 2 2 2
+
+:::::{grid} 2 3 3 3
 
 ::::{grid-item}
 

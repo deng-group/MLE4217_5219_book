@@ -57,7 +57,7 @@ $$
 This shift from dealing with wavefunctions with 3$N_e$ variables to the electron density with 3 variables (x, y, z) makes the problem much more tractable. Therefore, by finding the electron density that minimizes the total energy of the system, we can determine the ground-state electron density and the ground-state energy of the system.
 
 ````{sidebar}
-```{figure} ../figures/scf.pdf
+```{figure} ../figures/scf.png
 ---
 name: directive-fig
 ---
