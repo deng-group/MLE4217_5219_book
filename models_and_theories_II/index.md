@@ -2,7 +2,6 @@
 ```{image} ../figures/models_and_theories_title.jpeg
 ---
 width: 100%
-name: directive-fig
 ---
 ```
 

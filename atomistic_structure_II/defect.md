@@ -2,7 +2,6 @@
 ```{figure} ../figures/doping.png
 ---
 width: 100%
-name: directive-fig
 ---
 Defects contribute to rubies' red hue and emeralds' green coloration, and they are also crucial for enabling superconductivity in YBCO.
 ```
@@ -14,7 +13,6 @@ In the previous chapter, we discussed the ideal atomic arrangements in crystalli
 ```{figure} ../figures/point_defect.png
 ---
 width: 100%
-name: directive-fig
 ---
 Various types of point defects in crystalline materials.
 ```
@@ -40,7 +38,6 @@ Point defects play a crucial role in determining various material properties. Fo
 ```{figure} ../figures/supercell.png
 ---
 width: 100%
-name: directive-fig
 ---
 Construction of a supercell with example of $\rm{TiO_2}$
 ```
@@ -59,7 +56,6 @@ Another important consideration is that the finite size of the supercell can int
 ```{figure} ../figures/stacking_fault.png
 ---
 width: 100%
-name: directive-fig
 ---
 Stacking faults in a crystal structure.
 ```

@@ -20,7 +20,6 @@ Ultimately, the importance of each of these factors depends on the specific work
 ```{figure} ../figures/cost_of_compute.png
 ---
 width: 75%
-name: directive-fig
 ---
 The cost of computation is decreasing so the computational modelling is becoming increasingly cost-effective compared to experiments.
 ```

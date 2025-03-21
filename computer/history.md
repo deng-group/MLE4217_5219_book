@@ -4,7 +4,6 @@
 ```{figure} ../figures/computer_intro.png
 ---
 width: 100%
-name: directive-fig
 ---
 Some examples of computer in our daily life.
 ```
@@ -14,7 +13,6 @@ We will start from the basics of computer. Computer is everywhere in the digital
 ```{figure} ../figures/computer_early_days.png
 ---
 width: 100%
-name: directive-fig
 ---
 Some examples computer before 20th century.
 ```
@@ -25,7 +23,6 @@ During the Industrial Revolution, the Jacquard loom emerged as a significant inn
 ```{figure} ../figures/computer_charles_babbage.png
 ---
 width: 100%
-name: directive-fig
 ---
 Charles Babbage, his Analytical Engine, and Ada Lovelace, the first programmer.
 ```
@@ -51,7 +48,6 @@ Digital computers represent information in discrete form, typically as sequences
 ```{figure} ../figures/early_days_digital_computer.png
 ---
 width: 100%
-name: directive-fig
 ---
 Early Days: General-Purpose Programmable Computer
 ```

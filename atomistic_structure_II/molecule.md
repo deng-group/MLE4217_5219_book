@@ -5,7 +5,6 @@ Molecules can be represented in various ways, each providing different levels of
 ```{figure} ../figures/smiles.png
 ---
 width: 80%
-name: directive-fig
 ---
 SMILES string representation of ethane, benzene, and nitrobenzene.
 ```
@@ -24,14 +23,15 @@ SMILES is widely used in fields such as chemistry and drug discovery. Tools like
 Overall, SMILES serves as a bridge between a molecule’s visual structure and its digital representation, making it a fundamental tool in modern chemical research and data analysis.
 
 ## Graphs
+````{sidebar}
 ```{figure} ../figures/graph_adj.png
 ---
-width: 30%
-name: directive-fig
+width: 60%
 ---
 An example of a graph and adjacency matrix.
-```
 
+```
+````
 A graph (G) is a mathematical structure used to model relationships between objects. It consists of vertices or nodes (V) and edges (E) that connect these nodes: G(V, E). Relationships in a graph are typically stored using a sparse adjacency matrix or list.
 
 In the context of chemistry and materials science, graphs can be used to describe molecular structures. Here, atoms are represented as nodes and bonds as edges. Additional information, such as oxidation states, bond lengths, and bond strengths, can be stored as attributes of the nodes and edges.

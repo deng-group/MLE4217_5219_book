@@ -36,7 +36,6 @@ Golden section search is often used in line search procedures within larger opti
 ```{figure} ../figures/gradient_descent_2d.png
 ---
 width: 100%
-name: directive-fig
 ---
 Gradient descent in 1D and 2D. The algorithm iteratively takes steps in the direction of the negative gradient to find the minimum of the function.
 ```
@@ -60,7 +59,6 @@ Variants: Stochastic Gradient Descent (SGD, for large datasets, updates with a s
 ```{figure} ../figures/cg.png
 ---
 width: 100%
-name: directive-fig
 ---
 Comparison of gradient descent and conjugate gradient methods. Conjugate gradient methods can converge more quickly than gradient descent, especially for quadratic functions.
 ```
@@ -84,7 +82,6 @@ where $\alpha_k$ is again chosen (often via line search) to minimize the functio
 ```{figure} ../figures/newton_method.png
 ---
 width: 100%
-name: directive-fig
 ---
 Newton's method of optimization and the comparison to gradient descent. Newton's method converges much faster than gradient descent near the minimum.
 ```
@@ -99,7 +96,9 @@ where $H(x_k)$ is the Hessian matrix at $x_k$.  We want to find $\Delta x$ such 
 
 $$
 0 = \nabla f(x_k) + H(x_k) \Delta x
+$$
 
+$$
 \Delta x = -H(x_k)^{-1} \nabla f(x_k)
 $$
 

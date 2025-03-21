@@ -21,9 +21,9 @@ Converting between fractional and Cartesian coordinates is a crucial skill in cr
 
 For example, if the lattice vectors are defined as **a**, **b**, and **c**, the conversion from fractional (u, v, w) to Cartesian (x, y, z) coordinates can be performed using the following equation:
 
-$
+$$
 \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} a_{x} & b_{x} & c_{x} \\ a_{y} & b_{y} & c_{y} \\ a_{z} & b_{z} & c_{z} \end{bmatrix} \begin{bmatrix} u \\ v \\ w \end{bmatrix}
-$
+$$
 
 
 where: (x, y, z) are the Cartesian coordinates, (u, v, w) are the fractional coordinates, $a_x, a_y, a_z$ are the components of the lattice vector **a**, $b_x, b_y, b_z$ are the components of the lattice vector **b**, $c_x, c_y, c_z$ are the components of the lattice vector **c**.
@@ -48,8 +48,7 @@ Information about Wyckoff positions for each space group can be found in the Int
 
 ```{figure} ../figures/wyckoff.png
 ---
-width: 50%
-name: directive-fig
+width: 80%
 ---
 Wyckoff positions of $P2_1/c$ space group.
 ```
@@ -61,7 +60,6 @@ Imagine a simple cubic crystal structure with space group $P2_1/c$ as shown in a
 ```{figure} ../figures/cuau_disorder.png
 ---
 width: 50%
-name: directive-fig
 ---
 Disordered atomic arrangement in a $\rm{Cu_{0.8}Au_{0.2}}$ alloy.
 ```
@@ -89,7 +87,6 @@ As temperature increases, the vibrational motion of atoms amplifies, influencing
 ```{figure} ../figures/adp.png
 ---
 width: 50%
-name: directive-fig
 ---
 Thermal ellipsoids in $\rm{BiI3}$. The principal axes of the ellipsoid represent the directions of maximum and minimum displacement.
 ```
@@ -101,7 +98,6 @@ To visualize thermal displacement, the thermal ellipsoid represents the probable
 ```{figure} ../figures/cn_voronoi.png
 ---
 width: 100%
-name: directive-fig
 ---
 Local environment: Coordination number and Voronoi tessellation.
 ```

@@ -33,7 +33,6 @@ A group of directions that are equivalent due to the crystal's symmetry is calle
 ```{figure} ../figures/miller_indices.png
 ---
 width: 80%
-name: directive-fig
 ---
 An illustration of crystal directions and planes using the Miller indices notation.
 ```
@@ -80,7 +79,6 @@ As an illustration, consider a face-centered cubic (FCC) structure. In this case
 ```{figure} ../figures/primitive_cell.png
 ---
 width: 60%
-name: directive-fig
 ---
 Primitive cell are not unique and can be chosen in different ways. The figure shows three different primitive cells for a lattice.
 ```
@@ -91,7 +89,6 @@ Choosing a primitive unit cell is not unique, and different choices can be made 
 ```{figure} ../figures/motif.png
 ---
 width: 80%
-name: directive-fig
 ---
 Schematic of a crystal structure with a lattice and motif using a face-centered cubic (FCC) ZnS example. Motif atoms are highlighted in dashed circle.
 ```

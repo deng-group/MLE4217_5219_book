@@ -17,9 +17,6 @@ where $\Psi(\mathbf{r}, \mathbf{R}, t)$ is the wave function of the system, $\ha
 ## Born-Oppenheimer Approximation
 ````{sidebar}
 ```{figure} ../figures/bo_approx.png
----
-name: directive-fig
----
 Born-Oppenheimer approximation for separating the motion of the electrons and nuclei so that the electron wave function can be solved separately.
 ```
 ````
@@ -58,9 +55,7 @@ This shift from dealing with wavefunctions with 3$N_e$ variables to the electron
 
 ````{sidebar}
 ```{figure} ../figures/scf.png
----
-name: directive-fig
----
+
 Self-consistent field (SCF) method for solving the Kohn-Sham equations.
 ```
 ````
@@ -93,9 +88,7 @@ There are many different $V_{\text{xc}}$ that have been developed: Local Density
 ## Basis Set
 ````{sidebar}
 ```{figure} ../figures/planewave.png
----
-name: directive-fig
----
+
 Plane wave basis set for expanding the wave function of the Kohn-Sham electrons.
 ```
 ````
@@ -111,18 +104,12 @@ Noted that the computation is done in the reciprocal space, and a k-points grid 
 
 ## Pseudopotentials
 ```{figure} ../figures/pseudopotentials.png
----
-name: directive-fig
----
 Comparison of the wavefunction between all-electron (AE) and pseudopotential (PS) calculations. The core electrons are replaced by an effective smooth potential in the pseudopotential calculation.
 ```
 Psuedopotentials are used to replace the core electrons in the system with an effective potential that approximates the effect of the core electrons on the valence electrons because the core electrons are tightly bound to the nucleus and do not participate in chemical bonding. This allows us to reduce the number of electrons that need to be treated explicitly in the calculation. It also smooth out the potential near the nucleus, which makes the calculation converge faster with a much smaller basis set. There different ways of constructing pseudopotentials such as norm-conserving pseudopotentials (NCPP) and ultrasoft pseudopotentials (USPP). 
 
 ## Properties
 ```{figure} ../figures/dft_property.png
----
-name: directive-fig
----
 Band structure and optical adsorption spectra of Silicon calculated using DFT. It should be noted that the band gap of Silicon is underestimated.
 ```
 Instead of compute the derivative of the total energy with respect to the position of the particles, the force can be calculated directly once the ground state electron density is determined using the Hellmann-Feynman theorem, which we need to determine to get the energy anyway.

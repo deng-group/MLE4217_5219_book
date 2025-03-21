@@ -23,7 +23,6 @@ Applications of the reciprocal lattice include:
 ```{figure} ../figures/brillouin_zone.png
 ---
 width: 100%
-name: directive-fig
 ---
 Weigner-Seitz cell in reciprocal space and the first Brillouin zone of an FCC lattice.
 ```

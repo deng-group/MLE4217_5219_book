@@ -6,7 +6,6 @@ Noncrystalline materials, also known as amorphous materials, lack the long-range
 ```{figure} ../figures/rdf.png
 ---
 width: 100%
-name: directive-fig
 ---
 Radial Distribution Function (RDF) and examples of solid, liquid, and gas RDFs.
 ```

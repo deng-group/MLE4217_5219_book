@@ -2,9 +2,6 @@
 Monte Carlo methods are a class of computational algorithms that rely on random sampling to obtain numerical results. These methods are widely used in various fields, including physics, chemistry, and computer science, to solve complex problems that are difficult or impossible to solve analytically. In atomistic simulation, unlike molecular dynamics (MD), which relies on solving equations of motion for particles over time, Monte Carlo simulations are based on random sampling and statistical sampling methods to explore the configuration space of a system.
 
 ```{figure} ../figures/monte_carlo_pi_combined.png
----
-name: directive-fig
----
 Example of Monte Carlo simulation to estimate the value of $\pi$ using random sampling. Right panel shows the convergence of the estimated value of $\pi$ as a function of the number of samples.
 ```
 

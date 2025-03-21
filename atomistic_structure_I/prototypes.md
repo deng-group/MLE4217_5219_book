@@ -5,7 +5,6 @@ In materials science, a structure prototype is a representative structure that c
 ```{figure} ../figures/prototypes_1.png
 ---
 width: 100%
-name: directive-fig
 ---
 Crystal structure prototypes: FCC, BCC, and HCP.
 ```
@@ -17,7 +16,6 @@ FCC and HPC structures are close-packed structures, with the FCC structure havin
 ```{figure} ../figures/prototypes_2.png
 ---
 width: 100%
-name: directive-fig
 ---
 Crystal structure prototypes: Rocksalt and CsCl.
 ```
@@ -27,7 +25,6 @@ Other structure prototypes include the rocksalt (NaCl) and cesium chloride (CsCl
 ```{figure} ../figures/prototypes_3.png
 ---
 width: 100%
-name: directive-fig
 ---
 Crystal structure prototypes: Perovskite ($BaTiO_3$). It undergoes a phase transition from a cubic to a tetragonal structure below 120 °C.
 ```
@@ -39,7 +36,6 @@ An example is the compound $BaTiO_3$, which is a well-known perovskite material 
 ```{figure} ../figures/prototypes_4.png
 ---
 width: 100%
-name: directive-fig
 ---
 Crystal structure prototypes: Zincblende and Wurtzite.
 ```
@@ -49,7 +45,6 @@ The zincblende and wurtzite structures are common prototypes for binary compound
 ```{figure} ../figures/prototypes_5.png
 ---
 width: 100%
-name: directive-fig
 ---
 Crystal structure prototypes: Garnet, Spinel, and Rutile.
 ```

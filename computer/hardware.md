@@ -4,7 +4,6 @@
 ```{figure} ../figures/computer_von_neumann.png
 ---
 width: 60%
-name: directive-fig
 ---
 John von Neumann and von Neumann architecture.
 ```
@@ -28,7 +27,6 @@ The CPU operates in a cycle known as the fetch-decode-execute cycle, which it pe
 ```{figure} ../figures/computer_memory.png
 ---
 width: 100%
-name: directive-fig
 ---
 Examples of computer memory: RAM, SSD, HDD, SD card and HBM.
 ```
@@ -60,7 +58,6 @@ Understanding how these input and output devices work, and how they communicate 
 ```{figure} ../figures/beyond_von_neumann.png
 ---
 width: 80%
-name: directive-fig
 ---
 Examples of modern CPU or SOC: Intel Lunar Lake and Apple M4.
 ```

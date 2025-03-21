@@ -6,9 +6,6 @@ It is used to explain many phenomena in materials science. For example, the beha
 ## Microstates and Macrostates
 ````{sidebar}
 ```{figure} ../figures/micro_macrostates.png
----
-name: directive-fig
----
 Microstates and macrostates in statistical mechanics as applied to a coin toss example. Each possible outcome of the coin tosses represents a microstate, while the number of heads and tails represents a macrostate.
 ```
 ````
@@ -23,9 +20,6 @@ The microstate is characterized by the positions ($\mathbf{r}$) and momenta ($\m
 
 ## Ensemble
 ```{figure} ../figures/ensemble.png
----
-name: directive-fig
----
 4 types of ensembles in statistical mechanics: microcanonical, canonical, isothermal-isobaric, and grand canonical.
 ```
 Ensemble is the actual microstates and the probability distribution within the phase space. It is a collection of microstates that share certain macroscopic properties, such as temperature (T), pressure (P), volume (V), number of particles (N). There are several types of ensembles in statistical mechanics, each corresponding to different constraints on the system.

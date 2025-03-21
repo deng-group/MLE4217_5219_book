@@ -6,7 +6,6 @@ Force fields usually contains parameters that describe the interactions between 
 ```{figure} ../figures/pair_potentials.png
 ---
 width: 60%
-name: directive-fig
 ---
 A typical potential energy curves for a pair of atoms as a function of the separation distance.
 ```
@@ -33,7 +32,6 @@ For solid materials, the stress tensor can be derived from the potential energy 
 ```{figure} ../figures/cutoff.png
 ---
 width: 60%
-name: directive-fig
 ---
 A cutoff distance is used to limit the number of interactions that need to be calculated in force fields.
 ```
@@ -46,7 +44,6 @@ In practice, the unit cell is divided into a grid, and the atoms are assigned to
 ```{figure} ../figures/pbc.png
 ---
 width: 60%
-name: directive-fig
 ---
 Periodic boundary conditions are used to simulate an infinite system by replicating the simulation cell in all directions. Atoms that leave the simulation cell re-enter from the opposite side. Minimal image convention is used to calculate the distance between atoms in the simulation cell and the neighboring cells.
 ```
@@ -71,7 +68,6 @@ where $r_{ij}$ is the distance between atoms $i$ and $j$, $\mathbf{r}_i$ and $\m
 ```{figure} ../figures/bond_angles.png
 ---
 width: 60%
-name: directive-fig
 ---
 Bond lengths, bond angles, and dihedral angles are used to describe the geometry of molecules in force fields. Non-bonded interactions are used to describe the interactions between atoms that are not directly bonded.
 ```
@@ -135,7 +131,6 @@ Pair potentials are a type of force field that describes the interactions betwee
 ```{figure} ../figures/lennard_jones_potential.png
 ---
 width: 60%
-name: directive-fig
 ---
 The Leonard-Jones potential describes the interactions between neutral atoms or molecules. The equilibrium distance is $\sigma$ and the depth of the potential well is $\epsilon$. The equilibrium distance $r_e$ is increased when temperature is increased.
 ```
@@ -153,7 +148,6 @@ where $U(r)$ is the potential energy between two atoms or molecules at a distanc
 ```{figure} ../figures/morse_potential.png
 ---
 width: 60%
-name: directive-fig
 ---
 The Morse potential describes the interactions between atoms or molecules in a material. The dissociation energy is $D_e$, the width of the potential well is $a$, and the equilibrium bond length is $r_e$.
 ```
@@ -169,7 +163,6 @@ where $U(r)$ is the potential energy between two atoms or molecules at a distanc
 ```{figure} ../figures/many_body_pot.png
 ---
 width: 50%
-name: directive-fig
 ---
 Many-body potentials describe the interactions between three or more atoms or molecules in a material. The many-body expansion includes one-body, two-body, three-body, and higher-order terms that describe the interactions between atoms or molecules.
 ```

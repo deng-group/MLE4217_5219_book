@@ -2,7 +2,6 @@
 ```{figure} ../figures/materials_database.png
 ---
 width: 100%
-name: directive-fig
 ---
 Examples of experimental (ICSD, CSD) and computational databases (Materials Project and AFLOWLIB) in materials science.
 ```
@@ -38,7 +37,6 @@ The [AFLOWLIB](https://aflowlib.org/) database is a high-throughput computationa
 ```{figure} ../figures/ashby_plot.png
 ---
 width: 80%
-name: directive-fig
 ---
 Ashby plot showing the Young's modulus vs. density for various materials. Source: https://en.wikipedia.org/wiki/Material_selection#/media/File:Material-comparison--strength-vs-density_plain.svg
 ```

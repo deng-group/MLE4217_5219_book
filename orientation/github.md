@@ -3,7 +3,6 @@
 ```{figure} ../figures/opensource.png
 ---
 width: 70%
-name: directive-fig
 ---
 Various of open-source softwares, including some famous projects: Linux, Android that powers most of the mobile phones and servers nowadays.
 ```
@@ -45,7 +44,6 @@ GitHub is the hosting platform for your repository. It’s widely used across va
 ```{figure} ../figures/git_workflow.png
 ---
 width: 100%
-name: directive-fig
 ---
 GitHub workflow.
 ```
@@ -75,7 +73,6 @@ When you create a repository on GitHub, it is stored remotely in the cloud. To w
 ```{figure} ../figures/git_commands.png
 ---
 width: 100%
-name: directive-fig
 ---
 Some git commands.
 ```

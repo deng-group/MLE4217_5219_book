@@ -43,7 +43,6 @@ Modern computers are equipped with multiple processors or cores, allowing them t
 ```{figure} ../figures/amdahl.png
 ---
 width: 80%
-name: directive-fig
 ---
 The speed up of a parallel code can be estimated using the Amdahl’s law.
 ```

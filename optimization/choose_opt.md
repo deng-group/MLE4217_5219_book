@@ -14,7 +14,6 @@ For global optimization, the choice of algorithm depends on the properties of th
 ```{figure} ../figures/no_free_lunch_theorem.png
 ---
 width: 60%
-name: directive-fig
 ---
 No Free Lunch Theorem: No single optimization algorithm is the best for all problems.
 ```
