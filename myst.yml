@@ -86,10 +86,18 @@ project:
         - file: high_throughput/workflow.md
 site:
   options:
-    logo: materials_informatics_title.svg
-    logo_dark: materials_informatics_title_dark.svg
+    logo: logo.svg
+    logo_dark: logo_dark.svg
+    favicon: favicon.ico
   template: book-theme
   folders: true
+
+  actions:
+    - title: DENG.Group
+      url: https://matsci.dev
+
+
+
 launch_buttons:
   notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
   colab_url: "https://colab.research.google.com"
