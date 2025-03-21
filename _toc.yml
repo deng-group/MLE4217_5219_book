@@ -11,8 +11,6 @@ chapters:
 - file: orientation/intro
   sections:
   - file: orientation/orientation
-  - file: orientation/syllabus
-  - file: orientation/calendar
   - file: orientation/introduction
   - file: orientation/github
   - file: orientation/setup

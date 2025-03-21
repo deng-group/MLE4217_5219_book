@@ -22,7 +22,7 @@ Hi, my name is Zeyu Deng, and I am an Assistant Professor of Materials Science a
 ````
 
 ## Course arrangement
-Please refer to the [syllabus](syllabus.md) and [calendar](calendar.md) for the planned lectures. Note that the content may be subject to change depending on the schedule and progress.
+Please refer to the [syllabus](../syllabus.md) and [calendar](../calendar.md) for the planned lectures. Note that the content may be subject to change depending on the schedule and progress.
 
 ## Complete the pre-course survey
 ```{image} ../figures/pre-course_survey.png
