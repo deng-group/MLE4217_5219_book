@@ -90,8 +90,6 @@ site:
     logo_dark: materials_informatics_title_dark.svg
   template: book-theme
   folders: true
-
-numbering:
-  code: false
-  math: true
-  headings: true
+launch_buttons:
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+  colab_url: "https://colab.research.google.com"
