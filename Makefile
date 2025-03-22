@@ -5,3 +5,5 @@ book:
 	jupyter-book build --builder pdflatex .
 web:
 	jupyter book build --html
+serve:
+	jupyter book start

@@ -84,6 +84,9 @@ project:
       children:
         - file: high_throughput/introduction.md
         - file: high_throughput/workflow.md
+        - file: high_throughput/thermodynamics.md
+        - file: high_throughput/examples.md
+        - file: high_throughput/atomate.ipynb
 site:
   options:
     logo: logo.svg
