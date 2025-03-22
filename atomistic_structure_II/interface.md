@@ -1,11 +1,9 @@
 # Interface
+````{sidebar}
 ```{figure} ../figures/interface.png
----
-width: 50%
-name: directive-fig
----
 Heterogeneous interface between $\rm{LiFePO_4}$ (100) and $\rm{Si}$ (111).
 ```
+````
 Interfaces represent the boundaries between different materials or phases of the same material. These boundaries can manifest as surfaces, grain boundaries, or interfaces between distinct chemical compositions. The nature of the atomic arrangement at an interface significantly influences the material's overall behavior.
 
 Interfaces can be broadly categorized based on the degree of lattice matching between the adjacent materials: coherent, incoherent, and semi-coherent. A coherent interface exhibits perfect lattice matching, while an incoherent interface displays a complete mismatch. Semi-coherent interfaces represent an intermediate state, accommodating some degree of mismatch through periodic defects.
@@ -19,13 +17,11 @@ Interfaces play a crucial role in determining material properties and performanc
 The interface region represents a transition zone where the properties of the adjacent materials change. This region may exhibit distinct mechanical, electrical, or thermal characteristics compared to the bulk materials. 
 
 ## Surface/Slab
+````{sidebar}
 ```{figure} ../figures/slab_model.png
----
-width: 50%
-name: directive-fig
----
 A slab model of  Al (100) with a 10 Å vacuum layer.
 ```
+````
 A slab model is a computational technique used to simulate surfaces and interfaces, enabling the study of phenomena like adsorption and catalysis. When constructing a slab model, several key parameters must be carefully considered:
 
 - Bulk Structure: The starting point is an accurate representation of the bulk material's crystal structure.
@@ -65,7 +61,6 @@ Understanding Tasker's classification helps in predicting the stability and beha
 ```{figure} ../figures/wulff_shape.png
 ---
 width: 80%
-name: directive-fig
 ---
 Wulff shape example and construction.
 ```

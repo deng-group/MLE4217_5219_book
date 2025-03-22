@@ -5,9 +5,6 @@ Kinetic Monte Carlo (kMC) is an extension of the Monte Carlo method that is used
 
 ````{sidebar}
 ```{figure} ../figures/kmc_process.png
----
-name: directive-fig
----
 Process of running rejection-free kinetic Monte Carlo (RFkMC).
 ```
 ````

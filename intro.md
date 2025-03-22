@@ -1,45 +1,38 @@
-:::::{grid} 2
-:reverse:
+---
+title: Materials Informatics
+site:
+  hide_outline: true
+  hide_toc: true
+  hide_title_block: true
+---
 
-:::{grid-item}
-:columns: 6
-:class: sd-m-auto
 
-```{image} figures/materials_informatics_logo_notitle.png
-:alt: logo
+:::::{grid} 2 2 2 2
+
+::::{grid-item}
+
+# Materials Informatics
+
+## MLE4217/5219
+
+### Instructed by *Zeyu Deng*
+
+Department of Materials Science and Engineering  
+National University of Singapore  
+msedz@nus.edu.sg
+
+{button}`Get Started <orientation/intro.md>`
+::::
+
+::::{grid-item}
+```{figure} figures/materials_informatics_logo_notitle.png
+:width: 100%
 :align: center
-
 ```
-:::
-
-::::{grid}
-:reverse:
-
-:::{grid-item}
-:columns: 12
-:class: sd-fs-1
-Materials Informatics: The Role of Big Data  
-:::
-
-:::{grid-item}
-:columns: 12
-:class: sd-fs-4
-MLE4217/5219  
-Instructed by *Zeyu Deng*
-
-```{button-ref} orientation/intro
-:ref-type: doc
-:color: primary
-:class: sd-rounded-pill float-left
-Get started 
-```
-
-:::
-
-
 ::::
 
 :::::
++++ {"class": "col-page-inset"}
 
 # Welcome
 🙌 **Welcome to Materials Informatics (MLE4217/5219)**! 🎉 This interactive textbook will make you success!

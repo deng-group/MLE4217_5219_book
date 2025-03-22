@@ -4,7 +4,6 @@ Local optimization methods can get trapped in local minima. Global optimization 
 ```{figure} ../figures/global_opt.png
 ---
 width: 100%
-name: directive-fig
 ---
 Global optimization aims to find the global minimum of a function, which may have multiple local minima. The example shows an Ackley function with multiple local minima and a single global minimum.
 ```
@@ -14,7 +13,6 @@ Global optimization aims to find the global minimum of a function, which may hav
 ```{figure} ../figures/sa.png
 ---
 width: 100%
-name: directive-fig
 ---
 Simulated annealing and the comparison to local optimization algorithm BFGS. Simulated annealing can escape local minima by allowing moves that worsen the objective function with a certain probability.
 ```
@@ -47,7 +45,6 @@ Simulated annealing is inspired by the annealing process in metallurgy. Starts a
 ```{figure} ../figures/basin_hopping.png
 ---
 width: 100%
-name: directive-fig
 ---
 Basin hopping and comparison to BFGS. Basin hopping combines local optimization with random perturbations to escape local minima.
 ```

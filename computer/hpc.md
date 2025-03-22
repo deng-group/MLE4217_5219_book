@@ -4,7 +4,6 @@
 ```{figure} ../figures/hpc_examples.png
 ---
 width: 100%
-name: directive-fig
 ---
 Examples of HPC: El Capitan by LLNL in the USA and ASPIRE2A+ by NSCC in Singapore.
 ```
@@ -34,7 +33,6 @@ In summary, HPC clusters are the backbone of modern scientific research and tech
 ```{figure} ../figures/numa.png
 ---
 width: 100%
-name: directive-fig
 ---
 On the left shows an example NUMA architecture. An example of 2 NUMA nodes is shown on the right.
 ```
@@ -63,7 +61,6 @@ Cloud computing has transformed the way we access and utilize computing resource
 ```{figure} ../figures/neuromorphic.png
 ---
 width: 100%
-name: directive-fig
 ---
 Difference between a von Neumann architecture computer and a neuromorphic computer.
 ```
@@ -76,7 +73,6 @@ In a von Neumann system, data must be transferred back and forth between the mem
 ```{figure} ../figures/quantum_computer.png
 ---
 width: 80%
-name: directive-fig
 ---
 Features of quantum computer.
 ```
@@ -89,7 +85,6 @@ Quantum computers excel at specialized tasks that are infeasible for classical c
 ```{figure} ../figures/quantum_supremacy.png
 ---
 width: 100%
-name: directive-fig
 ---
 Quantum computer and the [quantum supremacy paper by Google](https://www.nature.com/articles/s41586-019-1666-5).
 ```

@@ -7,9 +7,6 @@ If we have a system of particles, we can simulate the dynamics of the system by 
 
 ````{sidebar}
 ```{figure} ../figures/md_process.png
----
-name: directive-fig
----
 General process of molecular dynamics simulation.
 ```
 ````

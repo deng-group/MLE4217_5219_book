@@ -2,7 +2,6 @@
 ```{image} ../figures/atomistic_structure_title.jpeg
 ---
 width: 100%
-name: directive-fig
 ---
 ```
 

@@ -6,7 +6,6 @@ This part introduces essential ideas that form the foundation of database manage
 ```{figure} ../figures/table.png
 ---
 width: 80%
-name: directive-fig
 ---
 Table structure with rows, columns, index, header, and table name.
 ```
@@ -16,7 +15,6 @@ A table is a structured collection of information arranged into rows and columns
 ```{figure} ../figures/indexing.png
 ---
 width: 100%
-name: directive-fig
 ---
 Index and indexing concept in databases: You can find the index at the end of a book (left panel), which helps in locating specific information quickly. Search engines (right panel) also use indexing to speed up the process of retrieving web pages.
 ```
@@ -27,7 +25,6 @@ An index is a copy of selected columns designed to speed up the process of retri
 ```{figure} ../figures/key_value.png
 ---
 width: 80%
-name: directive-fig
 ---
 Key-value pairs in a database: Each key is associated with a value, similar to a dictionary in Python.
 ```
@@ -38,7 +35,6 @@ The key and value concept is central to many data structures, including database
 ```{figure} ../figures/query.png
 ---
 width: 100%
-name: directive-fig
 ---
 Database query: A query is a set of instructions given to a database to retrieve or update data. The retrieved data is shown as view.
 ```

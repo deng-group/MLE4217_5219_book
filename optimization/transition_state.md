@@ -12,7 +12,6 @@ Knowing the energy of the transition state (the *activation energy*) is crucial 
 ```{figure} ../figures/transition_state.png
 ---
 width: 100%
-name: directive-fig
 ---
 The potential energy surface showing stable states, transition states, and the minimum energy path (MEP). In NEB, a series of images are used to represent the path between the initial and final states. The forces perpendicular to the band are projected to find the MEP.
 ```

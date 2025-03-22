@@ -2,7 +2,6 @@
 ```{image} ../figures/database_title.jpg
 ---
 width: 100%
-name: directive-fig
 ---
 ```
 

@@ -2,7 +2,6 @@
 ```{figure} ../figures/early_database.png
 ---
 width: 100%
-name: directive-fig
 ---
 Database in the early days: books and library catalogues.
 ```
@@ -24,7 +23,6 @@ There are several types of databases, each designed for specific use cases and r
 ```{figure} ../figures/relational_database.png
 ---
 width: 60%
-name: directive-fig
 ---
 Relational database structure: tables with rows and columns.
 ```
@@ -38,7 +36,6 @@ Relational databases are ideal for storing structured data, such as experimental
 ```{figure} ../figures/nosql.png
 ---
 width: 60%
-name: directive-fig
 ---
 Different types of the NoSQL database structure: key-value, document, graph, or column-based.
 ```

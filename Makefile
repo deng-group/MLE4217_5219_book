@@ -4,4 +4,4 @@ clean:
 book:
 	jupyter-book build --builder pdflatex .
 web:
-	jupyter-book build .
+	jupyter book build --html

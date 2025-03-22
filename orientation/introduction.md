@@ -8,7 +8,6 @@ Data-driven applications are ubiquitous in today's world. Initially, they were e
 ```{figure} ../figures/data_driven.png
 ---
 width: 100%
-name: directive-fig
 ---
 Some examples using data-driven applications.
 ```
@@ -26,7 +25,6 @@ Bioinformatics applies “informatics techniques” (derived from disciplines su
 ```{figure} ../figures/bioinformatics.png
 ---
 width: 80%
-name: directive-fig
 ---
 Two examples of using bioinformatics: DNA sequencing and AlphaFold.
 ```
@@ -42,7 +40,6 @@ Protein structure prediction has traditionally been a challenging and time-consu
 ```{figure} ../figures/nobel_prize.png
 ---
 width: 100%
-name: directive-fig
 ---
 Both Nobel prize in Physics and Chemistry are given to the development of AI-driven reserach.
 ```
@@ -59,7 +56,6 @@ Materials informatics employs techniques, tools, and theories drawn from the eme
 ```{figure} ../figures/battery_history.png
 ---
 width: 100%
-name: directive-fig
 ---
 It usually takes 10-20 years from initial research to real application, take Li-ion battery as an example.
 ```
@@ -69,7 +65,6 @@ Materials discovery is a complex, expensive, and time-consuming process, often t
 ```{figure} ../figures/wherearewe.png
 ---
 width: 100%
-name: directive-fig
 ---
 The location of Materials Informatics.
 ```
@@ -81,7 +76,6 @@ In the Venn diagram, materials informatics is at the intersection of materials s
 ```{figure} ../figures/MGI.png
 ---
 width: 50%
-name: directive-fig
 ---
 The overview of Materials Genome Initiative.
 ```
@@ -93,7 +87,6 @@ The table below highlights various examples and efforts in materials informatics
 ```{figure} ../figures/a-lab.png
 ---
 width: 80%
-name: directive-fig
 ---
 Berkeley A-lab: Robots operate instruments and artificial intelligence makes decisions to find useful new materials at the A-Lab.
 ```

@@ -1,0 +1,103 @@
+version: 1
+project:
+  title: Materials Informatics
+  exclude:
+    - _build
+    - Thumbs.db
+    - .DS_Store
+    - '**.ipynb_checkpoints'
+    - README.md
+  # github: deng-group/MLE4217_5219_book
+  bibliography:
+    - references.bib
+  exports:
+    - format: pdf
+      template: lapreprint-typst
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - file: syllabus.md
+    - file: calendar.md
+    - file: orientation/intro.md
+      children:
+        - file: orientation/orientation.md
+        - file: orientation/introduction.md
+        - file: orientation/github.md
+        - file: orientation/setup.md
+        - file: orientation/programming.ipynb
+    - file: computer/intro.md
+      children:
+        - file: computer/history.md
+        - file: computer/hardware.md
+        - file: computer/performance.md
+        - file: computer/hpc.md
+        - file: computer/software.md
+        - file: computer/git_examples.md
+        - file: computer/scaling.ipynb
+    - file: database/index.md
+      children:
+        - file: database/database.md
+        - file: database/concepts.md
+        - file: database/formats.md
+        - file: database/materials_database.md
+        - file: database/materials_project.ipynb
+        - file: database/bulk_modulus.ipynb
+    - file: atomistic_structure_I/index.md
+      children:
+        - file: atomistic_structure_I/unit_cell.md
+        - file: atomistic_structure_I/symmetry.md
+        - file: atomistic_structure_I/prototypes.md
+        - file: atomistic_structure_I/reciprocal_space.md
+        - file: atomistic_structure_I/structure_formats.md
+        - file: atomistic_structure_I/crystal_structure.ipynb
+    - file: atomistic_structure_II/index.md
+      children:
+        - file: atomistic_structure_II/site_properties.md
+        - file: atomistic_structure_II/defect.md
+        - file: atomistic_structure_II/interface.md
+        - file: atomistic_structure_II/molecule.md
+        - file: atomistic_structure_II/noncrystalline_materials.md
+        - file: atomistic_structure_II/vesta.md
+        - file: atomistic_structure_II/advanced_structure.ipynb
+    - file: models_and_theories_I/index.md
+      children:
+        - file: models_and_theories_I/modelling.md
+        - file: models_and_theories_I/force_fields.md
+        - file: models_and_theories_I/dft.md
+        - file: models_and_theories_I/ase.ipynb
+    - file: models_and_theories_II/index.md
+      children:
+        - file: models_and_theories_II/statistical_mech.md
+        - file: models_and_theories_II/molecular_dynamics.md
+        - file: models_and_theories_II/monte_carlo.md
+        - file: models_and_theories_II/kmc.md
+        - file: models_and_theories_II/md_mc.ipynb
+    - file: optimization/index.md
+      children:
+        - file: optimization/introduction.md
+        - file: optimization/local_optimization.md
+        - file: optimization/global_optimization.md
+        - file: optimization/choose_opt.md
+        - file: optimization/transition_state.md
+        - file: optimization/optimization.ipynb
+    - file: high_throughput/index.md
+      children:
+        - file: high_throughput/introduction.md
+        - file: high_throughput/workflow.md
+site:
+  options:
+    logo: logo.svg
+    logo_dark: logo_dark.svg
+    favicon: favicon.ico
+  template: book-theme
+  folders: true
+
+  actions:
+    - title: DENG.Group
+      url: https://matsci.dev
+
+
+
+launch_buttons:
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+  colab_url: "https://colab.research.google.com"
