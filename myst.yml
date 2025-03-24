@@ -8,6 +8,12 @@ project:
     - '**.ipynb_checkpoints'
     - README.md
   # github: deng-group/MLE4217_5219_book
+
+  jupyter:
+    binder:
+      url: https://mybinder.org/
+      repo: deng-group/MLE4217_5219_book
+      provider: github
   bibliography:
     - references.bib
   exports:
