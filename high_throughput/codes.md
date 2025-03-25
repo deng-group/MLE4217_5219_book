@@ -51,15 +51,22 @@ The codes are extremely complicated, especially for DFT codes, which requires a 
 
 However, be careful when publishing results for comparison between different codes, as it might violate the license agreement (especially for commercial softwares).
 
-
-## Python Ecosystem
-Several software packages are available to streamline high-throughput calculations. These libraries provide a high-level interface for setting up, running, and analyzing simulations, making it easier to manage large datasets and complex workflows. Some of these packages like pymatgen and ASE have been extensively used in the previous lectures.
-
-- pymatgen (Python Materials Genomics): A powerful and widely used Python library for materials analysis, including structure generation, input file creation, and data parsing. We have already used it extensively in the previous lectures.
-
-- ASE (Atomic Simulation Environment): Another popular Python library for setting up, running, and analyzing atomistic simulations. We have already used it extensively in the previous lectures.
+## Workflow Management Systems
+Workflow management systems are essential for coordinating and automating the various steps in a high-throughput simulation workflow. These systems help manage the complexity of running large numbers of simulations. They can handle tasks such as setting up simulations, running calculations, and analyzing results, allowing researchers to focus on the scientific aspects of their work.
 
 - AiiDA (Automated Interactive Infrastructure and Database for Computational Science): A more general-purpose workflow management system designed for high-throughput computational science, with a strong focus on provenance tracking.
 
 - FireWorks: A workflow management system specifically designed for high-throughput calculations, often used in conjunction with pymatgen.
 
+- Custodian: A Python package that provides error detection and handling for computational workflows, ensuring that simulations run smoothly and reliably.
+
+## Data Analysis and Data Mining
+In our previous lecture, we have extensively used packages like pymatgen and ASE for data analysis. There are some other packages that are useful for data analysis and data mining in materials science:
+
+- [**Matminer**](https://hackingmaterials.github.io/matminer/): A Python library for data mining in materials science, providing tools for retrieving, processing, and analyzing materials data.
+
+- [**DScribe**](https://singroup.github.io/dscribe/): A Python library for feature generation in materials science, providing tools for generating descriptors from atomic structures.
+
+For presentation and visualization of data, we can use packages like Matplotlib and Plotly. Plotly is more sutiable for interactive plots and dashboards for web applications. 
+
+If you want to build something like the Materials Project, you need to build a web interface. A web application nowadays can be easily built using [Flask](https://flask.palletsprojects.com/en/stable/) or [Dash](https://dash.plotly.com/). Then the web can be hosted on cloud services like [AWS](https://aws.amazon.com/), or even on your own server.
