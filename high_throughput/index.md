@@ -14,6 +14,11 @@ The lecture video will be available after this lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
+This week, we will discuss the topic of high-throughput simulations, which are essential for exploring large materials databases and predicting new materials with desired properties. We will cover the workflow of the high-throughput simulations, then discuss the computational codes used in high-throughput simulations, focusing on density functional theory (DFT), molecular dynamics, and Monte Carlo methods. We will also cover the workflow management systems used in high-throughput simulations. Then we will cover data analysis and thermodynamic property calculations in high-throughput simulations.
 
 ## Learning Objectives
 By the end of this week, you should be able to:
+- Understand the workflow of high-throughput simulations.
+- Identify the computational codes used in high-throughput simulations, including density functional theory (DFT), molecular dynamics, and Monte Carlo methods.
+- Explain the role of workflow management systems in high-throughput simulations.
+- Analyze data and calculate thermodynamic properties in high-throughput simulations.
