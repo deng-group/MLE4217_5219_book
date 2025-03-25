@@ -1,6 +1,13 @@
 # Workflow
 High-throughput simulation involves a systematic and automated *workflow*, typically comprising the following stages:
 
+```{figure} ../figures/workflow.png
+---
+width: 100%
+---
+Workflow of high-throughput simulations: data selection, generation, storage, analysis, and whole iteration process. A crystal structure database can be used in data selection process. Reproduced from [Jain et al.](https://doi.org/10.1016/j.commatsci.2011.02.023)
+```
+
 1. Data Selection: A large and diverse set of candidate crystal structures is created. This is the starting point for our computational exploration. There is usually an external crystal structure database that contains atomic positions and lattice paramters of known mateirals and can be used as a starting point for generating new structures.
 
 2. Data Generation: The properties of interest (e.g., energy, electronic structure, mechanical properties) are calculated for each generated structure using appropriate computational methods, such as density functional theory (DFT) or force field simulations. They're computed in parallel to speed up the process. 
@@ -15,7 +22,7 @@ The results of the screening process can be used to guide further data selection
 We need to define the materials or systems we want to simulate. The foundation of any high-throughput study is the generation of a representative set of candidate structures.
 
 ### From Crystal Structure Databases
-We can start by selecting structures from existing databases like the Inorganic Crystal Structure Database (ICSD), Cambridge Crystallographic Database, or Crystallography Open Database (COD). Please see our [previous lecture](../database/materials_database.md). These databases contain experimentally determined crystal structures of a wide range of materials. By filtering based on specific criteria (e.g., space group, composition, properties), we can create a diverse set of starting structures. It is also possible to use the computed structures from databases such as the Materials Project, OQMD, AFLOW, or other materials databases.
+We can start by selecting structures from existing databases like the Inorganic Crystal Structure Database (ICSD), Cambridge Structural Database (CSD), or Crystallography Open Database (COD). Please see our [previous lecture](../database/materials_database.md). These databases contain experimentally determined crystal structures of a wide range of materials. By filtering based on specific criteria (e.g., space group, composition, properties), we can create a diverse set of starting structures. It is also possible to use the computed structures from databases such as the Materials Project, OQMD, AFLOW, or other materials databases.
 
 ### Elemental Substitution
 Using established crystal structure prototypes (e.g. perovskites, spinels, rock salt) as starting points. These prototypes provide a structural template. By systematically substituting different elements into the crystallographic sites (A, B, and sometimes the anion site), a large number of derivative structures can be generated. Databases such as the Inorganic Crystal Structure Database (ICSD) serve as valuable resources for identifying known prototypes and their structural parameters.
@@ -43,8 +50,16 @@ The basic idea is simple:
 Random structure generation can be implemented using various algorithms and software packages. It often requires a large number of generated structures to adequately sample the relevant regions of the structural space. This is often combined with a structural relaxation step (using DFT or a force field) to bring the randomly generated structures to a local energy minimum. The example code is the AIRSS (Ab Initio Random Structure Searching) method is a widely used approach that combines random structure generation with DFT calculations to explore the potential energy landscape of materials.
 
 
-### Constraints and Considerations
-Regardless of the chosen structure generation method, it is crucial to generate physically reasonable structures. This involves:
+### Low-fidelity Screening
+````{sidebar}
+```{figure} ../figures/smact.png
+---
+width: 100%
+---
+Example of SMACT (Semiconducting Materials from Analogy and Chemical Theory) tool for low-fidelity screening. Reproduced from [Davies et al.](https://doi.org/10.1016/j.chempr.2016.09.010)
+```
+````
+Before diving into high-throughput simulations, it's often useful to perform a low-fidelity screening to filter out materials that are unlikely to be of interest. This can be done using simple criteria from the key chemical concepts and element properties in the search for candidate materials with target properties. For example, one might exclude compositions that are not charge-neutral, have too many atoms in the unit cell, or contain toxic elements. This step helps reduce the size of the search space and focus computational resources on more promising candidates. SMACT (Semiconducting Materials from Analogy and Chemical Theory) is an example of a low-fidelity screening tool that uses chemical intuition to identify promising materials. More constraints can be found below:
 
 - Avoiding Atomic Overlaps: Generated structures should not have unrealistically short interatomic distances, which would lead to extremely high energies and unphysical configurations.
 
@@ -58,23 +73,42 @@ Regardless of the chosen structure generation method, it is crucial to generate 
 
 - Thermodynamic Stability: Generated structures should be thermodynamically stable under the relevant conditions (e.g., temperature, pressure). This can be assessed using phase stability diagrams or other thermodynamic models.
 
-## Define Simulation Parameters
-Setting up the parameters for each simulation, such as:
+## Data Generation
+This part is often the most computationally intensive. It involves running the simulations for each generated structure, typically using high-performance computing resources. Automation is key to managing the large number of simulations efficiently. Tools like workflow managers (e.g., FireWorks, AiiDA) and job schedulers (e.g., SLURM, PBS) are used to distribute and monitor the simulations.
 
-- Exchange-correlation functional and basis sets for DFT calculations.
+### Simulation Setup
+Setting up the input parameters for each simulation, such as:
+
+- Use the right level of theory for the calculations (e.g., DFT, force field, tight-binding).
+- Exchange-correlation functional, basis sets, and k-points sampling for DFT calculations.
 - Force field parameters, timestep, and ensemble for Molecular Dynamics.
 - Temperature, pressure, and Monte Carlo moves for Monte Carlo simulations.
 
-## Automated Simulation
-This part is often the most computationally intensive. It involves running the simulations for each generated structure, typically using high-performance computing resources. Automation is key to managing the large number of simulations efficiently. Tools like workflow managers (e.g., FireWorks, AiiDA) and job schedulers (e.g., SLURM, PBS) are used to distribute and monitor the simulations.
+```{admonition} Standardized Inputset
+:class: tip
+For calculations, it's highly recommended to have a standardized inputset for all the simulations. This ensures consistency and reproducibility across the dataset. For example, in VASP calculations, you can use inputsets like `MPRelaxSet`, `MPStaticSet`, from the pymatgen library so that you can get the compatible results with the Materials Project database.
+```
 
 ### Automation Scripts
 These scripts handle the submission of jobs, data transfer, error handling, and post-processing tasks. They ensure that the simulations are executed correctly and that the results are collected and organized for further analysis. Scripts are usually written in Python or shell scripting languages.
+
+If the simulations are computationally expensive, it is common to use approximations or lower-level methods for the initial screening. Promising candidates can then be selected for more accurate (and expensive) calculations.
+
+### Parallelization
+High-throughput simulations often involve running a large number of calculations in parallel to speed up the process. This can be achieved by distributing the calculations across multiple processors or nodes on a high-performance computing cluster. Parallelization can significantly reduce the time required to complete the simulations.
 
 ### Workflow Management Systems
 Workflow management systems provide a higher-level interface for defining and executing complex workflows. They allow for the creation of multi-step pipelines, error handling, and provenance tracking. These systems are particularly useful for coordinating simulations across multiple software packages and computing resources. Examples include FireWorks, AiiDA, or any other custom workflow system. We will discuss more details in [Codes](./codes.md).
 
 ## Data Storage
+
+```{figure} ../figures/data_storage.png
+---
+width: 100%
+---
+Data flow diagram for high-throughput simulations: data is generated, stored, and analyzed in a structured manner. Reproduced from [Jain et al.](https://doi.org/10.1016/j.commatsci.2011.02.023)
+```
+
 Once the simulations are complete, the data needs to be collected, organized, and stored for analysis. 
 
 ### Parse and Extract Data

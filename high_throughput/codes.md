@@ -19,7 +19,7 @@ In HT, DFT is mainly used for:
 
 - Calculating ground-state properties: total energy, electronic band structure, density of states, magnetic properties, elastic constants, etc.
 - Screening for thermodynamically stable materials by comparing energies.
-- Predicting electronic and mechanical properties for functional materials.
+- Predicting properties for various materials.
 
 Popular DFT codes include:
 | Code                  | Licencing         | Feature                                                                                     |
@@ -45,13 +45,25 @@ Popular force field codes include:
 For Monte Carlo, the codes are usually developed in-house or adapted from existing libraries due to the specific nature of the simulations.
 
 ### Performance and Reproducibility
+````{sidebar}
+```{figure} ../figures/delta_reproduce.png
+$\Delta$ value comparison between different DFT codes. Reproduced from [Lejaeghere et al.](https://www.science.org/doi/10.1126/science.aad3000).
+```
+````
 These codes were written in Fortran or Python calling Fortran/C++ Libraries for high performance. They are usually run on high-performance computing (HPC) clusters due to their high computational cost. For such purpose, they are optimized for parallel computing using MPI (Message Passing Interface) or OpenMP (Open Multi-Processing) to distribute the workload across multiple processors.
+
+```{figure} ../figures/reproduce.png
+Verification of the precision of DFT codes. Reproduced from [Bosoni et al.](https://doi.org/10.1038/s42254-023-00655-3).
+```
 
 The codes are extremely complicated, especially for DFT codes, which requires a deep understanding of DFT theory and computational methods to use effectively. The development of these codes usually needs collaborations between different research group. Most of the DFT codes can show consistent results ($\Delta$ value), which is important for HT calculations. 
 
 However, be careful when publishing results for comparison between different codes, as it might violate the license agreement (especially for commercial softwares).
 
 ## Workflow Management Systems
+```{figure} ../figures/atomate.png
+Some workflows from Atomate 2 for high-throughput calculations. Reproduced from [Ganose et al.](https://doi.org/10.26434/chemrxiv-2025-tcr5h).
+```
 Workflow management systems are essential for coordinating and automating the various steps in a high-throughput simulation workflow. These systems help manage the complexity of running large numbers of simulations. They can handle tasks such as setting up simulations, running calculations, and analyzing results, allowing researchers to focus on the scientific aspects of their work.
 
 - AiiDA (Automated Interactive Infrastructure and Database for Computational Science): A more general-purpose workflow management system designed for high-throughput computational science, with a strong focus on provenance tracking.
@@ -60,13 +72,5 @@ Workflow management systems are essential for coordinating and automating the va
 
 - Custodian: A Python package that provides error detection and handling for computational workflows, ensuring that simulations run smoothly and reliably.
 
-## Data Analysis and Data Mining
-In our previous lecture, we have extensively used packages like pymatgen and ASE for data analysis. There are some other packages that are useful for data analysis and data mining in materials science:
+- Atomate 2: A high-level interface for setting up, running, and analyzing high-throughput calculations using various codes.
 
-- [**Matminer**](https://hackingmaterials.github.io/matminer/): A Python library for data mining in materials science, providing tools for retrieving, processing, and analyzing materials data.
-
-- [**DScribe**](https://singroup.github.io/dscribe/): A Python library for feature generation in materials science, providing tools for generating descriptors from atomic structures.
-
-For presentation and visualization of data, we can use packages like Matplotlib and Plotly. Plotly is more sutiable for interactive plots and dashboards for web applications. 
-
-If you want to build something like the Materials Project, you need to build a web interface. A web application nowadays can be easily built using [Flask](https://flask.palletsprojects.com/en/stable/) or [Dash](https://dash.plotly.com/). Then the web can be hosted on cloud services like [AWS](https://aws.amazon.com/), or even on your own server.

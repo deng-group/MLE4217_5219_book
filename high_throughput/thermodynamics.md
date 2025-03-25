@@ -13,6 +13,9 @@ where $E(A_x B_y)$ is the total energy of the compound $A_x$ $B_y$ per formula u
 A negative formation energy indicates that the compound is stable with respect to its constituent elements. The more negative the formation energy, the more stable the compound is. A positive formation energy suggests that the compound is unstable and will decompose into its constituent elements.
 
 ## Convex Hull
+```{figure} ../figures/convex_hull.png
+Convex hull construction for a binary system. The points represent the formation energies of different compounds. The compounds that lie on the convex hull are stable phases, while those above the hull are unstable. Reproduced from [Bartel](https://doi.org/10.1007/s10853-022-06915-4).
+```
 For systems with more than two components (e.g., ternary or quaternary systems), the concept of the convex hull is used to determine phase stability. The convex hull is a geometric construct that represents the lowest-energy phases at different compositions.
 
 Construction of the convex hull involves the following steps:
@@ -27,6 +30,11 @@ Practically, the convex hull can be constructed using packages like `SciPy` or `
 For example, consider a binary system A-B. Suppose we have calculated the formation energies of several compounds: A, A3B, A2B, AB, AB2, AB3, and B. After plotting these energies and constructing the convex hull, we might find that A, A2B, AB2, and B lie on the hull, while A3B and AB lie above it. This means that A, A2B, AB2, and B are stable phases, while A3B and AB are unstable and will decompose into mixtures of the stable phases.
 
 ## Thermodynamic Potentials
+````{sidebar}
+```{figure} ../figures/thermo_potential.png
+The Gibbs free energy is the appropriate thermodynamic potential to consider at finite temperatures and the grand canonical free energy is used for systems with chemical potential controlled by a reservoir. Reproduced from [Darby et al.](https://doi.org/10.1103/PhysRevMaterials.8.105002) and [Bartel](https://doi.org/10.1007/s10853-022-06915-4).
+```
+````
 The convex hull analysis described above is strictly valid only at 0 K. At finite temperatures, entropic contributions become important and can stabilize compounds that are unstable at 0 K. The Gibbs free energy is the appropriate thermodynamic potential to consider at finite temperatures, defined as:
 
 $$
@@ -65,3 +73,4 @@ However, in reality, the configurational entropy can be more complex, especially
 ## Phase Diagrams
 By calculating the free energy as a function of temperature and composition, one can construct phase diagrams. Phase diagrams show the stable phases and their coexistence regions as a function of temperature and composition. High-throughput calculations, combined with thermodynamic modeling, can be used to predict phase diagrams, which can then be compared with experimental results.
 
+Computing phase diagrams is a complex task, especially for systems with many components and phases. The CALPHAD (CALculation of PHAse Diagrams) method is a widely used approach for constructing phase diagrams. It combines experimental data, thermodynamic modeling, and computational calculations to predict phase equilibria in multicomponent systems.

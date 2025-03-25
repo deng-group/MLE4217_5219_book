@@ -90,10 +90,11 @@ project:
       children:
         - file: high_throughput/introduction.md
         - file: high_throughput/workflow.md
-        - file: high_throughput/thermodynamics.md
+        - file: high_throughput/data_mining.md
+        - file: high_throughput/thermodynamics.md        
         - file: high_throughput/codes.md
         - file: high_throughput/examples.md
-        - file: high_throughput/atomate.ipynb
+        - file: high_throughput/high_throughput.ipynb
 site:
   options:
     logo: logo.svg
