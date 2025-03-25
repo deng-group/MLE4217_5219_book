@@ -41,6 +41,8 @@ $$
 G(T) = H(T) - TS(T)
 $$
 
+For thermodynamic stability, we can just replace the formation energy with the Gibbs free energy in the convex hull analysis. The compounds that lie on the convex hull of formation energy at 0 K are stable phases, while at finite temperatures, the compounds that lie on the convex hull of the Gibbs free energy are stable phases.
+
 ### Entropy
 As we discussed in our previous lecture, the entropy can be computed from the partition function, which is a sum over all possible states of the system. Practically, in solid-state materials, since atoms are mostly localized in potential wells, the entropy is mostly contributed by the vibrational and configurational degrees of freedom.
 
