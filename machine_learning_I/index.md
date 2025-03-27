@@ -1,4 +1,4 @@
-# High-Throughput Simulation
+# Machine Learning I
 ```{image} ../figures/machine_learning_title1.jpeg
 ---
 width: 100%
