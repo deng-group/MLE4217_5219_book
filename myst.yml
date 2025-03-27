@@ -95,6 +95,10 @@ project:
         - file: high_throughput/codes.md
         - file: high_throughput/examples.md
         - file: high_throughput/high_throughput.ipynb
+    
+    - file: machine_learning_I/index.md
+      children:
+        - file: machine_learning_I/machine_learning.ipynb
 site:
   options:
     logo: logo.svg
