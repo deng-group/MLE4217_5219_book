@@ -1,2 +1,1 @@
-jupyter-book==2.0.0a2
-pydata-sphinx-theme==0.15.3
+jupyter-book==2.0.0a3
