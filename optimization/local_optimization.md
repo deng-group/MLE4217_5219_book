@@ -7,7 +7,7 @@ Line search is a method for finding the minimum of a function along a given dire
 
 Golden section search is a method for finding the minimum (or maximum) of a unimodal function within a specified interval. It is a derivative-free optimization technique that relies on the golden ratio to reduce the search interval at each step.
 
-#### Algorithm
+### Algorithm
 1. Define the interval $[a, b]$ where the minimum lies.
 2. Compute two interior points:
 
@@ -23,7 +23,7 @@ Golden section search is a method for finding the minimum (or maximum) of a unim
 5. Repeat steps 2-4 until the interval is sufficiently small.
 6. The minimum is approximately at the midpoint of the final interval.
 
-#### Advantages and Disadvantages
+### Advantages and Disadvantages
 - Does not require derivatives, making it suitable for non-differentiable or noisy functions.
 - Efficient for unimodal functions due to the constant reduction factor provided by the golden ratio.
 - Only works for unimodal functions within the specified interval.
