@@ -1,5 +1,5 @@
 # Machine Learning Potentials
-```{image} ../figures/machine_learning_title2.jpeg
+```{image} ../figures/machine_learning_potentials_title.png
 ---
 width: 100%
 ---

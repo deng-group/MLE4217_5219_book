@@ -38,7 +38,7 @@ The [AFLOWLIB](https://aflowlib.org/) database is a high-throughput computationa
 ---
 width: 80%
 ---
-Ashby plot showing the Young's modulus vs. density for various materials. Source: https://en.wikipedia.org/wiki/Material_selection#/media/File:Material-comparison--strength-vs-density_plain.svg
+[Ashby plot](https://en.wikipedia.org/wiki/Material_selection#/media/File:Material-comparison--strength-vs-density_plain.svg) showing the Young's modulus vs. density for various materials. 
 ```
 When selecting materials for a specific application, the primary objective is to find the best balance between performance, cost, and other constraints. This involves a thorough evaluation of various material properties to determine which material will provide the optimal solution for the intended use.
 
