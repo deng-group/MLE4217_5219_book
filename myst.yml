@@ -102,7 +102,8 @@ project:
         - file: machine_learning_I/features.md
         - file: machine_learning_I/models.md
         - file: machine_learning_I/learning.md
-        - file: machine_learning_I/machine_learning.ipynb
+        - file: machine_learning_I/pytorch.ipynb
+        - file: machine_learning_I/basic_ml.ipynb
 site:
   options:
     logo: logo.svg
