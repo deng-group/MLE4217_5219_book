@@ -8,7 +8,7 @@ $$
 \Delta E_f(A_x B_y) = E(A_x B_y) - xE(A) - yE(B)
 $$
 
-where $E(A_x B_y)$ is the total energy of the compound $A_x$ $B_y$ per formula unit, calculated using DFT or a force field. $E(A)$ and $E(B)$ are the total energies per atom of the elements A and B in their standard reference states. The reference state is typically the most stable form of the element at standard conditions (e.g., for Li, it is body-centered cubic Li metal; for O, it is the $\ce{O2}$ molecule). The formation energy is typically expressed per formula unit (f.u.) of the compound.
+where $E(A_x B_y)$ is the total energy of the compound $A_x$ $B_y$ per formula unit, calculated using DFT or a force field. $E(A)$ and $E(B)$ are the total energies per atom of the elements A and B in their standard reference states. The reference state is typically the most stable form of the element at standard conditions (e.g., for Li, it is body-centered cubic Li metal; for O, it is the O$_2$ molecule). The formation energy is typically expressed per formula unit (f.u.) of the compound.
 
 A negative formation energy indicates that the compound is stable with respect to its constituent elements. The more negative the formation energy, the more stable the compound is. A positive formation energy suggests that the compound is unstable and will decompose into its constituent elements.
 
