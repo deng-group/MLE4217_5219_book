@@ -21,17 +21,17 @@ project:
       template: lapreprint-typst
       output: exports/book.pdf
   toc:
-    - file: intro.md
+    - file: index.md
     - file: syllabus.md
     - file: calendar.md
-    - file: orientation/intro.md
+    - file: orientation/index.md
       children:
         - file: orientation/orientation.md
         - file: orientation/introduction.md
         - file: orientation/github.md
         - file: orientation/setup.md
         - file: orientation/programming.ipynb
-    - file: computer/intro.md
+    - file: computer/index.md
       children:
         - file: computer/history.md
         - file: computer/hardware.md
