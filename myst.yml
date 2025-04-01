@@ -99,7 +99,6 @@ project:
       children:
         - file: machine_learning_I/introduction.md
         - file: machine_learning_I/data.md
-        - file: machine_learning_I/features.md
         - file: machine_learning_I/models.md
         - file: machine_learning_I/learning.md
         - file: machine_learning_I/pytorch.ipynb
