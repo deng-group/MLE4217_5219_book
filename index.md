@@ -21,7 +21,7 @@ Department of Materials Science and Engineering
 National University of Singapore  
 msedz@nus.edu.sg
 
-{button}`Get Started <orientation/intro.md>`
+{button}`Get Started <orientation/index.md>`
 ::::
 
 ::::{grid-item}
