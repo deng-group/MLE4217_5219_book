@@ -167,7 +167,7 @@ yourusername@yourmachine:~$
 ````
 `````
 ## Select Interpreter in VS Code
-If you're editing any Python code (file ends with `.py`), you should select your Python interpreter for your project in VS Code. Make sure you [installed the Python extension in VS Code](#visual-studio-code-vs-code). Here's how you can do it:
+If you're editing any Python code (file ends with `.py`), you should select your Python interpreter for your project in VS Code. Make sure you [installed the Python extension in VS Code](setup.md#visual-studio-code-vs-code). Here's how you can do it:
 
 
 1. Open VS Code and press `Ctrl/Command+Shift+P` to open the command palette. You will see a prompt like this at the top of the window:
