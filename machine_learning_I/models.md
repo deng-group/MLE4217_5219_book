@@ -1,119 +1,102 @@
-# Models
+# Model
+A machine learning model is a mathematical representation of the relationship between input features and output labels. The model can be expressed as a function $f(x)$, where $x$ is the input feature vector. The model parameters (weights and biases) are learned from the training data to minimize the loss function.
 
-In the previous sections, we established the core concepts of machine learning: leveraging data through features to train models that can predict properties or uncover patterns. Now, we delve into some of the specific algorithms, or models, commonly employed in materials informatics. The choice of model depends heavily on the nature of the data, the complexity of the underlying relationships we aim to capture, and the specific goals of the task (e.g., prediction accuracy vs. interpretability).
+## Parameters and Hyperparameters
+Parameters are the internal variables of the model that are learned during the training process. They include weights and biases in neural networks, coefficients in linear regression, and support vectors in SVMs. The parameters are adjusted to minimize the loss function during training. For example, in linear regression ($y = w^T x + b$), the parameters are the weights ($w$) and bias ($b$) that define the linear relationship between the input features and the target variable.
 
-It's important to remember the **"No Free Lunch" theorem** in machine learning, which essentially states that no single algorithm outperforms all others across all possible problems. Therefore, understanding the strengths and weaknesses of different approaches is crucial for effective model selection. We will broadly categorize models, starting from simpler ones and moving towards more complex function approximators.
+Hyperparameters are parameters that are set before the training process begins. They control the learning process and can significantly impact the model's performance. Examples of hyperparameters include the learning rate, batch size, number of epochs, and regularization strength. Hyperparameters are typically tuned using techniques such as grid search or random search.
 
-## Linear Models
+## Loss Function
 
-Linear models are often the simplest starting point and serve as valuable baselines. They assume a linear relationship between the input features ($\mathbf{x}$) and the output target ($y$).
+```{figure} ../figures/loss_functions.png
+---
+width: 100%
+---
+Commonly used loss functions. The loss function quantifies the difference between the predicted output and the true output, while the objective function includes the loss function and any regularization terms. Loss function can be varied depending on the type of problem being solved (e.g., regression, classification).
+```
 
-*   **Linear Regression:** Used for regression tasks. The goal is to find weights $\mathbf{w}$ and a bias term $b$ such that the prediction $\hat{y}$ minimizes the difference (typically squared error) from the true values $y$. The model takes the form:
-    $ \hat{y} = \mathbf{w}^T \mathbf{x} + b = \sum_{j=1}^{d} w_j x_j + b $
-    where $d$ is the number of features. The parameters $\mathbf{w}$ and $b$ are typically found using the method of Ordinary Least Squares (OLS).
+The loss function, also known as the cost function or objective function, quantifies how well a machine learning model performs on a given dataset. It measures the difference between the predicted output and the true output. The goal of training a machine learning model is to minimize this loss function.
+### Mean Squared Error (MSE)
+The Mean Squared Error (MSE) is a commonly used loss function for regression tasks. It calculates the average of the squared differences between the predicted values and the actual values. The MSE can be expressed mathematically as:
+$$
+MSE = \frac{1}{N} \sum_{i=1}^N (y_i - f(x_i))^2
+$$
+where $y_i$ is the true output, $f(x_i)$ is the predicted output, and $N$ is the number of samples in the dataset. The MSE penalizes larger errors more than smaller ones, making it sensitive to outliers.
+### Mean Absolute Error (MAE)
+The Mean Absolute Error (MAE) is another loss function used for regression tasks. It calculates the average of the absolute differences between the predicted values and the actual values. The MAE can be expressed mathematically as:
+$$
+MAE = \frac{1}{N} \sum_{i=1}^N |y_i - f(x_i)|
+$$
+where $y_i$ is the true output, $f(x_i)$ is the predicted output, and $N$ is the number of samples in the dataset. The MAE is less sensitive to outliers compared to the MSE, making it a robust choice for certain applications.
 
-*   **Logistic Regression:** Despite its name, this is used for classification tasks (typically binary). It models the probability that an input $\mathbf{x}$ belongs to a particular class. It uses a linear combination of features passed through a sigmoid (or logistic) function $\sigma(z) = 1 / (1 + e^{-z})$, which squashes the output between 0 and 1:
-    $ P(y=1 | \mathbf{x}) = \sigma(\mathbf{w}^T \mathbf{x} + b) $
-    Predictions are made by thresholding this probability (e.g., if $P > 0.5$, predict class 1).
+### Huber Loss
+Huber loss is a combination of MSE and MAE. It is less sensitive to outliers than MSE and is defined as:
+$$
+L(y, f(x)) = \begin{cases}
+\frac{1}{2}(y - f(x))^2 & \text{if } |y - f(x)| \leq \delta \\
+\delta (|y - f(x)| - \frac{1}{2}\delta) & \text{otherwise}
+\end{cases}
+$$
+where $y$ is the true output, $f(x)$ is the predicted output, and $\delta$ is a threshold parameter. The Huber loss behaves like MSE when the error is small and like MAE when the error is large, making it a good choice for regression tasks with outliers.
 
-*   **Regularization:** Standard linear models can be prone to overfitting, especially with high-dimensional feature spaces. Regularization techniques add a penalty term to the loss function based on the magnitude of the weights $\mathbf{w}$, encouraging simpler models. Common types include:
-    *   **Ridge Regression (L2 Regularization):** Adds a penalty proportional to the sum of squared weights ($\lambda ||\mathbf{w}||_2^2$). It shrinks weights towards zero but rarely makes them exactly zero.
-    *   **Lasso Regression (L1 Regularization):** Adds a penalty proportional to the sum of absolute values of weights ($\lambda ||\mathbf{w}||_1$). This can force some weights to become exactly zero, effectively performing feature selection.
 
-**Strengths:**
-*   Simple, computationally efficient, and highly interpretable (the magnitude and sign of weights $w_j$ indicate feature importance and direction of influence).
-*   Provide excellent baselines to compare against more complex models.
+### Cross-Entropy Loss
+Cross-entropy loss is commonly used for classification tasks. It measures the dissimilarity between the predicted probability distribution and the true distribution. For binary classification, the cross-entropy loss can be expressed as:
+$$
+L(y, f(x)) = -\frac{1}{N} \sum_{i=1}^N [y_i \log(f(x_i)) + (1 - y_i) \log(1 - f(x_i))]
+$$
+where $y_i$ is the true label (0 or 1), $f(x_i)$ is the predicted probability of the positive class, and $N$ is the number of samples in the dataset. The cross-entropy loss penalizes incorrect predictions more heavily than correct ones, making it suitable for classification tasks.
+### Hinge Loss
+Hinge loss is commonly used for "maximum-margin" classification, most notably with support vector machines (SVMs). It is defined as:
+$$
+L(y, f(x)) = \frac{1}{N} \sum_{i=1}^N \max(0, 1 - y_i f(x_i))
+$$
+where $y_i$ is the true label (1 or -1), $f(x_i)$ is the predicted output, and $N$ is the number of samples in the dataset. The hinge loss encourages the model to make predictions that are not only correct but also have a margin of confidence.
+### Gini Impurity
+Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset. It is used in decision trees to determine the best split at each node. The Gini impurity can be expressed as:
+$$
+Gini = 1 - \sum_{i=1}^C p_i^2
+$$
+where $C$ is the number of classes and $p_i$ is the proportion of instances belonging to class $i$ in the subset. The Gini impurity ranges from 0 (pure) to 0.5 (impure).
 
-**Weaknesses:**
-*   Limited by the strong assumption of linearity; they cannot capture complex, non-linear relationships common in materials science (e.g., intricate structure-property mappings).
-*   Can be sensitive to outliers.
+## Regularization
+The optimization process involves finding the optimal parameters of the model that minimize the loss function. The optimization algorithm iteratively updates the model parameters based on the gradients of the loss function with respect to the parameters.
 
-**Materials Relevance:** Useful for problems where relationships are expected to be roughly linear, for initial exploratory analysis, or when interpretability is paramount. Regularized versions are particularly handy when dealing with high-dimensional descriptors derived from composition or structure. However, they often lack the predictive power needed for complex materials phenomena.
+The objective function is a broader term that encompasses the loss function and any additional regularization terms. The objective function can be expressed as:
+$$
+J(w, b) = L(y, f(x)) + R(w, b)
+$$
+where $J$ is the objective function, $R(w, b)$ is the regularization term, and $w$ and $b$ are the model parameters (weights and biases). The regularization term helps prevent overfitting by penalizing complex models.
 
-## Kernel Methods
+The regularization term can take various forms, such as L1 (Lasso) or L2 (Ridge) regularization. The choice of regularization term depends on the specific problem and the desired properties of the model.
 
-Kernel methods are a powerful class of algorithms that can model complex, non-linear relationships without explicitly mapping features into a very high-dimensional space. They achieve this using a **kernel function**, $K(\mathbf{x}_i, \mathbf{x}_j)$, which computes a measure of similarity between two data points $\mathbf{x}_i$ and $\mathbf{x}_j$ in the original feature space. This similarity computation corresponds to an inner product in some (potentially infinite-dimensional) feature space $\phi(\mathbf{x})$: $K(\mathbf{x}_i, \mathbf{x}_j) = \langle \phi(\mathbf{x}_i), \phi(\mathbf{x}_j) \rangle$. This is known as the "kernel trick."
+## Optimization
+The optimization process involves finding the optimal parameters $w$ and $b$ that minimize the objective function. This is typically done using gradient descent or its variants, such as stochastic gradient descent (SGD) or mini-batch gradient descent.
 
-*   **Support Vector Machines (SVMs):** Primarily designed for classification, SVMs aim to find the optimal hyperplane that best separates data points belonging to different classes. "Optimal" means the hyperplane with the maximum margin (distance) to the nearest data points (the "support vectors") of any class. For non-linearly separable data, the kernel trick allows SVMs to find a non-linear boundary in the original feature space by finding a linear boundary in the higher-dimensional kernel-induced space.
-    *   **Support Vector Regression (SVR):** An adaptation of SVM for regression tasks. Instead of maximizing the margin between classes, SVR aims to fit as many data points as possible within a margin (defined by a parameter $\epsilon$) around the regression function, while limiting the model complexity.
-    *   **Common Kernels:**
-        *   *Linear Kernel:* $K(\mathbf{x}_i, \mathbf{x}_j) = \mathbf{x}_i^T \mathbf{x}_j$ (recovers linear models).
-        *   *Polynomial Kernel:* $K(\mathbf{x}_i, \mathbf{x}_j) = (\gamma \mathbf{x}_i^T \mathbf{x}_j + r)^p$.
-        *   *Radial Basis Function (RBF) Kernel:* $K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-\gamma ||\mathbf{x}_i - \mathbf{x}_j||^2)$. This is a very popular and flexible choice.
+The optimization process can be expressed mathematically as:
+$$
+w \leftarrow w - \eta \frac{\partial J(w, b)}{\partial w}
+$$
+where $\eta$ is the learning rate, $w$ is the weight vector, and $\frac{\partial J(w, b)}{\partial w}$ is the gradient of the objective function with respect to the weights. The learning rate controls the step size in the optimization process.
 
-*   **Gaussian Processes (GPs):** A probabilistic, Bayesian approach to regression (and classification). Instead of fitting a single function, GP defines a prior distribution over functions. Given training data, it updates this prior to obtain a posterior distribution over functions that fit the data. Predictions are not single point values but rather probability distributions (typically Gaussian), providing both a mean prediction and an estimate of uncertainty (variance). The core of a GP is the kernel function, which defines the covariance between the outputs at different input points – points that are "similar" according to the kernel are expected to have more correlated outputs.
-    $ y(\mathbf{x}) \sim \mathcal{GP}(m(\mathbf{x}), k(\mathbf{x}, \mathbf{x}')) $
-    where $m(\mathbf{x})$ is the mean function (often assumed zero) and $k(\mathbf{x}, \mathbf{x}')$ is the covariance (kernel) function.
+The optimization process iteratively updates the model parameters until convergence, i.e., when the change in the objective function is below a certain threshold or when a maximum number of iterations is reached.
 
-**Strengths:**
-*   Can model complex non-linear relationships effectively via the kernel trick (SVM, GP).
-*   SVMs are effective in high-dimensional spaces and robust when there's a clear margin of separation.
-*   GPs provide valuable uncertainty quantification for predictions, which is crucial for applications like active learning or experimental design.
-*   Work well even with relatively small datasets (especially GPs).
+### Concept
+There are some terminologies that are frequently used in training process:
+- Epoch: One complete pass through the entire training dataset. Usually, multiple epochs are required to train a model effectively.
+- Batch: A subset of the training dataset used to update the model parameters during each iteration. This is important for GPU acceleration, as it allows for parallel processing of multiple samples.
+- Iteration: One update of the model parameters based on a batch of data.
+- Learning Rate: A hyperparameter that controls the step size in the optimization process. A small learning rate may lead to slow convergence, while a large learning rate may cause overshooting and divergence.
+- Convergence: The process of reaching a stable state where the model parameters no longer change significantly.
 
-**Weaknesses:**
-*   Computational complexity can be high, especially for large datasets ($N$). Standard SVM and GP training scales roughly as $O(N^2)$ to $O(N^3)$.
-*   Performance is highly sensitive to the choice of kernel and its hyperparameters (e.g., $\gamma$ in RBF, $C$ and $\epsilon$ in SVM/SVR). Requires careful tuning (e.g., via cross-validation).
-*   Less directly interpretable than linear models or decision trees.
 
-**Materials Relevance:** Widely used for both classification (e.g., predicting crystal structure types, identifying stable phases) and regression (predicting properties like band gap, modulus). GPs are particularly valuable in *active learning* workflows where the model's uncertainty estimate is used to intelligently select the next most informative DFT calculation or experiment to perform `[Citation: Look for GP active learning materials science papers]`. They also form the basis for some ML interatomic potentials like GAP `[Citation: Bartok, Csanyi et al.]`.
+## Choose the Right Model
+Choosing the right model for a specific task is crucial for achieving good performance. The choice of model depends on various factors, including the nature of the data, the complexity of the problem, and the desired interpretability of the model. 
 
-## Tree-Based Methods
-
-These methods build predictive models based on hierarchical partitioning of the feature space, resembling a tree structure.
-
-*   **Decision Trees:** A single decision tree partitions the data recursively based on simple rules applied to feature values at each node (e.g., "Is feature $x_1 < 5$?"). Each branch represents the outcome of a test, and each leaf node represents a prediction (the average target value for regression, or the majority class for classification). Trees are constructed by selecting splits that best separate the data according to some criterion (e.g., minimizing variance or Gini impurity/entropy).
-
-*   **Ensemble Methods:** The real power of tree-based methods comes from ensembles, which combine predictions from multiple individual trees (often called "weak learners") to produce a more robust and accurate final prediction ("strong learner").
-    *   **Random Forests (RF):** An ensemble method based on *bagging* (Bootstrap Aggregating). It constructs multiple decision trees, each trained on a different bootstrapped sample (random sample with replacement) of the original data. Additionally, at each node split, only a random subset of features is considered. Predictions are made by averaging the outputs of all trees (regression) or taking a majority vote (classification). This averaging process significantly reduces the variance and tendency of individual trees to overfit.
-    *   **Gradient Boosted Trees (e.g., Gradient Boosting Machine - GBM, XGBoost, LightGBM):** An ensemble method based on *boosting*. Trees are built sequentially, with each new tree trained to correct the errors (residuals) made by the previous ensemble of trees. It places more focus on data points that are harder to predict correctly. Variants like XGBoost `[Citation: Chen & Guestrin]` and LightGBM include sophisticated regularization techniques and efficient training algorithms, often achieving state-of-the-art performance on tabular data.
-
-**Strengths:**
-*   Can capture complex non-linear relationships and feature interactions.
-*   Relatively robust to outliers and scaling of features (though scaling can still be beneficial).
-*   Single decision trees are highly interpretable. Ensemble methods provide measures of *feature importance*, indicating which features were most influential in the model's predictions.
-*   Ensemble methods (especially RF and Gradient Boosting) often achieve very high prediction accuracy.
-
-**Weaknesses:**
-*   Single decision trees are prone to overfitting and can be unstable (small changes in data can lead to very different trees).
-*   Ensemble methods lose the direct interpretability of single trees, becoming more like "black boxes" (though feature importances help).
-*   Gradient Boosting models can be sensitive to hyperparameter tuning and may overfit if not carefully regularized or monitored (e.g., using early stopping).
-
-**Materials Relevance:** Extremely popular and effective for predicting material properties from engineered features (compositional, structural descriptors). Random Forests are known for their robustness and ease of use. Gradient Boosting methods frequently win machine learning competitions involving tabular materials data and are widely used for screening large databases for candidate materials with desired properties `[Citation: Look for review papers on ML for materials property prediction, e.g., by Ramprasad, Curtarolo, Agrawal]`.
-
-## Neural Networks (A Brief Introduction)
-
-Artificial Neural Networks (ANNs), or simply Neural Networks, are a class of models inspired (loosely) by the structure of biological nervous systems. They consist of interconnected nodes or "neurons" organized in layers.
-
-*   **Basic Structure:** Typically includes an *input layer* (receiving the features), one or more *hidden layers*, and an *output layer* (producing the prediction).
-*   **Neuron Operation:** Each neuron in a hidden or output layer computes a weighted sum of its inputs (outputs from the previous layer, plus a bias term) and then applies a non-linear **activation function** (e.g., ReLU, sigmoid, tanh).
-    $ \text{output} = \sigma(\sum_i w_i \cdot \text{input}_i + b) $
-*   **Learning:** The weights ($w_i$) and biases ($b$) are the parameters learned during training, typically using gradient descent and an algorithm called **backpropagation** to efficiently compute gradients through the network.
-*   **Deep Learning:** Networks with multiple hidden layers are often referred to as "deep" neural networks, forming the basis of deep learning. The depth allows the network to learn hierarchical features, where earlier layers might learn simple patterns and later layers combine these to learn more complex representations.
-
-**Strengths:**
-*   Highly flexible function approximators capable of learning extremely complex, non-linear relationships.
-*   Can perform automatic feature learning, reducing the need for extensive manual feature engineering, especially in deep architectures applied to raw data (like images or sequences, or graphs as we will see).
-*   Achieve state-of-the-art performance in many complex domains.
-
-**Weaknesses:**
-*   Typically require large amounts of labeled data for effective training.
-*   Computationally expensive to train, often requiring specialized hardware like GPUs.
-*   Prone to overfitting if not properly regularized (e.g., using dropout, weight decay).
-*   Often considered "black boxes" due to the difficulty in interpreting the specific role of individual neurons and weights in complex networks.
-*   Sensitive to network architecture choices and hyperparameter tuning.
-
-**Materials Relevance:** Neural networks are increasingly central to materials informatics. While standard feedforward networks (Multi-Layer Perceptrons - MLPs) can be applied to tabular feature data (similar to RF or GBM), their real power in materials science emerges with specialized architectures designed to handle structural information directly. **Graph Neural Networks (GNNs)**, which operate on graph representations of molecules and crystals, and their use in developing highly accurate **Machine Learning Interatomic Potentials (MLIPs)** are transformative applications that we will explore in detail in the subsequent chapters.
-
-## Model Selection Considerations
-
-Given this diversity of models, how do we choose the right one? There is no universal answer, but key factors include:
-
-*   **Dataset Size:** Linear models, SVMs, GPs, and Trees might be suitable for smaller datasets. Neural networks typically require larger datasets to perform well and avoid overfitting.
-*   **Dimensionality of Features:** Linear models and tree ensembles handle high dimensions relatively well. Standard GP/SVM implementations struggle with very high $N$ and high $d$. NNs can handle high dimensions but require more data.
-*   **Nature of the Relationship:** If the relationship is expected to be highly non-linear, linear models will likely perform poorly. Kernels, Trees, and NNs are better suited.
-*   **Interpretability:** If understanding *why* a prediction is made is crucial, linear models or single decision trees are preferred. Feature importances from tree ensembles offer some insight. NNs and kernel methods are generally less interpretable.
-*   **Need for Uncertainty:** If probabilistic predictions or uncertainty estimates are required (e.g., for active learning), Gaussian Processes are a natural choice. (Though techniques exist to estimate uncertainty in NNs too).
-*   **Computational Resources:** Training large NNs or kernel methods on large datasets can be computationally demanding. Linear models and Random Forests are typically faster.
-
-In practice, it is common to test several candidate models, starting with simpler baselines (like linear regression or Random Forest) and comparing their performance using appropriate validation strategies (like cross-validation) and metrics on a held-out test set. Remember that **feature engineering** often has a greater impact on final performance than the specific choice between reasonably complex models.
+```{figure} ../figures/choose_model.png
+---
+width: 100%
+---
+The [flowchart](https://scikit-learn.org/stable/machine_learning_map.html
+) illustrates the process of choosing the right model for a specific task. It starts with understanding the data and the problem, followed by selecting the appropriate model type.
+```
