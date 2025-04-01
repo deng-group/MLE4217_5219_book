@@ -73,7 +73,8 @@ Neural network architecture. The input layer receives the input features, the hi
 ```
 ````
 
-Neural networks are a class of supervised learning algorithms inspired by the structure and function of the human brain. They consist of interconnected nodes (neurons) organized into layers: input layer, hidden layers, and output layer. Each neuron applies a non-linear activation function to the weighted sum of its inputs.
+Neural networks are a class of supervised learning algorithms inspired by the structure and function of the human brain. They consist of interconnected nodes (neurons) organized into layers: input layer, hidden layers, and output layer. Each neuron applies a non-linear activation function to the weighted sum of its inputs. A simple neural network is also called a multi-layer perceptron (MLP) or vanilla neural network.
+
 The output of a neuron can be expressed as:
 $$
 y = \sigma(w^T x + b)
