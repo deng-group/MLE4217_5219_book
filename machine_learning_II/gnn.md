@@ -1,7 +1,7 @@
 # Graph Neural Networks (GNNs)
 Graph Neural Networks (GNNs) are a class of neural networks designed to work directly with graph-structured data. They have gained popularity due to their ability to capture the relationships and dependencies between nodes in a graph, making them suitable for various applications such as social network analysis, recommendation systems, and molecular chemistry.
 
-```{adomination} Introduction to GNNs
+```{admonition} Introduction to GNNs
 :class: tips
 There is a very good GNN tutorial available at [A Gentle Introduction to Graph Neural Networks](https://doi.org/10.23915/distill.00033). It is a great resource for understanding the fundamentals of GNNs and their applications.
 ```
