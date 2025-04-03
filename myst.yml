@@ -107,7 +107,10 @@ project:
     - file: machine_learning_II/index.md
       children:
         - file: machine_learning_II/gnn.md
-        - file: machine_learning_I/adv_ml.ipynb
+        - file: machine_learning_II/cnn.md
+        - file: machine_learning_II/deep_learning.md
+        - file: machine_learning_II/generative.md
+        - file: machine_learning_II/adv_ml.ipynb
 site:
   options:
     logo: logo.svg

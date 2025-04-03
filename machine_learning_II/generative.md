@@ -1,0 +1,3 @@
+# Generative Models
+
+Generative artificial intelligence (AI) refers to a class of algorithms that can generate new content, such as images, text, or music, based on learned patterns from existing data. These models have gained significant attention in recent years due to their ability to create realistic and high-quality outputs. Generative AI encompasses various techniques, including generative adversarial networks (GANs), variational autoencoders (VAEs), and diffusion models.
