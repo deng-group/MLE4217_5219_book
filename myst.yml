@@ -110,6 +110,7 @@ project:
         - file: machine_learning_II/graph.md
         - file: machine_learning_II/gnn.md
         - file: machine_learning_II/generative.md
+        - file: machine_learning_II/summary.md
         - file: machine_learning_II/adv_ml.ipynb
 site:
   options:
