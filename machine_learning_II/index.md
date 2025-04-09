@@ -14,5 +14,10 @@ The lecture video will be available after this lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
+This week, we will go through the advanced topics in machine learning including the graph neural networks (GNNs) and diffusion models. Particularly, we will focus on the applications of GNNs and diffusion models in materials science. In the practical session, we will implement a GNN model to predict the polarizability of molecules.
 
 ## Learning Objectives
+By the end of this lecture, you should be able to:
+- Understand the basic concepts of graph neural networks (GNNs) and their applications in materials science.
+- Understand the basic concepts of diffusion models and their applications in materials science.
+- Understand the basics of implementing a GNN model and apply to the materials science problems.

@@ -11,6 +11,16 @@ A graph $G$ is mathematically defined as a pair $(V, E)$, where:
 - $E$ is a set of edges, representing the connections or relationships between pairs of nodes. An edge $e = (u, v)$ connects node $u$ to node $v$.
 - $U$ is the global feature vector, which can represent properties of the entire graph.
 
+````{sidebar}
+```{figure} ../figures/graph.png
+---
+width: 60%
+---
+Diagram of a graph with nodes and edges. Directed edges are shown with arrows, while undirected edges are shown without arrows. The graph also includes node features (e.g., element type) and edge features (e.g., bond type).
+```
+````
+
+
 ## Characteristics
 
 - Directed vs. Undirected: In an undirected graph, edges represent symmetric relationships; if node $u$ is connected to node $v$, then $v$ is also connected to $u$. The edge $(u, v)$ is the same as $(v, u)$. This is common for representing atomic bonds or proximity where the relationship is inherently mutual. In a directed graph, edges have a direction, so $(u, v)$ is distinct from $(v, u)$, representing asymmetric relationships (e.g., information flow, prerequisite dependencies).
@@ -24,6 +34,14 @@ While various data structures exist for storing graphs (like adjacency lists or 
 *   For a **weighted graph**, $A_{ij} = w_{ij}$, the weight of the edge between $i$ and $j$, if an edge exists, and $A_{ij} = 0$ (or sometimes $\infty$ for distance-based graphs) if no direct edge exists.
 
 For an undirected graph, the adjacency matrix is symmetric ($A_{ij} = A_{ji}$). For a directed graph, it may not be.
+````{sidebar}
+```{figure} ../figures/adjacency_matrix.png
+---
+width: 60%
+--- 
+Example of an adjacency matrix for a simple undirected graph. The matrix is symmetric, indicating that the graph is undirected. The diagonal elements are zero, indicating no self-loops.
+```
+````
 
 **Example:** Consider a simple undirected, unweighted graph with 4 nodes {1, 2, 3, 4} and edges {(1, 2), (1, 3), (2, 3), (3, 4)}. Its adjacency matrix $A$ would be:
 
@@ -41,6 +59,16 @@ Features are essential components of graphs, providing additional information ab
 - Global Features: In some cases, graphs may also have global features that describe properties of the entire graph (e.g., total energy, symmetry).
 
 ## Examples of Graphs
+
+````{sidebar}
+```{figure} ../figures/graphs_example.png
+---
+width: 100%
+--- 
+We can represent social network as a graph, where nodes represent users and edges represent connections (friendships, follows, etc.). The graph captures the relationships and interactions between users. We can also represent an image as a graph by segmenting it into regions or pixels, where nodes represent segments and edges represent spatial relationships. This allows us to analyze the image structure and relationships between different regions.
+```
+````
+
 Graphs are ubiquitous in various fields, including computer science, social networks, biology, and materials science. Here are some examples of graphs:
 
 - **Social Networks:** Perhaps the most intuitive example. Nodes represent individuals or entities (users, organizations), and edges represent relationships like friendship, followership, professional connections, or interactions (likes, comments). Node features might include user profiles, while edge features could represent the type or timestamp of an interaction. Analyzing these graphs helps understand community structure, influence propagation, and information dissemination.
@@ -51,6 +79,16 @@ Graphs are ubiquitous in various fields, including computer science, social netw
 
 
 ### Molecular Graphs
+
+````{sidebar}
+```{figure} ../figures/molecule_graphs.png
+---
+width: 60%
+--- 
+Molecule graph representation of caffeine. The atoms are represented as nodes, and the bonds between them are represented as edges. The graph captures the connectivity and structure of the molecule.
+```
+````
+
 The graph representation is exceptionally well-suited for materials. We can naturally model a material structure (like a molecule or a crystal) as a graph where:
 
 - Nodes ($V$) are atoms. Node features ($h_v$) can include the element type (e.g., represented as a one-hot vector or an embedding), atomic coordinates, partial charges, magnetic moments, etc.

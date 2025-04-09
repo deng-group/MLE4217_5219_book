@@ -16,9 +16,17 @@ There are several types of tasks that GNNs can be applied to, depending on the l
 - Graph-level tasks: Predicting properties of the entire graph (e.g., predicting the total energy of a molecule or the band gap of a crystal).
 
 ## Message Passing
+
 Message passing is a mechanism by which nodes in a graph can exchange information with their neighbors. This process allows GNNs to learn representations of nodes based on their local connectivity and features, effectively capturing the graph's structure and the relationships between its components.
 
 Imagine the atoms within a structure "communicating" with their local environment. In a GNN, this communication occurs iteratively over several layers.  Let $h_i^{(k)}$ denote the feature vector (or embedding) of node $i$ at layer $k$. The process can be conceptually represented as:
+
+```{figure} ../figures/message_passing.png
+---
+width: 60%
+---
+Message passing process in a GNN: message calculation, aggregation, and update steps.
+```
 
 ### Message Calculation (Optional but common)
 Transform neighbor features $h_j^{(k-1)}$ potentially considering edge features $e_{ij}$. The message from node $j$ to node $i$ at layer $k$ is computed as:
@@ -45,6 +53,10 @@ $$h_i^{(k)} = \text{UPDATE}^{(k)} \left( h_i^{(k-1)}, a_i^{(k)} \right)$$
 Here, `AGGREGATE` and `UPDATE` are differentiable functions (often implemented using neural network layers) whose parameters are learned during training. The repeated application of these steps over several layers allows information to propagate across the graph, enabling nodes to incorporate information from beyond their immediate neighbors.
 
 Crucially, because aggregation functions like sum or mean are independent of the order of their inputs, the message passing framework is inherently permutation equivariant at the node level (permuting input nodes permutes the output node embeddings correspondingly) and can be made permutation invariant at the graph level (the overall graph property prediction remains unchanged upon node permutation). This aligns perfectly with the physical requirement that material properties are independent of atom indexing.
+
+```{figure} ../figures/gnn_layers.png
+The figure shows the message passing process in a GNN. Each node aggregates messages from its neighbors and updates its own feature vector based on the aggregated information. Figure adapted from [A Gentle Introduction to Graph Neural Networks](https://doi.org/10.23915/distill.00033).
+```
 
 ## Graph-Level Readout
 After several iterations of message passing, we obtain a set of node embeddings $h_i^{(K)}$ for each node $i$. To make predictions about the entire graph (e.g., predicting the total energy or band gap), we need to aggregate these node embeddings into a single graph-level representation. This is often done using a readout function, which can be as simple as summing or averaging the node features:

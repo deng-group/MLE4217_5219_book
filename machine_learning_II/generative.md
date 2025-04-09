@@ -5,6 +5,13 @@ Beyond predicting properties of known or hypothetical materials, a grand challen
 
 ## Controlled Corruption and Learned Reversal
 
+```{figure} ../figures/diffusion_model.png
+---
+width: 100%
+---
+Diffusion model framework: forward process (corruption) and reverse process (denoising). Figure adapted from [Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://arxiv.org/abs/1503.03585).
+```
+
 Diffusion models operate based on two complementary processes:
 
 ### Forward Process (Noise Addition)
@@ -31,7 +38,13 @@ $$x_t = \sqrt{\alpha_t} x_{t-1} + \sqrt{1-\alpha_t} \epsilon_{t-1}$$
 where $\epsilon_{t-1} \sim \mathcal{N}(0, I)$ and $\alpha_t$ are predefined noise schedule constants.
 
 ### Reverse Process (Denoising)
+
 This is where the learning happens. The goal is to learn a "denoiser" model $\epsilon_\theta(x_{t-1} | x_t)$ that can reverse the noise addition process. Starting from pure noise $x_T \sim \mathcal{N}(0, I)$, the model iteratively predicts the noise that was added at step $t$ (or equivalently, predicts the slightly less noisy sample $x_{t-1}$) and gradually denoises the sample step-by-step, eventually yielding a generated sample $x_0$ that should resemble the original data distribution. 
+
+
+```{figure} ../figures/u-net.png
+U-Net architecture for denoising. The U-Net consists of an encoder-decoder structure with skip connections, allowing it to capture both local and global features effectively. Figure adapted from [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597).
+```
 
 This reverse process is typically parameterized by a neural network (often a U-Net architecture, often incorporating specialized layers like GNNs or equivariant layers when dealing with atomic structures) which is trained to predict the noise $\epsilon_t$ added at each step $t$, given the noisy input $x_t$ and the time step $t$. 
 
