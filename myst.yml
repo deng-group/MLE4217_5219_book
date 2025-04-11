@@ -112,6 +112,11 @@ project:
         - file: machine_learning_II/diffusion_model.md
         - file: machine_learning_II/summary.md
         - file: machine_learning_II/adv_ml.ipynb
+    
+    - file: machine_learning_potentials/index.md
+      children:
+        - file: machine_learning_potentials/introduction.md
+
 site:
   options:
     logo: logo.svg
