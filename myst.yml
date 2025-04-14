@@ -116,6 +116,10 @@ project:
     - file: machine_learning_potentials/index.md
       children:
         - file: machine_learning_potentials/introduction.md
+        - file: machine_learning_potentials/explicit.md
+        - file: machine_learning_potentials/implicit.md
+        - file: machine_learning_potentials/umlp.md
+        - file: machine_learning_potentials/training_validation.md
 
 site:
   options:
