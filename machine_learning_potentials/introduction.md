@@ -27,6 +27,12 @@ However, a reliable and universal MLP needs to be trained on a large dataset of 
 
 ## Formalism
 
+```{figure} ../figures/mlp_process.png
+:width:100%
+
+The general process of making a MLP. Figure adapted from [](https://doi.org/10.1063/5.0139611)
+```
+
 The basic idea of MLPs is to approximate the Born-Oppenheimer Potential Energy Surface (PES). This surface describes the potential energy of a system as a function of the positions of all its aotmic nuclei.
 
 $$

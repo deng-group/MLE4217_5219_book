@@ -2,9 +2,17 @@
 
 [Atomic Cluster Expansion (ACE)](https://doi.org/10.1103/PhysRevB.99.014104) provides a powerful framework for constructing high-order polynomial basis functions to describe atomic environments. Many existing descriptors, such as SOAP, MTP, HBF, and ACSF, can be seen as special cases of ACE. While ACE is highly flexible and comprehensive, it is limited by its cutoff distance, which restricts the range of interactions it can model.
 
+In ACE, high body order polynomial basis functions are constructed to describe the local environment of an atom:
+
+$$
+\mathbf{m_i}^{(t)} = \sum_j \mathbf{u_1}(\sigma_i^{(t)}, \sigma_j^{(t)}) + \sum_{j_1,j_2} \mathbf{u_2}(\sigma_i^{(t)}, \sigma_{j_1}^{(t)}, \sigma_{j_2}^{(t)}) + \ldots + \sum_{j_1,j_2,\ldots,j_n} \mathbf{u_n}(\sigma_i^{(t)}, \sigma_{j_1}^{(t)}, \sigma_{j_2}^{(t)}, \ldots, \sigma_{j_n}^{(t)})
+$$
+
+where $\sigma_i^{(t)}$ is the state of atom $i$ at time $t$, and $\mathbf{u_n}$ are the basis functions. The basis functions are constructed using a set of one-particle basis functions, which are then symmetrized to ensure they respect the symmetry properties of the system.
+
 To overcome this limitation, message passing neural networks (MPNNs) can be used to describe atomic environments. However, MPNNs are computationally expensive and challenging to parallelize across multiple GPUs. 
 
-[Multi-Atomic Cluster Expansion (MACE)](https://doi.org/10.48550/arXiv.2206.07697) combines the strengths of ACE and MPNNs. It is an E(3)-equivariant (translation, rotation and reflection), atom-centered neural network that extends ACE by incorporating message passing. The key idea is to use ACE models to parameterize the many-body messages $m_i^{(t)}$. MACE achieves excellent performance and generalization while being faster to train and evaluate compared to other machine learning potentials.
+[Multi-Atomic Cluster Expansion (MACE)](https://doi.org/10.48550/arXiv.2206.07697) combines the strengths of ACE and MPNNs. It is an E(3)-equivariant (translation, rotation and reflection), atom-centered neural network that extends ACE by incorporating message passing. The key idea is to use ACE models to parameterize the many-body messages $m_i^{(t)}$. MACE achieves excellent performance and generalization while being faster to train and evaluate compared to other machine learning potentials. The E(3)-equivariant neural network is constructed by the [`e3nn` package](https://github.com/e3nn/e3nn).
 
 In this section, we will first explain the construction of ACE features and then show how MACE extends this framework.
 
