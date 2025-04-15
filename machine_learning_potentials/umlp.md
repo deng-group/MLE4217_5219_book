@@ -1,12 +1,20 @@
 # Universal MLPs (UMLIPs)
 Universal MLPs (UMLIPs) are a class of MLPs that are designed to be transferable across different systems and chemical environments. They are trained on a large and diverse dataset of atomic configurations and their corresponding DFT energies, forces, and stresses. The goal of universal MLPs is to provide a single model that can accurately predict the potential energy surface for a wide range of materials and systems without the need for retraining or fine-tuning.
 
+
+
 We have used `MACE-MP0` in our previous lectures and assignment.
 
-## Examples
+## Training Dataset
+```{figure} ../figures/umlp_data.png
+:width: 70%
+Dataset size of the training data used in UMLPs. The size of the dataset keeps increasing. The average size of the training dataset can be $10^8$ atomic configurations in 2024.
+```
+
 Typical UMLPs cover 10-100 elements and trained using large dataset such as the [MPtrj](https://doi.org/10.1038/s42256-023-00716-3), [OMAT24](
 https://doi.org/10.48550/arXiv.2410.12771), and [Alexandria](https://doi.org/10.1016/j.mtphys.2024.101560).  They are summarized in the table below (taken from [here](https://doi.org/10.1016/j.cossms.2025.101214))
 
+## Examples
 
 | U-MLIP Name       | Training Database                                                                 | Number of Elements | Training Data                                                                                     | Notes                                                                                                   |
 |--------------------|----------------------------------------------------------------------------------|--------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
