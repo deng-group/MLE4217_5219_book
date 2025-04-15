@@ -23,3 +23,19 @@ https://doi.org/10.48550/arXiv.2410.12771), and [Alexandria](https://doi.org/10.
 | EquiformerV2OMAT24| Initial data from public databases like Materials Project, Materials Project Trajectory, and Alexandria, then customized with additional DFT calculations | 89                             | Roughly 118 million atomic configurations                                                               | As of this writing, state-of-the-art performance on the main ranking of the MatBench leaderboard and largest publicly-available DFT database |
 
 
+## Benchmarking UMLPs
+```{figure} ../figures/matbench.png
+The Matbench Discovery benchmark table for various UMLPs., data accessed on 2025-04-16.
+```
+
+There are established benchmarks like [Matbench Discovery](https://matbench-discovery.materialsproject.org/) to test the performance of UMLPs. 
+
+Folowing metrics are reported in the benchmark:
+- CPS (Combined Performance Score):  a metric that weights F1,RMSD, and $\kappa_{SRME}$.
+- F1: harmonic mean of precision and recall, used to evaluate the performance of classification models.
+- DAF (Discovery Accuracy Factor): a metric that measures the accuracy of a model's predictions in a discovery task.
+- Prec: precision of classifying thermodynamic stability.
+- Acc: accuracy of classifying thermodynamic stability.
+- MAE: average absolute error in convex hull distances.
+- RMSD: a measure of the average deviation of predicted structures from reference structures after relxation.
+- $\kappa_{SRME}$: error in the phonon mode contribution to thermal conductivity $\kappa$.

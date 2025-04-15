@@ -1,108 +1,54 @@
-# MACE
+# MACE Potential
 
-Atomic Cluster Expansion (ACE) construct high body order complete polynomial basis functions. Previous atomic environment descriptors including SOAP, MTP, HBF, and ACSF are all special cases of ACE. The ACE is a general framework that can be used to construct a wide range of explicit features. The ACE is the most flexible and comprehensive method. However, these models are limited by their cutoff distance.
+[Atomic Cluster Expansion (ACE)](https://doi.org/10.1103/PhysRevB.99.014104) provides a powerful framework for constructing high-order polynomial basis functions to describe atomic environments. Many existing descriptors, such as SOAP, MTP, HBF, and ACSF, can be seen as special cases of ACE. While ACE is highly flexible and comprehensive, it is limited by its cutoff distance, which restricts the range of interactions it can model.
 
-Using message passing neural networks (MPNNs) to construct the atomic environment descriptors can overcome the cutoff distance limitation. However, the computational costs of MPNNs are high, and they are hard to parallelize across multiple GPUs. 
+To overcome this limitation, message passing neural networks (MPNNs) can be used to describe atomic environments. However, MPNNs are computationally expensive and challenging to parallelize across multiple GPUs. 
 
-Multi-Atomic Cluster Expansion (MACE) is an E(3)-equivariant atom-centered MLP. It extend the ACE with message passing neural networks (MPNNs). The main idea is to parameterize the many body message $m_i^{(t)}$ using invariant or equivariant ACE models. MACE offers great performance and generalization capabilities. It is also faster to train and evaluate compared to other MLPs.
+[Multi-Atomic Cluster Expansion (MACE)](https://doi.org/10.48550/arXiv.2206.07697) combines the strengths of ACE and MPNNs. It is an E(3)-equivariant (translation, rotation and reflection), atom-centered neural network that extends ACE by incorporating message passing. The key idea is to use ACE models to parameterize the many-body messages $m_i^{(t)}$. MACE achieves excellent performance and generalization while being faster to train and evaluate compared to other machine learning potentials.
 
-Below we start from ACE and then extend it to MACE.
+In this section, we will first explain the construction of ACE features and then show how MACE extends this framework.
 
-## Embedding
+## Feature Construction
 
 ````{sidebar}
 ```{figure} ../figures/ace_features.png
-Illustration of the construction of ACE features. Each node represents an atom, and surrounding nodes are the neighbors of this target atom. Then one particle basis functions can be computed for each edge, and the A-functions are computed by summing over the neighbors. The B-functions are constructed by symmetrizing the tensor product of all coupled indices of the A-functions.
+Illustration of ACE feature construction. Each node represents an atom, and surrounding nodes are its neighbors. One-particle basis functions are computed for each edge, and A-functions are obtained by summing over neighbors. B-functions are constructed by symmetrizing the tensor product of coupled indices of the A-functions. Figure adapted from [](https://doi.org/10.1038/s42256-024-00956-x)
 ```
 ````
-### Particle Basis
-The one-particle basis defines the spacial arrange ment of atoms $j$ around atoms $i$:
 
-$$
-\phi_{k\nu}(\sigma_i, \sigma_j) = R_{kcl}(r_{ji})Y_l^m(\vec{r}_{ji})T_{kc}(\mathbf{\theta}_i, \mathbf{\theta}_j)
-$$
+To describe the environment around a central atom $i$, we start with one-particle basis functions $\phi_{k\nu}(\sigma_i, \sigma_j)$. These functions capture the spatial arrangement of neighboring atoms and are built using three components:
+1. Radial basis functions ($R_{kcl}(r_{ji})$): Depend on the distance between the central atom and its neighbors.
+2. Spherical harmonics ($Y_l^m(\vec{r_{ji}})$): Capture angular information about the arrangement of neighbors.
+3. Chemical attributes: Incorporate information about the types of atoms involved.
 
-where $R_{kcl}(r_{ji})$ is the radial basis function, $Y_l^m(\vec{r}_{ji})$ is the spherical harmonics, and $T_{kc}$ is a generic function of chemical attributes $\mathbf{\theta}_i$, $\mathbf{\theta}_j$ with two indices, $k$ and $c$. $lmc$ are coupled with each other can be replaced by a single index $\nu \equiv lmc$. $k$ is called uncoupled index and is also called number of channels here. $\sigma_i$ and $\sigma_j$ are the [node states](./mace.md#message-construction) of atom $i$ and $j$, respectively. 
+By combining these components, we can represent the interaction between the central atom and its neighbors.
 
-ACE construct a high body order complete polynomial basis functions. The first is to construct atomic- or $A$-basis:
+Next, we construct atomic basis functions $A_{i,k\nu}$ by summing over contributions from all neighbors. These functions are invariant to the permutation of atoms. To capture more complex interactions, we extend these to higher-order atomic basis functions ($\mathbf{A}_{i,k\mathbf{v}}$) by taking products of the lower-order ones.
 
-$$
-A_{i, k\nu} = \sum_{j\in N(i)} \phi_{k\nu}(\sigma_i, \sigma_j)
-$$
-where $\sigma_i$ is the atomic species of atom $i$, $N(i)$ is the set of neighbors of atom $i$, and $\phi_{k\nu}$ is the basis function. The basis function is a polynomial function of the distances between atoms. The basis function can be constructed using spherical harmonics or Bessel functions. The basis function is invariant to the permutation of atoms.
-
-Then the higher order atomic basis function can be constructed using the product:
-
-$$
-\mathbf{A}_{i, k\mathbf{v}} = \prod_{\xi=1}^{\nu} A_{i, k\nu_\xi}, \mathbf{v} = (v_1, v_2, \ldots, v_\nu)
-$$
-where $A_{i, kv}$ is the higher order atomic basis function, $v$ is the body order, and $v_\nu$ is the body order of the $v$-th atom. The higher order atomic basis function is also invariant to the translation of atoms.
-
-To incorporate rotational invariance or equivariance, $\mathbf{A}_{i, k\mathbf{v}}$ can be symmetrized.
-
-$$
-B_{i, \eta_\nu k LM} = \sum_{\mathbf{lm}}C^{LM}_{\eta_\nu, \mathbf{lm}} \prod_{\xi=1}^{\nu} w_{k\tilde{k}l_\xi}A_{i, \tilde{k}l_\xi m_\xi}, \mathbf{lm} = (l_1m_1, l_2m_2, \ldots, l_\nu m_\nu)
-$$
-
-$$
-B_{i, k\eta, LM} = \sum_{\mathbf{v}}C^{LM}_{\eta, \mathbf{v}} \mathbf{A}_{i, k\mathbf{v}}
-$$
-where $B_{i, k\eta, LM}$ is the symmetrized higher order atomic basis function, $C^{LM}_{\eta, \mathbf{v}}$ is the Clebsch-Gordan coefficient, corresponding to the correlation order $\nu$ and imposed equivariance (symmetry) $L$. The index $\eta$ corresponds to the total possible combinations of $\mathbf{A}_{i, k\mathbf{v}}$.
-
-The message can be computed using the $B$ functions:
-$$
-m_{i,kLM} = \sum_{\eta}w_{k\eta L}B_{i, k\eta, LM}
-$$
-where $w_{k\eta L}$ is the weight of the $B$ functions. The message is invariant to the permutation of atoms and equivariant to the rotation of atoms.
+To ensure the basis functions respect rotational symmetry, we symmetrize them to obtain $B_{i,k\mathbf{v}}$. These symmetrized functions are then used to compute messages ($m_{i,kLM}$), which encode information about the atomic environment. The resulting messages are both permutation-invariant and rotation-equivariant, making them ideal for use in MACE.
 
 ## Message Passing
 
+Message passing is the process of sharing information between atoms to update their features. It consists of three main steps: message construction, feature update, and readout. Message passing can be considered as a sparsification of an equivalent ACE model with a much larger cutoff radius. 
+
+```{figure} ../figures/mpnn_ace.png
+---
+width: 80%
+---
+The left panel shows a cluster with two iterations message passing process (MACE) with a cutoff of $r_{cut}$. The right side shows the cluster a cutoff radius of $2r_{cut}$ (ACE). The MACE model can be seen as a sparse version of the ACE model, where only the nearest neighbors are considered for message passing. This allows MACE to capture long-range interactions while maintaining computational efficiency. Figure adapted from [](https://doi.org/10.1038/s42256-024-00956-x)
+```
 ### Message Construction
-The state of each node $i$ in layer $t$:
+At each step, the state of an atom $i$ is described by:
+- Its position ($\mathbf{r}_i$),
+- Fixed attributes like its chemical element ($\mathbf{\theta}_i$),
+- Learnable features ($\mathbf{h}_i^{(t)}$) that evolve during the process.
 
-$$
-\sigma_i^{(t)} = (\mathbf{r}_i, \mathbf{\theta}_i, \mathbf{h}_i^{(t)})
-$$
+To share information, messages are passed from neighboring atoms $j$ to the target atom $i$. The message $m_i^{(t)}$ is constructed by combining information from all neighbors. This ensures the process respects both the order of atoms (permutation invariance) and their orientation in space (rotation equivariance).
 
-where $\sigma_i^{(t)}$ is the state of atom $i$ at iteration $t$, $\mathbf{r}_i$ is the position of atom $i$, $\mathbf{\theta}_i$ is a set of fixed attriburtes (e.g. chemical element) of atom $i$, and $\mathbf{h}_i^{(t)}$ is the learnable features. The message passing is invariant to the permutation of atoms and equivariant to the rotation of atoms.
-
-The message $m_i^{(t)}$ is computed using the state of the neighbors $j$ of atom $i$:
-$$
-m_i^{(t)} = \sum_{j\in N(i)} M_t(\sigma_i^{(t)}, \sigma_j^{(t)})
-$$
-where $M_t$ is the learnable message function and $\sum$ is a learnable permutation invariant pooling operation (e.g. summation) over neighbors around atom $i$. The message function is invariant to the permutation of atoms and equivariant to the rotation of atoms.
-
-In MACE, the message function is constructed as:
-
-$$
-m_{i,kLM}^{(t)}=\sum_{\eta} W_{z_i,kL,\eta}^{(t)}B_{i, k\eta LM}^{(t)}
-$$
-
-$$
-m_{i,kLM}^{(t)}=\sum_{j\in N(i)}M_t(\sigma_i^{(t)}, \sigma_j^{(t)}) =  \sum_{\eta} w_{i,k\eta L}^{(t)}\sum_{\mathbf{v}}C^{LM}_{\eta, \mathbf{v}} \prod_{\xi=1}^\nu \phi_{k\nu_\xi L}^{(t)}(\sigma_i^{(t)}, \sigma_j^{(t)})
-$$
-where $w_{i,k\eta L}^{(t)}$ is the learnable weight, $\phi_{k\nu_\xi L}^{(t)}(\sigma_i^{(t)}, \sigma_j^{(t)})$ is the one particle basis function, and $C^{LM}_{\eta, \mathbf{v}}$ is the Clebsch-Gordan coefficient.
+In MACE, the message is built using the symmetrized atomic basis functions ($B_{i, k\eta LM}^{(t)}$). These functions describe the environment around atom $i$ and are combined with learnable weights ($W_{z_i,kL,\eta}^{(t)}$). Clebsch-Gordan coefficients are used to ensure the message respects the symmetry of the system.
 
 ### Update
-In MACE, the message $m_i^{(t)}$ is used to update the state of atom $i$:
-$$
-\mathbf{h}_{i, kLM}^{(t+1)} = U_t(\sigma_i^{(t)}, m_i^{(t)})=  \sum_{\tilde{k}} W_{k\tilde{k}L}^{(t)} m_{i,\tilde{k}LM}^{(t)}
-$$
-where $U_t$ is the learnable update function, $W_{k\tilde{k}L}^{(t)}$ is the learnable weights. The update function is invariant to the permutation of atoms and equivariant to the rotation of atoms.
+Once the message $m_i^{(t)}$ is constructed, it is used to update the learnable features of atom $i$. This update step adjusts the features based on the information received from neighbors. The updated features continue to respect the symmetry properties of the system, ensuring consistency throughout the process.
 
 ### Readout
-
-After $T$ iterations, the final state of atom $i$ is computed using the readout function:
-$$
-E_i = \sum_{t=1}^{T} R_t(\sigma_i^{(t)})
-$$
-where $R_t$ is the readout function. 
-
-In MACE, the readout function is constructed as:
-
-$$
-E_i = E_i^{(0)} + E_i^{(1)} + \cdots + E_i^{(T)}, \\
-E_i^{(t)} = R_t(\mathbf{h}_i^{(t)}) = \sum_{kL} W_{kL}^{(t)} \mathbf{h}_{i, kL}^{(t)},
-$$
-where $E_i^{(t)}$ is the energy of atom $i$ at iteration $t$, and $W_{kL}^{(t)}$ is the learnable weight. The readout function is invariant to the permutation of atoms and equivariant to the rotation of atoms.
-
+After several rounds of message passing and feature updates, the final state of each atom is used to calculate its energy. The energy is computed by summing contributions from all steps. This ensures the energy calculation respects the symmetry and order of the atoms, making it accurate and reliable.
