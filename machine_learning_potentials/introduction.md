@@ -5,7 +5,8 @@ Machine learning potentials (MLPs) are a class of interatomic potentials that us
 ---
 width: 70%
 ---
-A message passing neural network (MPNN) can predict the energy and properties of a system using a fraction of the time compared to DFT.
+A message passing neural network (MPNN) can predict the energy and properties of a system using a fraction of the time compared to DFT. Figure adapted from [](
+https://doi.org/10.48550/arXiv.1704.01212)
 ```
 
 There are two category of interatomic potentials: physics-based potentials (PBPs) and first-principles. PBPs, or classical force fields, are based on physical models and parameters that are fitted to experimental data or high-level quantum mechanical calculations. They are computationally efficient but may not accurately capture the complex interactions in some systems. First-principles methods, such as density functional theory (DFT), provide highly accurate results but are computationally expensive and not suitable for large systems or long time scales.

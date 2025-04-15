@@ -122,6 +122,7 @@ project:
         - file: machine_learning_potentials/mace.md
         - file: machine_learning_potentials/umlp.md
         - file: machine_learning_potentials/training_validation.md
+        - file: machine_learning_potentials/challenges.md
         - file: machine_learning_potentials/mlp.ipynb
 
 site:
