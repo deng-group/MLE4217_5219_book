@@ -14,5 +14,12 @@ The lecture video will be available after this lecture.
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
 ## Content
+This week, we will dive into the world of machine learning potentials (MLPs). We will start from why we need MLPs, and then introduce different types of MLPs. Next we will go a bit deeper into the Behler-Parrinello and Multi-Atomic Cluster Expansion (MACE) potentials. We will then introduce the universal MLPs and how to compare their performance. In addition, we will briefly cover the training and validation process of MLPs. Finally, we will discuss the challenges of the current field.
 
 ## Learning Objectives
+- Understand the need for MLPs and their advantages over traditional methods.
+- Understand the features of MLPs and how they are constructed.
+- Familiarize with different types of MLPs, including Behler-Parrinello and MACE potentials.
+- Learn about universal MLPs and how to compare their performance.
+- Understand the training and validation process of MLPs.
+- Familiarize with the challenges of MLPs.

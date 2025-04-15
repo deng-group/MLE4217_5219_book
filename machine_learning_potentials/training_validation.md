@@ -1,5 +1,9 @@
 # Training and Validation
 
+```{figure} ../figures/construct_mlp.png
+General process of constructing a MLP.
+```
+
 ## Dataset: The Foundation of MLPs
 
 A good machine learning potential (MLP) starts with a high-quality dataset. This dataset is typically generated using density functional theory (DFT) calculations and should include:
@@ -31,7 +35,9 @@ Training an MLP involves teaching it to predict energies, forces, and stresses f
 
 2. Optimization: Algorithms like gradient descent are used to minimize the loss function, improving the model's predictions over time.
 
-3. Validation: To ensure the MLP generalizes well, test it on a separate validation dataset. This helps detect overfitting and ensures the model performs well on unseen data.
+3. Hyperparameters: These are settings that control the training process, such as learning rate, batch size, and number of epochs. Tuning these hyperparameters is crucial for achieving optimal performance.
+
+4. Validation: To ensure the MLP generalizes well, test it on a separate validation dataset. This helps detect overfitting and ensures the model performs well on unseen data.
 
 ## Evaluation: Measuring MLP Performance
 
@@ -41,6 +47,7 @@ Once the MLP is trained, it’s important to evaluate its performance. Here are 
     - Use metrics like Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) to assess:
       - Energy predictions (e.g., in meV/atom).
       - Force predictions (e.g., in eV/Å).
+    - You also need to check the accuracy of the properties that you are interested in, such as ionic conductivity, etc.
 
 2. Stability in Molecular Dynamics (MD):
     - Test the MLP in MD simulations to check if it maintains stable temperature and conserves energy.
