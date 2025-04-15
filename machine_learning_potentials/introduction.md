@@ -1,6 +1,13 @@
 # Why MLPs?
 Machine learning potentials (MLPs) are a class of interatomic potentials that use machine learning techniques to predict the potential energy surface (PES) of a system. The forces and stresses are available through analytical derivatives of the energy. They are designed to provide accurate and efficient approximations of the potential energy and forces acting on atoms in a material, making them suitable for large-scale molecular dynamics simulations.
 
+```{figure} ../figures/mlp_compare.png
+---
+width: 70%
+---
+A message passing neural network (MPNN) can predict the energy and properties of a system using a fraction of the time compared to DFT.
+```
+
 There are two category of interatomic potentials: physics-based potentials (PBPs) and first-principles. PBPs, or classical force fields, are based on physical models and parameters that are fitted to experimental data or high-level quantum mechanical calculations. They are computationally efficient but may not accurately capture the complex interactions in some systems. First-principles methods, such as density functional theory (DFT), provide highly accurate results but are computationally expensive and not suitable for large systems or long time scales.
 
 | | Classical force fields | Quantum mechanical methods |  Machine learning potentials |
@@ -19,4 +26,19 @@ However, a reliable and universal MLP needs to be trained on a large dataset of 
 
 ## Formalism
 
-The basic idea of MLPs is to represent the local atomic environment of each atom in a system using a set of numbers or features. Then this feature vector will be fed into a regression model. There are two types of features: explicit and implicit features. We will introduce them in the following sections.
+The basic idea of MLPs is to approximate the Born-Oppenheimer Potential Energy Surface (PES). This surface describes the potential energy of a system as a function of the positions of all its aotmic nuclei.
+
+$$
+E = E(R_1, R_2, \ldots, R_N)
+$$
+
+where $E$ is the total energy of the system, and $R_i$ is the position of the $i$-th atom.
+
+The forces are simply the negative graidient of the energy with respect to the atomic positions:
+$$
+F_i = -\frac{\partial E}{\partial R_i}
+$$
+
+The positions of the atomic nuclei are converted to a feature vector. Then this feature vector will be fed into a ML model. 
+
+There are two types of features: explicit and implicit features. We will introduce them in the following sections.

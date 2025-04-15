@@ -1,29 +1,50 @@
-# Training and Validation of MLPs
+# Training and Validation
 
-## Dataset
-- Need diverse, high-quality DFT data
-- Energies, forces, (optional) virials
-- Good coverage: configurations, volumes, chemistries
+## Dataset: The Foundation of MLPs
 
+A good machine learning potential (MLP) starts with a high-quality dataset. This dataset is typically generated using density functional theory (DFT) calculations and should include:
 
+- Energies: The total energy of atomic configurations.
+- Forces: The forces acting on each atom in the system.
+- (Optional) Virials: Stress tensors, which are particularly useful for systems under pressure or strain.
 
-## Training
+### What Makes a Dataset Good?
 
-Training a machine learning potential (MLP) involves fitting the model to a dataset of atomic configurations and their corresponding energies, forces, and stresses. The training process typically involves the following steps:
+- Diversity: The dataset should cover a wide range of atomic configurations, including different geometries, volumes, and chemical compositions.
+- Accuracy: The data must be reliable and free from errors. Poor-quality data can lead to poor model performance.
+- Coverage: Ensure the dataset represents the conditions the MLP will encounter, such as varying temperatures, pressures, and chemical environments.
 
-The loss function is defined as the difference between the predicted and true energies, forces, and stresses. The loss function is typically a combination of the mean squared error (MSE) for energies, forces, and stresses.
+## Training: How MLPs Learn
 
-$$
-L = \frac{1}{N} \sum_{i=1}^{N} \left( E_i - \hat{E}_i \right)^2 + \frac{1}{N} \sum_{i=1}^{N} \left( F_i - \hat{F}_i \right)^2 + \frac{1}{N} \sum_{i=1}^{N} \left( S_i - \hat{S}_i \right)^2
-$$
+Training an MLP involves teaching it to predict energies, forces, and stresses from atomic configurations. This process can be broken down into three main steps:
 
-where $N$ is the number of atomic configurations, $E_i$ is the true energy, $\hat{E}_i$ is the predicted energy, $F_i$ is the true force, $\hat{F}_i$ is the predicted force, $S_i$ is the true stress, and $\hat{S}_i$ is the predicted stress.
+1. Loss Function: The loss function measures how far the MLP's predictions are from the actual values. A common choice is the mean squared error (MSE), which combines errors in energies, forces, and stresses:
 
-## Evaluation
-- MAE, RMSE of energy (meV/atom), force (eV/Å)
-- Stability in MD (temperature drift, energy conservation)
-- Transferability: new structures, new chemistry
+    $$
+    L = \frac{1}{N} \sum_{i=1}^{N} \left( E_i - \hat{E}_i \right)^2 + \frac{1}{N} \sum_{i=1}^{N} \left( F_i - \hat{F}_i \right)^2 + \frac{1}{N} \sum_{i=1}^{N} \left( S_i - \hat{S}_i \right)^2
+    $$
 
+    - $N$: Number of atomic configurations.
+    - $E_i$, $\hat{E}_i$: True and predicted energies.
+    - $F_i$, $\hat{F}_i$: True and predicted forces.
+    - $S_i$, $\hat{S}_i$: True and predicted stresses.
 
-## UMLPs Benchmark
-[Matbench Discovery](https://matbench-discovery.materialsproject.org/) is a benchmark for evaluating the performance of MLPs. It consists of a set of tasks that cover a wide range of materials properties, including formation energy, band gap, and elastic modulus. The benchmark is designed to test the transferability and accuracy of MLPs across different systems and chemical environments.
+2. Optimization: Algorithms like gradient descent are used to minimize the loss function, improving the model's predictions over time.
+
+3. Validation: To ensure the MLP generalizes well, test it on a separate validation dataset. This helps detect overfitting and ensures the model performs well on unseen data.
+
+## Evaluation: Measuring MLP Performance
+
+Once the MLP is trained, it’s important to evaluate its performance. Here are some key aspects to consider:
+
+1. Accuracy:
+    - Use metrics like Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) to assess:
+      - Energy predictions (e.g., in meV/atom).
+      - Force predictions (e.g., in eV/Å).
+
+2. Stability in Molecular Dynamics (MD):
+    - Test the MLP in MD simulations to check if it maintains stable temperature and conserves energy.
+
+3. Transferability:
+    - Evaluate the MLP on new structures or chemistries not included in the training dataset. This ensures the model can handle scenarios it hasn’t seen before.
+
