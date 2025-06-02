@@ -9,7 +9,10 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRf6jF7PwWV7FFjiCIBX8Wq5ByXFZGzDFo3fq7fsQHkkwVzxWYr9wQIKMl4jNYo5vdNyXZOinrmvwqq/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-The lecture video will be available after this lecture.
+The lecture video has been recorded using Zoom. Please access them below:
+
+- [Lecture](https://nus-sg.zoom.us/rec/share/BCE_ViS2fF9QorvxC5KL6hGxwqFrZjet-nwWFCQfg2t4sT91qOpSmpKlqC8IGbIN.hoYFapqH2NG5erD0?startTime=1744851666000)
+- [Practical](https://nus-sg.zoom.us/rec/share/BCE_ViS2fF9QorvxC5KL6hGxwqFrZjet-nwWFCQfg2t4sT91qOpSmpKlqC8IGbIN.hoYFapqH2NG5erD0?startTime=1744857383000)
 
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
