@@ -5,6 +5,23 @@ site:
   hide_toc: true
   hide_title_block: true
 ---
++++ {"class": "col-page-inset"}
+
+:::::{grid} 1 2 2 2
+::::{grid-item}
+{large}`Jupyter Book allows you to create documents and knowledge bases that are **reusable**, **reproducible**, and **interactive**.`
+::::
+::::{grid-item}
+
+```{code-block} bash
+:filename: Jupyter Book quickstart
+:class: hi
+pip install jupyter-book
+jupyter book start
+```
+
+::::
+:::::
 
 
 :::::{grid} 2 2 2 2
@@ -55,4 +72,4 @@ You can run the Jupyter notebooks in this course using Google Colab. Click the l
 Please feel free to contact me through email at [msedz@nus.edu.sg](mailto:msedz@nus.edu.sg) if you have any questions or suggestions. I'm looking forward to hearing from you!
 
 # Acknowledgements
-This interactive textbook is built by Jupyter Book. Some contents of this course was inspired by the Materials Informatics courses offered by [Prof. Chris J. Pickard](https://www.msm.cam.ac.uk/people/pickard), [Prof. Taylor D. Sparks](https://faculty.utah.edu/u0203991-Taylor_D._Sparks/hm/index.hml), and [Dr. Enze Chen & Prof. Mark Asta](https://enze-chen.github.io/mi-book-2021/intro.html).
+This interactive textbook is built by Jupyter Book. Some contents of this course was inspired by the Materials Informatics courses offered by [Prof. Chris J. Pickard](https://www.msm.cam.ac.uk/people/pickard), and [Dr. Enze Chen & Prof. Mark Asta](https://enze-chen.github.io/mi-book-2021/intro.html).

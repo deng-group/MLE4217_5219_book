@@ -371,3 +371,14 @@ It is also recommended to install the Git Graph extension to see commit and logs
 
 
 That's it! You are now ready to use Git with VS Code.
+
+```{admonition} Useful GitHub Repositories
+:class: tip
+- [awesome-materials-informatics](https://github.com/tilde-lab/awesome-materials-informatics) summarizes the tools and resources for materials informatics, including databases, software, and libraries for materials science and computational materials research.
+
+- [atomistic.software](https://atomistic.software/) is a curated list of software packages for atomistic simulations, including DFT, molecular dynamics, and Monte Carlo methods.
+
+- [Materials-Databases](https://github.com/blaiszik/Materials-Databases) is a collection of materials databases and resources for materials informatics and computational materials science.
+
+- [awesome-chemical-data](https://github.com/neo-chem/awesome-chemical-data) summarizes a list of experimental chemical data resources, including databases, software, and tools for chemical informatics.
+```

@@ -1,16 +1,5 @@
 # Codes
 
-```{admonition} Useful GitHub Repositories
-:class: tip
-- [awesome-materials-informatics](https://github.com/tilde-lab/awesome-materials-informatics) summarizes the tools and resources for materials informatics, including databases, software, and libraries for materials science and computational materials research.
-
-- [atomistic.software](https://atomistic.software/) is a curated list of software packages for atomistic simulations, including DFT, molecular dynamics, and Monte Carlo methods.
-
-- [Materials-Databases](https://github.com/blaiszik/Materials-Databases) is a collection of materials databases and resources for materials informatics and computational materials science.
-
-- [awesome-chemical-data](https://github.com/neo-chem/awesome-chemical-data) summarizes a list of experimental chemical data resources, including databases, software, and tools for chemical informatics.
-```
-
 ## Computational Codes for High-Throughput Simulations
 Here we will discuss the computational codes used in high-throughput (HT) simulations, focusing on density functional theory (DFT), molecular dynamics, and Monte Carlo methods. These codes are essential for calculating the properties of materials in a high-throughput manner, enabling the exploration of large materials databases and the prediction of new materials with desired properties.
 

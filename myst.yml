@@ -14,12 +14,19 @@ project:
       url: https://mybinder.org/
       repo: deng-group/MLE4217_5219_book
       provider: github
-  bibliography:
-    - references.bib
+  # bibliography:
+  #   - references.bib
   exports:
     - format: pdf
       template: lapreprint-typst
       output: exports/book.pdf
+
+  plugins:
+    - src/xref.mjs
+    - src/landing-page.mjs
+    - src/directives.mjs
+    - src/admonition.mjs
+    
   toc:
     - file: index.md
     - file: syllabus.md
@@ -130,7 +137,7 @@ site:
     logo: logo.svg
     logo_dark: logo_dark.svg
     favicon: favicon.ico
-  template: book-theme
+  # template: book-theme
   folders: true
 
   actions:

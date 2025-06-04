@@ -1,17 +1,20 @@
 # Jupyter Book for the course "Materials Informatics"
 
-## How to build this book
-Make sure you have installed packages in `requirements.txt`:
+## Building the Book in HTML format
+To build this book, you need to have [Jupyter Book](https://jupyterbook.org/) installed. You can install it using pip in your Python environment:
+
 ```shell
-pip install -r requirements.txt
+pip install jupyter-book>=2.0.0a0
 ```
+
 Then you can build the book using:
 ```
 make
 ```
 This will build the book in html format. You can view the book by opening the file `./_build/html/index.html` in a web browser.
 
-You can also build the book in pdf format using:
+## Building the Book in PDF format
+You can also build the book in `pdf` format using:
 ```shell
 make book
 ```
