@@ -2,21 +2,21 @@
 
 ```{admonition} Content is subjected to change
 :class: warning
-Below are the planned schedule, which are subjected to change depends on the progress.
+Below are planned schedule, which are subjected to change depends on progress.
 ```
 
-| **Week** | **Topic** | **Details** | **Practical** | **Assignment**| **Quiz**| 
+| **Week** | **Topic** | **Details** | **Practical** | **Assignment** | **Quiz** |
 |----------|------------|-------------|---------------|---|---|
-| 1 | Orientation |Course arrangement <br> Overview of the course Open-source software<br> git, Github & Gitlab | Setup Python environment and use jupyter notebook<br>Git, Github & Gitlab | | |
-| 2 | CNY Week |  |   | | |
-| 3 | Computer and Computation |  materials informatics, computer, programming language, performance, high-performance computing (HPC)<br> open-sourced software |   | | |
-| 4 | Database|  data structure, database format, materials database, data generation, materials selection<br> visualization<br> data mining  how to query database<br> data visualization<br> data mining |  query data from materials project<br> simple data visualization and data mining (bulk modulus)| | |
-| 5 | Atomistic Structures I |  molecules, graph, biochemistry, nanomaterials, crystalline materials, noncrystalline materials, ordering, prototypes, Wyckoff positions, structure map<br> symmetry, group theory, point groups, space groups, primitive cells, conventional cells, Brillouin zone, reciprocal space & path | | | |
-| 6 | Atomistic Structures II |  defect<br> interface<br> grain boundary |  use pymatgen, ase, and spglib to build models and symmetry analysis<br> use VESTA and ase-gui for structure visualization | 1 | 1|
-| 7 | Models and Theories I |  multiscale modelling, atomistic modelling, force field, codes<br> molecular dynamics and monte carlo | | |2|
-| 8 | Models and Theories II |  quantum mechanics, electronic structure, density functional theory (DFT)<br> functionals, plane waves and pseudopotentials, codes |  use ase to load force field and do some computation (equation of state, stability of diamond and graphite)<br> use ase to run molecular dynamics | | |
-| 9 | Optimization |  introduction, energy landscapes<br> local optimization: 1D, 2D & beyond optimization, performance<br> gradients, steepest descent, curvature<br> global optimization: genetic algorithm, basin hopping, stimulus annealing<br> no free lunch rule | | | 3|
-| 10 | High-throughput Simulation |  thermodynamics and kinetics<br> finite temperature and entropy<br> convex hulls<br> phase diagram<br> AIRSS<br> Genetic Algorithm | |2 | |
-| 11 | Machine Learning I |  regression and fitting<br> neural networks<br> Decision tree & random Forest <br> classification<br> principal component analysis<br> clustering |  use pytorch learn to run some simple classification<br>training, errors | | 4|
-| 12 | Machine Learning II |  Graph neural network<br> Diffusion model  |  Pytorch for GNNs | | |
-| 13 | Machine Learning Potential |  descriptor: SOAP, ACE, GAP and etc.<br>  errors<br>  MACE |  MACE examples | 3 | 5|
+| **1** | Orientation + Git | Course arrangement, Open-source software, git/Github/Gitlab | Setup Python environment and use jupyter notebook<br>Git, Github & Gitlab | | |
+| **2** | Python Programming | Python syntax review, NumPy fundamentals, Matplotlib for Materials Science, Jupyter workflow & best practices | NumPy + Matplotlib exercises | | |
+| **3** | Computer and Computation | Materials informatics intro, high-performance computing (HPC), open-sourced software | | | |
+| **4** | Database | Data structure, database format, materials database, data generation, materials selection, visualization, data mining (how to query database, data visualization, data mining)<br>**Pandas basics** (loading JSON/CSV, basic DataFrame operations) | Query data from materials project<br>Pandas data handling, simple data visualization and data mining (bulk modulus) | | |
+| **5** | Atomistic Structures | **Merged I & II** (reorganized)<br>• Site: Wyckoff positions, site coordinates<br>• Site collection & molecule: molecules, graphs, biochemistry, nanomaterials<br>• Symmetry: group theory, point groups, space groups, primitive/conventional cells, Brillouin zone, reciprocal space & path, lattice types, periodicity<br>• Defect & Interface representation: vacancy, interstitial, substitution, interface, grain boundary | Use pymatgen, ase and spglib to build models and symmetry analysis<br>Use VESTA and ase-gui for structure visualization | **1** | |
+| **6** | CNY Week | 2026-02-16 to 2026-02-22 | | | |
+| **7** | **MID-TERM REVIEW** | Review of Weeks 1-5 (orientation, Python, computing, database, atomistic structures), Q&A, practice problems | | | **1** |
+| **8** | Models and Theories I | Multiscale modelling, atomistic modelling, force field, codes, molecular dynamics and Monte Carlo | | | |
+| **9** | Models and Theories II | Quantum mechanics, electronic structure, density functional theory (DFT), functionals, plane waves and pseudopotentials, codes | Use ase to load force field and do computation (equation of state, stability of diamond and graphite)<br>Use ase to run molecular dynamics | | |
+| **10** | Optimization | Introduction, energy landscapes<br>**Local optimization**: 1D, 2D & beyond, performance, gradients, steepest descent, curvature<br>**Global optimization**: Genetic Algorithm, basin hopping, simulated annealing<br>**AIRSS**: Ab Initio Random Structure Searching<br>No free lunch rule | | | |
+| **11** | High-throughput Simulation | Thermodynamics and kinetics, finite temperature and entropy, convex hulls, phase diagram | | **2** | |
+| **12** | Machine Learning + ML Potentials (Combined) | **Part 1**: ML fundamentals overview (brief recap of reading materials: regression, neural networks, decision trees, classification, PCA, clustering, GNNs)<br>**Part 2**: ML Potentials overview, Descriptors (SOAP, ACE, GAP), error analysis, MACE | MACE demo/examples | | |
+| **13** | **PRE-EXAM REVIEW** | Review of Weeks 7-12, Q&A, exam preparation | | | **2** |

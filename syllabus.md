@@ -1,9 +1,8 @@
 # Syllabus
-- Year: AY2024/2025 Semester 2
+- Year: AY2025/2026 Semester 2
 - Instructor: [Asst. Prof. Zeyu Deng](https://cde.nus.edu.sg/mse/staff/zeyu-deng/)
 - Email: msedz@nus.edu.sg
-- L1: Wednesday 12:00 - 15:00 @ LT1 (MLE4217/5219)
-- L2: Thursday 09:00 -12:00 @ LT2 (MLE5219)
+- L1: Wednesday 15:00 - 18:00 @ LT1 (MLE4217/5219)
 
 ## Goals
 - Familiarize student with basic knowledge of modern computer architecture and working mechanism
