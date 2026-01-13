@@ -1,3 +1,14 @@
+```{admonition} Reading Material
+:class: note
+**This chapter covers advanced ML topics provided as self-study materials.**
+
+Topics include:
+- Graph Neural Networks (GNNs)
+- Diffusion models
+
+These topics are provided for interested students but are NOT required for Week 12 (ML Potentials) and will NOT be covered in lecture.
+```
+
 # Machine Learning II
 ```{image} ../figures/machine_learning_title2.jpeg
 ---

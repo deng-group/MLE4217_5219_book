@@ -1,4 +1,6 @@
-# History of Computer and Computation
+# Reference Material: History of Computer and Computation
+
+Historical context is provided as optional reading. Materials informatics overview was covered in Week 1.
 
 ## Computer Is the Foundation of Modern Digital Life
 ```{figure} ../figures/computer_intro.png

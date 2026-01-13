@@ -7,22 +7,6 @@ site:
 ---
 +++ {"class": "col-page-inset"}
 
-:::::{grid} 1 2 2 2
-::::{grid-item}
-{large}`Jupyter Book allows you to create documents and knowledge bases that are **reusable**, **reproducible**, and **interactive**.`
-::::
-::::{grid-item}
-
-```{code-block} bash
-:filename: Jupyter Book quickstart
-:class: hi
-pip install jupyter-book
-jupyter book start
-```
-
-::::
-:::::
-
 
 :::::{grid} 2 2 2 2
 
@@ -43,7 +27,7 @@ msedz@nus.edu.sg
 
 ::::{grid-item}
 ```{figure} figures/materials_informatics_logo_notitle.png
-:width: 100%
+:width: 50%
 :align: center
 ```
 ::::

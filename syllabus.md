@@ -2,7 +2,7 @@
 - Year: AY2025/2026 Semester 2
 - Instructor: [Asst. Prof. Zeyu Deng](https://cde.nus.edu.sg/mse/staff/zeyu-deng/)
 - Email: msedz@nus.edu.sg
-- L1: Wednesday 15:00 - 18:00 @ LT1 (MLE4217/5219)
+- L1: Wednesday 12:00 - 15:00 @ LT1 (MLE4217/5219)
 
 ## Goals
 - Familiarize student with basic knowledge of modern computer architecture and working mechanism
@@ -13,10 +13,17 @@
 - Provide students basic knowledge to analyze manuscripts containing computational simulations
 ## Organization
 - Three hours in person lecture per week including instructions and practicals.
-- Three assignments (25% * 3) + five quiz (5% * 5)
+- Two assignments and two quizzes during the semester.
+- Two review sessions (one mid-term and one pre-final).
+- A final exam at the end of the semester.
 
 ## Grading
-Grading is based on the assignments and in class quiz. There are no exams.
+Grading is based on the assignments and in class quizzes as well as a final exam. The breakdown is as follows:
+- Assignment 1: 20%
+- Assignment 2: 20%
+- Quiz 1: 10%
+- Quiz 2: 10%
+- Final Exam: 40%
 
 ## Textbooks
 This interactive textbook will serve as the textbook for this course. There is no other required book for the course. Following are some suggested reference works; additional references are provided in lecture.

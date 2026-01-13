@@ -11,6 +11,11 @@ This lecture has been recorded using Zoom. Please use [this link](https://nus-sg
 
 **Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
 
+```{admonition} Course Focus
+:class: note
+This week focuses on **Git workflow, open-sourced software principles, and understanding computer hardware/software**. HPC was covered in Week 1 (practical setup).
+```
+
 ## Content
 This week, we will explore computer hardware and software, starting with the history and development of computer systems. We will examine computer architectures, focusing on the basic components such as the CPU, GPU, memory, and storage. We will discuss the differences between CPUs and GPUs, their roles, and functionalities. Additionally, we will cover fundamental programming languages and libraries, and assess the performance of your code using Python libraries. Finally, we will demonstrate version control with git and collaboration using GitHub. 
 

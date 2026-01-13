@@ -15,7 +15,7 @@ These skills will help you manage your project files efficiently and collaborate
 
 ```{admonition} Git, Github, and VS Code
 :class: info
-For more information about Git or GitHub, please read [here](../orientation/github.md#git-and-github). Make sure you have [installed VS Code and Git](../orientation/setup.md#visual-studio-code-vs-code) on your computer.
+For more information about Git or GitHub, please read [here](../python_programming/github.md#git-and-github). Make sure you have [installed VS Code and Git](../orientation/setup.md#visual-studio-code-vs-code) on your computer.
 ```
 
 ## Open VS Code

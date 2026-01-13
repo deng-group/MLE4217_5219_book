@@ -23,3 +23,14 @@ By the end of this week, you should be able to:
 - Understand basics of optimization algorithms such as gradient descent, Newton's method, and simulated annealing.
 - Choose an appropriate optimization algorithm based on the problem characteristics.
 - Explain the Nudged Elastic Band (NEB) method and its application in finding transition states.
+- Understand AIRSS (Ab Initio Random Structure Searching) as a global optimization method for structure prediction.
+
+## Contents
+
+- [Introduction](introduction.md)
+- [Local Optimization](local_optimization.md)
+- [Global Optimization](global_optimization.md)
+- [AIRSS: Ab Initio Random Structure Searching](airss.md)
+- [Choosing Optimizers](choose_opt.md)
+- [Transition State Search](transition_state.md)
+- [Practical: Optimization](optimization.ipynb)

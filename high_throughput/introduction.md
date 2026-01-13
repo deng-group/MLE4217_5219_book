@@ -13,3 +13,8 @@ This limitation motivates the need for *accelerated* materials discovery, a para
 High-throughput simulations are a powerful tool which allows us to explore a vast range of materials and conditions, and to predict the properties of materials that have not yet been synthesized. It is used to accelerate the discovery of new materials, and to understand the properties of materials that are difficult to study experimentally. It also breaks the big computational problem into smaller, more manageable pieces, allowing us to run many simulations in parallel, so that we can explore a large number of materials in a reasonable amount of time.
 
 Typical tasks in high-throughput simulation include: rapid screening of mateirals for desireable properties, systematic exploration of structure-property relationship, and discovery of new materials by mapping stability and performance trends.
+
+```{admonition} Note
+:class: note
+**Structure prediction methods** like AIRSS (Ab Initio Random Structure Searching) and Genetic Algorithms are covered in **[Week 10: Optimization](../optimization/airss.md)**. This week (Week 11) focuses on thermodynamics, convex hulls, phase diagrams, and high-throughput workflows for known structures.
+```

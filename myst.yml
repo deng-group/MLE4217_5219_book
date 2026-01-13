@@ -35,17 +35,27 @@ project:
       children:
         - file: orientation/orientation.md
         - file: orientation/introduction.md
-        - file: orientation/github.md
+        - file: orientation/vanda.md
         - file: orientation/setup.md
-        - file: orientation/programming.ipynb
+        - file: orientation/jupyter_workflow.ipynb
+        - file: orientation/setup_local.md
+
+    - file: programming/index.md
+      children:
+        - file: programming/github.md
+        - file: programming/python_introduction.ipynb
+        - file: programming/numpy.ipynb
+        - file: programming/matplotlib.ipynb
+        - file: programming/pandas.md
+
     - file: computer/index.md
       children:
-        - file: computer/history.md
+        - file: computer/git_examples.md
+        - file: computer/software.md
         - file: computer/hardware.md
+        - file: computer/history.md
         - file: computer/performance.md
         - file: computer/hpc.md
-        - file: computer/software.md
-        - file: computer/git_examples.md
         - file: computer/scaling.ipynb
     - file: database/index.md
       children:
@@ -55,23 +65,30 @@ project:
         - file: database/materials_database.md
         - file: database/materials_project.ipynb
         - file: database/bulk_modulus.ipynb
-    - file: atomistic_structure_I/index.md
+    - file: atomistic_structure/index.md
       children:
-        - file: atomistic_structure_I/unit_cell.md
-        - file: atomistic_structure_I/symmetry.md
-        - file: atomistic_structure_I/prototypes.md
-        - file: atomistic_structure_I/reciprocal_space.md
-        - file: atomistic_structure_I/structure_formats.md
-        - file: atomistic_structure_I/crystal_structure.ipynb
-    - file: atomistic_structure_II/index.md
-      children:
-        - file: atomistic_structure_II/site_properties.md
-        - file: atomistic_structure_II/defect.md
-        - file: atomistic_structure_II/interface.md
-        - file: atomistic_structure_II/molecule.md
-        - file: atomistic_structure_II/noncrystalline_materials.md
-        - file: atomistic_structure_II/vesta.md
-        - file: atomistic_structure_II/advanced_structure.ipynb
+        - file: atomistic_structure/unit_cell.md
+        - file: atomistic_structure/symmetry.md
+        - file: atomistic_structure/prototypes.md
+        - file: atomistic_structure/reciprocal_space.md
+        - file: atomistic_structure/structure_formats.md
+        - file: atomistic_structure/crystal_structure.ipynb
+        - file: atomistic_structure/site_properties.md
+        - file: atomistic_structure/molecule.md
+        - file: atomistic_structure/noncrystalline_materials.md
+        - file: atomistic_structure/defect.md
+        - file: atomistic_structure/interface.md
+        - file: atomistic_structure/advanced_structure.ipynb
+        - file: atomistic_structure/vesta.md
+    # - file: midterm_review/index.md
+    #   children:
+    #     - file: midterm_review/week1_orientation.md
+    #     - file: midterm_review/week2_python.md
+    #     - file: midterm_review/week3_computer.md
+    #     - file: midterm_review/week4_database.md
+    #     - file: midterm_review/week5_atomistic.md
+    #     - file: midterm_review/practice_problems.md
+    #     - file: midterm_review/quiz1_guide.md
     - file: models_and_theories_I/index.md
       children:
         - file: models_and_theories_I/modelling.md
@@ -102,35 +119,44 @@ project:
         - file: high_throughput/codes.md
         - file: high_throughput/high_throughput.ipynb
     
-    - file: machine_learning_I/index.md
-      children:
-        - file: machine_learning_I/introduction.md
-        - file: machine_learning_I/features.md
-        - file: machine_learning_I/models.md
-        - file: machine_learning_I/task_algorithm.md
-        - file: machine_learning_I/validation.md
-        - file: machine_learning_I/pytorch.ipynb
+    # - file: machine_learning_I/index.md
+    #   children:
+    #     - file: machine_learning_I/introduction.md
+    #     - file: machine_learning_I/features.md
+    #     - file: machine_learning_I/models.md
+    #     - file: machine_learning_I/task_algorithm.md
+    #     - file: machine_learning_I/validation.md
+    #     - file: machine_learning_I/pytorch.ipynb
 
-    - file: machine_learning_II/index.md
-      children:
-        - file: machine_learning_II/introduction.md
-        - file: machine_learning_II/graph.md
-        - file: machine_learning_II/gnn.md
-        - file: machine_learning_II/diffusion_model.md
-        - file: machine_learning_II/summary.md
-        - file: machine_learning_II/adv_ml.ipynb
+    # - file: machine_learning_II/index.md
+    #   children:
+    #     - file: machine_learning_II/introduction.md
+    #     - file: machine_learning_II/graph.md
+    #     - file: machine_learning_II/gnn.md
+    #     - file: machine_learning_II/diffusion_model.md
+    #     - file: machine_learning_II/summary.md
+    #     - file: machine_learning_II/adv_ml.ipynb
     
     - file: machine_learning_potentials/index.md
       children:
         - file: machine_learning_potentials/introduction.md
         - file: machine_learning_potentials/explicit.md
-        - file: machine_learning_potentials/implicit.md
         - file: machine_learning_potentials/bp_nn.md
         - file: machine_learning_potentials/mace.md
         - file: machine_learning_potentials/umlp.md
         - file: machine_learning_potentials/training_validation.md
         - file: machine_learning_potentials/challenges.md
         - file: machine_learning_potentials/mlp.ipynb
+    # - file: preexam_review/index.md
+    #   children:
+    #     - file: preexam_review/week8_models1.md
+    #     - file: preexam_review/week9_models2.md
+    #     - file: preexam_review/week10_optimization.md
+    #     - file: preexam_review/week11_highthroughput.md
+    #     - file: preexam_review/week12_ml.md
+    #     - file: preexam_review/exam_format.md
+    #     - file: preexam_review/key_concepts.md
+    #     - file: preexam_review/quiz2_guide.md
 
 site:
   options:

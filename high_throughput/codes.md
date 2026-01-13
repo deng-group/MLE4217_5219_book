@@ -63,3 +63,8 @@ Workflow management systems are essential for coordinating and automating the va
 
 - Atomate 2: A high-level interface for setting up, running, and analyzing high-throughput calculations using various codes.
 
+```{admonition} Note
+:class: note
+**AIRSS (Ab Initio Random Structure Searching)** has been moved to **[Week 10: Optimization](../optimization/airss.md)** as it is fundamentally a global optimization method for structure prediction. This week (Week 11) focuses on codes for high-throughput simulations, workflow management systems, and data analysis.
+```
+

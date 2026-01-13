@@ -1,195 +1,61 @@
-# Practical: Setup Programming Environment
+# Setup Programming Environment
+We will use VS Code as our main code editor throughout this course. Python will be the main programming language used in this course. Please follow the instructions below to set up your programming environment.
 
-## Visual Studio Code (VS Code)
-We recommend using *Visual Studio Code* in this course. It is an open-sourced (free) software and is available for most of the main stream OS. Its intuitive interface and robust functionality make coding smoother and more enjoyable.
+Make sure you have completed the HPC access setup in [HPC Access Setup](vanda.md) before proceeding.
 
-Here's how you can get started:
-```{admonition} Choose the correct version for your operating system (OS)
-- You should install the Windows version if you're using Windows, even you're using Windows + WSL2. 
-- You're most likely to use the 64-bit version if your computer was purchased in recent years.
-```
+## Create a course directory
+It's a good practice to create a dedicated directory for your course work. By default, you will be in your home directory when you log in. You can create a new directory by clicking the new folder icon in the file explorer on the left side of `VS Code` and then name it to something like `MLE4217_5219`. 
 
-1. Download and Install VS Code: Visit the official Visual Studio Code website ([https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)) and download the installer compatible with your operating system. Follow the on-screen instructions during installation, accepting default settings. 
+## Open this directory in VS Code
+Then you should open this directory in VS Code by clicking on `File` > `Open Folder...` and selecting the folder you just created.
 
-2. Install extensions: You should install **Python** and **Jupyter** plugin under the **Extensions** on the left side of the VS Code. Other plugins that are recommended: Git Graph, and GitHub Copilot.
-
-3. (**For Windows only**) Install Git: Download and install [Git for Windows](https://git-scm.com/downloads/win). Choose *Use Windows' default console window* during installation.
-
-(**For macOS only**) Install Xcode Command Line Tools: Open Terminal and run the following command:
-```shell
-xcode-select --install
-```
-
-```{admonition} (For macOS only) Terminal app
-:class: info
-To open Terminal on macOS, press `Cmd+Space` to open Spotlight Search, type `Terminal`, and press `Enter`.
-```
-
-4. (**For Windows only**) Install [Visual Studio C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/). **This will download a few GB data. You can do this after you go home!**
-
-```{admonition} (For Windows only) Install Visual Studio C++ build tools 
-:class: tip
-1. Visit the [Visual Studio C++ build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) website.
-2. Click on the "Download Visual Studio" button.
-3. Run the downloaded installer and follow the on-screen instructions.
-4. Select the "Desktop development with C++" workload during installation.
-5. Make sure to install the "MSVC v142 - VS 2019 C++ x64/x86 build tools" or other higher version component.
-6. After installation, restart your computer to apply the changes.
-```
-
-```{admonition} (For Windows only) If **spglib** installation failed
-:class: warning
-If you encountered an error during the installation of the `pymatgen` package, complaining some error about the `spglib`, you may need to install the Visual Studio C++ build tools. This package is a dependency of `pymatgen`. Follow the instructions above to install the Visual Studio C++ build tools, and then try installing the `spglib` package again.
-
-You might also need to open the Anaconda Prompt in administrator mode to try to install the `spglib` package successfully. To do this, right-click on the Anaconda Prompt shortcut and select "Run as administrator." Then, try installing the `spglib` package using `pip install spglib`.
-```
-
-
-Visual Studio Code offers a convenient file explorer panel for easy script navigation and access. You can also launch an integrated terminal using "Terminal > New Terminal" for seamless coding workflows.
+## Install Python and Jupyter extensions in VS Code
+To work with Python and Jupyter notebooks in VS Code, you need to install the following extensions:
+1. Open the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
+2. In the search bar, type `Python` and install the extension named `Python` by Microsoft.
+3. Similarly, search for `Jupyter` and install the extension named `Jupyter` by Microsoft.
 
 ## Creating Python Virtual Environments
 A virtual environment is a self-contained directory that contains a Python installation for a particular version of Python, plus a number of additional packages. This allows you to work on a specific project without affecting other projects or your system Python installation.
 
-Here's a step-by-step guide to creating virtual environments in both Windows, macOS, and Linux:
-`````{tab-set}
-````{tab-item} Windows
-- **Install Miniconda**: Download and install Miniconda from [here](https://www.anaconda.com/download/success). Follow the installation instructions and make sure to add Miniconda to your PATH environment variable.
+To create a virtual environment for this course, press `Ctrl/Command+Shift+P` to open the command palette in VS Code, you will see a prompt like this at the top of the window:
+```
+> 
+```
+Then type `Python: Create Environment` and select it. Then choose `Venv` as the environment type, and select the base Python interpreter. Then it will create a folder `.venv` in your current directory. When you create a new Python file or Jupyter notebook, VS Code will automatically detect and use this virtual environment.
 
-- **Open Anaconda Prompt**: After installation, open the [Anaconda Prompt](https://www.youtube.com/watch?v=UAUO_K-bRMs) from the Start Menu. You should see a window like this:
-```
-(base) C:\Users\YourUsername>
-```
-
-- **Create the virtual environment**: Run the following command, replacing "mi" with your desired environment name:
-```shell
-conda create -n mi python=3.13
-```
-You will see a series of prompts asking you to confirm the installation of various packages. Type `y` and press Enter to proceed.
-
-- **Activate the virtual environment**:
-```shell
-conda activate mi
-```
-Your prompt should now look like this, indicating that the environment is active:
-```
-(mi) C:\Users\YourUsername>
+```{admonition} Virtual Environment Management
+:class: tip
+There are many ways to create virtual environments in Python. Here we use `venv` which is included in the standard library. You can also use other tools such as `conda` or `uv` or `virtualenv` if you prefer. `uv` is highly reommended for its simplicity and speed. However, it is not included in this course. You can find more details about virtual environment management in the [official Python documentation](https://docs.python.org/3/tutorial/venv.html) and more details about uv [here](https://docs.astral.sh/uv/).
 ```
 
-- **Install packages**: Use `conda` or `pip` to install packages specific to your project: You might need to install the Visual Studio C++ build tools first for installing packages like `spglib`, which is a dependency of `pymatgen`. Please see the [VS Code instruction #4](setup.md#visual-studio-code-vs-code) above.
-```shell
-pip install pymatgen ase jupyter
-```
-
-- **Deactivate the virtual environment**: When you are finished working on your project, deactivate the environment by typing:
-```shell
-conda deactivate
-```
-Your prompt will return to:
-```
-(base) C:\Users\YourUsername>
-```
-````
-
-````{tab-item} macOS
-- **Install Miniconda**: Download and install Miniconda from [here](https://www.anaconda.com/download/success). Follow the installation instructions and make sure to add Miniconda to your PATH environment variable.
-
-- **Open Terminal**: After installation, [open the Terminal application](https://support.apple.com/en-sg/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.) from your Launchpad. You should see a window like this:
-```
-Your-MacBook:~ YourUsername$
-```
-
-- **Create the virtual environment**: Run the following command, replacing "mi" with your desired environment name:
-```shell
-conda create -n mi python=3.13
-```
-You will see a series of prompts asking you to confirm the installation of various packages. Type `y` and press Enter to proceed.
-
-- **Activate the virtual environment**:
-```shell
-conda activate mi
-```
-Your prompt should now look like this, indicating that the environment is active:
-```
-(mi) Your-MacBook:~ YourUsername$
-```
-
-- **Install packages**: Use `conda` or `pip` to install packages specific to your project:
-```shell
-pip install pymatgen ase jupyter
-```
-
-- **Deactivate the virtual environment**: When you are finished working on your project, deactivate the environment by typing:
-```shell
-conda deactivate
-```
-Your prompt will return to:
-```
-Your-MacBook:~ YourUsername$
-```
-````
-
-````{tab-item} Linux
-- **Install Miniconda**: Download and install Miniconda from [here](https://www.anaconda.com/download/success). Follow the installation instructions and make sure to add Miniconda to your PATH environment variable.
-
-- **Open Terminal**: After installation, open a terminal. You should see a window like this:
-```
-yourusername@yourmachine:~$
-```
-
-- **Create the virtual environment**: Run the following command, replacing "mi" with your desired environment name:
-```shell
-conda create -n mi python=3.13
-```
-You will see a series of prompts asking you to confirm the installation of various packages. Type `y` and press Enter to proceed.
-
-- **Activate the virtual environment**:
-```shell
-conda activate mi
-```
-Your prompt should now look like this, indicating that the environment is active:
-```
-(mi) yourusername@yourmachine:~$
-```
-
-- **Install packages**: Use `conda` or `pip` to install packages specific to your project:
-```shell
-pip install pymatgen ase jupyter
-```
-
-- **Deactivate the virtual environment**: When you are finished working on your project, deactivate the environment by typing:
-```shell
-conda deactivate
-```
-Your prompt will return to:
-```
-yourusername@yourmachine:~$
-```
-````
-`````
 ## Select Interpreter in VS Code
 If you're editing any Python code (file ends with `.py`), you should select your Python interpreter for your project in VS Code. Make sure you [installed the Python extension in VS Code](setup.md#visual-studio-code-vs-code). Here's how you can do it:
 
 
-1. Open VS Code and press `Ctrl/Command+Shift+P` to open the command palette. You will see a prompt like this at the top of the window:
-```
-> 
-```
-
+1. Open VS Code and press `Ctrl/Command+Shift+P` to open the command palette. 
 2. Type `Python: Select Interpreter` in the command palette. As you type, you will see a list of options appear. Select `Python: Select Interpreter` from the list. The prompt will look like this:
 ```
 > Python: Select Interpreter
 ```
 
-3. After selecting `Python: Select Interpreter`, you will see a list of available Python interpreters. Look for the interpreter you just created. It should be named something like `Python 3.13.1 ('mi')`.
-
-4. Select the appropriate interpreter for your OS.
-
+3. After selecting `Python: Select Interpreter`, you will see a list of available Python interpreters. Look for the interpreter you just created. It should be named something like `Python 3.9.18 ('./.venv/bin/python')`.
+4. Select the appropriate interpreter.
 5. Once selected, you should see the interpreter path at the bottom left corner of VS Code, indicating that it is now using the specified Python environment for your project.
 
 By following these steps, you ensure that VS Code uses the correct Python interpreter, which is essential for running your code and managing dependencies correctly.
 
+## Install Required Python Packages
+You need to install some Python packages that we will use in this course. You can do this by opening a terminal in VS Code (`Terminal` > `New Terminal`) and running the following commands:
+```bash
+pip install numpy matplotlib pandas jupyter pymatgen ase dscribe mace-torch asap3 atomate2
+```
+Make sure your terminal is using the virtual environment you created earlier. You can check this by looking at the terminal prompt, which should show the name of your virtual environment, e.g., `(.venv)`.
 
-## Setting Up GitHub Copilot in VS Code (Optional)
+## Upload and Download Files via VS Code
+You can easily upload and download files between your local machine and the Vanda cluster using the built-in file explorer in VS Code. For download, just right-click on the folder or file you want to download and select the appropriate option. For uploading files from your local machine to Vanda, you can also simply drag and drop files into the file explorer in VS Code.
+
+## * Setting Up GitHub Copilot in VS Code
 
 ```{admonition} Free GitHub Education Pack
 :class: tip
@@ -238,3 +104,4 @@ GitHub Copilot is an AI-powered code completion tool that helps you write code f
 - **Context Matters**: The more context you provide, the better the suggestions. Including comments and descriptive variable names can help Copilot understand what you need.
 - **Iterate and Refine**: Use the suggestions as a starting point. You can always modify the generated code to better fit your needs.
 - **Explore Settings**: You can customize GitHub Copilot settings by going to the settings menu in VS Code and searching for `Copilot`.
+

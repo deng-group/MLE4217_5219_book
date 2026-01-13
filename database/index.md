@@ -24,3 +24,9 @@ By the end of this week, you should be able to:
 - Explore specialized materials databases to perform tasks like querying properties.
 - Identify methods for generating materials data and evaluate their appropriateness.
 - Use materials databases effectively to select appropriate materials based on specific criteria.
+- Use Pandas to load, manipulate, and analyze materials data from APIs and simulation logs.
+
+```{admonition} Pandas
+:class: tip
+Pandas is used extensively in this course for handling data from Materials Project API and molecular dynamics simulations. Review the [Pandas Basics](pandas_basics.md) section before the practicals.
+```

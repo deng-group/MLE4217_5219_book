@@ -47,7 +47,12 @@ The basic idea is simple:
 
 3. Constraints (Optional): Impose constraints to ensure the generated structures are physically reasonable (e.g., avoiding atomic overlaps, maintaining charge neutrality).
 
-Random structure generation can be implemented using various algorithms and software packages. It often requires a large number of generated structures to adequately sample the relevant regions of the structural space. This is often combined with a structural relaxation step (using DFT or a force field) to bring the randomly generated structures to a local energy minimum. The example code is the AIRSS (Ab Initio Random Structure Searching) method is a widely used approach that combines random structure generation with DFT calculations to explore the potential energy landscape of materials.
+Random structure generation can be implemented using various algorithms and software packages. It often requires a large number of generated structures to adequately sample the relevant regions of the structural space. This is often combined with a structural relaxation step (using DFT or a force field) to bring the randomly generated structures to a local energy minimum.
+
+```{admonition} Note
+:class: note
+AIRSS (Ab Initio Random Structure Searching) is covered in detail in **[Week 10: Optimization](../optimization/airss.md)**. This week (Week 11) focuses on thermodynamics, convex hulls, and phase diagrams rather than random structure generation methods.
+```
 
 
 ### Low-fidelity Screening

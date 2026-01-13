@@ -1,4 +1,6 @@
-# HPC, Cloud, and Other Computers
+# Reference Material: HPC, Cloud, and Other Computers
+
+HPC basics were covered in Week 1 (practical setup). This file is provided as reference for detailed information.
 
 ## High-Performance Computing (HPC)
 ```{figure} ../figures/hpc_examples.png

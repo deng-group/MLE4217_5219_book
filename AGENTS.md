@@ -12,10 +12,10 @@ This project uses `uv` to manage Python packages. Before running Python commands
 
 1. **Check if virtual environment exists:**
    - If `.venv` directory doesn't exist, create it with: `uv venv`
-
+   
 2. **Activate the virtual environment:**
    - Source the environment: `source ./.venv/bin/activate`
-
+   
 3. **Install dependencies:**
    - Run: `uv pip install -e .` or `uv pip install -r requirements.txt` if available
 
@@ -27,7 +27,6 @@ Always ensure the virtual environment is activated before running Python or Jupy
 - `make` or `make web` - Build HTML version of the book (runs `jupyter book build --html`)
 - `make book` - Build PDF version using LaTeX (runs `jupyter-book build --builder pdflatex .`)
 - `make clean` - Remove the `_build` directory
-- `make serve` - Start a live development server (runs `jupyter book start`)
 
 ### Viewing the Book
 After building with `make web`, open `_build/html/index.html` in a browser.
@@ -38,6 +37,10 @@ This is primarily a documentation/book project. Jupyter notebooks serve as inter
 - Run notebooks manually in Jupyter environment
 - Verify all cells execute without errors
 - Check that plots and visualizations render correctly
+- When modifying notebooks, ensure:
+  1. Code cells execute in order (top to bottom)
+  2. All required imports are present
+  3. Dependencies are listed in pyproject.toml or documented in notebooks
 
 There is no automated testing framework configured. When modifying notebooks, ensure:
 1. Code cells execute in order (top to bottom)
@@ -83,27 +86,49 @@ from ase.build import molecule, bulk
 
 ### Markdown Files (.md)
 
-**General:**
-- Use standard Markdown with MyST extensions
-- Include YAML frontmatter with title and metadata
-- Level 1 headings (#) for page titles only
-- Use ### (level 3) and below for section headings
+## MyST-Compatible Markdown
 
-**Code Blocks:**
-- Specify language for syntax highlighting:
-````markdown
-```python
-code here
+This project uses **MyST (Markedly Structured Text)** extensions for Jupyter Book. All Markdown (`.md`) files MUST use MyST-compatible syntax.
+
+### MyST Admonitions
+Use MyST admonition syntax for important notes:
+
+```markdown
+```{note}
+This is an important note for students.
 ```
-````
 
-**Math:**
-- Use LaTeX notation with `$` for inline math
-- Use `$$` or `\\[` for display math
-- Example: $E = \hbar\omega$
+```{warning}
+Be careful with this operation.
+```
 
-**Figures:**
-- Use MyST figure syntax:
+```{tip}
+Helpful tip for students.
+```
+
+```{danger}
+Critical warning or error.
+```
+
+### Code Blocks with Language Specification
+Always specify the programming language for syntax highlighting:
+
+```markdown
+```python
+import numpy as np
+```
+```
+
+Supported languages: `python`, `bash`, `javascript`, `typescript`, `c`, `cpp`, `fortran`, `julia`, `matlab`, `mathematica`, `html`, `json`, `yaml`
+
+### Math Notation
+- **Inline math**: Use single dollar signs: `$E = mc^2$`
+- **Display math**: Use double dollar signs: `$$F = ma$$`
+- **Example**: Use `\\[` for array notation: `\\[a_1, a_2, a_3\\]`
+
+### Figure Syntax
+Use MyST figure syntax:
+
 ```markdown
 ```{figure} ../figures/your_image.png
 ---
@@ -112,11 +137,11 @@ width: 80%
 Caption text here
 ```
 
-**Tables:**
-- Use Markdown table syntax for simple tables
-- Consider HTML tables for complex formatting
+### Table Syntax
+- Use standard Markdown for simple tables
+- For complex tables, use HTML table syntax or list format
 
-**Links:**
+### Links
 - Use relative paths for internal links
 - Use descriptive link text: `[click here](page.md)` not `[here](page.md)`
 
@@ -130,103 +155,24 @@ MLE4217_5219_book/
 ├── Makefile              # Build commands
 ├── pyproject.toml        # Python dependencies
 ├── figures/              # All images and figures
-├── orientation/          # Chapter: Orientation materials
+├── orientation/          # Chapter: Orientation
 │   ├── index.md
 │   ├── setup.md
-│   └── programming.ipynb
+│   ├── programming.ipynb
 ├── computer/            # Chapter: Computing basics
 ├── database/            # Chapter: Materials databases
 ├── atomistic_structure_I/ # Chapter: Crystal structure
-└── ... (other chapters)
+├── atomistic_structure_II/ # Chapter: Defects & interfaces
+├── models_and_theories_I/ # Chapter: Force fields & MD
+├── models_and_theories_II/ # Chapter: DFT & MC
+├── optimization/         # Chapter: Optimization algorithms
+├── high_throughput/      # Chapter: High-throughput methods
+├── machine_learning_I/   # Chapter: ML fundamentals
+├── machine_learning_II/  # Chapter: Advanced ML
+└── machine_learning_potentials/ # Chapter: ML potentials
 ```
 
 ### Chapter Organization
 - Each chapter folder contains an `index.md` table of contents
 - Mix of `.md` pages for theory and `.ipynb` for practicals
 - Practical notebooks are typically named with descriptive titles (e.g., `pytorch.ipynb`, `ase.ipynb`)
-
-## Common Libraries
-
-**Scientific Computing:**
-- `numpy` - Numerical operations
-- `matplotlib`, `seaborn` - Plotting and visualization
-- `pandas` - Data manipulation
-
-**Machine Learning:**
-- `torch`, `torch.nn`, `torch.optim` - PyTorch for deep learning
-- `sklearn` - Traditional ML algorithms
-
-**Materials Science:**
-- `ase` - Atomic Simulation Environment for structure manipulation
-- `pymatgen` - Materials analysis and database interfaces
-
-**Data Handling:**
-- `ase.io` - Read/write structure files (CIF, XYZ, etc.)
-- `pymatgen.core.structure` - Structure objects
-
-## Content Guidelines
-
-### Educational Focus
-- Prioritize clarity and educational value over code optimization
-- Include explanatory comments in code cells
-- Use print statements to show intermediate results when helpful
-- Provide context before code: explain what the code does and why
-
-### Visualization
-- Always label plots (xlabel, ylabel, title)
-- Use appropriate figure sizes for readability
-- Include legend when multiple data series are shown
-- Consider colorblind-friendly palettes
-
-### Documentation in Notebooks
-- Use markdown cells to explain code blocks
-- Include step-by-step explanations for complex operations
-- Document expected outputs
-- Add tips/tricks in separate markdown cells
-
-## MyST/Jupyter Book Specifics
-
-### Cell Metadata
-- Use `execution_count` tracking for reference
-- Clear output cells before committing if outputs are large
-- Keep notebook outputs for reference unless they're extremely large
-
-### Cross-References
-- Use `{ref}` for referencing section headings
-- Use `{doc}` for linking to other pages
-- Example: `See {doc}`orientation/setup.md` for setup instructions`
-
-### Admonitions
-- Use MyST admonitions for important notes:
-````markdown
-```{note}
-This is an important note for students.
-```
-
-```{warning}
-Be careful with this operation.
-```
-````
-
-## Version Requirements
-
-- Python: >=3.13
-- Jupyter Book: >=2.0.0a0
-- See pyproject.toml for full dependency list
-
-## Git Workflow
-
-When making changes:
-1. Run `make clean` before committing large `_build` directories
-2. Commit source files (.md, .ipynb, myst.yml, pyproject.toml)
-3. Generally don't commit `_build/` directory contents
-4. Test notebooks before committing significant code changes
-5. Ensure all relative paths (especially images) are correct
-
-## Special Considerations
-
-- Figures are in `figures/` directory, referenced with `../figures/` from chapter folders
-- Some notebooks generate figures on-the-fly - these don't need to be committed
-- When adding new chapters, update `myst.yml` table of contents
-- Keep notebook cell outputs clean for readability (clear large outputs)
-- Use Google Colab rocket button for optional online execution
