@@ -1,7 +1,7 @@
 # * Setup Programming Environment (local)
 ```{admonition} Vanda
 :class: info
-We can access Vanda machine provided by the NUS HPC for free. You can follow the [Vanda setup instruction](setup_hpc.md) to set up your programming environment on Vanda.
+We can access Vanda machine provided by the NUS HPC for free. You can follow the [Vanda setup instruction](setup_hpc.md) to set up your programming environment on Vanda. However, you may want to set up your local programming environment as well for convenience.
 ```
 ## Visual Studio Code (VS Code)
 We recommend using *Visual Studio Code* in this course. It is an open-sourced (free) software and is available for most of the main stream OS. Its intuitive interface and robust functionality make coding smoother and more enjoyable.

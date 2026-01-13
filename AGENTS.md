@@ -151,25 +151,28 @@ Caption text here
 ```
 MLE4217_5219_book/
 ├── index.md              # Landing page
+├── calendar.md           # Course calendar
+├── syllabus.md           # Course syllabus
+├── README.md             # Project README
 ├── myst.yml              # Jupyter Book configuration
 ├── Makefile              # Build commands
 ├── pyproject.toml        # Python dependencies
 ├── figures/              # All images and figures
 ├── orientation/          # Chapter: Orientation
-│   ├── index.md
-│   ├── setup.md
-│   ├── programming.ipynb
-├── computer/            # Chapter: Computing basics
-├── database/            # Chapter: Materials databases
-├── atomistic_structure_I/ # Chapter: Crystal structure
-├── atomistic_structure_II/ # Chapter: Defects & interfaces
-├── models_and_theories_I/ # Chapter: Force fields & MD
+├── computer/             # Chapter: Computing basics
+├── programming/          # Chapter: Programming fundamentals
+├── database/             # Chapter: Materials databases
+├── atomistic_structure/  # Chapter: Atomistic structure
+├── models_and_theories_I/  # Chapter: Force fields & MD
 ├── models_and_theories_II/ # Chapter: DFT & MC
 ├── optimization/         # Chapter: Optimization algorithms
 ├── high_throughput/      # Chapter: High-throughput methods
 ├── machine_learning_I/   # Chapter: ML fundamentals
 ├── machine_learning_II/  # Chapter: Advanced ML
-└── machine_learning_potentials/ # Chapter: ML potentials
+├── machine_learning_potentials/ # Chapter: ML potentials
+├── midterm_review/       # Chapter: Midterm review
+├── preexam_review/       # Chapter: Pre-exam review
+└── draft/               # Draft content
 ```
 
 ### Chapter Organization

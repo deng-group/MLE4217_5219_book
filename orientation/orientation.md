@@ -22,11 +22,6 @@ Hi, my name is Zeyu Deng, and I am an Assistant Professor of Materials Science a
 ## Course arrangement
 Please refer to [syllabus](../syllabus.md) and [calendar](../calendar.md) for planned lectures. Note that to content may be subject to change depending on to schedule and progress.
 
-## Getting support
-This is course is considered as a **difficult course** due to its interdisciplinary nature and the technical skills required. Therefore, we highly encourage you to seek help when needed. Here are some ways to get support:
-- Email: You can email me at `msedz@nus.edu.sg`
-- Teams message: You can message me on Microsoft Teams for quick questions.
-- I will also stay after class for 15-30 minutes to answer any questions you may have.
 
 ## Complete to pre-course survey
 ```{image} ../figures/pre-course-survey.png
@@ -36,6 +31,9 @@ This is course is considered as a **difficult course** due to its interdisciplin
 :align: center
 ```
 Please scan to QR code above or use [this link](https://forms.office.com/r/6srivZ5uVc) to complete this form so we can consider content changes based on your background and previous experience. Your responses are anonymous and will not impact your course GPA or any other academic standing. Please provide accurate information throughout to form.
+
+## Get access to the HPC resources
+We will use `Vanda` for this course to do computation. Please follow the guidance of [get access to NUS HPC](vanda.md) to get access to NUS HPC resources before the course start.
 
 ## Set up your programming environment
 Please see to guide to [setup your environment](setup.md).
@@ -82,3 +80,17 @@ You should use [Find Full Text: Proxy Bookmarklet](https://libguides.nus.edu.sg/
 
 We use [GitHub](https://www.github.com) for data version control and storage. **Please register a GitHub account if you don't have one.** You can use to [GitHub Student Developer Pack](https://education.github.com/pack) to get free access to many useful tools such as Copilot.
 
+## Getting support
+This is course is considered as a **difficult course** due to its interdisciplinary nature and the technical skills required. Therefore, we highly encourage you to seek help when needed. Here are some ways to get support:
+- Search online: There are many online resources available for learning Python and materials science. You should first try to use search engines like Google to find tutorials, forums, and documentation.
+- LLMs: You can use large language models (LLMs) such as ChatGPT to get help with programming and materials science questions. However, please be cautious about the accuracy of the information provided by LLMs and always verify it with reliable sources.
+- Email: You can email me at `msedz@nus.edu.sg`
+- Teams message: You can message me on Microsoft Teams for quick questions.
+- I will also stay after class for 15-30 minutes to answer any questions you may have.
+
+````{admonition} Email & Teams message etiquette
+:class: warning
+When reaching out for help, please keep the following etiquette in mind:
+Do consider the time of day and week when sending messages. Avoid sending messages late at night or during weekends unless it is an emergency.
+Be clear and concise in your messages. Provide all necessary information to help me understand your question or concern.
+````
