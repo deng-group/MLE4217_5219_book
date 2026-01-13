@@ -1,7 +1,11 @@
 # Setup Programming Environment
-We will use VS Code as our main code editor throughout this course. Python will be the main programming language used in this course. Please follow the instructions below to set up your programming environment.
-
+```{admonition} Vanda
+:class: warning
 Make sure you have completed the HPC access setup in [HPC Access Setup](vanda.md) before proceeding.
+```
+
+We will use VS Code as our main code editor throughout this course. Python will be the main programming language used in this course. In previous section, we have connected to Vanda cluster and launched VS Code via OnDemand.Please follow the instructions below to set up your programming environment.
+
 
 ## Create a course directory
 It's a good practice to create a dedicated directory for your course work. By default, you will be in your home directory when you log in. You can create a new directory by clicking the new folder icon in the file explorer on the left side of `VS Code` and then name it to something like `MLE4217_5219`. 
@@ -45,12 +49,23 @@ If you're editing any Python code (file ends with `.py`), you should select your
 
 By following these steps, you ensure that VS Code uses the correct Python interpreter, which is essential for running your code and managing dependencies correctly.
 
+```{admonition} Activate and Deactivate Virtual Environment in Terminal
+:class: tip
+When you open a new terminal in VS Code, the virtual environment should be activated automatically. You can tell if the virtual environment is active by looking at the terminal prompt, which should show the name of your virtual environment, e.g., `(.venv)`. However, if you open a terminal outside of VS Code or if the virtual environment is not activated for some reason, you can manually activate it by running the following command in the terminal `source activate .venv/bin/activate` (Linux/Mac) or `.venv\Scripts\activate` (Windows). To deactivate the virtual environment, simply run the command `deactivate`.
+```
+
 ## Install Required Python Packages
+Python packages are libraries that provide additional functionality for Python. In this course we will use `pip` to manage Python packages. When installing packages, make sure your virtual environment is activated. You can check this by looking at the terminal prompt, which should show the name of your virtual environment, e.g., `(.venv)`.
+
+The command to install packages is:
+```bash
+pip install package_name
+```
+
 You need to install some Python packages that we will use in this course. You can do this by opening a terminal in VS Code (`Terminal` > `New Terminal`) and running the following commands:
 ```bash
 pip install numpy matplotlib pandas jupyter pymatgen ase dscribe mace-torch asap3 atomate2
 ```
-Make sure your terminal is using the virtual environment you created earlier. You can check this by looking at the terminal prompt, which should show the name of your virtual environment, e.g., `(.venv)`.
 
 ## Upload and Download Files via VS Code
 You can easily upload and download files between your local machine and the Vanda cluster using the built-in file explorer in VS Code. For download, just right-click on the folder or file you want to download and select the appropriate option. For uploading files from your local machine to Vanda, you can also simply drag and drop files into the file explorer in VS Code.

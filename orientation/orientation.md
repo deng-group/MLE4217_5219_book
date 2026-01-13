@@ -22,6 +22,12 @@ Hi, my name is Zeyu Deng, and I am an Assistant Professor of Materials Science a
 ## Course arrangement
 Please refer to [syllabus](../syllabus.md) and [calendar](../calendar.md) for planned lectures. Note that to content may be subject to change depending on to schedule and progress.
 
+## Getting support
+This is course is considered as a **difficult course** due to its interdisciplinary nature and the technical skills required. Therefore, we highly encourage you to seek help when needed. Here are some ways to get support:
+- Email: You can email me at `msedz@nus.edu.sg`
+- Teams message: You can message me on Microsoft Teams for quick questions.
+- I will also stay after class for 15-30 minutes to answer any questions you may have.
+
 ## Complete to pre-course survey
 ```{image} ../figures/pre-course-survey.png
 :alt: profile
