@@ -46,7 +46,7 @@ project:
         - file: programming/python_introduction.ipynb
         - file: programming/numpy.ipynb
         - file: programming/matplotlib.ipynb
-        - file: programming/pandas.md
+        - file: programming/pandas.ipynb
         - file: programming/ai.md
 
     - file: computer/index.md
