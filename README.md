@@ -4,14 +4,14 @@
 To build this book, you need to have [Jupyter Book](https://jupyterbook.org/) installed. You can install it using pip in your Python environment:
 
 ```shell
-pip install jupyter-book>=2.0.0a0
+pip install jupyter-book
 ```
 
 Then you can build the book using:
-```
+```shell
 make
 ```
-This will build the book in html format. You can view the book by opening the file `./_build/html/index.html` in a web browser.
+This will build the book in `html` format. You can view the book by opening the file `./_build/html/index.html` in a web browser.
 
 ## Building the Book in PDF format
 You can also build the book in `pdf` format using:

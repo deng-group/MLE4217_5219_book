@@ -11,13 +11,20 @@ Vanda is one of the HPC clusters provided by NUS IT. It is suitable for a wide r
 OnDemand is a web-based portal that provides an easy-to-use interface for accessing HPC resources without needing to use command-line tools. It allows you to run jobs, manage files, and use interactive applications directly from your web browser.
 ```
 
-```{admonition} Register for HPC Access
-:class: info
-- Please [register an NUS HPC account](https://nusit.nus.edu.sg/hpc/get-an-hpc-account/) if you haven't done so. 
-- Read the [introductory guide for new HPC users](https://nusit.nus.edu.sg/hpc/introductory-guide-for-new-hpc-users/). 
-- For questions or problems regarding the HPC usage, visit the [HPC support page](https://nusit.nus.edu.sg/hpc/contact-us-ntouch/). 
-- Please review and comply with the HPC Code of Conduct.
-```
+## First Time Setup
+1. [Register your NUS HPC account](https://nusit.nus.edu.sg/hpc/get-an-hpc-account/) (if not already done)
+2. Activate account settings on Vanda via `SSH` (one time only):
+    - Use Terminal, PuTTY, or MobaXterm on macOS/Windows to connect to `vanda.nus.edu.sg`; e.g. `ssh USERNAME@vanda.nus.edu.sg` where `USERNAME` is your `NUSNETID`.
+    - Enter your `NUSNETID` password when prompted (note: no characters will be shown while typing)
+    - This initializes your account on the cluster
+3. Read the [introductory guide for new HPC users](https://nusit.nus.edu.sg/hpc/introductory-guide-for-new-hpc-users/)
+
+### For Ongoing Use
+- Log in via the web portal: [https://vanda.nus.edu.sg](https://vanda.nus.edu.sg)
+- SSH access remains available anytime for job submission: `ssh USERNAME@vanda.nus.edu.sg`
+- For questions or problems, visit the [HPC support page](https://nusit.nus.edu.sg/hpc/contact-us-ntouch/)
+- Please review and comply with the HPC Code of Conduct
+
 ## How to Access Vanda
 - NUS VPN must be installed and connected when off-campus. `eduroam` WiFi is not working for HPC access, you need to connect to `NUS` or `NUS-STU` WiFi on campus to access `Vanda` without VPN.
 - Valid `NUSNETID` with HPC account registered
@@ -36,6 +43,11 @@ We need to start a `VS Code Server` session on Vanda via OnDemand portal and the
 7. After a few moments, you can click `Connect to VS Code`. This will open Visual Studio Code in a new browser tab.
 
 There are also other Apps available such as: `Jupyter Notebook`, `R Studio Server`, `Matlab` etc. You can find the list [here](https://vanda.nus.edu.sg/pun/sys/dashboard/apps/index).
+
+```{admonition} What's Happened in the Background
+:class: tip
+On `Vanda`, jobs are managed by a job scheduler called PBS (Portable Batch System). When you launch a `Code Server` session, OnDemand submits a job to the scheduler to allocate resources for your session. Once the job is scheduled and resources are allocated, you can connect to the compute node where your Visual Studio Code session is running. When you end your session, the job is terminated, and the resources are released back to the cluster.
+```
 
 ## Interactive Sessions
 If you close your browser or tab, your session will continue to run on the cluster until the specified time limit is reached. You can always see your active sessions in the OnDemand dashboard under `My Interactive Sessions`.
@@ -87,9 +99,6 @@ Understanding the Linux filesystem is essential when working on HPC clusters. Un
 
 When you log into Vanda, you start in your home directory (e.g., `/home/svu/USERNAME`). Use `pwd` to see your current location and `ls` to list directory contents. You only have write permissions in your home directory and any subdirectories you create.
 ```
-
-## What's Happened in the Background
-On `Vanda`, jobs are managed by a job scheduler called PBS (Portable Batch System). When you launch a `Code Server` session, OnDemand submits a job to the scheduler to allocate resources for your session. Once the job is scheduled and resources are allocated, you can connect to the compute node where your Visual Studio Code session is running. When you end your session, the job is terminated, and the resources are released back to the cluster.
 
 ```{admonition} Important Note
 :class: warning
