@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: mle4217-5219-book
+Version: 2026.1.14
+Summary: Course materials for MLE4217/5219
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: jupyter-book>=2.1.0
+
+# Jupyter Book for the course "Materials Informatics"
+
+## Building the Book in HTML format
+To build this book, you need to have [Jupyter Book](https://jupyterbook.org/) installed. You can install it using pip in your Python environment:
+
+```shell
+pip install jupyter-book
+```
+
+Then you can build the book using:
+```shell
+make
+```
+This will build the book in `html` format. You can view the book by opening the file `./_build/html/index.html` in a web browser.
+
+## Building the Book in PDF format
+You can also build the book in `pdf` format using:
+```shell
+make book
+```
+You have to [install LaTex](https://www.latex-project.org/get/), e.g. `pdflatex`, to build this book in pdf format.

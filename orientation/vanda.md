@@ -12,7 +12,7 @@ OnDemand is a web-based portal that provides an easy-to-use interface for access
 ```
 
 ## First Time Setup
-1. [Register your NUS HPC account](https://nusit.nus.edu.sg/hpc/get-an-hpc-account/) (if not already done)
+1. [Register your NUS HPC account](https://nusit.nus.edu.sg/hpc/get-an-hpc-account/). If you already have an HPC account, you can skip this step.
 2. Activate account settings on Vanda via `SSH` (one time only):
     - Use Terminal, PuTTY, or MobaXterm on macOS/Windows to connect to `vanda.nus.edu.sg`; e.g. `ssh USERNAME@vanda.nus.edu.sg` where `USERNAME` is your `NUSNETID`.
     - Enter your `NUSNETID` password when prompted (note: no characters will be shown while typing)

@@ -22,7 +22,7 @@ Department of Materials Science and Engineering
 National University of Singapore  
 msedz@nus.edu.sg
 
-{button}`Get Started <orientation/index.md>`
+{button}`Get Started <syllabus.md>`
 ::::
 
 ::::{grid-item}
@@ -49,8 +49,8 @@ For more details about the course (like the syllabus, calendar, and rules), chec
 # Navigation
 You can quickly navigate through the sections using the navigation bar on the left side. There is also a search box to help you find any content in this course swiftly. To get started, you can use the navigation bar and begin with the [Orientation](orientation/orientation.md).
 
-# Running the Jupyter Notebook Using Colab
-You can run the Jupyter notebooks in this course using Google Colab. Click the little rocket button if you see it to open the notebook in Colab. You can then run the code cells and interact with the notebook as if it were on your local machine.
+# Running the Jupyter Notebook Using Binder
+You can run the Jupyter notebooks in this course using [Binder](https://mybinder.org/). Click the little rocket button if you see it to open the notebook in Binder. You can then run the code cells and interact with the notebook as if it were on your local machine.
 
 # Contact
 Please feel free to contact me through email at [msedz@nus.edu.sg](mailto:msedz@nus.edu.sg) if you have any questions or suggestions. I'm looking forward to hearing from you!

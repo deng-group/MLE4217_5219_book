@@ -37,7 +37,7 @@ project:
         - file: orientation/introduction.md
         - file: orientation/vanda.md
         - file: orientation/setup.md
-        - file: orientation/jupyter_workflow.ipynb
+        - file: orientation/jupyter.ipynb
         - file: orientation/setup_local.md
 
     - file: programming/index.md
@@ -173,6 +173,6 @@ site:
 
 
 
-launch_buttons:
-  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
-  colab_url: "https://colab.research.google.com"
+# launch_buttons:
+#   notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+#   colab_url: "https://colab.research.google.com"
