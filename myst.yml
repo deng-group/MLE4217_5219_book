@@ -47,6 +47,7 @@ project:
         - file: programming/numpy.ipynb
         - file: programming/matplotlib.ipynb
         - file: programming/pandas.md
+        - file: programming/ai.md
 
     - file: computer/index.md
       children:

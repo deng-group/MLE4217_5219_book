@@ -89,32 +89,32 @@ GitHub Copilot is an AI-powered code completion tool that helps you write code f
 
 ### Set Up GitHub Copilot
 
-1. **Install the GitHub Copilot Extension**:
+1. Install the GitHub Copilot Extension:
     - Open Visual Studio Code.
     - Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl/Command+Shift+X`.
     - In the search bar, type `GitHub Copilot`.
     - Click on the `GitHub Copilot` extension from the list and then click the `Install` button.
 
-2. **Sign In to GitHub**:
+2. Sign In to GitHub:
     - After installing the extension, you will need to sign in to your GitHub account.
     - Click on the `Sign in to GitHub` button that appears in the notification or go to the Accounts view and sign in from there.
     - Follow the prompts to authorize Visual Studio Code to access your GitHub account.
 
-3. **Enable GitHub Copilot**:
+3. Enable GitHub Copilot:
     - Once signed in, GitHub Copilot should be enabled automatically.
     - You can check if it is enabled by looking for the Copilot icon in the status bar at the bottom of the VS Code window.
 
 ### Using GitHub Copilot
 
-- **Code Suggestions**:
+- Code Suggestions:
   - As you type, GitHub Copilot will provide code suggestions. These suggestions appear as grayed-out text.
   - To accept a suggestion, press `Tab`. To see more suggestions, press `Ctrl/Command+Space`.
 
-- **Inline Code Completions**:
+- Inline Code Completions:
   - GitHub Copilot can complete entire lines or blocks of code based on the context of your current file.
   - Start typing a comment or a function, and Copilot will suggest the rest of the code.
 
-- **Documentation and Examples**:
+- Documentation and Examples:
   - You can ask GitHub Copilot to provide documentation or examples by typing a comment describing what you need.
   - For example, typing `// example of a function to calculate factorial` will prompt Copilot to generate a relevant code snippet.
 
