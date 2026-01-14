@@ -1,9 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "mle4217-5219-book"
-version = "0.1.0"
+version = "2026.1.0"
 description = "Course materials for MLE4217/5219"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
-    "jupyter-book>=2.1.0",
+  "jupyter-book>=2.1.0",
 ]
+
+[tool.setuptools]
+packages = []

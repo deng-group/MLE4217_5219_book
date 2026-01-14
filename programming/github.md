@@ -1,6 +1,6 @@
 # Open-Source Software
 
-```{figure} ../../figures/opensource.png
+```{figure} ../figures/opensource.png
 ---
 width: 70%
 ---
@@ -41,7 +41,7 @@ Git is a **distributed Version Control System (VCS)**, which enables easy tracki
 GitHub is the hosting platform for your repository. It’s widely used across various software industries and beyond for collaboration and project history management. Other platforms includes GitLab and Bitbucket.
 
 ## GitHub Workflow
-```{figure} ../../figures/git_workflow.png
+```{figure} ../figures/git_workflow.png
 ---
 width: 100%
 ---
@@ -70,7 +70,7 @@ When you create a repository on GitHub, it is stored remotely in the cloud. To w
 
 - `.github`: This directory contains configuration files for GitHub-specific features, such as issue templates, pull request templates, and workflows for GitHub Actions. It helps standardize and automate repository management tasks.
 
-```{figure} ../../figures/git_commands.png
+```{figure} ../figures/git_commands.png
 ---
 width: 100%
 ---

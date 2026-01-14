@@ -114,9 +114,3 @@ GitHub Copilot is an AI-powered code completion tool that helps you write code f
   - You can ask GitHub Copilot to provide documentation or examples by typing a comment describing what you need.
   - For example, typing `// example of a function to calculate factorial` will prompt Copilot to generate a relevant code snippet.
 
-### Tips for Effective Use
-
-- **Context Matters**: The more context you provide, the better the suggestions. Including comments and descriptive variable names can help Copilot understand what you need.
-- **Iterate and Refine**: Use the suggestions as a starting point. You can always modify the generated code to better fit your needs.
-- **Explore Settings**: You can customize GitHub Copilot settings by going to the settings menu in VS Code and searching for `Copilot`.
-
