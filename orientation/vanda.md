@@ -76,6 +76,18 @@ For remaining computing resources, you can check the available resources on Vand
 hpc project
 ```
 
+```{admonition} Directory Structure
+:class: tip
+Understanding the Linux filesystem is essential when working on HPC clusters. Unlike Windows, Linux uses a hierarchical structure starting from the root directory `/`. Key directories include:
+- `/` - Root directory
+- `/home/svu/USERNAME` - User home directories (your files are here)
+- `/tmp` - Temporary files
+- `/usr` - User programs and libraries
+- `/etc` - System configuration files
+
+When you log into Vanda, you start in your home directory (e.g., `/home/svu/USERNAME`). Use `pwd` to see your current location and `ls` to list directory contents. You only have write permissions in your home directory and any subdirectories you create.
+```
+
 ## What's Happened in the Background
 On `Vanda`, jobs are managed by a job scheduler called PBS (Portable Batch System). When you launch a `Code Server` session, OnDemand submits a job to the scheduler to allocate resources for your session. Once the job is scheduled and resources are allocated, you can connect to the compute node where your Visual Studio Code session is running. When you end your session, the job is terminated, and the resources are released back to the cluster.
 
