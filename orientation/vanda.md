@@ -26,7 +26,7 @@ OnDemand is a web-based portal that provides an easy-to-use interface for access
 - Please review and comply with the HPC Code of Conduct
 
 ## How to Access Vanda
-- NUS VPN must be installed and connected when off-campus. `eduroam` WiFi is not working for HPC access, you need to connect to `NUS` or `NUS-STU` WiFi on campus to access `Vanda` without VPN.
+- NUS VPN must be installed and connected when off-campus. `eduroam` WiFi is not working for HPC access, you need to connect to `NUS` or `NUS-STU` WiFi on campus to access `Vanda` without VPN. You can find more information about the how to install and use NUS VPN [here](https://nusit.nus.edu.sg/services/wifi_internet/nvpn/).
 - Valid `NUSNETID` with HPC account registered
 And any of the following:
 - Modern web browser (Chrome, Firefox, Edge, Safari) for OnDemand portal access
