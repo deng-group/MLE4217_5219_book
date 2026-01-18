@@ -46,7 +46,6 @@ project:
         - file: programming/python_introduction.ipynb
         - file: programming/numpy.ipynb
         - file: programming/matplotlib.ipynb
-        - file: programming/pandas.ipynb
         - file: programming/ai.md
 
     - file: computer/index.md
@@ -64,6 +63,7 @@ project:
         - file: database/concepts.md
         - file: database/formats.md
         - file: database/materials_database.md
+        - file: database/pandas.ipynb
         - file: database/materials_project.ipynb
         - file: database/bulk_modulus.ipynb
     - file: atomistic_structure/index.md
