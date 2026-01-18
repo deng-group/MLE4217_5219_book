@@ -6,6 +6,22 @@ GitHub Copilot can be useful for speeding up repetitive coding tasks. This guide
 Copilot is free for students through [GitHub Education](https://education.github.com/). You'll need an .edu email address.
 ```
 
+````{admonition} Install VS Code Extension
+:type: info
+You need to install the Github Copilot & Github Copilot Chat extensions manually in VS Code if you are using them with the OnDemand web version.
+1. Open VS Code (OnDemand web version). Make sure you're using the new version (`4.105`) that supports extensions.
+2. Open a Terminal (menu: Terminal -> New Terminal)
+3. Run the following commands exactly one by one:
+```bash
+code-server --install-extension /nfs/home/svu/msedz/share/github.copilot-1.388.0.vsix
+code-server --install-extension /nfs/home/svu/msedz/share/github.copilot-chat-0.32.3.vsix
+```
+4. Reload VS Code to activate the extensions. (refresh the browser page)
+5. Sign in to GitHub Copilot using your GitHub account.
+
+You can also refer to the official documentation [here](https://github.com/features/copilot).
+````
+
 ## What Copilot is Good For
 
 **File parsing and boilerplate**: Loading CIF files, parsing POSCAR output, setting up pandas DataFrames.
