@@ -1,4 +1,4 @@
-# Using AI Tools for Code Development
+# *AI Tools for Code Development
 
 GitHub Copilot can be useful for speeding up repetitive coding tasks. This guide covers practical ways to use it effectively in this course—and importantly, when to be careful about trusting its output.
 
