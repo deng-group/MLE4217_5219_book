@@ -64,7 +64,7 @@ pip install package_name
 
 You need to install some Python packages that we will use in this course. You can do this by opening a terminal in VS Code (`Terminal` > `New Terminal`) and running the following commands:
 ```bash
-pip install numpy matplotlib pandas jupyter pymatgen ase dscribe mace-torch asap3 atomate2
+pip install numpy matplotlib pandas jupyter pymatgen ase dscribe mace-torch asap3 atomate2 mp-api line_profiler
 ```
 
 ## Upload and Download Files via VS Code

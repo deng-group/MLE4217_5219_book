@@ -1,4 +1,4 @@
-# Reference Material: History of Computer and Computation
+# History
 
 Historical context is provided as optional reading. Materials informatics overview was covered in Week 1.
 

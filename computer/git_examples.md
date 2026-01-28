@@ -1,6 +1,6 @@
-# Practical: Version Control System
+# Version Control System
 
-In this practical, you will gain hands-on experience with Git, a powerful version control system, and learn how to integrate it with Visual Studio Code (VS Code). Both VS Code and equivalent command-line instructions are provided for each step. By the end of this practical, you will be able to:
+In this practical, you will gain hands-on experience with Git, a powerful version control system, and learn how to integrate it with [VS Code](../orientation/setup.md#vs-code). Both VS Code and equivalent command-line instructions are provided for each step. By the end of this practical, you will be able to:
 
 - Initialize a Git repository
 - Configure Git with your username and email

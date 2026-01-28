@@ -1,4 +1,4 @@
-# Reference Material: HPC, Cloud, and Other Computers
+# HPC, Cloud, and Other Computers
 
 HPC basics were covered in Week 1 (practical setup). This file is provided as reference for detailed information.
 
@@ -58,7 +58,7 @@ High-Performance Computing (HPC) can also be hosted on the cloud, combining the 
 
 Cloud computing has transformed the way we access and utilize computing resources. Its scalability, cost-effectiveness, and flexibility make it an attractive option for individuals and organizations alike. Whether running a small business or conducting large-scale scientific research, cloud computing provides the tools and resources needed to succeed. Major companies like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) dominate the cloud computing market, offering a wide range of services tailored to various needs.
 
-## Other Technologies
+## *Other Technologies
 ### Neuromorphic Computing
 ```{figure} ../figures/neuromorphic.png
 ---

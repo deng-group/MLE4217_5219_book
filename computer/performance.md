@@ -1,4 +1,4 @@
-# Reading Material: Performance and costs
+# Performance and costs
 
 ## Hardware Performance
 When evaluating hardware performance, several key factors come into play. The CPU, or central processing unit, is often the heart of the system, and its performance can be gauged by its clock speed, measured in gigahertz (GHz), the number of cores and threads it possesses, its instructions per cycle (IPC), and the size and speed of its cache. These elements collectively determine how quickly and efficiently a CPU can process tasks.

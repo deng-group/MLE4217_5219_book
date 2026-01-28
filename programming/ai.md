@@ -24,23 +24,9 @@ You can also refer to the official documentation [here](https://github.com/featu
 
 ## What Copilot is Good For
 
-**File parsing and boilerplate**: Loading CIF files, parsing POSCAR output, setting up pandas DataFrames.
+- Writing boilerplate code: It can quickly generate common code patterns, such as function definitions, class structures, and data loading routines.
 
-```python
-# Type this:
-def load_structure_from_cif(filename):
-    """Load crystal structure from CIF file."""
-    # Copilot will suggest pymatgen code
-```
-
-**Repetitive transformations**: Converting between coordinate systems, normalizing data, applying the same operation to many arrays.
-
-```python
-# Convert fractional to Cartesian coordinates for many structures
-# Copilot can quickly write the loop or vectorized version
-```
-
-**Writing tests and documentation**: It's surprisingly good at generating pytest templates and docstrings.
+- Writing tests and documentation: It's surprisingly good at generating pytest templates and docstrings.
 
 ## What to Be Careful About
 
