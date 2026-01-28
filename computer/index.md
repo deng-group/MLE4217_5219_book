@@ -7,14 +7,11 @@
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR2JdLzP4PgXJC7K2s7AN92dIcYEq2-I1bikd2QVpGOxfePajCKDc5jmP3I4wDweQxJpzmCMwbpNcMh/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-This lecture has been recorded using Zoom. Please use [this link](https://nus-sg.zoom.us/rec/share/PbLXr6S9KQySCkpS_OPVc4ozERIgsNhDhmzw6ACw9kxhDMAwILAaOHw9LbiOeiHz.JCLDvohFKef29jti%20) to access the Zoom recording.
-
-**Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
-
-```{admonition} Course Focus
-:class: note
-This week focuses on **Git workflow, open-sourced software principles, and understanding computer hardware/software**. HPC was covered in Week 1 (practical setup).
-```
+The lecture recording will be available after the lecture.
+<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to access it.**
+ Please access the Zoom recording use the links below:
+- [Recording](https://nus-sg.zoom.us/rec/share/MdC9LcwQeBzyn0adL6J8yuPG9Mjd-NoTZ4WMGWqg_G1PiELEdgarXv89fxCCY68.T92P2vRFCf5I3Ior) (Passcode: 8kPl6=JU)
+ -->
 
 ## Content
 This week, we will explore computer hardware and software, starting with the history and development of computer systems. We will examine computer architectures, focusing on the basic components such as the CPU, GPU, memory, and storage. We will discuss the differences between CPUs and GPUs, their roles, and functionalities. Additionally, we will cover fundamental programming languages and libraries, and assess the performance of your code using Python libraries. Finally, we will demonstrate version control with git and collaboration using GitHub. 
@@ -25,5 +22,4 @@ This week, we will explore computer hardware and software, starting with the his
 - Understand the differences between CPU and GPU
 - Understand the differences between different programming languages
 - Test the performance of your computer code
-- Use the basic libraries in Python
-- Use git and GitHub to manage your code
+- Use git and GitHub to manage your code repository

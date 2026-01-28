@@ -50,13 +50,14 @@ project:
 
     - file: computer/index.md
       children:
-        - file: computer/git_examples.md
-        - file: computer/software.md
-        - file: computer/hardware.md
         - file: computer/history.md
-        - file: computer/performance.md
+        - file: computer/hardware.md
+        - file: computer/software.md
         - file: computer/hpc.md
+        - file: computer/performance.md
+        - file: computer/git_examples.md
         - file: computer/scaling.ipynb
+        
     - file: database/index.md
       children:
         - file: database/database.md
