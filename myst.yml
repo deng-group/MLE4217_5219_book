@@ -58,107 +58,107 @@ project:
         - file: computer/git_examples.md
         - file: computer/scaling.ipynb
         
-    - file: database/index.md
-      children:
-        - file: database/database.md
-        - file: database/concepts.md
-        - file: database/formats.md
-        - file: database/materials_database.md
-        - file: database/pandas.ipynb
-        - file: database/materials_project.ipynb
-        - file: database/bulk_modulus.ipynb
-    - file: atomistic_structure/index.md
-      children:
-        - file: atomistic_structure/unit_cell.md
-        - file: atomistic_structure/symmetry.md
-        - file: atomistic_structure/prototypes.md
-        - file: atomistic_structure/reciprocal_space.md
-        - file: atomistic_structure/structure_formats.md
-        - file: atomistic_structure/crystal_structure.ipynb
-        - file: atomistic_structure/site_properties.md
-        - file: atomistic_structure/molecule.md
-        - file: atomistic_structure/noncrystalline_materials.md
-        - file: atomistic_structure/defect.md
-        - file: atomistic_structure/interface.md
-        - file: atomistic_structure/advanced_structure.ipynb
-        - file: atomistic_structure/vesta.md
-    # - file: midterm_review/index.md
+    # - file: database/index.md
     #   children:
-    #     - file: midterm_review/week1_orientation.md
-    #     - file: midterm_review/week2_python.md
-    #     - file: midterm_review/week3_computer.md
-    #     - file: midterm_review/week4_database.md
-    #     - file: midterm_review/week5_atomistic.md
-    #     - file: midterm_review/practice_problems.md
-    #     - file: midterm_review/quiz1_guide.md
-    - file: models_and_theories_I/index.md
-      children:
-        - file: models_and_theories_I/modelling.md
-        - file: models_and_theories_I/force_fields.md
-        - file: models_and_theories_I/dft.md
-        - file: models_and_theories_I/ase.ipynb
-    - file: models_and_theories_II/index.md
-      children:
-        - file: models_and_theories_II/statistical_mech.md
-        - file: models_and_theories_II/molecular_dynamics.md
-        - file: models_and_theories_II/monte_carlo.md
-        - file: models_and_theories_II/kmc.md
-        - file: models_and_theories_II/md_mc.ipynb
-    - file: optimization/index.md
-      children:
-        - file: optimization/introduction.md
-        - file: optimization/local_optimization.md
-        - file: optimization/global_optimization.md
-        - file: optimization/choose_opt.md
-        - file: optimization/transition_state.md
-        - file: optimization/optimization.ipynb
-    - file: high_throughput/index.md
-      children:
-        - file: high_throughput/introduction.md
-        - file: high_throughput/workflow.md
-        - file: high_throughput/data_mining.md
-        - file: high_throughput/thermodynamics.md        
-        - file: high_throughput/codes.md
-        - file: high_throughput/high_throughput.ipynb
+    #     - file: database/database.md
+    #     - file: database/concepts.md
+    #     - file: database/formats.md
+    #     - file: database/materials_database.md
+    #     - file: database/pandas.ipynb
+    #     - file: database/materials_project.ipynb
+    #     - file: database/bulk_modulus.ipynb
+    # - file: atomistic_structure/index.md
+    #   children:
+    #     - file: atomistic_structure/unit_cell.md
+    #     - file: atomistic_structure/symmetry.md
+    #     - file: atomistic_structure/prototypes.md
+    #     - file: atomistic_structure/reciprocal_space.md
+    #     - file: atomistic_structure/structure_formats.md
+    #     - file: atomistic_structure/crystal_structure.ipynb
+    #     - file: atomistic_structure/site_properties.md
+    #     - file: atomistic_structure/molecule.md
+    #     - file: atomistic_structure/noncrystalline_materials.md
+    #     - file: atomistic_structure/defect.md
+    #     - file: atomistic_structure/interface.md
+    #     - file: atomistic_structure/advanced_structure.ipynb
+    #     - file: atomistic_structure/vesta.md
+    # # - file: midterm_review/index.md
+    # #   children:
+    # #     - file: midterm_review/week1_orientation.md
+    # #     - file: midterm_review/week2_python.md
+    # #     - file: midterm_review/week3_computer.md
+    # #     - file: midterm_review/week4_database.md
+    # #     - file: midterm_review/week5_atomistic.md
+    # #     - file: midterm_review/practice_problems.md
+    # #     - file: midterm_review/quiz1_guide.md
+    # - file: models_and_theories_I/index.md
+    #   children:
+    #     - file: models_and_theories_I/modelling.md
+    #     - file: models_and_theories_I/force_fields.md
+    #     - file: models_and_theories_I/dft.md
+    #     - file: models_and_theories_I/ase.ipynb
+    # - file: models_and_theories_II/index.md
+    #   children:
+    #     - file: models_and_theories_II/statistical_mech.md
+    #     - file: models_and_theories_II/molecular_dynamics.md
+    #     - file: models_and_theories_II/monte_carlo.md
+    #     - file: models_and_theories_II/kmc.md
+    #     - file: models_and_theories_II/md_mc.ipynb
+    # - file: optimization/index.md
+    #   children:
+    #     - file: optimization/introduction.md
+    #     - file: optimization/local_optimization.md
+    #     - file: optimization/global_optimization.md
+    #     - file: optimization/choose_opt.md
+    #     - file: optimization/transition_state.md
+    #     - file: optimization/optimization.ipynb
+    # - file: high_throughput/index.md
+    #   children:
+    #     - file: high_throughput/introduction.md
+    #     - file: high_throughput/workflow.md
+    #     - file: high_throughput/data_mining.md
+    #     - file: high_throughput/thermodynamics.md        
+    #     - file: high_throughput/codes.md
+    #     - file: high_throughput/high_throughput.ipynb
     
-    # - file: machine_learning_I/index.md
-    #   children:
-    #     - file: machine_learning_I/introduction.md
-    #     - file: machine_learning_I/features.md
-    #     - file: machine_learning_I/models.md
-    #     - file: machine_learning_I/task_algorithm.md
-    #     - file: machine_learning_I/validation.md
-    #     - file: machine_learning_I/pytorch.ipynb
+    # # - file: machine_learning_I/index.md
+    # #   children:
+    # #     - file: machine_learning_I/introduction.md
+    # #     - file: machine_learning_I/features.md
+    # #     - file: machine_learning_I/models.md
+    # #     - file: machine_learning_I/task_algorithm.md
+    # #     - file: machine_learning_I/validation.md
+    # #     - file: machine_learning_I/pytorch.ipynb
 
-    # - file: machine_learning_II/index.md
-    #   children:
-    #     - file: machine_learning_II/introduction.md
-    #     - file: machine_learning_II/graph.md
-    #     - file: machine_learning_II/gnn.md
-    #     - file: machine_learning_II/diffusion_model.md
-    #     - file: machine_learning_II/summary.md
-    #     - file: machine_learning_II/adv_ml.ipynb
+    # # - file: machine_learning_II/index.md
+    # #   children:
+    # #     - file: machine_learning_II/introduction.md
+    # #     - file: machine_learning_II/graph.md
+    # #     - file: machine_learning_II/gnn.md
+    # #     - file: machine_learning_II/diffusion_model.md
+    # #     - file: machine_learning_II/summary.md
+    # #     - file: machine_learning_II/adv_ml.ipynb
     
-    - file: machine_learning_potentials/index.md
-      children:
-        - file: machine_learning_potentials/introduction.md
-        - file: machine_learning_potentials/explicit.md
-        - file: machine_learning_potentials/bp_nn.md
-        - file: machine_learning_potentials/mace.md
-        - file: machine_learning_potentials/umlp.md
-        - file: machine_learning_potentials/training_validation.md
-        - file: machine_learning_potentials/challenges.md
-        - file: machine_learning_potentials/mlp.ipynb
-    # - file: preexam_review/index.md
+    # - file: machine_learning_potentials/index.md
     #   children:
-    #     - file: preexam_review/week8_models1.md
-    #     - file: preexam_review/week9_models2.md
-    #     - file: preexam_review/week10_optimization.md
-    #     - file: preexam_review/week11_highthroughput.md
-    #     - file: preexam_review/week12_ml.md
-    #     - file: preexam_review/exam_format.md
-    #     - file: preexam_review/key_concepts.md
-    #     - file: preexam_review/quiz2_guide.md
+    #     - file: machine_learning_potentials/introduction.md
+    #     - file: machine_learning_potentials/explicit.md
+    #     - file: machine_learning_potentials/bp_nn.md
+    #     - file: machine_learning_potentials/mace.md
+    #     - file: machine_learning_potentials/umlp.md
+    #     - file: machine_learning_potentials/training_validation.md
+    #     - file: machine_learning_potentials/challenges.md
+    #     - file: machine_learning_potentials/mlp.ipynb
+    # # - file: preexam_review/index.md
+    # #   children:
+    # #     - file: preexam_review/week8_models1.md
+    # #     - file: preexam_review/week9_models2.md
+    # #     - file: preexam_review/week10_optimization.md
+    # #     - file: preexam_review/week11_highthroughput.md
+    # #     - file: preexam_review/week12_ml.md
+    # #     - file: preexam_review/exam_format.md
+    # #     - file: preexam_review/key_concepts.md
+    # #     - file: preexam_review/quiz2_guide.md
 
 site:
   options:
