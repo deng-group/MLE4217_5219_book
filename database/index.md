@@ -9,9 +9,13 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQilh7zHIE8DTR5GaxTz8Xp8R54amSXeBiBRpETeJl1Z-yWm7IjxycK4z_IybXmjkCsSF2edy6oS9-4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-This lecture has been recorded using Zoom. Please use [this link](https://nus-sg.zoom.us/rec/share/T2VM6_-h7r9m0KkJTPtalpyGoCz4uCG19FdRbZy32cN2P4FAj9MzS62SQFwEV8ss.tixbG6Rajzw2x4Xz) to access the Zoom recording.
+The lecture recording will be available after the lecture.
+<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to access it.**
+ Please access the Zoom recording use the links below:
+- [Part I](https://nus-sg.zoom.us/rec/share/UP4ublbb5a4V9sK2rMDB_6ByzdNprIqaO8HWYMpGAegA3I91O9jTbUs2hljyi5D8.Kd431HESAa73C_fm) (Passcode: 7d+pxq81)
+- [Part II](https://nus-sg.zoom.us/rec/share/MyA_--JILA58jtB1H1DLK2INqMj-deORnVbyGX_Bm3xmQWNkB0x859USuE_8qLrq.FC3LFXuxJjqK0PGB) (Passcode: 5N8w=z=U) -->
 
-**Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
+
 
 ## Content
 This week, we will dive into database for materials informatics. We will discuss the importance of data structures and formats in database design, and explore specialized materials databases to perform tasks like querying properties. We will also use Python to call APIs and access materials data from online databases.

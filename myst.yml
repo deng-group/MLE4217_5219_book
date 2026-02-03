@@ -58,15 +58,15 @@ project:
         - file: computer/git_examples.md
         - file: computer/scaling.ipynb
         
-    # - file: database/index.md
-    #   children:
-    #     - file: database/database.md
-    #     - file: database/concepts.md
-    #     - file: database/formats.md
-    #     - file: database/materials_database.md
-    #     - file: database/pandas.ipynb
-    #     - file: database/materials_project.ipynb
-    #     - file: database/bulk_modulus.ipynb
+    - file: database/index.md
+      children:
+        - file: database/database.md
+        - file: database/concepts.md
+        - file: database/formats.md
+        - file: database/materials_database.md
+        - file: database/pandas.ipynb
+        - file: database/materials_project.ipynb
+        - file: database/bulk_modulus.ipynb
     # - file: atomistic_structure/index.md
     #   children:
     #     - file: atomistic_structure/unit_cell.md
