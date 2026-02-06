@@ -9,11 +9,10 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQilh7zHIE8DTR5GaxTz8Xp8R54amSXeBiBRpETeJl1Z-yWm7IjxycK4z_IybXmjkCsSF2edy6oS9-4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-The lecture recording will be available after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to access it.**
+<!-- The lecture recording will be available after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to access it.**
  Please access the Zoom recording use the links below:
-- [Part I](https://nus-sg.zoom.us/rec/share/UP4ublbb5a4V9sK2rMDB_6ByzdNprIqaO8HWYMpGAegA3I91O9jTbUs2hljyi5D8.Kd431HESAa73C_fm) (Passcode: 7d+pxq81)
-- [Part II](https://nus-sg.zoom.us/rec/share/MyA_--JILA58jtB1H1DLK2INqMj-deORnVbyGX_Bm3xmQWNkB0x859USuE_8qLrq.FC3LFXuxJjqK0PGB) (Passcode: 5N8w=z=U) -->
+- [Part I & II](https://nus-sg.zoom.us/rec/share/4ijyvwrQaDh9j7X24N9qP7u8RSAiyuSP041kFa0zyB2X5m2aNIkoRe19jB4VffU.lPEDPjHrHlzH7Iiy) (Passcode: .ZiwSZ9v) Both part I and II are in this link. You can navigate between two parts using the forward/backward button at the bottom of the video.
 
 
 
