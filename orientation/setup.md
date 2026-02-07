@@ -68,8 +68,10 @@ pip install -r requirements.txt
 ```
 You should create a `requirements.txt` file in your course directory with the following content:
 
-```{admonition} requirements.txt for x86/64 architcture
+````{admonition} requirements.txt for x86/64 architcture
 :class: info, dropdown
+
+```plaintext
 aioitertools==0.13.0
 annotated-types==0.7.0
 anyio==4.12.1
@@ -276,6 +278,7 @@ widgetsnbextension==4.0.15
 wrapt==2.1.1
 zipp==3.23.0
 ```
+````
 
 
 ## Upload and Download Files via VS Code
