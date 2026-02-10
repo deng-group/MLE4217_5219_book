@@ -67,21 +67,21 @@ project:
         - file: database/pandas.ipynb
         - file: database/materials_project.ipynb
         - file: database/bulk_modulus.ipynb
-    - file: atomistic_structure/index.md
+    - file: structures/index.md
       children:
-        - file: atomistic_structure/unit_cell.md
-        - file: atomistic_structure/symmetry.md
-        - file: atomistic_structure/prototypes.md
-        - file: atomistic_structure/reciprocal_space.md
-        - file: atomistic_structure/structure_formats.md
-        - file: atomistic_structure/crystal_structure.ipynb
-        - file: atomistic_structure/site_properties.md
-        - file: atomistic_structure/molecule.md
-        - file: atomistic_structure/noncrystalline_materials.md
-        - file: atomistic_structure/defect.md
-        - file: atomistic_structure/interface.md
-        - file: atomistic_structure/advanced_structure.ipynb
-        - file: atomistic_structure/vesta.md
+        - file: structures/site.md
+        - file: structures/molecule.md
+        - file: structures/unit_cell.md
+        - file: structures/symmetry.md
+        - file: structures/prototypes.md
+        - file: structures/reciprocal_space.md
+        - file: structures/defect.md
+        - file: structures/interface.md
+        - file: structures/noncrystalline_materials.md
+        - file: structures/structure_formats.md
+        - file: structures/crystal_structure.ipynb
+        - file: structures/vesta.md
+        - file: structures/advanced_structure.ipynb
     # # - file: midterm_review/index.md
     # #   children:
     # #     - file: midterm_review/week1_orientation.md

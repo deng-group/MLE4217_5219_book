@@ -1,4 +1,7 @@
-# Site Property
+# Site
+A site in a crystal structure refers to a specific location within the unit cell where an atom, ion, or molecule resides. Each site is characterized by its position, species, occupation, and various properties that define its behavior within the crystal lattice, called site properties. A collection of sites, along with their associated atoms and properties, constitutes the overall crystal structure of a material.
+
+## Site Properties
 In crystallography, a site property is a fundamental concept that describes the physical and chemical characteristics of specific atomic positions within a crystal. Imagine a crystal as a well-organized orchestra where each atomic site contributes its unique "sound." These individual characteristics, influenced by their local environments, determine the overall performance of the material under varying conditions such as temperature and pressure.
 
 The detailed understanding of a site property enables scientists and engineers to interpret how local differences at the atomic level aggregate to form complex material behaviors.

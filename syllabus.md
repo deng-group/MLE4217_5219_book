@@ -40,3 +40,14 @@ This interactive textbook will serve as the textbook for this course. There is n
 - [Atomic Simulation Environment (ASE)](https://wiki.fysik.dtu.dk/ase/)
 - [Dscribe](https://singroup.github.io/dscribe/latest/)
 - [Multi- Atomic Cluster Expansion (MACE)](https://github.com/ACEsuit/mace)
+
+```{admonition} Useful GitHub Repositories
+:class: tip
+- [awesome-materials-informatics](https://github.com/tilde-lab/awesome-materials-informatics) summarizes the tools and resources for materials informatics, including databases, software, and libraries for materials science and computational materials research.
+
+- [atomistic.software](https://atomistic.software/) is a curated list of software packages for atomistic simulations, including DFT, molecular dynamics, and Monte Carlo methods.
+
+- [Materials-Databases](https://github.com/blaiszik/Materials-Databases) is a collection of materials databases and resources for materials informatics and computational materials science.
+
+- [awesome-chemical-data](https://github.com/neo-chem/awesome-chemical-data) summarizes a list of experimental chemical data resources, including databases, software, and tools for chemical informatics.
+```
