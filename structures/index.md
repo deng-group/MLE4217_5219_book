@@ -12,14 +12,15 @@ width: 100%
 
 
 ## Lecture Videos
-Lecture video will be recorded and uploaded after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Part I](https://nus-sg.zoom.us/rec/share/4tU3GHIWFBqUGGi1IfsDNAkuwZwwgdp4-EqF2n5aSdBZn4_VF7Iju7ZwYevYwPCP.pdCf3EHj8FIFS6Gl) (Passcode: edZQ+!6&) -->
+- [Part I & II](https://nus-sg.zoom.us/rec/share/FnmshukdyMXuZdthCrZlM0i3gi1CFlWi7I72RLLTDrJJfGbch6xrfp3I7zFwCE2p.0DhVHvCyxpuOCJF_) (Passcode: Yu=x3h51)
+Both part I and II are in this link. You can navigate between two parts using the forward/backward button at the bottom of the video.
 
 ## Content
 
-This chapter covers atomistic structures in materials science, from crystalline materials to molecules, defects, and interfaces. We will discuss the importance of atomic structure in materials science, explore different types of atomic structures, and use `pymatgen` and `ASE` to manipulate and visualize structures.
+This chapter covers structures in materials science, from crystalline materials to molecules, defects, and interfaces. We will discuss the importance of atomic structure in materials science, explore different types of atomic structures, and use `pymatgen` and `ASE` to manipulate and visualize structures.
 
 ## Learning Objectives
 
