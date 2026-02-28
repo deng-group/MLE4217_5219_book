@@ -3,21 +3,25 @@
 GitHub Copilot can be useful for speeding up repetitive coding tasks. This guide covers practical ways to use it effectively in this course—and importantly, when to be careful about trusting its output.
 
 ```{note}
-Copilot is free for students through [GitHub Education](https://education.github.com/). You'll need an .edu email address.
+Copilot is free for students through [GitHub Education](https://education.github.com/). You'll need a university student email address to get this.
 ```
 
 ````{admonition} Install VS Code Extension
 :type: info
 You need to install the Github Copilot & Github Copilot Chat extensions manually in VS Code if you are using them with the OnDemand web version.
-1. Open VS Code (OnDemand web version). Make sure you're using the new version (`4.105`) that supports extensions.
-2. Open a Terminal (menu: Terminal -> New Terminal)
-3. Run the following commands exactly one by one:
+1. Download the extension files `copilot.zip` from Canvas and unzip them as `github.copilot-1.388.0.vsix` and `github.copilot-chat-0.32.3.vsix`.
+2. Open VS Code (OnDemand web version). Make sure you're using the new version (`4.105`) that supports extensions.
+3. Open the folder that you created for this course, e.g. `MLE4217_5219`.
+4. Upload `github.copilot-1.388.0.vsix` and `github.copilot-chat-0.32.3.vsix` to this folder (drag and drop).
+5. Open a Terminal (menu: Terminal -> New Terminal)
+6. Run the following commands exactly one by one:
 ```bash
-code-server --install-extension /nfs/home/svu/msedz/share/github.copilot-1.388.0.vsix
-code-server --install-extension /nfs/home/svu/msedz/share/github.copilot-chat-0.32.3.vsix
+code-server --install-extension github.copilot-1.388.0.vsix
+code-server --install-extension github.copilot-chat-0.32.3.vsix
 ```
-4. Reload VS Code to activate the extensions. (refresh the browser page)
-5. Sign in to GitHub Copilot using your GitHub account.
+7. Reload VS Code to activate the extensions. (refresh the browser page)
+8. Sign in to GitHub Copilot using your GitHub account. If Sign in is not working, then you can use `Ctrl/Command+Shift+p` open the prompt and type `Copilot Sign in` and choose the relative option to sign in.
+9. Once you've sign in, the chat box on the right panel will be available and you can start to code with Copilot.
 
 You can also refer to the official documentation [here](https://github.com/features/copilot).
 ````
@@ -53,30 +57,6 @@ Press `Tab` to accept a suggestion, `Esc` to dismiss, `Alt+[` to see alternative
 - Ask "how do I..." questions
 - Select code and ask "/explain"
 - Paste error messages and ask for help
-
-### Common Patterns in This Course
-
-**Loading materials data:**
-```python
-# Type the function name and docstring
-def load_energies_from_output(filename):
-    """Read energies from VASP OUTCAR file."""
-```
-
-**Computing properties:**
-```python
-# Be specific about what you're calculating
-def compute_elastic_modulus(stress_strain_pairs, volume):
-    """Calculate elastic modulus from stress-strain data (GPa)."""
-```
-
-**Tests:**
-```python
-def test_structure_has_valid_lattice():
-    """Verify lattice vectors have correct shape."""
-```
-
-Copilot is often good at these patterns. But **test it immediately** with real data.
 
 ## Tips That Actually Help
 

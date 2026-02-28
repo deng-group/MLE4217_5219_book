@@ -82,15 +82,13 @@ project:
         - file: structures/crystal_structure.ipynb
         - file: structures/vesta.md
         - file: structures/advanced_structure.ipynb
-    # # - file: midterm_review/index.md
-    # #   children:
-    # #     - file: midterm_review/week1_orientation.md
-    # #     - file: midterm_review/week2_python.md
-    # #     - file: midterm_review/week3_computer.md
-    # #     - file: midterm_review/week4_database.md
-    # #     - file: midterm_review/week5_atomistic.md
-    # #     - file: midterm_review/practice_problems.md
-    # #     - file: midterm_review/quiz1_guide.md
+    - file: midterm_review/index.md
+      children:
+        - file: midterm_review/orientation.md
+        - file: midterm_review/programming.md
+        - file: midterm_review/computer.md
+        - file: midterm_review/database.md
+        - file: midterm_review/structure.md
     # - file: models_and_theories_I/index.md
     #   children:
     #     - file: models_and_theories_I/modelling.md

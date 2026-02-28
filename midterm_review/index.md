@@ -1,37 +1,35 @@
 # Mid-Term Review
 
-Comprehensive review of Weeks 1-5 before Quiz 1.
-
+In this week, we will review the Lecture 1-5, do Quiz 1, and help you solve the Assignment 1.
 ## Weeks Covered
 
-1. [Week 1: Orientation + Git & HPC Setup](week1_orientation.md)
-2. [Week 2: Python Programming](week2_python.md)
-3. [Week 3: Computer, Git & Open-Source Software](week3_computer.md)
-4. [Week 4: Database + Pandas](week4_database.md)
-5. [Week 5: Atomistic Structures](week5_atomistic.md)
+1. [Week 1: Orientation and Setup](orientation.md)
+2. [Week 2: Programming](programming.md)
+3. [Week 3: Computer and Computation](computer.md)
+4. [Week 4: Database](database.md)
+5. [Week 5: Structures](structure.md)
 
-## Assessment
+## Review Flow
 
-- [Practice Problems](practice_problems.md) - Sample problems covering Weeks 1-5
-- [Quiz 1 Guide](quiz1_guide.md) - Format, topics, and preparation tips
+| Lecture | Focus | What to complete |
+|-----|-------|------------------|
+| Lecture 1 | Orientation + Setup | Recheck environment setup, VS Code workflow, and Jupyter basics |
+| Lecture 2 | Python + Plotting | Re-run NumPy and Matplotlib examples from Lecture 2 notebooks |
+| Lecture 3 | Computer + Git | Practice branch/merge/conflict flow and review CPU/GPU/HPC concepts |
+| Lecture 4 | Database + Pandas | Repeat API query -> DataFrame cleaning -> simple plot pipeline |
+| Lecture 5 | Structures Integration | Review key representations (cell, symmetry, prototype, defect/interface) and run one structure notebook |
 
-## Study Tips
+## Minimum Readiness Checklist
 
-```{admonition} Study Strategy
-:class: tip
-- Focus on understanding key concepts rather than memorization
-- Practice the hands-on skills (Git commands, NumPy/Matplotlib, API queries)
-- Review the practical notebooks from each week
-- Pay special attention to integrated tasks (e.g., using Pandas with Materials Project API)
-- For Week 5 (Atomistic Structures), focus on fundamental concepts - advanced topics are reading material
+By the end of this review, you should be able to do these without notes:
+
+- Explain the workflow from data source -> Python analysis -> materials interpretation.
+- Create and activate a Python environment in VS Code, then run a notebook end-to-end.
+- Use Git for a basic collaboration cycle: clone, branch, commit, pull, merge.
+- Use NumPy arrays and Matplotlib to compute and visualize a materials-relevant quantity.
+- Query/load materials data and process it with Pandas.
+- Read and describe a crystal structure using unit cell, coordinates, and symmetry language.
+
+```{tip}
+Study with a terminal and notebook open. For each week, run at least one practical task while you review.
 ```
-
-## Review Timeline
-
-| Day | Focus | Materials |
-|-----|--------|------------|
-| Day 1 | Orientation, Git, HPC | Week 1, Week 3 (first half) |
-| Day 2 | Python Programming | Week 2 (all) |
-| Day 3 | Database & Pandas | Week 4 (all) |
-| Day 4 | Atomistic Structures | Week 5 (Part I + basic Part II) |
-| Day 5 | Practice Problems | Practice problems.md, quiz1_guide.md |
