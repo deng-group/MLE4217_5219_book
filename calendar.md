@@ -16,7 +16,7 @@ Below are planned schedule, which are subjected to change depends on progress.
 | **7** | *Mid-Term Review* | Review of Weeks 1-5 (orientation, programming, computing, database, structures), Q&A, practice problems | | **1** | **1** |
 | **8** | Models and Theories I | Multiscale modelling, atomistic modelling, force field, codes, molecular dynamics and Monte Carlo | ASE | | |
 | **9** | Models and Theories II | Quantum mechanics, electronic structure, density functional theory (DFT), functionals, plane waves and pseudopotentials, codes | Molecular dynamics and Monte Carlo | | |
-| **10** | Optimization | Introduction, energy landscapes, local optimization, global optimization, structure prediction, no free lunch rule | Scipy, ASE (optimization) |**2** | |
+| **10** | Optimization | Introduction, energy landscapes, local optimization, global optimization, structure prediction, no free lunch rule | Scipy, ASE (optimization) | | |
 | **11** | High-throughput Simulation | Thermodynamics and kinetics, finite temperature and entropy, convex hulls, phase diagram | Atomate2 |  | |
 | **12** | Machine Learning Potentials | ML Potentials overview, Descriptors (SOAP, ACE, GAP), error analysis, MACE | MACE | | |
 | **13** | *Pre-Exam Review* | Review of Weeks 8-12, Q&A, exam preparation | | **2** | **2** |
