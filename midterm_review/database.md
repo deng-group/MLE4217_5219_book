@@ -16,20 +16,6 @@
 - Extract nested dictionary fields from API-style data.
 - Build one simple plot from processed tabular data.
 
-## Common mistakes we saw in practicals
-
-- Treating nested JSON fields as flat columns without extraction.
-- Using row-wise loops for operations that Pandas can vectorize.
-- Filtering before checking types and null values.
-- Losing track of units during plotting and interpretation.
-- Copy/pasting query code without checking selected fields.
-
-## Fast self-check
-
-1. Load a JSON dataset and print `shape`, `columns`, and `head()`.
-2. Extract one nested field into a new column using `.apply(...)`.
-3. Filter with two conditions and compute one aggregate statistic.
-4. Make one labeled plot that answers a concrete materials question.
 
 ## Where to review in this book
 

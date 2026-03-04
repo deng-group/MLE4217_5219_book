@@ -18,21 +18,6 @@
 - Read a simple CIF/POSCAR-style structure description and describe key features.
 - Use structure terminology correctly: site, symmetry, reciprocal lattice, defect, interface.
 
-## Common mistakes we saw in practicals
-
-- Mixing coordinate systems and getting wrong distances/positions.
-- Memorizing lattice names without connecting them to geometry.
-- Treating symmetry labels as isolated facts instead of operations on structure.
-- Confusing real-space and reciprocal-space interpretations.
-- Ignoring format details when moving between structure files.
-
-## Fast self-check
-
-1. Given a lattice and fractional coordinates, compute one Cartesian position.
-2. Name one example material for each of FCC, BCC, and HCP.
-3. Explain the difference between point group and space group in two lines.
-4. State one defect type and one interface concept with a practical example.
-
 ## Where to review in this book
 
 - [Structures Overview](../structures/index.md)

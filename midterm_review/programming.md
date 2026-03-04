@@ -17,21 +17,6 @@
 - Use git and GitHub to do version control and collaborate on code repositories.
 - Use AI tools to speed up coding, but always check the output for logic.
 
-## Common mistakes we saw in practicals
-
-- Falling back to Python loops for tasks that NumPy handles directly.
-- Plotting before checking array shapes and units.
-- Missing labels/titles, making figures hard to interpret.
-- Running notebook cells out of order and hiding state bugs.
-- Accepting AI-generated code without checking logic and units.
-
-## Fast self-check
-
-1. Build a NumPy array, apply a boolean mask, and compute mean/std.
-2. Plot one line chart and one scatter plot from the same dataset.
-3. Add markdown text that explains what each plot means.
-4. Restart the kernel and rerun all cells successfully.
-
 ## Where to review in this book
 
 - [Programming Overview](../programming/index.md)
