@@ -14,8 +14,8 @@
 - Read and write small Python functions with clear variable names.
 - Use NumPy arrays for arithmetic, indexing, masking, and basic statistics.
 - Produce a clear plot with axis labels, title, and appropriate plot type.
-- Organize a notebook so another student can run it top-to-bottom.
-- Use GitHub workflow basics from the programming chapter.
+- Use git and GitHub to do version control and collaborate on code repositories.
+- Use AI tools to speed up coding, but always check the output for logic.
 
 ## Common mistakes we saw in practicals
 
