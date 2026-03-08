@@ -6,11 +6,10 @@ In this week, we will review the Lecture 1-5, do Quiz 1, and walk through the As
 
 
 ## Lecture Video
-Lecture video will be recorded and uploaded after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Part I](https://nus-sg.zoom.us/rec/share/4tU3GHIWFBqUGGi1IfsDNAkuwZwwgdp4-EqF2n5aSdBZn4_VF7Iju7ZwYevYwPCP.pdCf3EHj8FIFS6Gl) (Passcode: edZQ+!6&)
-- [Part II](https://nus-sg.zoom.us/rec/share/6lL9hQnCiBm_ejkoVlGcxT0HLGL3V65kC5n0VDT44WFG3jE97zyU0LPpK2aaBFWk.BpQCcOI176C3fmaF) (Passcode: F@#L3bNd) -->
+- [Recording](https://nus-sg.zoom.us/rec/share/0YTSmjhcQLGHCvUMUCQK3o7cuH9u3WAi2bt2rza4WNXhAd2fyEY3KFC_7bpwUJ6D.7Xt5-r4Ygw5qWj1T) (Passcode: 4!2fB&uD)
 
 
 ## Lecetures Covered
