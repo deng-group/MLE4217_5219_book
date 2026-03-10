@@ -89,19 +89,19 @@ project:
         - file: midterm_review/computer.md
         - file: midterm_review/database.md
         - file: midterm_review/structure.md
-    # - file: models_and_theories_I/index.md
-    #   children:
-    #     - file: models_and_theories_I/modelling.md
-    #     - file: models_and_theories_I/force_fields.md
-    #     - file: models_and_theories_I/dft.md
-    #     - file: models_and_theories_I/ase.ipynb
-    # - file: models_and_theories_II/index.md
-    #   children:
-    #     - file: models_and_theories_II/statistical_mech.md
-    #     - file: models_and_theories_II/molecular_dynamics.md
-    #     - file: models_and_theories_II/monte_carlo.md
-    #     - file: models_and_theories_II/kmc.md
-    #     - file: models_and_theories_II/md_mc.ipynb
+    - file: models_and_theories_I/index.md
+      children:
+        - file: models_and_theories_I/modelling.md
+        - file: models_and_theories_I/force_fields.md
+        - file: models_and_theories_I/dft.md
+        - file: models_and_theories_I/ase.ipynb
+    - file: models_and_theories_II/index.md
+      children:
+        - file: models_and_theories_II/statistical_mech.md
+        - file: models_and_theories_II/molecular_dynamics.md
+        - file: models_and_theories_II/monte_carlo.md
+        - file: models_and_theories_II/kmc.md
+        - file: models_and_theories_II/md_mc.ipynb
     # - file: optimization/index.md
     #   children:
     #     - file: optimization/introduction.md

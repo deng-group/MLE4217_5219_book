@@ -9,9 +9,11 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSDhqsHjR9lf5On5HX14RlgkEXQVIy088TyWIv_lRETf5ARJMPRlMpC37T-R-qVepBdKFMbllGNgtnN/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-The lecture video has been recorded and you can access it through [this link](https://nus-sg.zoom.us/rec/share/OmyfwnrMPI1ItrGoiLeENAei2YfDYHSOlvpeeGig08TyGGPM1wKYv8fBWGRBssve.fogCqkzbqIutWNzd)
-
-**Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
+Lecture video will be recorded and uploaded after the lecture.
+<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+ Please access the Zoom recording use the links below:
+- [Recording](https://nus-sg.zoom.us/rec/share/0YTSmjhcQLGHCvUMUCQK3o7cuH9u3WAi2bt2rza4WNXhAd2fyEY3KFC_7bpwUJ6D.7Xt5-r4Ygw5qWj1T) (Passcode: 4!2fB&uD)
+ -->
 
 ## Content
 This week, we will continue our discussion about models an theories, particularly related to the statistical mechanics. We will start from the principles of the statistical mechanics, then go to the molecular dynamics and Monte Carlo simulations. We will discuss the principles behind these methods, their advantages and limitations, and their applications in materials science. Finally, we will learn how to use atomic simulation environments (ASE) to perform calculations using these methods.
