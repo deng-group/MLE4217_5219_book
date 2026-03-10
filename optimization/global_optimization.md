@@ -75,4 +75,4 @@ Repeat steps 2-5 for a specified number of generations or until a convergence cr
 ## Other Global Optimization Methods
 - Particle Swarm Optimization (PSO): Inspired by the social behavior of birds flocking or fish schooling.
 - Bayesian Optimization: Uses a probabilistic model to guide the search, particularly useful for expensive objective functions.
-- Random Search: There is a correlation between basin depth and size and big basins exists in large fraction of the configurational space. Therefore, we can just randomly sample the whole space. It is simple but effective, especially for high-dimensional problems. 
+- Random Search: This is a simple baseline that samples candidate solutions randomly from the search space. It can be surprisingly effective in some high-dimensional problems, especially when function evaluations are cheap or easy to parallelize, but it does not rely on any general guarantee that large basins dominate the configurational space.

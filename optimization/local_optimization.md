@@ -110,24 +110,32 @@ Algorithm:
 4.  Update the position: $x_{k+1} = x_k + \Delta x$.
 5.  Repeat steps 2-4 until a convergence criterion is met.
 
-Near a minimum, Newton's method converges very rapidly (much faster than gradient descent).  The number of correct digits roughly doubles with each iteration. However, the Hessian can be computationally expensive to calculate, and the method can be sensitive to the choice of starting point. In addition, the Hessian matrix must be positive definite (which is true near a *minimum*) for the inverse to exist and for the method to move towards a minimum. If the Hessian is not positive definite, the method may diverge or move towards a saddle point or maximum.
+Near a minimum, Newton's method converges very rapidly (much faster than gradient descent). The number of correct digits roughly doubles with each iteration. However, the Hessian can be computationally expensive to calculate, and the method can be sensitive to the choice of starting point. In addition, the Hessian must be nonsingular for the Newton step to be defined, and it should be positive definite if we want the step to be a local descent direction toward a minimum. If the Hessian is not positive definite, the method may diverge or move toward a saddle point or maximum.
 
 ## BFGS (Broyden-Fletcher-Goldfarb-Shanno)
 
 BFGS is a *quasi-Newton* method.  Newton's method uses the *Hessian* (matrix of second derivatives) to find the optimum.  However, calculating the Hessian can be computationally expensive. BFGS *approximates* the Hessian iteratively, making it more practical for many problems.
 
-BFGS iteratively updates an approximation to the *inverse* Hessian, denoted as $B_k$.  The update rule for the approximation is complex, but the key idea is that it uses the change in the gradient and the change in the position to improve the approximation:
+BFGS iteratively updates an approximation to the *inverse* Hessian, denoted as $H_k$. The update rule uses the change in the gradient and the change in the position to improve the approximation:
 
 $$
-B_{k+1} = B_k + \frac{y_k y_k^T}{y_k^T s_k} - \frac{B_k s_k s_k^T B_k}{s_k^T B_k s_k}
+H_{k+1} =
+\left(I - \rho_k s_k y_k^T\right) H_k \left(I - \rho_k y_k s_k^T\right)
++ \rho_k s_k s_k^T
 $$
 
-where $s_k = x_{k+1} - x_k$ and $y_k = \nabla f(x_{k+1}) - \nabla f(x_k)$.
+where
+
+$$
+s_k = x_{k+1} - x_k, \qquad
+y_k = \nabla f(x_{k+1}) - \nabla f(x_k), \qquad
+\rho_k = \frac{1}{y_k^T s_k}.
+$$
 
 The search direction is then calculated as:
 
 $$
-d_k = -B_k \nabla f(x_k)
+d_k = -H_k \nabla f(x_k)
 $$
 
 And the position update is:
@@ -138,7 +146,7 @@ $$
 
 (Again, $\alpha_k$ is often found via line search.)
 
-- Key Idea:  BFGS builds up an approximation to the inverse Hessian matrix over iterations, using information from the gradient. This approximation is used to determine the search direction.  It's generally more robust and efficient than plain gradient descent, especially for non-convex problems.
+- Key Idea: BFGS builds up an approximation to the inverse Hessian matrix over iterations, using gradient information. This approximation is used to determine the search direction. It is often more efficient than plain gradient descent for smooth problems.
 
 - Limited-memory BFGS (L-BFGS):  For very high-dimensional problems (many variables), storing the full (approximate) Hessian in BFGS can become memory-intensive.  L-BFGS stores only a limited number of past gradient and position updates, reducing memory requirements.
 
@@ -146,4 +154,3 @@ $$
 Nelder-Mead (Simplex) method doesn't require derivatives. It constructs a simplex (a shape with $n+1$ vertices in $n$ dimensions) around the current point and iteratively shrinks, expands, or reflects the simplex to find the minimum.
 
 Powell's method is another derivative-free method that uses conjugate directions to find the minimum. It's often more efficient than Nelder-Mead for high-dimensional problems.
-

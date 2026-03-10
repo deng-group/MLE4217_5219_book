@@ -35,9 +35,9 @@ The AIRSS method follows a simple but powerful approach:
 ### Genetic Algorithms (GA)
 
 **Similarities:**
-- Both explore structural space to find global energy minimum
-- Both use population-based approaches (multiple structures)
-- Both require large number of energy evaluations
+- Both explore structural space to find low-energy structures
+- Both evaluate many candidate structures
+- Both require a large number of energy evaluations
 
 **Differences:**
 - **AIRSS**: Generates completely random structures at each iteration

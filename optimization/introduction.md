@@ -106,7 +106,7 @@ H(f) = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-The Hessian provides information about the local curvature of the function. If the Hessian is positive definite at a point, the function has a local minimum there. If it is negative definite, the function has a local maximum. If the Hessian has both positive and negative eigenvalues, the point is a saddle point. Hessian can be computed using numerical differentiation or symbolic differentiation, but it can be computationally expensive for high-dimensional functions.
+The Hessian provides information about the local curvature of the function. At a stationary point where $\nabla f(x) = 0$, a positive definite Hessian indicates a local minimum, a negative definite Hessian indicates a local maximum, and a Hessian with both positive and negative eigenvalues indicates a saddle point. The Hessian can be computed using numerical differentiation or symbolic differentiation, but it can be computationally expensive for high-dimensional functions.
 
 ## Challenges
 Optimizing materials presents significant challenges due to the inherent complexity of materials and the computational demands involved.
@@ -137,5 +137,10 @@ Optimization must adhere to physical and chemical constraints (charge neutrality
 
 ### Multi-Objective Optimization
 
-Optimizing multiple properties simultaneously (e.g., strength *and* ductility) leads to a set of *Pareto-optimal* solutions (the Pareto front), where improving one objective worsens another.  This adds complexity to decision-making. The objective function will be the weighted sum of multiple functions, $F(x) = w_1 f_1(x) + w_2 f_2(x)$.
+Optimizing multiple properties simultaneously (e.g., strength *and* ductility) leads to a set of *Pareto-optimal* solutions (the Pareto front), where improving one objective worsens another. This adds complexity to decision-making. One common way to convert a multi-objective problem into a single-objective one is to use a weighted sum, for example
 
+$$
+F(x) = w_1 f_1(x) + w_2 f_2(x),
+$$
+
+but this is only one scalarization strategy and may not recover all Pareto-optimal solutions when the Pareto front is non-convex.
