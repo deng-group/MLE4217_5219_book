@@ -22,16 +22,24 @@ A good machine learning potential (MLP) starts with a high-quality dataset. This
 
 Training an MLP involves teaching it to predict energies, forces, and stresses from atomic configurations. This process can be broken down into three main steps:
 
-1. Loss Function: The loss function measures how far the MLP's predictions are from the actual values. A common choice is the mean squared error (MSE), which combines errors in energies, forces, and stresses:
+1. Loss Function: The loss function measures how far the MLP's predictions are from the actual values. A common choice is a weighted combination of mean squared error (MSE) terms for energies, forces, and stresses:
 
     $$
-    L = \frac{1}{N} \sum_{i=1}^{N} \left( E_i - \hat{E}_i \right)^2 + \frac{1}{N} \sum_{i=1}^{N} \left( F_i - \hat{F}_i \right)^2 + \frac{1}{N} \sum_{i=1}^{N} \left( S_i - \hat{S}_i \right)^2
+    L =
+    w_E \frac{1}{N_{\mathrm{cfg}}} \sum_{i=1}^{N_{\mathrm{cfg}}} \left( E_i - \hat{E}_i \right)^2
+    + w_F \frac{1}{N_{\mathrm{atoms}}} \sum_{i=1}^{N_{\mathrm{cfg}}} \sum_{a=1}^{n_i} \left\| \mathbf{F}_{ia} - \hat{\mathbf{F}}_{ia} \right\|^2
+    + w_S \frac{1}{N_{\mathrm{cfg}}} \sum_{i=1}^{N_{\mathrm{cfg}}} \left\| \mathbf{S}_i - \hat{\mathbf{S}}_i \right\|^2
     $$
 
-    - $N$: Number of atomic configurations.
+    - $N_{\mathrm{cfg}}$: Number of configurations.
+    - $n_i$: Number of atoms in configuration $i$.
+    - $N_{\mathrm{atoms}} = \sum_i n_i$: Total number of atoms in the dataset.
     - $E_i$, $\hat{E}_i$: True and predicted energies.
-    - $F_i$, $\hat{F}_i$: True and predicted forces.
-    - $S_i$, $\hat{S}_i$: True and predicted stresses.
+    - $\mathbf{F}_{ia}$, $\hat{\mathbf{F}}_{ia}$: True and predicted forces on atom $a$ in configuration $i$.
+    - $\mathbf{S}_i$, $\hat{\mathbf{S}}_i$: True and predicted stress or virial quantities.
+    - $w_E$, $w_F$, $w_S$: Weights used to balance the different error terms.
+
+    In practice, these weights are important because energies, forces, and stresses have different units, magnitudes, and numbers of targets.
 
 2. Optimization: Algorithms like gradient descent are used to minimize the loss function, improving the model's predictions over time.
 
@@ -54,4 +62,3 @@ Once the MLP is trained, it’s important to evaluate its performance. Here are 
 
 3. Transferability:
     - Evaluate the MLP on new structures or chemistries not included in the training dataset. This ensures the model can handle scenarios it hasn’t seen before.
-

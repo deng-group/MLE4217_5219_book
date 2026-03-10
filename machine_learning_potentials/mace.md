@@ -37,13 +37,13 @@ To ensure the basis functions respect rotational symmetry, we symmetrize them to
 
 ## Message Passing
 
-Message passing is the process of sharing information between atoms to update their features. It consists of three main steps: message construction, feature update, and readout. Message passing can be considered as a sparsification of an equivalent ACE model with a much larger cutoff radius. 
+Message passing is the process of sharing information between atoms to update their features. It consists of three main steps: message construction, feature update, and readout. Multiple message-passing steps increase the effective receptive field of the model beyond a single neighbor shell, so MACE can encode higher-order and somewhat longer-ranged information than a single local expansion at the same cutoff.
 
 ```{figure} ../figures/mpnn_ace.png
 ---
 width: 80%
 ---
-The left panel shows a cluster with two iterations message passing process (MACE) with a cutoff of $r_{cut}$. The right side shows the cluster a cutoff radius of $2r_{cut}$ (ACE). The MACE model can be seen as a sparse version of the ACE model, where only the nearest neighbors are considered for message passing. This allows MACE to capture long-range interactions while maintaining computational efficiency. Figure adapted from [](https://doi.org/10.1038/s42256-024-00956-x)
+The left panel shows a cluster with a two-iteration message-passing process (MACE) with a cutoff of $r_{cut}$. The right side shows a model with a larger effective spatial range. In this sense, MACE can be viewed as a sparse way to propagate information over multiple local neighborhoods while maintaining computational efficiency. This extends the effective range of information flow, but it is not the same as explicitly modeling true long-range electrostatic or dispersion interactions. Figure adapted from [](https://doi.org/10.1038/s42256-024-00956-x)
 ```
 ### Message Construction
 At each step, the state of an atom $i$ is described by:

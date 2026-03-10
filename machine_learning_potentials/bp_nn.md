@@ -30,8 +30,9 @@ where $R_c$ is the cutoff distance. The radial symmetry functions capture the di
 The angular symmetry functions ($G_i^2$) are constructed by:
 
 $$
-G_i^2 = 2^{1-\zeta}\sum_{j,k\ne i}^{all}(1+\lambda cos\theta_{ijk})^\zeta \\
-\times e^{-\eta (R_{ij}^2+R_{ik}^2+R_{jk}^2))f_c(R_{ij})f_c(R_{ik})f_c(R_{jk})}
+G_i^2 = 2^{1-\zeta}\sum_{j,k\ne i}^{all}(1+\lambda \cos\theta_{ijk})^\zeta
+\exp\left[-\eta \left(R_{ij}^2+R_{ik}^2+R_{jk}^2\right)\right]
+f_c(R_{ij})f_c(R_{ik})f_c(R_{jk})
 $$
 where $\theta_{ijk}$ is the angle between the bonds connecting atom $i$ to atoms $j$ and $k$, $\zeta$ is a parameter that controls the sensitivity of the function, and $\lambda$ is a parameter that determines the weight of the angular contribution. The angular symmetry functions capture the angles between the target atom and its neighbors, providing additional information about the local environment.
 
@@ -47,5 +48,4 @@ Structure of the neural network of the Behler-Parrinello potential containing 3 
 Radial distribution function (RDF) of Si melt at 3000 K. The RDF is calculated using the Behler-Parrinello potential and compared with the RDF obtained from first-principles calculations and other force fields. The agreement between the two RDFs indicates that the Behler-Parrinello potential accurately captures the local atomic environment in the Si melt.
 ```
 
-The Behler-Parrinello potential has been shown to provide accurate predictions of the potential energy surface for a wide range of materials and systems, including metals, semiconductors, and biomolecules. It is particularly effective for systems with complex bonding environments, such as transition metals and alloys. The potential is also able to capture the effects of long-range interactions and can be used to model systems with varying atomic coordination numbers.
-
+The Behler-Parrinello potential has been shown to provide accurate predictions of the potential energy surface for a wide range of materials and systems, including metals, semiconductors, and biomolecules. It is particularly effective for systems with complex bonding environments and varying atomic coordination numbers. In its standard form, however, it is a local cutoff-based model and does not explicitly capture true long-range interactions such as electrostatics or dispersion unless additional long-range terms are introduced.
