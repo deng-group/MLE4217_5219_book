@@ -5,7 +5,7 @@ Monte Carlo methods are a class of computational algorithms that rely on random 
 Example of Monte Carlo simulation to estimate the value of $\pi$ using random sampling. Right panel shows the convergence of the estimated value of $\pi$ as a function of the number of samples.
 ```
 
-A simple example of a Monte Carlo simulation is the estimation of the value of $\pi$ using random sampling. The idea is to randomly sample points in a square and calculate the fraction of points that fall within a circle inscribed in the square. The ratio of the area of the quarter circle to the area of the square is $\pi$, which can be used as an estimate of the value of $\pi$. By increasing the number of random samples, the estimate of $\pi$ converges to the true value.
+A simple example of a Monte Carlo simulation is the estimation of the value of $\pi$ using random sampling. The idea is to randomly sample points in a square and calculate the fraction of points that fall within a quarter circle inscribed in the square. The ratio of the area of the quarter circle to the area of the square is $\pi/4$, so multiplying that sampled fraction by $4$ gives an estimate of $\pi$. By increasing the number of random samples, the estimate of $\pi$ converges to the true value.
 
 
 
@@ -35,9 +35,9 @@ The Metropolis algorithm consists of the following steps:
     where $k_B$ is the Boltzmann constant and $T$ is the temperature. Energy can be calculated using a force field using the configuration of the system.
 5. Update Configuration: If the move is accepted, update the configuration of the system.
 
-In general, the Metropolis algorithm allows you to explore the configuration space of a system by accepting moves that lower the energy of the system and occasionally accepting moves that increase the energy. This stochastic process ensures that the system samples configurations according to their Boltzmann weights and allows you to calculate ensemble averages and thermodynamic properties.
+In general, the Metropolis algorithm allows you to explore the configuration space of a system by accepting moves that lower the energy of the system and occasionally accepting moves that increase the energy. With a suitable proposal rule, this stochastic process samples configurations according to their Boltzmann weights and allows you to calculate ensemble averages and thermodynamic properties.
 
-At higher the temperature, it is more likely that the system is going to accept moves that increase the energy, allowing the system to explore a wider range of configurations. At low temperatures, the system is less likely to accept moves that increase the energy, leading to a more focused exploration of the low-energy configurations.
+At higher temperatures, the system is more likely to accept moves that increase the energy, allowing it to explore a wider range of configurations. At low temperatures, the system is less likely to accept such moves, leading to a more focused exploration of low-energy configurations.
 
 ## Applications
 - Phase Transitions: Monte Carlo simulations are widely used to study phase transitions in various systems, such as the Ising model for magnetic systems and the Lennard-Jones model for fluids.
@@ -51,7 +51,7 @@ At higher the temperature, it is more likely that the system is going to accept 
 | Efficiency               | Efficient for equilibrium properties      | Efficient for dynamic properties          |
 | System Size              | Can handle larger systems                 | Limited by computational cost             |
 | Temperature Dependence   | Can easily simulate different temperatures| Requires separate simulations for each temperature |
-| Energy Landscape         | Can escape local minima                   | May get trapped in local minima           |
+| Energy Landscape         | Can sometimes escape local minima more easily, depending on the move set | May get trapped in local minima           |
 | Computational Cost       | Generally lower                           | Generally higher                          |
 | Applications             | Equilibrium properties, phase transitions | Dynamic properties, transport phenomena   |
-| Nonequilibrium Processes | Cannot simulate nonequilibrium processes  | Can simulate nonequilibrium processes     |
+| Nonequilibrium Processes | Not naturally time-accurate for dynamical nonequilibrium processes | Can simulate nonequilibrium processes     |

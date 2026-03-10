@@ -6,7 +6,7 @@ Here we just briefly cover this topic. A detailed introduction to the First-Prin
 Using force fields to model the interactions between atoms and molecules is a powerful approach to study the structure and properties of materials. However, most force fields are based on empirical parameters and approximations, which limit their accuracy and applicability to certain types of systems. For more accurate and general predictions, we need to use quantum mechanical methods that are based on the fundamental principles of quantum mechanics.
 
 ## First-Principles
-Also known as _ab initio_ methods, first-principles method is based on solving the Schrödinger equation for a given system of particles. The Schrödinger equation is a partial differential equation that describes how the wave function of a quantum system evolves over time. By solving the Schrödinger equation, we can obtain the wave function ($\Psi$) of the system, which contains all the information about the system, such as the positions and momenta of the particles, the energy of the system, and the forces acting on the particles. Properties can be obtained by applying different operators to the wave function. For example, the total energy of the system can be obtained by applying the Hamiltonian $\hat{H}$ operator to the wave function. The many-body Schrödinger equation is given by:
+Also known as _ab initio_ methods, first-principles methods are based on solving the Schrödinger equation for a given system of particles. The Schrödinger equation is a partial differential equation that describes how the wave function of a quantum system evolves over time. By solving the Schrödinger equation, we can obtain the wave function $\Psi$ of the system, which contains all the information about the system, such as the positions and momenta of the particles, the energy of the system, and the forces acting on the particles. Properties are obtained as expectation values of operators. For example, the total energy is the expectation value of the Hamiltonian, $\langle \Psi | \hat{H} | \Psi \rangle$. The many-body Schrödinger equation is given by:
 
 $$
 i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r}, \mathbf{R}, t) = \hat{H}\Psi(\mathbf{r}, \mathbf{R}, t)
@@ -20,7 +20,7 @@ where $\Psi(\mathbf{r}, \mathbf{R}, t)$ is the wave function of the system, $\ha
 Born-Oppenheimer approximation for separating the motion of the electrons and nuclei so that the electron wave function can be solved separately.
 ```
 ````
-The Born-Oppenheimer approximation states that the motion of the electrons is much faster than the motion of the nuclei, so we can treat the electrons as moving in the fixed potential energy field of the nuclei. Then the nuclei are treated as classical particles and only electrons are quantum particles. This allows us to solve the Schrödinger equation for the electrons separately from the motion of the nuclei, which simplifies the problem and makes it computationally feasible. 
+The Born-Oppenheimer approximation states that the motion of the electrons is much faster than the motion of the nuclei, so we can treat the electrons as moving in the fixed potential energy field of the nuclei. This allows us to solve the electronic Schrödinger equation separately for fixed nuclear positions, which simplifies the problem and makes it computationally feasible. The nuclei do not have to be classical in the Born-Oppenheimer approximation; in many atomistic simulations they are treated classically as an additional approximation.
 
 $$
 \Psi(\mathbf{R},\mathbf{r}) = \chi(\mathbf{R})\psi(\mathbf{r})
@@ -30,21 +30,21 @@ where $\Psi(\mathbf{R},\mathbf{r})$ is the total wave function of the system, $\
 
 ## Density Functional Theory (DFT)
 
-Solving the Schrödinger equation directly is computationally expensive and often infeasible for large systems. Density functional theory (DFT) is a method that approximates the wave function of a system by considering the electron density of the system. The electron density is a function of the positions of the electrons in the system and contains all the information about the system. By approximating the wave function in terms of the electron density, DFT reduces the computational cost of solving the Schrödinger equation and makes it feasible to study large systems.
+Solving the Schrödinger equation directly is computationally expensive and often infeasible for large systems. Density functional theory (DFT) reformulates the ground-state problem in terms of the electron density rather than the many-electron wave function. The electron density is a function of position and contains the information needed to determine the ground-state properties. This reduces the complexity of the problem and makes it feasible to study much larger systems.
 
 ```{admonition} Functional
 :class: info
 Functional is a function of a function where the input is a function and the output is a number. For example, integration is a functional that takes a function as input and returns a number as output. In DFT, the electron density is the function, and the functional is a function of the electron density.
 ```
 
-The key idea behind DFT is the Hohenberg-Kohn theorems, is that (i) the ground state electron density determines uniquely the external potential of the nuclei $V_{\text{ext}}(\mathbf{r})$ (ii) $V_{\text{ext}}$ determines uniquely the many body wave function, and (iii) the ground state energy of the system is a unique functional of the many-body wave function. In total: $\rho({\mathbf{r}}) \rightarrow V_{\text{ext}}(\mathbf{r}) \rightarrow \Psi \rightarrow E$. 
+The key idea behind DFT is the Hohenberg-Kohn theorems: (i) the ground-state electron density determines the external potential $V_{\text{ext}}(\mathbf{r})$ up to an additive constant, and therefore determines all ground-state properties; and (ii) there exists an energy functional of the density whose minimum is attained at the ground-state density. In schematic form, $\rho(\mathbf{r}) \rightarrow V_{\text{ext}}(\mathbf{r}) \rightarrow \Psi \rightarrow E$.
 
 The Hohenberg-Kohn theorems allow us to write the total energy of the system as a functional of the electron density:
 
 $$
-E = F[\rho]
+E[\rho] = F_{\text{HK}}[\rho] + \int V_{\text{ext}}(\mathbf{r}) \rho(\mathbf{r}) \, d\mathbf{r}
 $$
-where $E$ is the total energy of the system, $\rho$ is the electron density, and $F$ is the energy functional of the system. The goal of DFT is to find the electron density that minimizes the total energy of the system, which gives us the ground state electron density and the ground state energy of the system.
+where $E[\rho]$ is the total energy functional, $\rho$ is the electron density, and $F_{\text{HK}}[\rho]$ is the universal part of the functional that contains the kinetic and electron-electron interaction contributions. The goal of DFT is to find the electron density that minimizes the total energy functional, which gives us the ground-state electron density and the ground-state energy of the system.
 
 $$
 E[\rho_{\text{gs}}] = \min_{\rho} E[\rho]
@@ -76,12 +76,12 @@ where $V_{\text{eff}}(\mathbf{r})$ is the effective potential that includes the 
 The charge density can be computed using:
 
 $$
-\rho(\mathbf{r}) = \sum_{i=1}^{N} |\psi_i(\mathbf{r})|^2
+\rho(\mathbf{r}) = \sum_i f_i |\psi_i(\mathbf{r})|^2
 $$
 
-where $\psi_i(\mathbf{r})$ is the wave function of the $i$-th electron and $N$ is the number of electrons in the system.
+where $\psi_i(\mathbf{r})$ is the $i$-th Kohn-Sham orbital and $f_i$ is its occupation number.
 
-The key idea is to separate the total energy functional into terms that are easier to calculate and terms that are more difficult to calculate. The first three terms can be computed easily. The exchange-correlation energy is unknown and need to be approximated using different exchange-correlation functionals. 
+The key idea is to separate the total energy functional into terms that are easier to calculate and terms that are more difficult to calculate. The kinetic energy of the non-interacting Kohn-Sham system, the external-potential energy, and the Hartree energy can be written explicitly. The exchange-correlation energy is not known exactly and must be approximated using different exchange-correlation functionals.
 
 There are many different $V_{\text{xc}}$ that have been developed: Local Density Approximation (LDA), Generalized Gradient Approximation (GGA), Hybrid Functionals, etc. Each functional has its own strengths and weaknesses, and the choice of functional depends on the system being studied and the properties of interest.
 
@@ -112,11 +112,11 @@ Psuedopotentials are used to replace the core electrons in the system with an ef
 ```{figure} ../figures/dft_property.png
 Band structure and optical adsorption spectra of Silicon calculated using DFT. It should be noted that the band gap of Silicon is underestimated.
 ```
-Instead of compute the derivative of the total energy with respect to the position of the particles, the force can be calculated directly once the ground state electron density is determined using the Hellmann-Feynman theorem, which we need to determine to get the energy anyway.
+Once the ground-state electron density has been determined, forces can be obtained from the derivative of the total energy with respect to atomic positions. In many electronic-structure methods this is evaluated using the Hellmann-Feynman theorem, together with any additional basis-set correction terms when needed.
 
 Compared to classical force fields, DFT can provide more properties, such as electronic structure, bonding, and reactivity. DFT can be used to study a variety of systems, including molecules, solids, and surfaces. 
 
-However, DFT has some limitations, such as the underestimation of band gaps, the lack of dispersion (van der Waals) interactions, problematic treatment for the strongly correlated system, and the sensitivity to the choice of exchange-correlation functional. These limitations can be addressed by using more advanced functionals, such as hybrid functionals, and by including corrections for dispersion interactions.
+However, DFT has some limitations, such as the underestimation of band gaps, the fact that many local and semi-local functionals miss dispersion (van der Waals) interactions, the problematic treatment of strongly correlated systems, and the sensitivity to the choice of exchange-correlation functional. These limitations can often be mitigated by using more advanced functionals, such as hybrid functionals, and by including dispersion corrections.
 
 ## Semi-Empirical Methods
 Semi-empirical methods are a class of quantum mechanical methods that are based on a combination of empirical parameters and quantum mechanical principles. These methods are less computationally expensive than first-principles methods and are often used to study large systems that are beyond the capabilities of first-principles methods. 

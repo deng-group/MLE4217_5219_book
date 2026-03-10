@@ -22,7 +22,7 @@ The microstate is characterized by the positions ($\mathbf{r}$) and momenta ($\m
 ```{figure} ../figures/ensemble.png
 4 types of ensembles in statistical mechanics: microcanonical, canonical, isothermal-isobaric, and grand canonical.
 ```
-Ensemble is the actual microstates and the probability distribution within the phase space. It is a collection of microstates that share certain macroscopic properties, such as temperature (T), pressure (P), volume (V), number of particles (N). There are several types of ensembles in statistical mechanics, each corresponding to different constraints on the system.
+An ensemble is a probability distribution over microstates in phase space. Different ensembles correspond to different macroscopic constraints, such as temperature ($T$), pressure ($P$), volume ($V$), and number of particles ($N$).
 
 ```{admonition} Partition function
 The partition function ($Z$) is a central quantity in statistical mechanics that describes the probability distribution of the system's microstates. It is defined as the sum of the Boltzmann factors over all microstates.
@@ -32,11 +32,10 @@ The partition function ($Z$) is a central quantity in statistical mechanics that
 In the microcanonical ensemble, we consider an isolated system with a fixed number of particles, volume, and energy. 
 
 $$
-P(E) = \frac{1}{\Omega(E)}
+P(\Gamma) = \frac{1}{\Omega(E)}
 $$
 
-
-where $\Omega(E)$ is the number of microstates with energy $E$. The microcanonical ensemble describes the system's behavior when it is isolated and not in contact with any external environment.
+where $\Gamma$ denotes a microstate on the constant-energy surface and $\Omega(E)$ is the number of accessible microstates with energy $E$. The microcanonical ensemble describes the system's behavior when it is isolated and not in contact with any external environment.
 
 - Canonical Ensemble (NVT)
 In the canonical ensemble, the system is in thermal equilibrium with a heat bath at a fixed temperature. The number of particles and volume are fixed, but the energy can fluctuate. The probability of each microstate is given by the Boltzmann distribution.
@@ -52,17 +51,17 @@ $$
 where $Z$ is the partition function, $\beta = \frac{1}{k_B T}$ is the inverse temperature, and $E$ is the energy of the microstate.
 
 - Isothermal-Isobaric Ensemble (NPT)
-In the isothermal-isobaric ensemble, the system is in thermal and mechanical equilibrium with a heat bath and a pressure bath. The temperature, pressure, and volume are fixed, but the energy and number of particles can fluctuate.
+In the isothermal-isobaric ensemble, the system is in thermal and mechanical equilibrium with a heat bath and a pressure bath. The temperature, pressure, and number of particles are fixed, but the energy and volume can fluctuate.
 
 $$
-P(E,V) = \frac{1}{Z}e^{-\beta (E+PV)}
+P(E,V) = \frac{1}{\Delta}e^{-\beta (E+PV)}
 $$
 
 $$
-Z = \sum e^{-\beta (E+PV)}
+\Delta = \sum_V \sum_{\text{states}} e^{-\beta (E+PV)}
 $$
 
-where $Z$ is the partition function, $P$ is the pressure, and $V$ is the volume of the system.
+where $\Delta$ is the isothermal-isobaric partition function, $P$ is the pressure, and $V$ is the volume of the system.
 
 - Grand Canonical Ensemble (μVT)
 In the grand canonical ensemble, the system is in thermal and chemical equilibrium with a reservoir. The temperature, volume, and chemical potential are fixed, but both the number of particles and the energy can fluctuate, representing an open system where the number of particles can change.
@@ -81,38 +80,39 @@ Each ensemble provides a different perspective on the system, allowing for the c
 
 ## Thermodynamic Properties
 
-Once we know the partition function, we can calculate various thermodynamic properties of the system:
+Once we know the partition function, we can calculate various thermodynamic properties of the system. For the canonical ensemble:
 
 $$
 F = -k_B T \ln Z
 $$
 
 $$
-U = -\frac{\partial \ln Z}{\partial \beta}=k_B T^2 \frac{\partial \ln Z}{\partial T}
+U = -\frac{\partial \ln Z}{\partial \beta} = k_B T^2 \frac{\partial \ln Z}{\partial T}
 $$
 
 $$
-S = - \frac{\partial F}{\partial T} = k_B \ln Z+k_B T \frac{\partial \ln Z}{\partial T}
+S = - \frac{\partial F}{\partial T} = k_B \ln Z + k_B T \frac{\partial \ln Z}{\partial T}
 $$
 
 $$
-P = -\frac{\partial F}{\partial V}=k_B T \frac{\partial \ln Z}{\partial V}  
+P = -\frac{\partial F}{\partial V} = k_B T \frac{\partial \ln Z}{\partial V}
 $$
 
 $$
-H = U + PV = k_B T^2 \frac{\partial \ln Z}{\partial \beta} + k_B T V \frac{\partial \ln Z}{\partial V}
+C_V = \left(\frac{\partial U}{\partial T}\right)_V = k_B \beta^2 \frac{\partial^2 \ln Z}{\partial \beta^2}
+$$
+
+For the isothermal-isobaric ensemble with partition function $\Delta$:
+
+$$
+G = -k_B T \ln \Delta
 $$
 
 $$
-G = F + PV = -k_B T \ln Z + k_B T V \frac{\partial \ln Z}{\partial V}
+H = -\frac{\partial \ln \Delta}{\partial \beta}
 $$
 
-$$
-C_v = \frac{\partial U}{\partial T} = k_B \beta^2 \frac{\partial^2 \ln Z}{\partial \beta^2}
-$$
-
-
-where $F$ is the Helmholtz free energy, $S$ is the entropy, $U$ is the internal energy, $C_v$ is the heat capacity at constant volume, $P$ is the pressure,  $V$ is the volume of the system, $H$ is the enthalpy, and $G$ is the Gibbs free energy.
+where $F$ is the Helmholtz free energy, $S$ is the entropy, $U$ is the internal energy, $C_V$ is the heat capacity at constant volume, $P$ is the pressure, $V$ is the volume of the system, $H$ is the enthalpy, and $G$ is the Gibbs free energy.
 
 These equations allow us to relate the microscopic properties of the system to its macroscopic behavior and predict how the system will respond to changes in temperature, pressure, and volume.
 
@@ -160,4 +160,4 @@ One of the main challenges in statistical mechanics is to sample the phase space
 
 - Monte Carlo samples the phase space by randomly selecting microstates based on their probabilities. MC simulations use statistical techniques to generate a representative set of microstates, from which ensemble averages can be calculated.
 
-Ergodic hypothesis states that a system will explore all of its microstates over time. According to this hypothesis, the time average of a property of the system is equal to the ensemble average. This implies that by simulating the dynamics of a system for a sufficiently long time, we can obtain accurate statistical averages and thermodynamic properties. Therefore, MD and MC simulation will get the same statistical averages if the system is ergodic and is independent of the initial conditions.
+The ergodic hypothesis states that, for an ergodic system, long-time averages are equal to ensemble averages. In practice, this means that if MD or MC samples the correct ensemble efficiently and the system equilibrates, the resulting statistical averages should agree and become insensitive to the initial conditions.

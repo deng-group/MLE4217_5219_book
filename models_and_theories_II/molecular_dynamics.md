@@ -1,6 +1,6 @@
 # Molecular Dynamics
 
-If we have a system of particles, we can simulate the dynamics of the system by solving the equations of motion for each particle. This is called molecular dynamics. The equations of motion are given by Newton's second law of motion, which states that the force acting on a particle is equal to the rate of change of its momentum. The force acting on a particle is given by the gradient of the potential energy function, which depends on the positions of all the particles in the system. By solving the equations of motion for each particle, we can simulate the dynamics of the system and study its behavior over time.
+If we have a system of particles, we can simulate the dynamics of the system by solving the equations of motion for each particle. This is called molecular dynamics. The equations of motion are given by Newton's second law of motion, which states that the force acting on a particle is equal to the rate of change of its momentum. The force acting on a particle is given by the negative gradient of the potential energy function, which depends on the positions of all the particles in the system. By solving the equations of motion for each particle, we can simulate the dynamics of the system and study its behavior over time.
 
 
 ## Verlet Integration
@@ -11,7 +11,7 @@ General process of molecular dynamics simulation.
 ```
 ````
 
-The Verlet integration is a numerical method for solving the equations of motion in molecular dynamics simulations. The Verlet integration is based on the idea of discretizing the equations of motion in time and updating the positions and velocities of the particles at each time step. 
+The Verlet family of integrators are numerical methods for solving the equations of motion in molecular dynamics simulations. A commonly used form is the velocity-Verlet algorithm, which updates the positions and velocities of the particles at each time step.
 
 $$
 \mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2
@@ -19,10 +19,10 @@ $$
 
 where $\mathbf{r}(t)$ is the position of the particle at time $t$, $\mathbf{v}(t)$ is the velocity of the particle at time $t$, $\mathbf{a}(t)$ is the acceleration of the particle at time $t$, and $\Delta t$ is the time step. The acceleration of the particle can be computed from the Newton's second law.
 
-The velocity of the particle at time $t + \Delta t$ can be calculated using the positions at time $t$ and $t + \Delta t$:
+The velocity update in velocity-Verlet is:
 
 $$
-\mathbf{v}(t + \Delta t) = \frac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}
+\mathbf{v}(t + \Delta t) = \mathbf{v}(t) + \frac{1}{2}\left[\mathbf{a}(t) + \mathbf{a}(t + \Delta t)\right]\Delta t
 $$
 
 
@@ -44,13 +44,13 @@ K = \sum_{i=1}^{N}\frac{1}{2}m_i\mathbf{v}_i^2
 $$
 where $m_i$ is the mass of the $i$-th particle and $\mathbf{v}_i$ is the velocity of the $i$-th particle. 
 
-Temperature is related to the kinetic energy of the particles in the system. The temperature of the system is given by the average kinetic energy of the particles:
+Temperature is related to the kinetic energy of the particles in the system. For a classical system with $f$ quadratic degrees of freedom, the temperature is given by:
 
 $$
-T = \frac{2K}{3Nk_B}
+T = \frac{2K}{f k_B}
 $$
 
-where $T$ is the temperature of the system, $K$ is the kinetic energy of the system, $N$ is the number of particles in the system, and $k_B$ is the Boltzmann constant.
+where $T$ is the temperature of the system, $K$ is the kinetic energy of the system, $f$ is the number of degrees of freedom, and $k_B$ is the Boltzmann constant. For an unconstrained three-dimensional system, $f \approx 3N$; if overall translation is removed, then $f = 3N - 3$.
 
 The summation of kinetic energy and potential energy is the total energy of the system:
 
@@ -60,13 +60,13 @@ $$
 
 where $U$ is the potential energy of the system, which has been discussed in the [previous section](../models_and_theories_I/force_fields.md). $U$ can also be computed using DFT or quantum mechanical methods. It is called ab initio molecular dynamics (AIMD) when quantum mechanical methods are used to compute the potential energy.
 
-The total energy of the system should be conserved during the simulation, which means that the sum of the kinetic and potential energy should remain constant over time. This is also known as the microcanonical ensemble in statistical mechanics, where the total energy of the system is conserved and the system is isolated from its surroundings.
+In an ideal NVE simulation, the total energy of the system should be conserved, which means that the sum of the kinetic and potential energy should remain approximately constant over time. This corresponds to the microcanonical ensemble in statistical mechanics, where the total energy of the system is conserved and the system is isolated from its surroundings.
 
 
 ## Temperature and Pressure Control
-The temperature and pressure of the system are usually controlled to study the behavior of the system under different conditions. The temperature can be adjusted by rescaling the velocities of the particles, while the pressure can be controlled by adjusting the volume of the system. 
+The temperature and pressure of the system are usually controlled to study the behavior of the system under different conditions. Thermostats modify the dynamics to sample a target temperature, while barostats change the cell degrees of freedom to sample a target pressure.
 
-The algorithms used to control the temperature and pressure of the system are called thermostats and barostats, respectively. Usually, the temperature and pressure are controlled by adding a term to the equations of motion that rescales the velocities or adjusts the volume of the system. This process is done at some regular interval during the simulation to maintain the desired temperature and pressure.
+The algorithms used to control the temperature and pressure of the system are called thermostats and barostats, respectively. Some methods rescale velocities or cell vectors directly, while others extend the equations of motion with additional dynamical variables.
 
 Typical thermostats used in molecular dynamics simulations include the Berendsen thermostat, the Andersen thermostat, and the Nose-Hoover thermostat. Examples of barostats include the Berendsen barostat and the Parrinello-Rahman barostat.
 
@@ -76,10 +76,10 @@ In molecular dynamics, you are only sampling part of the phase space, not the en
 In thermodynamic integration, we calculate the free energy difference between two states by integrating the derivative of the free energy with respect to a parameter that connects the two states. The free energy difference between two states is given by:
 
 $$
-\Delta F = \int_{\lambda_0}^{\lambda} \left\langle \frac{\partial H}{\partial \lambda^{\prime}} \right\rangle d\lambda^{\prime}
+\Delta F = \int_{\lambda_0}^{\lambda_1} \left\langle \frac{\partial H}{\partial \lambda} \right\rangle_{\lambda} d\lambda
 $$
 
-where $\Delta F$ is the free energy difference between the two states, $\lambda$ is the parameter that connects the two states (e.g. temperature, volume), $H$ is the Hamiltonian of the system (total energy), and the brackets denote the ensemble average (time average). $\lambda_0$ is the initial value of the parameter, usually a state where the partition function is known.
+where $\Delta F$ is the free energy difference between the two states, $\lambda$ is the parameter that connects the two states, $H$ is the Hamiltonian of the system, and the brackets denote an ensemble average taken at fixed $\lambda$.
 
 In practice, we need to perform multiple simulations at different values of the parameter $\lambda$ to calculate the free energy difference. Then integrate the derivative of the free energy with respect to $\lambda$ to obtain the free energy difference between the two states. The path should start from a state where the partition function is known and end at the state where we want to calculate the partition function, e.g. high temperature ideal gas and low temperature harmonic crystal.
 
