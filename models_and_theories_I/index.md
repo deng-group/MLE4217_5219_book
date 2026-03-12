@@ -9,11 +9,12 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5izwme0SjKUef0ghfbT63o1CUAbOhQRZgfUL5EiJgRYRF5N5FLvQEAlOcurYdjrAp4NrWUegtnSVX/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-Lecture video will be recorded and uploaded after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Recording](https://nus-sg.zoom.us/rec/share/0YTSmjhcQLGHCvUMUCQK3o7cuH9u3WAi2bt2rza4WNXhAd2fyEY3KFC_7bpwUJ6D.7Xt5-r4Ygw5qWj1T) (Passcode: 4!2fB&uD)
- -->
+- [Recording](https://nus-sg.zoom.us/rec/share/UGj6XocZakuIh8r7gdxg2Wqy9nwhzw-ymdZdto9Z6ACOiFGQGuTqrUN8PfvXi4IF.VUrYrglByoUWFHZM)
+(Passcode: .P1=SL.q)
+
 
 ## Content
 This week, we will cover the force fields and first-principles methods used in materials science to model the structure and properties of materials at the atomic scale. We will discuss the principles behind these methods, their advantages and limitations, and their applications in materials science. We will also introduce some ways to speed up the calculations using force fields and first-principles methods. Finally, we will learn how to use atomic simulation environments (ASE) to perform calculations using force fields.
