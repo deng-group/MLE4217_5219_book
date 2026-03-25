@@ -12,3 +12,5 @@ draft
 .venv
 tmp
 Tutorials
+
+*.model
