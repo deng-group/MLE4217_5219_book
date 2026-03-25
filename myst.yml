@@ -137,16 +137,16 @@ project:
         - file: machine_learning_II/summary.md
         - file: machine_learning_II/adv_ml.ipynb
     
-    # - file: machine_learning_potentials/index.md
-    #   children:
-    #     - file: machine_learning_potentials/introduction.md
-    #     - file: machine_learning_potentials/explicit.md
-    #     - file: machine_learning_potentials/bp_nn.md
-    #     - file: machine_learning_potentials/mace.md
-    #     - file: machine_learning_potentials/umlp.md
-    #     - file: machine_learning_potentials/training_validation.md
-    #     - file: machine_learning_potentials/challenges.md
-    #     - file: machine_learning_potentials/mlp.ipynb
+    - file: machine_learning_potentials/index.md
+      children:
+        - file: machine_learning_potentials/introduction.md
+        - file: machine_learning_potentials/explicit.md
+        - file: machine_learning_potentials/bp_nn.md
+        - file: machine_learning_potentials/mace.md
+        - file: machine_learning_potentials/umlp.md
+        - file: machine_learning_potentials/training_validation.md
+        - file: machine_learning_potentials/challenges.md
+        - file: machine_learning_potentials/mlp.ipynb
     # # - file: preexam_review/index.md
     # #   children:
     # #     - file: preexam_review/week8_models1.md
