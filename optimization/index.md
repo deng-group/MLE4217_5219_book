@@ -9,12 +9,10 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRd6TAxBAjozQVIJYbtWbgshPJn9qrtC1IzW_J1G1qWDvXg00a00QXZsTJAY04TR50T0RVPV9SfpuVo/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-Lecture video will be recorded and uploaded after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Recording](https://nus-sg.zoom.us/rec/share/j6o3VoTrpp__MNaR8P8_xwu7pGwhxTIwLeTPu6TQsBO_4TU-0n8PSj-jGFlVakIS.VTx1e_bX-SeMXBoR) (Passcode: B4eD$7m^) -->
-
-**Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
+- [Recording](https://nus-sg.zoom.us/rec/share/nYhJ5j3NyR2eV_xDYCbWTfl_ASZ6TAJwvVhzD-uBNak48uWrPc2Uz2fxwyc9svkN.KIc4iDxzhiXyhazq) (Passcode: q48M&oc#)
 
 ## Content
 This week, we will study various optimization algorithms and their applications in chemistry and materials science. Optimization is a fundamental tool in computational chemistry and materials science, used to find the minimum or maximum of a function. We will start from some basic concepts and then introduce local and global optimization algorithms. We will also cover how to get the minimum energy path (MEP) using the Nudged Elastic Band (NEB) method. In the practical session, you will learn how to perform optimization using Python and use ASE to perform geometry optimization.
