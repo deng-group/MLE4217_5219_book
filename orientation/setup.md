@@ -1,4 +1,4 @@
-# VS Code
+# Practical: VS Code
 ```{admonition} Vanda
 :class: warning
 Make sure you have completed the HPC access setup in [HPC Access Setup](vanda.md) before proceeding.
