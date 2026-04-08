@@ -9,10 +9,10 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTkfh3A_9BP9NEkZzWu9SIB_z8jBCsWKaJpxuX-GtwOU23jn636KazPDUHtH3sN2ayskbnpzcNRbQTL/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-Lecture video will be recorded and uploaded after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Recording](https://nus-sg.zoom.us/rec/share/j6o3VoTrpp__MNaR8P8_xwu7pGwhxTIwLeTPu6TQsBO_4TU-0n8PSj-jGFlVakIS.VTx1e_bX-SeMXBoR) (Passcode: B4eD$7m^) -->
+- [Recording](https://nus-sg.zoom.us/rec/share/Uj_G5L4QOC0wt6V9vZshGpTWc38hHtoiWZRjDZ9wanHoniyVdvj-5R9aL2QP7gvH.f7vsEBDEjzXrMRg8) (Passcode: n@w2l%uB)
 
 ## Content
 This week, we will discuss the topic of high-throughput simulations, which are essential for exploring large materials databases and predicting new materials with desired properties. We will cover the workflow of the high-throughput simulations, then discuss the computational codes used in high-throughput simulations, focusing on density functional theory (DFT), molecular dynamics, and Monte Carlo methods. We will also cover the workflow management systems used in high-throughput simulations. Then we will cover data analysis and thermodynamic property calculations in high-throughput simulations.
