@@ -1,4 +1,4 @@
-# HPC Tutorial
+# Practical: HPC Tutorial
 
 ```{admonition} Vanda User Guide
 :class: info

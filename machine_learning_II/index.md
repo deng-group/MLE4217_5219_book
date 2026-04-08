@@ -20,9 +20,10 @@ width: 100%
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQlpTOegXs2ZwFX41GQfqR3anymQidh0j80a3bhH8sZLC8jfgWCPvt1Uemu1xD90l1KhIASeSNLRpSh/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Lecture Video
-The lecture video will be available after this lecture.
-
-**Passcode will be sent through Canvas announcement. You might need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+ Please access the Zoom recording use the links below:
+- [Recording from AY2024/2025 Sem 2](https://nus-sg.zoom.us/rec/share/Eavcc2-dZugMfOtK74RAVq9jrVzMYj8lR3uXrBfSE2h0sUxcy-ZIqEE4efl3dBO3.-LIo5yZB1eqKofhW) (Passcode: sG.%8GJD)
 
 ## Content
 This week, we will go through the advanced topics in machine learning including the graph neural networks (GNNs) and diffusion models. Particularly, we will focus on the applications of GNNs and diffusion models in materials science. In the practical session, we will implement a GNN model to predict the polarizability of molecules.
