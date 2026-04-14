@@ -12,8 +12,10 @@ Lecture video will be recorded and uploaded after the lecture.
  Please access the Zoom recording use the links below:
 - [Recording](https://nus-sg.zoom.us/rec/share/0YTSmjhcQLGHCvUMUCQK3o7cuH9u3WAi2bt2rza4WNXhAd2fyEY3KFC_7bpwUJ6D.7Xt5-r4Ygw5qWj1T) (Passcode: 4!2fB&uD) -->
 
-## Scope of Final Examination
-8 questions (each 5 marks), focus on understanding, domain knowledge, and application
+## Final Examination
+- 2 hrs, closed book, no calculator, no internet, 1 page of handwritten cheat sheet (A4, both sides) allowed
+- 8 questions (each 5 marks), focus on understanding, domain knowledge, and application
+- No hand written coding tasks (no need to remember syntax & API etc.), but you might be asked to read and explain the code snippets
 
 Following contents will **not** be assessed (they’re marked as **Reading Material** in course website)
 
