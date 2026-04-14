@@ -147,16 +147,14 @@ project:
         - file: machine_learning_potentials/training_validation.md
         - file: machine_learning_potentials/challenges.md
         - file: machine_learning_potentials/mlp.ipynb
-    # # - file: preexam_review/index.md
-    # #   children:
-    # #     - file: preexam_review/week8_models1.md
-    # #     - file: preexam_review/week9_models2.md
-    # #     - file: preexam_review/week10_optimization.md
-    # #     - file: preexam_review/week11_highthroughput.md
-    # #     - file: preexam_review/week12_ml.md
-    # #     - file: preexam_review/exam_format.md
-    # #     - file: preexam_review/key_concepts.md
-    # #     - file: preexam_review/quiz2_guide.md
+    - file: final_review/index.md
+      children:
+        - file: final_review/foundations.md
+        - file: final_review/data_and_structures.md
+        - file: final_review/atomistic_models.md
+        - file: final_review/stat_mech_and_dft.md
+        - file: final_review/optimization.md
+        - file: final_review/high_throughput.md
 
 site:
   options:

@@ -32,7 +32,7 @@ width: 100%
 ## Lecture Video
 This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Recording from AY2024/2025 Sem 2](https://nus-sg.zoom.us/rec/share/VA2n9AUWlFV8Z_W6AWJiaVNhjl2o_4ZhmCvN3f-TQtrS48UDYeXImgRF_-mqbXI-.giuJzjX6S32__ygq) (Passcode: @j.#99+y)
+- [Recording from AY2024/2025 Sem 2](https://nus-sg.zoom.us/rec/share/VA2n9AUWlFV8Z_W6AWJiaVNhjl2o_4ZhmCvN3f-TQtrS48UDYeXImgRF_-mqbXI-.giuJzjX6S32__ygq) (Passcode: \@j.#99+y)
 
 ## Content
 This week, we will cover basic concepts of machine learning, including types of machine learning, difference between supervised and unsupervised learning, and importance of data preprocessing. We will also discuss different types of models used in machine learning, including linear regression, logistic regression, decision trees, and neural networks. Additionally, we will cover concepts of overfitting and underfitting, as well as importance of model evaluation and validation. In practical, we will use PyTorch to perform some basic machine learning tasks.
