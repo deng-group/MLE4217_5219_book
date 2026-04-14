@@ -10,11 +10,6 @@
 
 ## Where to review in this book
 
-- [Orientation Overview](../orientation/index.md)
-- [Getting Started and Course Logistics](../orientation/orientation.md)
-- [Introduction to Materials Informatics](../orientation/introduction.md)
-- [Environment Setup in VS Code](../orientation/setup.md)
-- [Jupyter Notebook Practical](../orientation/jupyter.ipynb)
 - [Programming Overview](../programming/index.md)
 - [Python Introduction Notebook](../programming/python_introduction.ipynb)
 - [NumPy Notebook](../programming/numpy.ipynb)
@@ -23,6 +18,5 @@
 - [Computer and Computation Overview](../computer/index.md)
 - [Hardware](../computer/hardware.md)
 - [Software](../computer/software.md)
-- [High-Performance Computing](../computer/hpc.md)
 - [Performance](../computer/performance.md)
 - [Git Examples](../computer/git_examples.md)

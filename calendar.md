@@ -19,6 +19,8 @@ Below are planned schedule, which are subjected to change depends on progress.
 | **10** | Optimization | Introduction, energy landscapes, local optimization, global optimization, structure prediction, no free lunch rule | Scipy, ASE (optimization) | | |
 | **11** | High-throughput Simulation | Thermodynamics and kinetics, finite temperature and entropy, convex hulls, phase diagram | Atomate2 |  | |
 | **12** | Machine Learning Potentials | ML Potentials overview, Descriptors (SOAP, ACE, GAP), error analysis, MACE | MACE | | |
-| **13** | *Pre-Exam Review* | Review of Weeks 8-12, Q&A, exam preparation | | **2** | **2** |
+| **13** | *Final Review* | Review of Weeks 1-12, Q&A, exam preparation | | **2** | **2** |
 
 **Assignment due week shown in the Assignment column.**
+
+The schedule of the final exam will be announced during the lecture.
