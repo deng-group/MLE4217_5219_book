@@ -1,5 +1,7 @@
 ```{admonition} Reading Material
 :class: note
+The whole section will not be assessed in the final exam, but it is recommended for students who want to explore more about the advanced topics in machine learning.
+
 **This chapter covers advanced ML topics provided as self-study materials.**
 
 Topics include:

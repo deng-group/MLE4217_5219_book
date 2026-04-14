@@ -2,7 +2,7 @@
 
 ```{admonition} Reading Material
 :class: note
-**We will not cover this chapter in this course, but this chapter provides foundational ML concepts for Week 12 (Machine Learning + ML Potentials).**
+The whole section will not be assessed in the final exam, but it is recommended for students who want to explore more about the foundational concepts of machine learning.
 
 Please review these materials BEFORE Week 12 lecture. They will NOT be covered in detail during lecture time. Topics include:
 - Regression and fitting

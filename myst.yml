@@ -151,8 +151,7 @@ project:
       children:
         - file: final_review/foundations.md
         - file: final_review/data_and_structures.md
-        - file: final_review/atomistic_models.md
-        - file: final_review/stat_mech_and_dft.md
+        - file: final_review/models_and_theories.md
         - file: final_review/optimization.md
         - file: final_review/high_throughput.md
 

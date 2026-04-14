@@ -1,6 +1,6 @@
 # Final Review
 
-In this week, we focus the review on the concepts and reasoning skills that matter most for a pen-and-paper final examination. The goal is not to rehearse software steps or long computational workflows, but to review how to read, interpret, compare, and explain the core ideas from the course clearly.
+In this week, we focus the review on the main course content that supports the final examination. The goal is to consolidate the key concepts and reasoning skills from the relevant chapters without turning the review into a question-by-question guide.
 
 ## Slides
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQPmikWkWiSoNfwcuqTTmSB0559o-yi-zP6UkdN8SehBEF-WeIBTBZtymQopIeP7r_LChgAbO12hchz/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -12,24 +12,23 @@ Lecture video will be recorded and uploaded after the lecture.
  Please access the Zoom recording use the links below:
 - [Recording](https://nus-sg.zoom.us/rec/share/0YTSmjhcQLGHCvUMUCQK3o7cuH9u3WAi2bt2rza4WNXhAd2fyEY3KFC_7bpwUJ6D.7Xt5-r4Ygw5qWj1T) (Passcode: 4!2fB&uD) -->
 
-## Lectures and Topics Covered
+## Review Blocks
 
 1. [Foundations: Programming, Git, and Computer and Computation](foundations.md)
 2. [Data and Structures: Database and Structures](data_and_structures.md)
-3. [Atomistic Models: Models and Theories I](atomistic_models.md)
-4. [Statistical Mechanics and Electronic Structure: Models and Theories II](stat_mech_and_dft.md)
-5. [Optimization](optimization.md)
-6. [High-Throughput Simulation](high_throughput.md)
+3. [Models and Theories](models_and_theories.md)
+4. [Optimization](optimization.md)
+5. [High-Throughput Simulation](high_throughput.md)
+
 ## Review Flow
 
-| Block | Main focus | What to revisit |
+| Block | Course chapters | Main focus |
 |-----|-----|-----|
-| Foundations | Interpreting code, git logic, and computing concepts | Short Python or NumPy snippets, plotting principles, branch and merge reasoning, CPU/GPU/HPC ideas |
-| Data and Structures | How we represent and organize materials information | Tables and queries, join and filter logic, unit cells, symmetry, defects, interfaces, structure files |
-| Atomistic Models | Comparing modelling approaches | Model hierarchy, force fields, fitting scope, transferability, and suitable use cases |
-| Statistical Mechanics and Electronic Structure | Reasoning about simulation and electronic-structure choices | MD ideas, ensembles, equilibration, time step, Monte Carlo, DFT concepts, strengths and limitations |
-| Optimization | How we search for stable configurations | Energy landscapes, local vs global search, optimizer choice, convergence meaning |
-| High-Throughput Simulation | Thermodynamics and workflow thinking | Workflow logic, automation, thermodynamics, and convex hull interpretation |
+| Foundations | Programming; Computer and Computation | Python and NumPy reasoning, plotting, git and GitHub logic, computing concepts |
+| Data and Structures | Database; Structures | Queries and joins, materials data, structure language, symmetry, defects, interfaces, file formats |
+| Models and Theories | Models and Theories I; Models and Theories II | Force fields, DFT, ensembles, MD, MC, KMC, modelling choices |
+| Optimization | Optimization | Energy landscapes, local and global methods, convergence, algorithm choice |
+| High-Throughput Simulation | High-Throughput Simulation | Workflow logic, automation, thermodynamics, convex hull reasoning |
 
 ## Minimum Readiness Checklist
 
@@ -45,6 +44,14 @@ By the end of this review, you should be able to do these without relying heavil
 - Distinguish local optimization from global optimization and explain what convergence does and does not guarantee.
 - Read a convex hull figure and discuss phase stability, decomposition tendency, and the limits of purely thermodynamic reasoning.
 - Describe the role of workflow thinking and automation in high-throughput materials studies.
+
+## Reading Materials Not Included in the Final Exam
+
+- AI tools for code development
+- Specific high-throughput simulation codes and software ecosystems
+- Machine Learning I
+- Machine Learning II
+- Machine Learning Potentials
 
 ```{tip}
 Review actively rather than only reading. Take one example question, explain the logic in words, and identify which course concepts justify your answer.

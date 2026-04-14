@@ -1,5 +1,8 @@
-# *AI Tools for Code Development
-
+# AI Tools for Code Development
+```{admonition} Reading Material
+:class: note
+This part will not be assessed in the final exam but it is recommended for students who want to explore how to use AI tools like GitHub Copilot to assist code development in this course.
+```
 GitHub Copilot can be useful for speeding up repetitive coding tasks. This guide covers practical ways to use it effectively in this course—and importantly, when to be careful about trusting its output.
 
 ```{note}

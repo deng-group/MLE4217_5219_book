@@ -1,21 +1,14 @@
 # Data and Structures: Database and Structures
 
-## What we covered
+## Review focus
 
-- How materials information is stored, queried, filtered, and interpreted in data-driven workflows.
-- Common database ideas including rows, columns, keys, joins, and the role of different data formats.
-- Structure language for materials, including lattice, motif, unit cell, symmetry, and reciprocal-space ideas.
-- Practical representations of defects, interfaces, supercells, and noncrystalline systems.
-
-## What you should be able to do
-
-- Explain the difference between relational and non-relational data storage in practical terms.
-- Read tabular or JSON-style materials data and process it with Pandas.
-- Filter, sort, and summarize a dataset for a materials question.
-- Explain what a join does and why one material can map to multiple calculation records.
-- Describe a crystal structure using lattice, basis or motif, coordinates, and symmetry language.
-- Interpret common structure files and explain when a supercell is needed.
-- Describe the purpose of modelling defects and interfaces with periodic structures.
+- Database types, tables, indexing, keys, and queries
+- Data formats, materials databases, and API-style data
+- Sites, coordinates, occupations, local environment, and coordination
+- Unit cells, lattice vectors, Miller indices, crystal systems, and Bravais lattices
+- Symmetry operations, point groups, space groups, and Wyckoff positions
+- Structure prototypes, reciprocal space, and Brillouin zone
+- Structure formats, defects, supercells, and interfaces
 
 ## Where to review in this book
 

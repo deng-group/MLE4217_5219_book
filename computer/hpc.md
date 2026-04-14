@@ -1,5 +1,8 @@
 # HPC, Cloud, and Other Computers
-
+```{admonition} Reading Material
+:class: note
+This part will not be assessed in the final exam, but it is recommended for students who want to explore more about high-performance computing (HPC), cloud computing, and other emerging computing technologies.
+```
 HPC basics were covered in Week 1 (practical setup). This file is provided as reference for detailed information.
 
 ## High-Performance Computing (HPC)

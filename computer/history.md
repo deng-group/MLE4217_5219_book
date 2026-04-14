@@ -1,5 +1,8 @@
 # History
-
+```{admonition} Reading Material
+:class: note
+This part will not be assessed in the final exam, but it is recommended for students who want to explore more about the history of computers and their applications in science.
+```
 Historical context is provided as optional reading. Materials informatics overview was covered in Week 1.
 
 ## Computer Is the Foundation of Modern Digital Life

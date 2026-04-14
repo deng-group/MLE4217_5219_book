@@ -4,7 +4,10 @@
 width: 100%
 ---
 ```
-
+```{admonition} Reading Material
+:class: note
+The whole Orientation section will not be assessed in the final exam but it is recommended for students who want to get an overview of the course arrangement and the concept of materials informatics.
+```
 ## Slides
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRN9R-AyTOa_WDo_4XlM7DlEEPQ5pwzCRLWegMFMhCOLdoDFJ8O4tkOcaUbAjdYr8ETSqPfq97uUalQ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 

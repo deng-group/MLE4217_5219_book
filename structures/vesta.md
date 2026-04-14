@@ -1,4 +1,10 @@
-# Practical: Visualize Crystal Structures Using VESTA
+# Visualize Crystal Structures Using VESTA
+
+```{admonition} Reading Material
+:class: note
+This part will not be assessed in the final exam, but it is recommended for students who want to explore more about visualizing crystal structures using `VESTA`.
+```
+
 In this practical, we will use VESTA to visualize crystal structures, particularly CIF files. VESTA is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. It can be used to create a variety of plots, such as ball-and-stick, polyhedral, and thermal ellipsoid plots. VESTA is available for Windows, macOS, and Linux. You can download VESTA from [here](https://jp-minerals.org/vesta/en/).
 
 ## Download a CIF File from ICSD

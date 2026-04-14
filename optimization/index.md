@@ -32,4 +32,4 @@ By the end of this week, you should be able to:
 - [Global Optimization](global_optimization.md)
 - [Choose an Optimization Algorithm](choose_opt.md)
 - [Transition State Theory](transition_state.md)
-- [Practical: Optimization Algorithms](optimization.ipynb)
+- [Optimization Algorithms](optimization.ipynb)

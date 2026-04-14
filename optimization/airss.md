@@ -1,5 +1,8 @@
-# AIRSS: Ab Initio Random Structure Searching
-
+# AIRSS
+```{admonition} Reading Material
+:class: note
+This part will not be assessed in the final exam, but it is recommended for students who want to explore more about global optimization methods for structure prediction.
+```
 ## Overview
 
 AIRSS (Ab Initio Random Structure Searching) is a computational method for discovering stable crystal structures by randomly generating candidate structures and relaxing them using ab initio (first-principles) calculations, typically Density Functional Theory (DFT). It is a powerful global optimization technique for exploring the potential energy landscape of materials.

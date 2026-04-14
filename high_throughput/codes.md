@@ -1,5 +1,8 @@
 # Codes
-
+```{admonition} Reading Material
+:class: note
+This part will not be assessed in the final exam, but it is recommended for students who want to explore more about the computational codes used in high-throughput simulations and workflow management systems.
+```
 ## Computational Codes for High-Throughput Simulations
 Here we will discuss the computational codes used in high-throughput (HT) simulations, focusing on density functional theory (DFT), molecular dynamics, and Monte Carlo methods. These codes are essential for calculating the properties of materials in a high-throughput manner, enabling the exploration of large materials databases and the prediction of new materials with desired properties.
 
@@ -62,9 +65,4 @@ Workflow management systems are essential for coordinating and automating the va
 - Custodian: A Python package that provides error detection and handling for computational workflows, ensuring that simulations run smoothly and reliably.
 
 - Atomate 2: A high-level interface for setting up, running, and analyzing high-throughput calculations using various codes.
-
-```{admonition} Note
-:class: note
-**AIRSS (Ab Initio Random Structure Searching)** has been moved to **[Week 10: Optimization](../optimization/airss.md)** as it is fundamentally a global optimization method for structure prediction. This week (Week 11) focuses on codes for high-throughput simulations, workflow management systems, and data analysis.
-```
 
