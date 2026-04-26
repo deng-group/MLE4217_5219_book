@@ -40,14 +40,14 @@ JSON (JavaScript Object Notation) is a lightweight, standard text-based format f
             "lattice_system": "Cubic",
             "hall_number": "F 4d 2 3 -1d",
             "international_number": 227,
-            "symbol": "Fd3̅m",
-            "point_group": "m3̅m"
+            "symbol": "Fd-3m",
+            "point_group": "m-3m"
         },
         "structure_meta": {
             "number_of_atoms": 8,
-            "density": "2.31 g·cm⁻³",
+            "density": "2.31 g/cm^3",
             "dimensionality": "",
-            "possible_oxidation_states": "Si⁰⁺"
+            "possible_oxidation_states": "Si0+"
         }
     }
 }

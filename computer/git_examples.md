@@ -1,6 +1,6 @@
 # Version Control System
 
-In this practical, you will gain hands-on experience with Git, a powerful version control system, and learn how to integrate it with [VS Code](../orientation/setup.md#vs-code). Both VS Code and equivalent command-line instructions are provided for each step. By the end of this practical, you will be able to:
+In this practical, you will gain hands-on experience with Git, a powerful version control system, and learn how to integrate it with [VS Code](../orientation/setup.md). Both VS Code and equivalent command-line instructions are provided for each step. By the end of this practical, you will be able to:
 
 - Initialize a Git repository
 - Configure Git with your username and email
@@ -15,7 +15,7 @@ These skills will help you manage your project files efficiently and collaborate
 
 ```{admonition} Git, Github, and VS Code
 :class: info
-For more information about Git or GitHub, please read [here](../python_programming/github.md#git-and-github). Make sure you have [installed VS Code and Git](../orientation/setup.md#visual-studio-code-vs-code) on your computer.
+For more information about Git or GitHub, please read [here](../programming/github.md#git-and-github). Make sure you have [installed VS Code and Git](../orientation/setup.md) on your computer.
 ```
 
 ## Open VS Code
@@ -371,4 +371,3 @@ It is also recommended to install the Git Graph extension to see commit and logs
 
 
 That's it! You are now ready to use Git with VS Code.
-

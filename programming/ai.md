@@ -10,7 +10,7 @@ Copilot is free for students through [GitHub Education](https://education.github
 ```
 
 ````{admonition} Install VS Code Extension
-:type: info
+:class: info
 You need to install the Github Copilot & Github Copilot Chat extensions manually in VS Code if you are using them with the OnDemand web version.
 1. Download the extension files `copilot.zip` from Canvas and unzip them as `github.copilot-1.388.0.vsix` and `github.copilot-chat-0.32.3.vsix`.
 2. Open VS Code (OnDemand web version). Make sure you're using the new version (`4.105`) that supports extensions.

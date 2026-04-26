@@ -76,7 +76,7 @@ In molecular dynamics, you are only sampling part of the phase space, not the en
 In thermodynamic integration, we calculate the free energy difference between two states by integrating the derivative of the free energy with respect to a parameter that connects the two states. The free energy difference between two states is given by:
 
 $$
-\Delta F = \int_{\lambda_0}^{\lambda_1} \left\langle \frac{\partial H}{\partial \lambda} \right\rangle_{\lambda} d\lambda
+\Delta F = \int_{\lambda_0}^{\lambda_1} \overline{\frac{\partial H}{\partial \lambda}}_{\lambda} d\lambda
 $$
 
 where $\Delta F$ is the free energy difference between the two states, $\lambda$ is the parameter that connects the two states, $H$ is the Hamiltonian of the system, and the brackets denote an ensemble average taken at fixed $\lambda$.

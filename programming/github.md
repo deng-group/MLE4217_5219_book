@@ -58,7 +58,7 @@ When you create a repository on GitHub, it is stored remotely in the cloud. To w
 - You can use `git clone` to clone a repo to your local directory.
 
 ### Additinal Files in a Repositories
-- `README.md`: Repositories also contain **README** files. A README explains your project's purpose, usage instructions, and other relevant information. This README guides you through learning Git and GitHub. 😄
+- `README.md`: Repositories also contain **README** files. A README explains your project's purpose, usage instructions, and other relevant information. This README guides you through learning Git and GitHub.
 
 - `.git`: This directory contains all the metadata for the repository, including the history, configuration, and the objects that make up the content of the repository. It is created when you initialize a new Git repository and should not be modified manually.
 
@@ -132,4 +132,3 @@ For further guidance on following users, consult [“Following People”](https:
 GitHub Explore serves as an excellent platform to explore and discover new projects, events, and developers.
 
 Visit the GitHub Explore website at [github.com/explore](https://github.com/explore) to enhance your exploration experience. The more you interact with GitHub, the more personalized your Explore view will become.
-

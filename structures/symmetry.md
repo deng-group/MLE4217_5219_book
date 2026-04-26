@@ -13,7 +13,7 @@ The following are the common symmetry operations used to describe the symmetry o
 | Rotation        | n      | $C_n$             | Rotation by 360°/n about an axis                 |
 | Reflection      | m      | $\sigma$          | Reflection through a plane                       |
 | Inversion       | i      | $i$               | Inversion through a point                        |
-| Rotoinversion   | n̅     | $S_n$             | Rotation by 360°/n followed by reflection        |
+| Rotoinversion   | $\overline{n}$ | $S_n$     | Rotation by 360°/n followed by reflection        |
 
 These operations form the basis for understanding the symmetry properties of molecules and crystals, and they are fundamental in the study of crystallography and molecular symmetry.
 
@@ -76,4 +76,3 @@ In addition to the point group symmetry operations, space groups include lattice
 Space groups are denoted by an international (H-M) symbol that combines the point group symbol with additional information about the lattice translations. The international symbol consists of a point group symbol followed by a lattice type symbol and a lattice centering symbol.
 
 Screw axes and glide planes are represented by additional symbols in the international symbol. The screw axes are denoted by a number that represents the order of rotation and a fraction that represents the translation along the axis. The glide planes are denoted by a letter that represents the direction of the glide and a fraction that represents the translation along the glide plane.
-

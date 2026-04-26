@@ -1,6 +1,10 @@
 version: 1
 project:
   title: Materials Informatics
+  authors:
+    - name: MLE4217/5219 Teaching Team
+  abstract: |
+    Course notes and practical material for MLE4217/5219 Materials Informatics.
   exclude:
     - _build
     - Thumbs.db
@@ -18,15 +22,9 @@ project:
   #   - references.bib
   exports:
     - format: pdf
-      template: lapreprint-typst
+      template: plain_latex_book
       output: exports/book.pdf
 
-  plugins:
-    - src/xref.mjs
-    - src/landing-page.mjs
-    - src/directives.mjs
-    - src/admonition.mjs
-    
   toc:
     - file: index.md
     - file: syllabus.md
@@ -160,8 +158,8 @@ site:
     logo: logo.svg
     logo_dark: logo_dark.svg
     favicon: favicon.ico
+    folders: true
   # template: book-theme
-  folders: true
 
   actions:
     - title: DENG.Group

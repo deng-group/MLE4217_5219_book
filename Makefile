@@ -2,8 +2,8 @@ default: web
 clean:
 	rm -rf _build
 book:
-	jupyter-book build --builder pdflatex .
+	./scripts/build_latex_pdf.sh
 web:
-	jupyter book build --html
+	uv run jupyter book build --html
 serve:
-	jupyter book start
+	uv run jupyter book start
