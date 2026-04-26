@@ -7,10 +7,10 @@ In this week, we focus the review on the main course content that supports the f
 
 
 ## Lecture Video
-Lecture video will be recorded and uploaded after the lecture.
-<!-- This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
+<!-- Lecture video will be recorded and uploaded after the lecture. -->
+This lecture has been recorded using Zoom. **You need to use your NUS email to login.**
  Please access the Zoom recording use the links below:
-- [Recording](https://nus-sg.zoom.us/rec/share/0YTSmjhcQLGHCvUMUCQK3o7cuH9u3WAi2bt2rza4WNXhAd2fyEY3KFC_7bpwUJ6D.7Xt5-r4Ygw5qWj1T) (Passcode: 4!2fB&uD) -->
+- [Recording](https://nus-sg.zoom.us/rec/share/qkg7iSyiFBPIpKpjBk3p_WOYGYzYgsCuqvQ1AwFSTaoRMyvrrSOuDQ-_Y07GCki3.7-gGQBPckPFIpJ54) (Passcode: g?^6peqx)
 
 ## Final Examination
 - 2 hrs, closed book, no calculator, no internet, 1 page of handwritten cheat sheet (A4, both sides) allowed
