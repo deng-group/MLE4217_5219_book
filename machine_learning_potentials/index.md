@@ -1,4 +1,10 @@
 # Machine Learning Potentials
+
+```{admonition} Reading Material
+:class: note
+The whole section will not be assessed in the final exam, but it is recommended for students who want to explore more about the machine learning potentials.
+```
+
 ```{image} ../figures/machine_learning_potentials_title.png
 ---
 width: 100%
