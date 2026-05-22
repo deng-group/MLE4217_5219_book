@@ -4,6 +4,7 @@ clean:
 book:
 	./scripts/build_latex_pdf.sh
 web:
-	uv run jupyter book build --html
+	jupyter book build --html
+	python ai_agent_widget/inject_ai_agent_widget.py
 serve:
-	uv run jupyter book start
+	jupyter book start

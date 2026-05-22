@@ -1,0 +1,311 @@
+:root {
+  --mle-agent-panel: #ffffff;
+  --mle-agent-line: #d9dee7;
+  --mle-agent-text: #172033;
+  --mle-agent-muted: #647084;
+  --mle-agent-accent: #0f766e;
+  --mle-agent-accent-dark: #115e59;
+  --mle-agent-danger: #b42318;
+  --mle-agent-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
+}
+
+.mle-agent-launcher,
+.mle-agent-widget,
+.mle-agent-widget * {
+  box-sizing: border-box;
+}
+
+.mle-agent-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--mle-agent-accent);
+  box-shadow: var(--mle-agent-shadow);
+  cursor: pointer;
+}
+
+.mle-agent-launcher:hover {
+  background: var(--mle-agent-accent-dark);
+}
+
+.mle-agent-launcher span {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.mle-agent-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 88px;
+  z-index: 10001;
+  display: grid;
+  grid-template-rows: auto minmax(160px, 1fr) auto;
+  width: min(540px, calc(100vw - 32px));
+  height: min(660px, calc(100vh - 112px));
+  overflow: hidden;
+  border: 1px solid var(--mle-agent-line);
+  border-radius: 12px;
+  color: var(--mle-agent-text);
+  background: var(--mle-agent-panel);
+  box-shadow: var(--mle-agent-shadow);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.mle-agent-widget[hidden] {
+  display: none;
+}
+
+.mle-agent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--mle-agent-line);
+}
+
+.mle-agent-header h2,
+.mle-agent-header p {
+  margin: 0;
+}
+
+.mle-agent-header h2 {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.mle-agent-header p {
+  margin-top: 2px;
+  color: var(--mle-agent-muted);
+  font-size: 13px;
+}
+
+.mle-agent-close {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--mle-agent-line);
+  border-radius: 6px;
+  color: var(--mle-agent-muted);
+  background: #fff;
+  cursor: pointer;
+}
+
+.mle-agent-close:hover {
+  color: var(--mle-agent-text);
+  background: #f8fafc;
+}
+
+.mle-agent-widget select,
+.mle-agent-widget input,
+.mle-agent-widget textarea {
+  width: 100%;
+  border: 1px solid var(--mle-agent-line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--mle-agent-text);
+  font: inherit;
+}
+
+.mle-agent-widget select,
+.mle-agent-widget input {
+  height: 34px;
+  padding: 0 9px;
+}
+
+.mle-agent-messages {
+  overflow: auto;
+  padding: 14px 16px;
+  background: #fff;
+}
+
+.mle-agent-message {
+  margin-bottom: 12px;
+}
+
+.mle-agent-message.user {
+  margin-left: auto;
+  max-width: 86%;
+}
+
+.mle-agent-bubble {
+  padding: 11px 12px;
+  border: 1px solid var(--mle-agent-line);
+  border-radius: 8px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mle-agent-message.user .mle-agent-bubble {
+  color: #fff;
+  background: var(--mle-agent-accent);
+  border-color: var(--mle-agent-accent);
+}
+
+.mle-agent-message.assistant .mle-agent-bubble {
+  background: #fff;
+  white-space: normal;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble p {
+  margin: 0 0 10px;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble h2,
+.mle-agent-message.assistant .mle-agent-bubble h3,
+.mle-agent-message.assistant .mle-agent-bubble h4 {
+  margin: 12px 0 7px;
+  color: var(--mle-agent-text);
+  font-weight: 750;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble h2:first-child,
+.mle-agent-message.assistant .mle-agent-bubble h3:first-child,
+.mle-agent-message.assistant .mle-agent-bubble h4:first-child {
+  margin-top: 0;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble h2 {
+  font-size: 16px;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble h3 {
+  font-size: 15px;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble h4 {
+  font-size: 14px;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble li {
+  margin: 4px 0;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #eef2f7;
+  color: #0f172a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.92em;
+}
+
+.mle-agent-code {
+  margin: 10px 0;
+  padding: 12px;
+  overflow: auto;
+  border: 1px solid #d6deea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172033;
+  white-space: pre;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.mle-agent-code code {
+  padding: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-size: inherit;
+}
+
+.mle-agent-source-link {
+  color: var(--mle-agent-accent-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.mle-agent-message.error .mle-agent-bubble {
+  color: var(--mle-agent-danger);
+  border-color: #f3b7b0;
+  background: #fff7f6;
+}
+
+.mle-agent-meta {
+  margin-top: 5px;
+  color: var(--mle-agent-muted);
+  font-size: 12px;
+}
+
+.mle-agent-composer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 70px;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid var(--mle-agent-line);
+  background: #fff;
+}
+
+.mle-agent-composer textarea {
+  min-height: 46px;
+  max-height: 120px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.mle-agent-composer button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--mle-agent-accent);
+  cursor: pointer;
+  font: inherit;
+}
+
+.mle-agent-composer button:hover {
+  background: var(--mle-agent-accent-dark);
+}
+
+.mle-agent-composer button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+@media (max-width: 560px) {
+  .mle-agent-launcher {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .mle-agent-widget {
+    right: 8px;
+    bottom: 76px;
+    width: calc(100vw - 16px);
+    height: min(680px, calc(100vh - 92px));
+  }
+
+  .mle-agent-composer {
+    grid-template-columns: 1fr;
+  }
+}
