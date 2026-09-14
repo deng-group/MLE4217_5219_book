@@ -94,10 +94,16 @@
   font-size: 13px;
 }
 
-.mle-agent-close {
+.mle-agent-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mle-agent-close,
+.mle-agent-reset {
   display: grid;
   place-items: center;
-  width: 34px;
   height: 34px;
   border: 1px solid var(--mle-agent-line);
   border-radius: 6px;
@@ -106,7 +112,19 @@
   cursor: pointer;
 }
 
-.mle-agent-close:hover {
+.mle-agent-close {
+  width: 34px;
+}
+
+.mle-agent-reset {
+  min-width: 48px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mle-agent-close:hover,
+.mle-agent-reset:hover {
   color: var(--mle-agent-text);
   background: #f8fafc;
 }
@@ -147,7 +165,6 @@
   padding: 11px 12px;
   border: 1px solid var(--mle-agent-line);
   border-radius: 8px;
-  white-space: pre-wrap;
   overflow-wrap: anywhere;
   font-size: 14px;
   line-height: 1.5;
@@ -200,9 +217,18 @@
   font-size: 14px;
 }
 
-.mle-agent-message.assistant .mle-agent-bubble ul {
+.mle-agent-message.assistant .mle-agent-bubble ul,
+.mle-agent-message.assistant .mle-agent-bubble ol {
   margin: 0 0 10px;
-  padding-left: 20px;
+  padding-left: 28px;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble ul {
+  list-style: disc outside;
+}
+
+.mle-agent-message.assistant .mle-agent-bubble ol {
+  list-style: decimal outside;
 }
 
 .mle-agent-message.assistant .mle-agent-bubble li {
@@ -243,6 +269,20 @@
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.mle-agent-title-link {
+  color: var(--mle-agent-accent-dark) !important;
+  font-weight: 850 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 3px;
+}
+
+.mle-agent-title-link:hover {
+  color: var(--mle-agent-accent) !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
 }
 
 .mle-agent-message.error .mle-agent-bubble {

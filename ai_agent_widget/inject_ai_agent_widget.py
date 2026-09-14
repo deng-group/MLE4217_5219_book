@@ -13,6 +13,7 @@ BUILD_HTML = BOOK_ROOT / "_build" / "html"
 BUILD_WIDGET = BUILD_HTML / "ai_agent_widget"
 START_MARKER = "<!-- MLE AI Agent Widget: start -->"
 END_MARKER = "<!-- MLE AI Agent Widget: end -->"
+ASSET_VERSION = "20260914-01"
 
 
 def relative_asset_prefix(html_file: Path) -> str:
@@ -24,11 +25,12 @@ def relative_asset_prefix(html_file: Path) -> str:
 
 
 def strip_existing_block(html: str) -> str:
-    start = html.find(START_MARKER)
-    end = html.find(END_MARKER)
-    if start == -1 or end == -1:
-        return html
-    return html[:start] + html[end + len(END_MARKER) :]
+    while True:
+        start = html.find(START_MARKER)
+        end = html.find(END_MARKER, start + len(START_MARKER))
+        if start == -1 or end == -1:
+            return html
+        html = html[:start] + html[end + len(END_MARKER) :]
 
 
 def inject_html(html_file: Path) -> None:
@@ -37,12 +39,12 @@ def inject_html(html_file: Path) -> None:
     prefix = relative_asset_prefix(html_file)
     head_block = (
         f"{START_MARKER}\n"
-        f'<link rel="stylesheet" href="{prefix}/ai_agent_widget.css">\n'
+        f'<link rel="stylesheet" href="{prefix}/ai_agent_widget.css?v={ASSET_VERSION}" data-mle-agent-widget="style">\n'
         f"{END_MARKER}"
     )
     body_block = (
         f"{START_MARKER}\n"
-        f'<script src="{prefix}/ai_agent_widget.js"></script>\n'
+        f'<script src="{prefix}/ai_agent_widget.js?v={ASSET_VERSION}"></script>\n'
         f"{END_MARKER}"
     )
 
