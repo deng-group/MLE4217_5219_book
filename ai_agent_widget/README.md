@@ -1,90 +1,35 @@
 # Course Helper Widget
 
-This folder contains the course-page helper widget for MLE4217/5219.
-
-It is intentionally isolated from the course chapters. The widget is injected into
-the built HTML pages after the MyST/Jupyter Book build completes.
-
-## Files
-
-- `ai_agent_widget.css`: floating chat widget styles.
-- `ai_agent_widget.js`: floating chat widget behavior.
-- `inject_ai_agent_widget.py`: post-build injector for `_build/html/**/*.html`.
-
-## Build Workflow
-
-Run the normal book build:
+The chat widget on the course pages now comes from [Wendao](https://github.com/deng-group/wendao).
+`make web` builds the book and then adds the widget to every page:
 
 ```bash
-make web
+python -m pip install --quiet --no-deps "wendao>=0.3"
+python -m wendao widget install _build/html --api https://wendao.matsci.dev
 ```
 
-The Makefile runs the MyST/Jupyter Book build and then injects this widget into
-the generated HTML.
+`--no-deps` is enough to add the widget, so this is quick, also in the Cloudflare Pages build.
+The widget files are copied into `_build/html/_wendao/`. Running the command again updates them and
+never adds a second copy. `wendao widget remove _build/html` takes the widget out.
 
-The widget waits until after the MyST/React page has hydrated before mounting.
-Its JavaScript also re-adds its stylesheet at runtime, because the book theme may
-rewrite generated `<head>` content during hydration.
+## Backend
 
-## Backend Requirement
+This website is static (Cloudflare Pages), so the AI runs elsewhere: a Wendao server on a lab machine,
+reachable at `https://wendao.matsci.dev` through a Cloudflare Tunnel (set `WENDAO_API` to change it, e.g.
+`make web WENDAO_API=https://...`). See "Static course website: Cloudflare Tunnel" in Wendao's
+`deploy/DEPLOYMENT.md`. On `localhost` the widget uses `http://127.0.0.1:5055` instead.
 
-The widget expects the RAG backend to be running separately. By default it calls:
-
-```text
-http://127.0.0.1:5055/api/answer
-```
-
-To change this later, set `window.MLE_AI_AGENT_API_BASE` before loading
-`ai_agent_widget.js`.
-
-Provider and model settings are intentionally not exposed in the student-facing
-interface. By default, the widget lets the backend choose its configured
-provider/model. To force a provider or model for a deployment, set page-level
-globals before the widget script loads.
-
-The widget reads `/api/answer/stream` incrementally. It updates the same answer
-bubble and the elapsed-time label while the model is generating.
-
-## Local Test in the Real Course Site
-
-From the sibling `mle4217_5219_AIdesk` repository, run:
+To try it locally, build without the live server and run Wendao next to it:
 
 ```bash
-python scripts/start_course_widget_test.py
+make web WENDAO_API=
+# then, from the Wendao course workspace:
+wendao serve --widget --site ../MLE4217_5219_book/_build/html
 ```
 
-This refreshes the widget assets in the existing built course site, starts the
-RAG backend and a local course-site server, and opens an actual course page. Use
-`--build` when the course content itself also needs rebuilding. Press `Ctrl+C`
-in the terminal to stop the test services.
+This repository holds no API keys, prompts, or course data for the AI. Those stay on the Wendao server.
 
-## Maintenance TODO
+## Sharing a preview
 
-When updating or rebuilding the book, keep this folder and the Makefile injection
-step together. If the book theme changes, re-run `make web` and verify that the
-widget still appears on built pages and can call the backend.
-
-## Temporary Friend Preview
-
-To combine the built course site and the local API behind one temporary port,
-start the preview gateway with a one-time access code:
-
-```bash
-SHARE_ACCESS_CODE='replace-with-a-random-code' \
-  ./.venv/bin/python ai_agent_widget/share_gateway.py
-```
-
-Then expose only the gateway:
-
-```bash
-cloudflared tunnel --url http://127.0.0.1:8080
-```
-
-Send the friend a complete URL containing the code once, for example:
-
-```text
-https://random.trycloudflare.com/high-throughput/thermodynamics/?code=replace-with-a-random-code
-```
-
-The gateway stores the accepted code in a secure, HTTP-only session cookie and
-removes it from the visible URL. Stop both processes immediately after testing.
+`share_gateway.py` serves the built book and forwards `/api/...` to the backend on the same address,
+behind an access code. Build with `make web WENDAO_API=` so the widget uses that address.

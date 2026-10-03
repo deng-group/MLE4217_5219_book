@@ -76,7 +76,7 @@ class ShareHandler(SimpleHTTPRequestHandler):
         if not self.require_access():
             return
         path = parse.urlsplit(self.path).path
-        if path == "/api/health":
+        if path in {"/api/health", "/api/page", "/api/neighborhood"}:
             self.proxy_request("GET")
             return
         if path.startswith("/api/"):
@@ -93,7 +93,8 @@ class ShareHandler(SimpleHTTPRequestHandler):
         self.proxy_request("POST")
 
     def proxy_request(self, method: str) -> None:
-        path = parse.urlsplit(self.path).path
+        parts = parse.urlsplit(self.path)
+        path = parts.path + (f"?{parts.query}" if parts.query else "")
         length = int(self.headers.get("Content-Length", "0"))
         body = self.rfile.read(length) if length else None
         upstream = request.Request(
