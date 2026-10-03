@@ -4,26 +4,26 @@ The chat widget on the course pages now comes from [Wendao](https://github.com/d
 `make web` builds the book and then adds the widget to every page:
 
 ```bash
-uvx --from "wendao>=0.3" wendao widget install _build/html
+python -m pip install --quiet --no-deps "wendao>=0.3"
+python -m wendao widget install _build/html --api https://wendao.matsci.dev
 ```
 
-(If Wendao is already installed, `wendao widget install _build/html` does the same.)
-
+`--no-deps` is enough to add the widget, so this is quick, also in the Cloudflare Pages build.
 The widget files are copied into `_build/html/_wendao/`. Running the command again updates them and
 never adds a second copy. `wendao widget remove _build/html` takes the widget out.
 
 ## Backend
 
-The widget talks to a Wendao widget API. On `localhost` it uses `http://127.0.0.1:5055`; on the
-published site it uses the same address under `/api`. To use another server:
+This website is static (Cloudflare Pages), so the AI runs elsewhere: a Wendao server on a lab machine,
+reachable at `https://wendao.matsci.dev` through a Cloudflare Tunnel (set `WENDAO_API` to change it, e.g.
+`make web WENDAO_API=https://...`). See "Static course website: Cloudflare Tunnel" in Wendao's
+`deploy/DEPLOYMENT.md`. On `localhost` the widget uses `http://127.0.0.1:5055` instead.
+
+To try it locally, build without the live server and run Wendao next to it:
 
 ```bash
-wendao widget install _build/html --api https://your-server.example.edu
-```
-
-To try it locally, from the Wendao course workspace:
-
-```bash
+make web WENDAO_API=
+# then, from the Wendao course workspace:
 wendao serve --widget --site ../MLE4217_5219_book/_build/html
 ```
 
@@ -32,4 +32,4 @@ This repository holds no API keys, prompts, or course data for the AI. Those sta
 ## Sharing a preview
 
 `share_gateway.py` serves the built book and forwards `/api/...` to the backend on the same address,
-behind an access code. It works with the Wendao widget unchanged.
+behind an access code. Build with `make web WENDAO_API=` so the widget uses that address.
